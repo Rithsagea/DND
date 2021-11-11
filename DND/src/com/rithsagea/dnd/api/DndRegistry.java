@@ -15,7 +15,6 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.rithsagea.dnd.api.misc.AbilityScore;
 import com.rithsagea.dnd.api.misc.Alignment;
-import com.rithsagea.dnd.api.misc.CharacterSize;
 import com.rithsagea.dnd.api.misc.Language;
 import com.rithsagea.dnd.api.misc.Proficiency;
 import com.rithsagea.dnd.api.misc.Skill;
@@ -25,43 +24,47 @@ public class DndRegistry {
 	public static Registry<AbilityScore> AbilityScore = new Registry<>();
 	public static Registry<Skill> Skill = new Registry<>();
 	public static Registry<Proficiency> Proficiency = new Registry<>();
-	
-	public static Registry<Alignment> Alignment = new Registry<>();
-	public static Registry<CharacterSize> CharacterSize = new Registry<>();
 	public static Registry<Language> Language = new Registry<>();
+	public static Registry<Alignment> Alignment = new Registry<>();
 	
 	private static HashMap<String, Registry<?>> REGISTRY_INDEX;
 	static {
 		REGISTRY_INDEX = new HashMap<>();
-		REGISTRY_INDEX.put("ability_score", AbilityScore);
-		REGISTRY_INDEX.put("skill", Skill);
-		REGISTRY_INDEX.put("proficiency", Proficiency);
-		
-		REGISTRY_INDEX.put("alignment", Alignment);
-		REGISTRY_INDEX.put("character_size", CharacterSize);
-		REGISTRY_INDEX.put("language", Language);
+		REGISTRY_INDEX.put("ability_scores", AbilityScore);
+		REGISTRY_INDEX.put("skills", Skill);
+		REGISTRY_INDEX.put("proficiencies", Proficiency);
+		REGISTRY_INDEX.put("languages", Language);
+		REGISTRY_INDEX.put("alignments", Alignment);
 	}
 	
 	private static final Gson gson = new GsonBuilder()
 			.registerTypeAdapter(Registry.class, new RegistryAdapter())
 			.create();
 	
-	public static void registerAbilityScores(List<AbilityScore> abilityScores) {
-		for(AbilityScore abilityScore : abilityScores) {
-			AbilityScore.register(abilityScore.id, abilityScore);
+	private static <T extends DndItem> void registerItems(List<T> items, Registry<T> registry) {
+		for(T item : items) {
+			registry.register(item.id, item);
 		}
+	}
+	
+	public static void registerAbilityScores(List<AbilityScore> abilityScores) {
+		registerItems(abilityScores, AbilityScore);
 	}
 	
 	public static void registerSkills(List<Skill> skills) {
-		for(Skill skill : skills) {
-			Skill.register(skill.id, skill);
-		}
+		registerItems(skills, Skill);
 	}
 	
 	public static void registerProficiencies(List<Proficiency> proficiencies) {
-		for(Proficiency proficiency : proficiencies) {
-			Proficiency.register(proficiency.id, proficiency);
-		}
+		registerItems(proficiencies, Proficiency);
+	}
+	
+	public static void registerLanguages(List<Language> languages) {
+		registerItems(languages, Language);
+	}
+	
+	public static void registerAlignments(List<Alignment> alignments) {
+		registerItems(alignments, Alignment);
 	}
 	
 	@SuppressWarnings("unchecked")

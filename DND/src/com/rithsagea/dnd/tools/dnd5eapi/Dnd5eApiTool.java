@@ -15,6 +15,8 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.rithsagea.dnd.api.misc.AbilityScore;
+import com.rithsagea.dnd.api.misc.Alignment;
+import com.rithsagea.dnd.api.misc.Language;
 import com.rithsagea.dnd.api.misc.Proficiency;
 import com.rithsagea.dnd.api.misc.Skill;
 
@@ -30,6 +32,8 @@ public class Dnd5eApiTool {
 		builder.registerTypeAdapter(AbilityScore.class, new AbilityScoreAdapter());
 		builder.registerTypeAdapter(Skill.class, new SkillAdapter());
 		builder.registerTypeAdapter(Proficiency.class, new ProficiencyAdapter());
+		builder.registerTypeAdapter(Language.class, new LanguageAdapter());
+		builder.registerTypeAdapter(Alignment.class, new AlignmentAdapter());
 		gson = builder.create();
 		
 		this.url = url;
@@ -99,5 +103,13 @@ public class Dnd5eApiTool {
 	
 	public List<Proficiency> getProficiencies() {
 		return getItems("/proficiencies", Proficiency.class);
+	}
+	
+	public List<Language> getLanguages() {
+		return getItems("/languages", Language.class);
+	}
+	
+	public List<Alignment> getAlignments() {
+		return getItems("/alignments", Alignment.class);
 	}
 }

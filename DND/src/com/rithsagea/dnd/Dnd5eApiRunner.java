@@ -14,5 +14,7 @@ public class Dnd5eApiRunner {
 		DndRegistry.loadRegistry(file);
 		DndRegistry.registerAbilityScores(tool.getAbilityScores());
 		DndRegistry.saveRegistry(file);
+		
+		System.out.println();
 	}
 }

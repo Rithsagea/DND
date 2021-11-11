@@ -12,7 +12,8 @@ public class Dnd5eApiRunner {
 		File file = new File("5e.json");
 		
 		DndRegistry.loadRegistry(file);
-		DndRegistry.registerAbilityScores(tool.getAbilityScores());
+//		DndRegistry.registerAbilityScores(tool.getAbilityScores());
+//		DndRegistry.registerSkills(tool.getSkills());
 		DndRegistry.saveRegistry(file);
 		
 		System.out.println();

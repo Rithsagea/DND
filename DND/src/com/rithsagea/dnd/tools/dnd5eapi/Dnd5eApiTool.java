@@ -30,6 +30,7 @@ public class Dnd5eApiTool {
 		GsonBuilder builder = new GsonBuilder();
 		builder.setPrettyPrinting();
 		builder.registerTypeAdapter(AbilityScore.class, new AbilityScoreAdapter());
+		builder.registerTypeAdapter(Skill.class, new SkillAdapter());
 		gson = builder.create();
 		
 		this.url = url;

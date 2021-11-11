@@ -1,8 +1,6 @@
 package com.rithsagea.dnd.api.misc;
 
-public class Skill {
-	public String id;
-	
+public class Skill extends DndItem{
 	public String name;
 	public String description;
 	

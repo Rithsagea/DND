@@ -2,8 +2,7 @@ package com.rithsagea.dnd.api.misc;
 
 import java.util.List;
 
-public class AbilityScore {
-	public String id;
+public class AbilityScore extends DndItem {
 	
 	public String shortName;
 	public String name;

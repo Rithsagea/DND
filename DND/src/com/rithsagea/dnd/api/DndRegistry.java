@@ -26,7 +26,7 @@ public class DndRegistry {
 	public static Registry<Language> Language = new Registry<>();
 	
 	private static final Gson gson = new GsonBuilder()
-			.registerTypeAdapter(Registry.class, new RegistryAdapater())
+			.registerTypeAdapter(Registry.class, new RegistryAdapter())
 			.create();
 	
 	public static void registerAbilityScores(List<AbilityScore> abilityScores) {

@@ -15,6 +15,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.rithsagea.dnd.api.misc.AbilityScore;
+import com.rithsagea.dnd.api.misc.Skill;
 
 public class Dnd5eApiTool {
 	
@@ -22,6 +23,7 @@ public class Dnd5eApiTool {
 	private Gson gson;
 	
 	public static final String ABILITY_SCORE_HEADER = "/ability-scores";
+	public static final String SKILL_HEADER = "/skills";
 	
 	public Dnd5eApiTool(String url) {
 		
@@ -81,6 +83,16 @@ public class Dnd5eApiTool {
 		List<AbilityScore> res = new ArrayList<>();
 		for(String item : index) {
 			res.add(gson.fromJson(get(ABILITY_SCORE_HEADER + "/" + item), AbilityScore.class));
+		}
+		
+		return res;
+	}
+	
+	public List<Skill> getSkills() {
+		List<String> index = getIndex(SKILL_HEADER);
+		List<Skill> res = new ArrayList<>();
+		for(String item : index) {
+			res.add(gson.fromJson(get(SKILL_HEADER + "/" + item), Skill.class));
 		}
 		
 		return res;

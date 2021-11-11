@@ -10,7 +10,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonSerializationContext;
 import com.rithsagea.util.JsonAdapter;
 
-public class RegistryAdapater implements JsonAdapter<Registry<?>> {
+public class RegistryAdapter implements JsonAdapter<Registry<?>> {
 
 	private Gson gson = new GsonBuilder().create();
 	

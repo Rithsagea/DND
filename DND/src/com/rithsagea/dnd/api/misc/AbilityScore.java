@@ -4,8 +4,10 @@ import java.util.List;
 
 public class AbilityScore {
 	public String id;
+	
 	public String shortName;
 	public String name;
+	
 	public String description;
 	public String usageDescription;
 	

@@ -15,6 +15,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.rithsagea.dnd.api.misc.AbilityScore;
+import com.rithsagea.dnd.api.misc.Proficiency;
 import com.rithsagea.dnd.api.misc.Skill;
 
 public class Dnd5eApiTool {
@@ -22,15 +23,13 @@ public class Dnd5eApiTool {
 	private String url;
 	private Gson gson;
 	
-	public static final String ABILITY_SCORE_HEADER = "/ability-scores";
-	public static final String SKILL_HEADER = "/skills";
-	
 	public Dnd5eApiTool(String url) {
 		
 		GsonBuilder builder = new GsonBuilder();
 		builder.setPrettyPrinting();
 		builder.registerTypeAdapter(AbilityScore.class, new AbilityScoreAdapter());
 		builder.registerTypeAdapter(Skill.class, new SkillAdapter());
+		builder.registerTypeAdapter(Proficiency.class, new ProficiencyAdapter());
 		gson = builder.create();
 		
 		this.url = url;
@@ -79,23 +78,26 @@ public class Dnd5eApiTool {
 		return index;
 	}
 	
-	public List<AbilityScore> getAbilityScores() {
-		List<String> index = getIndex(ABILITY_SCORE_HEADER);
-		List<AbilityScore> res = new ArrayList<>();
+	public <T> List<T> getItems(String header, Class<T> clazz) {
+		List<String> index = getIndex(header);
+		List<T> res = new ArrayList<>();
+		
 		for(String item : index) {
-			res.add(gson.fromJson(get(ABILITY_SCORE_HEADER + "/" + item), AbilityScore.class));
+			res.add(gson.fromJson(get(header + "/" + item), clazz));
 		}
 		
 		return res;
 	}
 	
+	public List<AbilityScore> getAbilityScores() {
+		return getItems("/ability-scores", AbilityScore.class);
+	}
+	
 	public List<Skill> getSkills() {
-		List<String> index = getIndex(SKILL_HEADER);
-		List<Skill> res = new ArrayList<>();
-		for(String item : index) {
-			res.add(gson.fromJson(get(SKILL_HEADER + "/" + item), Skill.class));
-		}
-		
-		return res;
+		return getItems("/skills", Skill.class);
+	}
+	
+	public List<Proficiency> getProficiencies() {
+		return getItems("/proficiencies", Proficiency.class);
 	}
 }

@@ -14,6 +14,7 @@ public class Dnd5eApiRunner {
 		DndRegistry.loadRegistry(file);
 //		DndRegistry.registerAbilityScores(tool.getAbilityScores());
 //		DndRegistry.registerSkills(tool.getSkills());
+//		DndRegistry.registerProficiencies(tool.getProficiencies());
 		DndRegistry.saveRegistry(file);
 		
 		System.out.println();

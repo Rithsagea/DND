@@ -1,9 +1,6 @@
 package com.rithsagea.dnd.tools.dnd5eapi;
 
 import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonDeserializationContext;
@@ -28,11 +25,6 @@ public class AbilityScoreAdapter implements JsonAdapter<AbilityScore> {
 		arr = obj.get("desc").getAsJsonArray();
 		abilityScore.description = arr.get(0).getAsString();
 		abilityScore.usageDescription = arr.get(1).getAsString();
-		
-		arr = obj.get("skills").getAsJsonArray();
-		List<String> skills = new ArrayList<String>();
-		for(JsonElement e : arr) skills.add(e.getAsJsonObject().get("index").getAsString());
-		abilityScore.skills = skills;
 		
 		return abilityScore;
 	}

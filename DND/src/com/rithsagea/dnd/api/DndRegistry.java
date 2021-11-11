@@ -7,26 +7,24 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
-import com.google.gson.reflect.TypeToken;
 import com.rithsagea.dnd.api.misc.AbilityScore;
 import com.rithsagea.dnd.api.misc.Alignment;
 import com.rithsagea.dnd.api.misc.CharacterSize;
-import com.rithsagea.dnd.api.misc.DndItem;
 import com.rithsagea.dnd.api.misc.Language;
+import com.rithsagea.dnd.api.misc.Proficiency;
 import com.rithsagea.dnd.api.misc.Skill;
 
 public class DndRegistry {
 	
 	public static Registry<AbilityScore> AbilityScore = new Registry<>();
 	public static Registry<Skill> Skill = new Registry<>();
+	public static Registry<Proficiency> Proficiency = new Registry<>();
 	
 	public static Registry<Alignment> Alignment = new Registry<>();
 	public static Registry<CharacterSize> CharacterSize = new Registry<>();
@@ -37,6 +35,8 @@ public class DndRegistry {
 		REGISTRY_INDEX = new HashMap<>();
 		REGISTRY_INDEX.put("ability_score", AbilityScore);
 		REGISTRY_INDEX.put("skill", Skill);
+		REGISTRY_INDEX.put("proficiency", Proficiency);
+		
 		REGISTRY_INDEX.put("alignment", Alignment);
 		REGISTRY_INDEX.put("character_size", CharacterSize);
 		REGISTRY_INDEX.put("language", Language);
@@ -55,6 +55,12 @@ public class DndRegistry {
 	public static void registerSkills(List<Skill> skills) {
 		for(Skill skill : skills) {
 			Skill.register(skill.id, skill);
+		}
+	}
+	
+	public static void registerProficiencies(List<Proficiency> proficiencies) {
+		for(Proficiency proficiency : proficiencies) {
+			Proficiency.register(proficiency.id, proficiency);
 		}
 	}
 	

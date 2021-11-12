@@ -2,7 +2,7 @@ package com.rithsagea.dnd;
 
 import java.io.File;
 
-import com.rithsagea.dnd.api.DndRegistry;
+import com.rithsagea.dnd.api.Datapack;
 import com.rithsagea.dnd.tools.dnd5eapi.Dnd5eApiTool;
 
 public class Dnd5eApiRunner {
@@ -11,13 +11,13 @@ public class Dnd5eApiRunner {
 		
 		File file = new File("5e.json");
 		
-		DndRegistry.loadRegistry(file);
-//		DndRegistry.registerAbilityScores(tool.getAbilityScores());
-//		DndRegistry.registerSkills(tool.getSkills());
-//		DndRegistry.registerProficiencies(tool.getProficiencies());
-//		DndRegistry.registerLanguages(tool.getLanguages());
-//		DndRegistry.registerAlignments(tool.getAlignments());
-		DndRegistry.saveRegistry(file);
+		Datapack data5e = Datapack.loadDatapack(file);
+		Datapack.saveDatapack(file, data5e);
+//		data5e.registerAbilityScores(tool.getAbilityScores());
+//		data5e.registerSkills(tool.getSkills());
+//		data5e.registerProficiencies(tool.getProficiencies());
+//		data5e.registerLanguages(tool.getLanguages());
+//		data5e.registerAlignments(tool.getAlignments());
 		
 		System.out.println();
 	}

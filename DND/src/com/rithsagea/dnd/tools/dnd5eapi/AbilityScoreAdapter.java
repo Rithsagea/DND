@@ -4,13 +4,12 @@ import java.lang.reflect.Type;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonSerializationContext;
 import com.rithsagea.dnd.api.misc.AbilityScore;
-import com.rithsagea.util.JsonAdapter;
 
-public class AbilityScoreAdapter implements JsonAdapter<AbilityScore> {
+public class AbilityScoreAdapter implements JsonDeserializer<AbilityScore> {
 
 	@Override
 	public AbilityScore deserialize(JsonElement elem, Type type, JsonDeserializationContext context) {
@@ -28,11 +27,4 @@ public class AbilityScoreAdapter implements JsonAdapter<AbilityScore> {
 		
 		return abilityScore;
 	}
-
-	@Override
-	public JsonElement serialize(AbilityScore obj, Type type, JsonSerializationContext context) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }

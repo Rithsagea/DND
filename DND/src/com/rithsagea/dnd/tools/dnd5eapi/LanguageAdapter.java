@@ -3,13 +3,12 @@ package com.rithsagea.dnd.tools.dnd5eapi;
 import java.lang.reflect.Type;
 
 import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonSerializationContext;
 import com.rithsagea.dnd.api.misc.Language;
-import com.rithsagea.util.JsonAdapter;
 
-public class LanguageAdapter implements JsonAdapter<Language> {
+public class LanguageAdapter implements JsonDeserializer<Language> {
 
 	@Override
 	public Language deserialize(JsonElement elem, Type type, JsonDeserializationContext context) {
@@ -26,11 +25,4 @@ public class LanguageAdapter implements JsonAdapter<Language> {
 		
 		return language;
 	}
-
-	@Override
-	public JsonElement serialize(Language obj, Type type, JsonSerializationContext context) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }

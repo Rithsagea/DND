@@ -15,6 +15,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.rithsagea.dnd.api.misc.AbilityScore;
 import com.rithsagea.dnd.api.misc.Alignment;
+import com.rithsagea.dnd.api.misc.DndItem;
 import com.rithsagea.dnd.api.misc.Language;
 import com.rithsagea.dnd.api.misc.Proficiency;
 import com.rithsagea.dnd.api.misc.Skill;

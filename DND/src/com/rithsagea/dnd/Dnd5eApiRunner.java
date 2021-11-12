@@ -12,11 +12,11 @@ public class Dnd5eApiRunner {
 		File file = new File("5e.json");
 		
 		DndRegistry.loadRegistry(file);
-		DndRegistry.registerAbilityScores(tool.getAbilityScores());
-		DndRegistry.registerSkills(tool.getSkills());
-		DndRegistry.registerProficiencies(tool.getProficiencies());
-		DndRegistry.registerLanguages(tool.getLanguages());
-		DndRegistry.registerAlignments(tool.getAlignments());
+//		DndRegistry.registerAbilityScores(tool.getAbilityScores());
+//		DndRegistry.registerSkills(tool.getSkills());
+//		DndRegistry.registerProficiencies(tool.getProficiencies());
+//		DndRegistry.registerLanguages(tool.getLanguages());
+//		DndRegistry.registerAlignments(tool.getAlignments());
 		DndRegistry.saveRegistry(file);
 		
 		System.out.println();

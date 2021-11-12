@@ -16,7 +16,7 @@ public class RegistryAdapter implements JsonAdapter<Registry<?>> {
 	
 	@Override
 	public JsonElement serialize(Registry<?> obj, Type type, JsonSerializationContext context) {
-		return gson.toJsonTree(obj.registry);
+		return gson.toJsonTree(obj.getMap());
 	}
 
 	@Override

@@ -39,6 +39,7 @@ public class DndRegistry {
 	
 	private static final Gson gson = new GsonBuilder()
 			.registerTypeAdapter(Registry.class, new RegistryAdapter())
+			.setPrettyPrinting()
 			.create();
 	
 	private static <T extends DndItem> void registerItems(List<T> items, Registry<T> registry) {
@@ -75,7 +76,9 @@ public class DndRegistry {
 			
 			for(String key : registry.keySet()) {
 				Registry<?> r = REGISTRY_INDEX.get(key);
-				r.registry = gson.fromJson(registry.get(key), r.registry.getClass());
+				
+				gson.fromJson(registry.get(key), r.getClass());
+				r.register(gson.fromJson(registry.get(key), r.getClass()));
 			}
 		} catch (FileNotFoundException e) {
 			try {

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Set;
 
 public class Registry<T> {
-	protected HashMap<String, T> registry;
+	private HashMap<String, T> registry;
 	
 	public Registry() {
 		registry = new HashMap<>();
@@ -18,7 +18,19 @@ public class Registry<T> {
 		return registry.put(key, value);
 	}
 	
+	public void register(Registry<T> r) {
+		for(String k : r.getKeys()) {
+			if(!registry.containsKey(k)) {
+				registry.put(k, r.get(k));
+			}
+		}
+	}
+	
 	public Set<String> getKeys() {
 		return registry.keySet();
+	}
+	
+	public HashMap<String, T> getMap() {
+		return registry;
 	}
 }

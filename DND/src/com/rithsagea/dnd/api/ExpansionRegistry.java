@@ -1,11 +1,11 @@
 package com.rithsagea.dnd.api;
 
 import com.google.gson.annotations.SerializedName;
-import com.rithsagea.dnd.api.misc.AbilityScore;
-import com.rithsagea.dnd.api.misc.Alignment;
-import com.rithsagea.dnd.api.misc.Language;
-import com.rithsagea.dnd.api.misc.Proficiency;
-import com.rithsagea.dnd.api.misc.Skill;
+import com.rithsagea.dnd.api.data.AbilityScore;
+import com.rithsagea.dnd.api.data.Alignment;
+import com.rithsagea.dnd.api.data.Language;
+import com.rithsagea.dnd.api.data.Proficiency;
+import com.rithsagea.dnd.api.data.Skill;
 
 public class ExpansionRegistry {
 	

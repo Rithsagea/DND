@@ -1,4 +1,4 @@
-package com.rithsagea.dnd.api.misc;
+package com.rithsagea.dnd.api.data;
 
 public class Alignment extends DndItem {
 	public String shortName;

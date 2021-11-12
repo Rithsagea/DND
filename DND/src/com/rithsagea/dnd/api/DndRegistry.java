@@ -13,12 +13,12 @@ import java.util.List;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
-import com.rithsagea.dnd.api.misc.AbilityScore;
-import com.rithsagea.dnd.api.misc.Alignment;
-import com.rithsagea.dnd.api.misc.DndItem;
-import com.rithsagea.dnd.api.misc.Language;
-import com.rithsagea.dnd.api.misc.Proficiency;
-import com.rithsagea.dnd.api.misc.Skill;
+import com.rithsagea.dnd.api.data.AbilityScore;
+import com.rithsagea.dnd.api.data.Alignment;
+import com.rithsagea.dnd.api.data.DndItem;
+import com.rithsagea.dnd.api.data.Language;
+import com.rithsagea.dnd.api.data.Proficiency;
+import com.rithsagea.dnd.api.data.Skill;
 
 public class DndRegistry {
 	

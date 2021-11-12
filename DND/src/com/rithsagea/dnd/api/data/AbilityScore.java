@@ -1,4 +1,4 @@
-package com.rithsagea.dnd.api.misc;
+package com.rithsagea.dnd.api.data;
 
 public class AbilityScore extends DndItem {
 	public String shortName;

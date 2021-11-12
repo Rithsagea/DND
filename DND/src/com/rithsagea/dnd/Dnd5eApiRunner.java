@@ -11,13 +11,18 @@ public class Dnd5eApiRunner {
 		
 		File file = new File("5e.json");
 		
-		Datapack data5e = Datapack.loadDatapack(file);
-		Datapack.saveDatapack(file, data5e);
+		Datapack data5e = new Datapack();
+		data5e = Datapack.loadDatapack(file);
+		
 //		data5e.registerAbilityScores(tool.getAbilityScores());
 //		data5e.registerSkills(tool.getSkills());
 //		data5e.registerProficiencies(tool.getProficiencies());
 //		data5e.registerLanguages(tool.getLanguages());
 //		data5e.registerAlignments(tool.getAlignments());
+//		data5e.registerEquipment(tool.getEquipment());
+//		Datapack.saveDatapack(file, data5e);
+		
+		
 		
 		System.out.println();
 	}

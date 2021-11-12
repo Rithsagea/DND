@@ -16,22 +16,26 @@ import com.rithsagea.dnd.api.data.DndItem;
 import com.rithsagea.dnd.api.data.Language;
 import com.rithsagea.dnd.api.data.Proficiency;
 import com.rithsagea.dnd.api.data.Skill;
+import com.rithsagea.dnd.api.data.equipment.Equipment;
 
 public class Datapack {
 	@SerializedName("ability_scores")
-	public HashMap<String, AbilityScore> AbilityScore;
+	public HashMap<String, AbilityScore> AbilityScore = new HashMap<>();
 	
 	@SerializedName("skills")
-	public HashMap<String, Skill> Skill;
+	public HashMap<String, Skill> Skill = new HashMap<>();
 	
 	@SerializedName("proficiencies")
-	public HashMap<String, Proficiency> Proficiency;
+	public HashMap<String, Proficiency> Proficiency = new HashMap<>();
 	
 	@SerializedName("languages")
-	public HashMap<String, Language> Language;
+	public HashMap<String, Language> Language = new HashMap<>();
 	
 	@SerializedName("alignments")
-	public HashMap<String, Alignment> Alignment;
+	public HashMap<String, Alignment> Alignment = new HashMap<>();
+	
+	@SerializedName("equipment")
+	public HashMap<String, Equipment> Equipment = new HashMap<>();
 	
 	private <T extends DndItem> void registerItems(HashMap<String, T> map, Collection<T> items) {
 		for(T item : items) {
@@ -60,12 +64,17 @@ public class Datapack {
 		registerItems(Alignment, items);
 	}
 	
+	public void registerEquipment(Collection<Equipment> items) {
+		registerItems(Equipment, items);
+	}
+	
 	public void registerDatapack(Datapack data) {
 		registerAbilityScores(data.AbilityScore.values());
 		registerSkills(data.Skill.values());
 		registerProficiencies(data.Proficiency.values());
 		registerLanguages(data.Language.values());
 		registerAlignments(data.Alignment.values());
+		registerEquipment(data.Equipment.values());
 	}
 	
 	private static final Gson gson = new GsonBuilder()

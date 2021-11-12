@@ -1,1 +1,4006 @@
-{"ability_scores":{"str":{"shortName":"STR","name":"Strength","description":"Strength measures bodily power, athletic training, and the extent to which you can exert raw physical force.","usageDescription":"A Strength check can model any attempt to lift, push, pull, or break something, to force your body through a space, or to otherwise apply brute force to a situation. The Athletics skill reflects aptitude in certain kinds of Strength checks.","id":"str"},"wis":{"shortName":"WIS","name":"Wisdom","description":"Wisdom reflects how attuned you are to the world around you and represents perceptiveness and intuition.","usageDescription":"A Wisdom check might reflect an effort to read body language, understand someone\u0027s feelings, notice things about the environment, or care for an injured person. The Animal Handling, Insight, Medicine, Perception, and Survival skills reflect aptitude in certain kinds of Wisdom checks.","id":"wis"},"con":{"shortName":"CON","name":"Constitution","description":"Constitution measures health, stamina, and vital force.","usageDescription":"Constitution checks are uncommon, and no skills apply to Constitution checks, because the endurance this ability represents is largely passive rather than involving a specific effort on the part of a character or monster.","id":"con"},"dex":{"shortName":"DEX","name":"Dexterity","description":"Dexterity measures agility, reflexes, and balance.","usageDescription":"A Dexterity check can model any attempt to move nimbly, quickly, or quietly, or to keep from falling on tricky footing. The Acrobatics, Sleight of Hand, and Stealth skills reflect aptitude in certain kinds of Dexterity checks.","id":"dex"},"cha":{"shortName":"CHA","name":"Charisma","description":"Charisma measures your ability to interact effectively with others. It includes such factors as confidence and eloquence, and it can represent a charming or commanding personality.","usageDescription":"A Charisma check might arise when you try to influence or entertain others, when you try to make an impression or tell a convincing lie, or when you are navigating a tricky social situation. The Deception, Intimidation, Performance, and Persuasion skills reflect aptitude in certain kinds of Charisma checks.","id":"cha"},"int":{"shortName":"INT","name":"Intelligence","description":"Intelligence measures mental acuity, accuracy of recall, and the ability to reason.","usageDescription":"An Intelligence check comes into play when you need to draw on logic, education, memory, or deductive reasoning. The Arcana, History, Investigation, Nature, and Religion skills reflect aptitude in certain kinds of Intelligence checks.","id":"int"}},"skills":{"sleight-of-hand":{"name":"Sleight of Hand","description":"Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an object on your person, make a Dexterity (Sleight of Hand) check. The GM might also call for a Dexterity (Sleight of Hand) check to determine whether you can lift a coin purse off another person or slip something out of another person\u0027s pocket.","abilityScore":"dex","id":"sleight-of-hand"},"nature":{"name":"Nature","description":"Your Intelligence (Nature) check measures your ability to recall lore about terrain, plants and animals, the weather, and natural cycles.","abilityScore":"int","id":"nature"},"survival":{"name":"Survival","description":"The GM might ask you to make a Wisdom (Survival) check to follow tracks, hunt wild game, guide your group through frozen wastelands, identify signs that owlbears live nearby, predict the weather, or avoid quicksand and other natural hazards.","abilityScore":"wis","id":"survival"},"medicine":{"name":"Medicine","description":"A Wisdom (Medicine) check lets you try to stabilize a dying companion or diagnose an illness.","abilityScore":"wis","id":"medicine"},"history":{"name":"History","description":"Your Intelligence (History) check measures your ability to recall lore about historical events, legendary people, ancient kingdoms, past disputes, recent wars, and lost civilizations.","abilityScore":"int","id":"history"},"animal-handling":{"name":"Animal Handling","description":"When there is any question whether you can calm down a domesticated animal, keep a mount from getting spooked, or intuit an animal\u0027s intentions, the GM might call for a Wisdom (Animal Handling) check. You also make a Wisdom (Animal Handling) check to control your mount when you attempt a risky maneuver.","abilityScore":"wis","id":"animal-handling"},"acrobatics":{"name":"Acrobatics","description":"Your Dexterity (Acrobatics) check covers your attempt to stay on your feet in a tricky situation, such as when you\u0027re trying to run across a sheet of ice, balance on a tightrope, or stay upright on a rocking ship\u0027s deck. The GM might also call for a Dexterity (Acrobatics) check to see if you can perform acrobatic stunts, including dives, rolls, somersaults, and flips.","abilityScore":"dex","id":"acrobatics"},"perception":{"name":"Perception","description":"Your Wisdom (Perception) check lets you spot, hear, or otherwise detect the presence of something. It measures your general awareness of your surroundings and the keenness of your senses. For example, you might try to hear a conversation through a closed door, eavesdrop under an open window, or hear monsters moving stealthily in the forest. Or you might try to spot things that are obscured or easy to miss, whether they are orcs lying in ambush on a road, thugs hiding in the shadows of an alley, or candlelight under a closed secret door.","abilityScore":"wis","id":"perception"},"religion":{"name":"Religion","description":"Your Intelligence (Religion) check measures your ability to recall lore about deities, rites and prayers, religious hierarchies, holy symbols, and the practices of secret cults.","abilityScore":"int","id":"religion"},"persuasion":{"name":"Persuasion","description":"When you attempt to influence someone or a group of people with tact, social graces, or good nature, the GM might ask you to make a Charisma (Persuasion) check. Typically, you use persuasion when acting in good faith, to foster friendships, make cordial requests, or exhibit proper etiquette. Examples of persuading others include convincing a chamberlain to let your party see the king, negotiating peace between warring tribes, or inspiring a crowd of townsfolk.","abilityScore":"cha","id":"persuasion"},"insight":{"name":"Insight","description":"Your Wisdom (Insight) check decides whether you can determine the true intentions of a creature, such as when searching out a lie or predicting someone\u0027s next move. Doing so involves gleaning clues from body language, speech habits, and changes in mannerisms.","abilityScore":"wis","id":"insight"},"performance":{"name":"Performance","description":"Your Charisma (Performance) check determines how well you can delight an audience with music, dance, acting, storytelling, or some other form of entertainment.","abilityScore":"cha","id":"performance"},"deception":{"name":"Deception","description":"Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This deception can encompass everything from misleading others through ambiguity to telling outright lies. Typical situations include trying to fast- talk a guard, con a merchant, earn money through gambling, pass yourself off in a disguise, dull someone\u0027s suspicions with false assurances, or maintain a straight face while telling a blatant lie.","abilityScore":"cha","id":"deception"},"stealth":{"name":"Stealth","description":"Make a Dexterity (Stealth) check when you attempt to conceal yourself from enemies, slink past guards, slip away without being noticed, or sneak up on someone without being seen or heard.","abilityScore":"dex","id":"stealth"},"arcana":{"name":"Arcana","description":"Your Intelligence (Arcana) check measures your ability to recall lore about spells, magic items, eldritch symbols, magical traditions, the planes of existence, and the inhabitants of those planes.","abilityScore":"int","id":"arcana"},"investigation":{"name":"Investigation","description":"When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You might deduce the location of a hidden object, discern from the appearance of a wound what kind of weapon dealt it, or determine the weakest point in a tunnel that could cause it to collapse. Poring through ancient scrolls in search of a hidden fragment of knowledge might also call for an Intelligence (Investigation) check.","abilityScore":"int","id":"investigation"},"athletics":{"name":"Athletics","description":"Your Strength (Athletics) check covers difficult situations you encounter while climbing, jumping, or swimming.","abilityScore":"str","id":"athletics"},"intimidation":{"name":"Intimidation","description":"When you attempt to influence someone through overt threats, hostile actions, and physical violence, the GM might ask you to make a Charisma (Intimidation) check. Examples include trying to pry information out of a prisoner, convincing street thugs to back down from a confrontation, or using the edge of a broken bottle to convince a sneering vizier to reconsider a decision.","abilityScore":"cha","id":"intimidation"}},"proficiencies":{"medium-armor":{"name":"Medium Armor","type":"Armor","id":"medium-armor"},"weavers-tools":{"name":"Weaver\u0027s Tools","type":"Artisan\u0027s Tools","id":"weavers-tools"},"longbows":{"name":"Longbows","type":"Weapons","id":"longbows"},"ring-mail":{"name":"Ring Mail","type":"Armor","id":"ring-mail"},"whips":{"name":"Whips","type":"Weapons","id":"whips"},"shawm":{"name":"Shawm","type":"Musical Instruments","id":"shawm"},"smiths-tools":{"name":"Smith\u0027s Tools","type":"Artisan\u0027s Tools","id":"smiths-tools"},"glassblowers-tools":{"name":"Glassblower\u0027s Tools","type":"Artisan\u0027s Tools","id":"glassblowers-tools"},"handaxes":{"name":"Handaxes","type":"Weapons","id":"handaxes"},"maces":{"name":"Maces","type":"Weapons","id":"maces"},"skill-athletics":{"name":"Skill: Athletics","type":"Skills","id":"skill-athletics"},"skill-persuasion":{"name":"Skill: Persuasion","type":"Skills","id":"skill-persuasion"},"chain-mail":{"name":"Chain Mail","type":"Armor","id":"chain-mail"},"calligraphers-supplies":{"name":"Calligrapher\u0027s Supplies","type":"Artisan\u0027s Tools","id":"calligraphers-supplies"},"carpenters-tools":{"name":"Carpenter\u0027s Tools","type":"Artisan\u0027s Tools","id":"carpenters-tools"},"warhammers":{"name":"Warhammers","type":"Weapons","id":"warhammers"},"skill-insight":{"name":"Skill: Insight","type":"Skills","id":"skill-insight"},"sickles":{"name":"Sickles","type":"Weapons","id":"sickles"},"padded-armor":{"name":"Padded Armor","type":"Armor","id":"padded-armor"},"chain-shirt":{"name":"Chain Shirt","type":"Armor","id":"chain-shirt"},"skill-medicine":{"name":"Skill: Medicine","type":"Skills","id":"skill-medicine"},"spears":{"name":"Spears","type":"Weapons","id":"spears"},"skill-religion":{"name":"Skill: Religion","type":"Skills","id":"skill-religion"},"skill-acrobatics":{"name":"Skill: Acrobatics","type":"Skills","id":"skill-acrobatics"},"simple-weapons":{"name":"Simple Weapons","type":"Weapons","id":"simple-weapons"},"pan-flute":{"name":"Pan flute","type":"Musical Instruments","id":"pan-flute"},"navigators-tools":{"name":"Navigator\u0027s Tools","type":"Other","id":"navigators-tools"},"halberds":{"name":"Halberds","type":"Weapons","id":"halberds"},"herbalism-kit":{"name":"Herbalism Kit","type":"Other","id":"herbalism-kit"},"masons-tools":{"name":"Mason\u0027s Tools","type":"Artisan\u0027s Tools","id":"masons-tools"},"shortbows":{"name":"Shortbows","type":"Weapons","id":"shortbows"},"splint-armor":{"name":"Splint Armor","type":"Armor","id":"splint-armor"},"saving-throw-str":{"name":"Saving Throw: STR","type":"Saving Throws","id":"saving-throw-str"},"tinkers-tools":{"name":"Tinker\u0027s Tools","type":"Artisan\u0027s Tools","id":"tinkers-tools"},"cobblers-tools":{"name":"Cobbler\u0027s Tools","type":"Artisan\u0027s Tools","id":"cobblers-tools"},"nets":{"name":"Nets","type":"Weapons","id":"nets"},"shortswords":{"name":"Shortswords","type":"Weapons","id":"shortswords"},"forgery-kit":{"name":"Forgery Kit","type":"Artisan\u0027s Tools","id":"forgery-kit"},"cooks-utensils":{"name":"Cook\u0027s utensils","type":"Artisan\u0027s Tools","id":"cooks-utensils"},"leather-armor":{"name":"Leather Armor","type":"Armor","id":"leather-armor"},"flails":{"name":"Flails","type":"Weapons","id":"flails"},"scimitars":{"name":"Scimitars","type":"Weapons","id":"scimitars"},"morningstars":{"name":"Morningstars","type":"Weapons","id":"morningstars"},"thieves-tools":{"name":"Thieves\u0027 Tools","type":"Other","id":"thieves-tools"},"alchemists-supplies":{"name":"Alchemist\u0027s Supplies","type":"Artisan\u0027s Tools","id":"alchemists-supplies"},"light-hammers":{"name":"Light hammers","type":"Weapons","id":"light-hammers"},"skill-survival":{"name":"Skill: Survival","type":"Skills","id":"skill-survival"},"skill-perception":{"name":"Skill: Perception","type":"Skills","id":"skill-perception"},"saving-throw-dex":{"name":"Saving Throw: DEX","type":"Saving Throws","id":"saving-throw-dex"},"all-armor":{"name":"All armor","type":"Armor","id":"all-armor"},"daggers":{"name":"Daggers","type":"Weapons","id":"daggers"},"heavy-armor":{"name":"Heavy Armor","type":"Armor","id":"heavy-armor"},"darts":{"name":"Darts","type":"Weapons","id":"darts"},"potters-tools":{"name":"Potter\u0027s Tools","type":"Artisan\u0027s Tools","id":"potters-tools"},"skill-history":{"name":"Skill: History","type":"Skills","id":"skill-history"},"war-picks":{"name":"War picks","type":"Weapons","id":"war-picks"},"saving-throw-int":{"name":"Saving Throw: INT","type":"Saving Throws","id":"saving-throw-int"},"skill-intimidation":{"name":"Skill: Intimidation","type":"Skills","id":"skill-intimidation"},"martial-weapons":{"name":"Martial Weapons","type":"Weapons","id":"martial-weapons"},"mauls":{"name":"Mauls","type":"Weapons","id":"mauls"},"dulcimer":{"name":"Dulcimer","type":"Musical Instruments","id":"dulcimer"},"greataxes":{"name":"Greataxes","type":"Weapons","id":"greataxes"},"lute":{"name":"Lute","type":"Musical Instruments","id":"lute"},"drum":{"name":"Drum","type":"Musical Instruments","id":"drum"},"light-armor":{"name":"Light Armor","type":"Armor","id":"light-armor"},"saving-throw-wis":{"name":"Saving Throw: WIS","type":"Saving Throws","id":"saving-throw-wis"},"brewers-supplies":{"name":"Brewer\u0027s Supplies","type":"Artisan\u0027s Tools","id":"brewers-supplies"},"rapiers":{"name":"Rapiers","type":"Weapons","id":"rapiers"},"longswords":{"name":"Longswords","type":"Weapons","id":"longswords"},"pikes":{"name":"Pikes","type":"Weapons","id":"pikes"},"playing-card-set":{"name":"Playing Card Set","type":"Gaming Sets","id":"playing-card-set"},"blowguns":{"name":"Blowguns","type":"Weapons","id":"blowguns"},"greatclubs":{"name":"Greatclubs","type":"Weapons","id":"greatclubs"},"breastplate":{"name":"Breastplate","type":"Armor","id":"breastplate"},"skill-animal-handling":{"name":"Skill: Animal Handling","type":"Skills","id":"skill-animal-handling"},"skill-performance":{"name":"Skill: Performance","type":"Skills","id":"skill-performance"},"crossbows-heavy":{"name":"Crossbows, heavy","type":"Weapons","id":"crossbows-heavy"},"quarterstaffs":{"name":"Quarterstaffs","type":"Weapons","id":"quarterstaffs"},"battleaxes":{"name":"Battleaxes","type":"Weapons","id":"battleaxes"},"lyre":{"name":"Lyre","type":"Musical Instruments","id":"lyre"},"horn":{"name":"Horn","type":"Musical Instruments","id":"horn"},"crossbows-light":{"name":"Crossbows, light","type":"Weapons","id":"crossbows-light"},"scale-mail":{"name":"Scale Mail","type":"Armor","id":"scale-mail"},"jewelers-tools":{"name":"Jeweler\u0027s Tools","type":"Artisan\u0027s Tools","id":"jewelers-tools"},"greatswords":{"name":"Greatswords","type":"Weapons","id":"greatswords"},"painters-supplies":{"name":"Painter\u0027s Supplies","type":"Artisan\u0027s Tools","id":"painters-supplies"},"poisoners-kit":{"name":"Poisoner\u0027s Kit","type":"Other","id":"poisoners-kit"},"javelins":{"name":"Javelins","type":"Weapons","id":"javelins"},"half-plate-armor":{"name":"Half Plate Armor","type":"Armor","id":"half-plate-armor"},"skill-nature":{"name":"Skill: Nature","type":"Skills","id":"skill-nature"},"glaives":{"name":"Glaives","type":"Weapons","id":"glaives"},"dice-set":{"name":"Dice Set","type":"Gaming Sets","id":"dice-set"},"skill-investigation":{"name":"Skill: Investigation","type":"Skills","id":"skill-investigation"},"land-vehicles":{"name":"Land Vehicles","type":"Vehicles","id":"land-vehicles"},"slings":{"name":"Slings","type":"Weapons","id":"slings"},"lances":{"name":"Lances","type":"Weapons","id":"lances"},"cartographers-tools":{"name":"Cartographer\u0027s Tools","type":"Artisan\u0027s Tools","id":"cartographers-tools"},"saving-throw-cha":{"name":"Saving Throw: CHA","type":"Saving Throws","id":"saving-throw-cha"},"clubs":{"name":"Clubs","type":"Weapons","id":"clubs"},"leatherworkers-tools":{"name":"Leatherworker\u0027s Tools","type":"Artisan\u0027s Tools","id":"leatherworkers-tools"},"plate-armor":{"name":"Plate Armor","type":"Armor","id":"plate-armor"},"viol":{"name":"Viol","type":"Musical Instruments","id":"viol"},"hand-crossbows":{"name":"Hand crossbows","type":"Weapons","id":"hand-crossbows"},"skill-deception":{"name":"Skill: Deception","type":"Skills","id":"skill-deception"},"skill-arcana":{"name":"Skill: Arcana","type":"Skills","id":"skill-arcana"},"studded-leather-armor":{"name":"Studded Leather Armor","type":"Armor","id":"studded-leather-armor"},"tridents":{"name":"Tridents","type":"Weapons","id":"tridents"},"flute":{"name":"Flute","type":"Musical Instruments","id":"flute"},"shields":{"name":"Shields","type":"Armor","id":"shields"},"bagpipes":{"name":"Bagpipes","type":"Musical Instruments","id":"bagpipes"},"skill-stealth":{"name":"Skill: Stealth","type":"Skills","id":"skill-stealth"},"skill-sleight-of-hand":{"name":"Skill: Sleight of Hand","type":"Skills","id":"skill-sleight-of-hand"},"disguise-kit":{"name":"Disguise Kit","type":"Artisan\u0027s Tools","id":"disguise-kit"},"hide-armor":{"name":"Hide Armor","type":"Armor","id":"hide-armor"},"saving-throw-con":{"name":"Saving Throw: CON","type":"Saving Throws","id":"saving-throw-con"},"water-vehicles":{"name":"Water Vehicles","type":"Vehicles","id":"water-vehicles"},"woodcarvers-tools":{"name":"Woodcarver\u0027s Tools","type":"Artisan\u0027s Tools","id":"woodcarvers-tools"}},"languages":{"draconic":{"name":"Draconic","script":"Draconic","id":"draconic"},"deep-speech":{"name":"Deep Speech","script":"None","id":"deep-speech"},"orc":{"name":"Orc","script":"Dwarvish","id":"orc"},"sylvan":{"name":"Sylvan","script":"Elvish","id":"sylvan"},"primordial":{"name":"Primordial","script":"Dwarvish","id":"primordial"},"undercommon":{"name":"Undercommon","script":"Elvish","id":"undercommon"},"celestial":{"name":"Celestial","script":"Celestial","id":"celestial"},"elvish":{"name":"Elvish","script":"Elvish","id":"elvish"},"infernal":{"name":"Infernal","script":"Infernal","id":"infernal"},"dwarvish":{"name":"Dwarvish","script":"Dwarvish","id":"dwarvish"},"common":{"name":"Common","script":"Common","id":"common"},"abyssal":{"name":"Abyssal","script":"Infernal","id":"abyssal"},"giant":{"name":"Giant","script":"Dwarvish","id":"giant"},"goblin":{"name":"Goblin","script":"Dwarvish","id":"goblin"},"halfling":{"name":"Halfling","script":"Common","id":"halfling"},"gnomish":{"name":"Gnomish","script":"Dwarvish","id":"gnomish"}},"alignments":{"neutral-evil":{"shortName":"NE","name":"Neutral Evil","description":"Neutral evil (NE) is the alignment of those who do whatever they can get away with, without compassion or qualms. Many drow, some cloud giants, and goblins are neutral evil.","id":"neutral-evil"},"chaotic-good":{"shortName":"CG","name":"Chaotic Good","description":"Chaotic good (CG) creatures act as their conscience directs, with little regard for what others expect. Copper dragons, many elves, and unicorns are chaotic good.","id":"chaotic-good"},"lawful-evil":{"shortName":"LE","name":"Lawful Evil","description":"Lawful evil (LE) creatures methodically take what they want, within the limits of a code of tradition, loyalty, or order. Devils, blue dragons, and hobgoblins are lawful evil.","id":"lawful-evil"},"neutral-good":{"shortName":"NG","name":"Neutral Good","description":"Neutral good (NG) folk do the best they can to help others according to their needs. Many celestials, some cloud giants, and most gnomes are neutral good.","id":"neutral-good"},"lawful-neutral":{"shortName":"LN","name":"Lawful Neutral","description":"Lawful neutral (LN) individuals act in accordance with law, tradition, or personal codes. Many monks and some wizards are lawful neutral.","id":"lawful-neutral"},"neutral":{"shortName":"N","name":"Neutral","description":"Neutral (N) is the alignment of those who prefer to steer clear of moral questions and don\u0027t take sides, doing what seems best at the time. Lizardfolk, most druids, and many humans are neutral.","id":"neutral"},"lawful-good":{"shortName":"LG","name":"Lawful Good","description":"Lawful good (LG) creatures can be counted on to do the right thing as expected by society. Gold dragons, paladins, and most dwarves are lawful good.","id":"lawful-good"},"chaotic-evil":{"shortName":"CE","name":"Chaotic Evil","description":"Chaotic evil (CE) creatures act with arbitrary violence, spurred by their greed, hatred, or bloodlust. Demons, red dragons, and orcs are chaotic evil.","id":"chaotic-evil"},"chaotic-neutral":{"shortName":"CN","name":"Chaotic Neutral","description":"Chaotic neutral (CN) creatures follow their whims, holding their personal freedom above all else. Many barbarians and rogues, and some bards, are chaotic neutral.","id":"chaotic-neutral"}}}
+{
+  "ability_scores" : {
+    "str" : {
+      "shortName" : "STR",
+      "name" : "Strength",
+      "description" : "Strength measures bodily power, athletic training, and the extent to which you can exert raw physical force.",
+      "usageDescription" : "A Strength check can model any attempt to lift, push, pull, or break something, to force your body through a space, or to otherwise apply brute force to a situation. The Athletics skill reflects aptitude in certain kinds of Strength checks.",
+      "id" : "str"
+    },
+    "wis" : {
+      "shortName" : "WIS",
+      "name" : "Wisdom",
+      "description" : "Wisdom reflects how attuned you are to the world around you and represents perceptiveness and intuition.",
+      "usageDescription" : "A Wisdom check might reflect an effort to read body language, understand someone's feelings, notice things about the environment, or care for an injured person. The Animal Handling, Insight, Medicine, Perception, and Survival skills reflect aptitude in certain kinds of Wisdom checks.",
+      "id" : "wis"
+    },
+    "con" : {
+      "shortName" : "CON",
+      "name" : "Constitution",
+      "description" : "Constitution measures health, stamina, and vital force.",
+      "usageDescription" : "Constitution checks are uncommon, and no skills apply to Constitution checks, because the endurance this ability represents is largely passive rather than involving a specific effort on the part of a character or monster.",
+      "id" : "con"
+    },
+    "dex" : {
+      "shortName" : "DEX",
+      "name" : "Dexterity",
+      "description" : "Dexterity measures agility, reflexes, and balance.",
+      "usageDescription" : "A Dexterity check can model any attempt to move nimbly, quickly, or quietly, or to keep from falling on tricky footing. The Acrobatics, Sleight of Hand, and Stealth skills reflect aptitude in certain kinds of Dexterity checks.",
+      "id" : "dex"
+    },
+    "cha" : {
+      "shortName" : "CHA",
+      "name" : "Charisma",
+      "description" : "Charisma measures your ability to interact effectively with others. It includes such factors as confidence and eloquence, and it can represent a charming or commanding personality.",
+      "usageDescription" : "A Charisma check might arise when you try to influence or entertain others, when you try to make an impression or tell a convincing lie, or when you are navigating a tricky social situation. The Deception, Intimidation, Performance, and Persuasion skills reflect aptitude in certain kinds of Charisma checks.",
+      "id" : "cha"
+    },
+    "int" : {
+      "shortName" : "INT",
+      "name" : "Intelligence",
+      "description" : "Intelligence measures mental acuity, accuracy of recall, and the ability to reason.",
+      "usageDescription" : "An Intelligence check comes into play when you need to draw on logic, education, memory, or deductive reasoning. The Arcana, History, Investigation, Nature, and Religion skills reflect aptitude in certain kinds of Intelligence checks.",
+      "id" : "int"
+    }
+  },
+  "skills" : {
+    "sleight-of-hand" : {
+      "name" : "Sleight of Hand",
+      "description" : "Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an object on your person, make a Dexterity (Sleight of Hand) check. The GM might also call for a Dexterity (Sleight of Hand) check to determine whether you can lift a coin purse off another person or slip something out of another person's pocket.",
+      "abilityScore" : "dex",
+      "id" : "sleight-of-hand"
+    },
+    "nature" : {
+      "name" : "Nature",
+      "description" : "Your Intelligence (Nature) check measures your ability to recall lore about terrain, plants and animals, the weather, and natural cycles.",
+      "abilityScore" : "int",
+      "id" : "nature"
+    },
+    "survival" : {
+      "name" : "Survival",
+      "description" : "The GM might ask you to make a Wisdom (Survival) check to follow tracks, hunt wild game, guide your group through frozen wastelands, identify signs that owlbears live nearby, predict the weather, or avoid quicksand and other natural hazards.",
+      "abilityScore" : "wis",
+      "id" : "survival"
+    },
+    "medicine" : {
+      "name" : "Medicine",
+      "description" : "A Wisdom (Medicine) check lets you try to stabilize a dying companion or diagnose an illness.",
+      "abilityScore" : "wis",
+      "id" : "medicine"
+    },
+    "history" : {
+      "name" : "History",
+      "description" : "Your Intelligence (History) check measures your ability to recall lore about historical events, legendary people, ancient kingdoms, past disputes, recent wars, and lost civilizations.",
+      "abilityScore" : "int",
+      "id" : "history"
+    },
+    "animal-handling" : {
+      "name" : "Animal Handling",
+      "description" : "When there is any question whether you can calm down a domesticated animal, keep a mount from getting spooked, or intuit an animal's intentions, the GM might call for a Wisdom (Animal Handling) check. You also make a Wisdom (Animal Handling) check to control your mount when you attempt a risky maneuver.",
+      "abilityScore" : "wis",
+      "id" : "animal-handling"
+    },
+    "acrobatics" : {
+      "name" : "Acrobatics",
+      "description" : "Your Dexterity (Acrobatics) check covers your attempt to stay on your feet in a tricky situation, such as when you're trying to run across a sheet of ice, balance on a tightrope, or stay upright on a rocking ship's deck. The GM might also call for a Dexterity (Acrobatics) check to see if you can perform acrobatic stunts, including dives, rolls, somersaults, and flips.",
+      "abilityScore" : "dex",
+      "id" : "acrobatics"
+    },
+    "perception" : {
+      "name" : "Perception",
+      "description" : "Your Wisdom (Perception) check lets you spot, hear, or otherwise detect the presence of something. It measures your general awareness of your surroundings and the keenness of your senses. For example, you might try to hear a conversation through a closed door, eavesdrop under an open window, or hear monsters moving stealthily in the forest. Or you might try to spot things that are obscured or easy to miss, whether they are orcs lying in ambush on a road, thugs hiding in the shadows of an alley, or candlelight under a closed secret door.",
+      "abilityScore" : "wis",
+      "id" : "perception"
+    },
+    "religion" : {
+      "name" : "Religion",
+      "description" : "Your Intelligence (Religion) check measures your ability to recall lore about deities, rites and prayers, religious hierarchies, holy symbols, and the practices of secret cults.",
+      "abilityScore" : "int",
+      "id" : "religion"
+    },
+    "persuasion" : {
+      "name" : "Persuasion",
+      "description" : "When you attempt to influence someone or a group of people with tact, social graces, or good nature, the GM might ask you to make a Charisma (Persuasion) check. Typically, you use persuasion when acting in good faith, to foster friendships, make cordial requests, or exhibit proper etiquette. Examples of persuading others include convincing a chamberlain to let your party see the king, negotiating peace between warring tribes, or inspiring a crowd of townsfolk.",
+      "abilityScore" : "cha",
+      "id" : "persuasion"
+    },
+    "insight" : {
+      "name" : "Insight",
+      "description" : "Your Wisdom (Insight) check decides whether you can determine the true intentions of a creature, such as when searching out a lie or predicting someone's next move. Doing so involves gleaning clues from body language, speech habits, and changes in mannerisms.",
+      "abilityScore" : "wis",
+      "id" : "insight"
+    },
+    "performance" : {
+      "name" : "Performance",
+      "description" : "Your Charisma (Performance) check determines how well you can delight an audience with music, dance, acting, storytelling, or some other form of entertainment.",
+      "abilityScore" : "cha",
+      "id" : "performance"
+    },
+    "deception" : {
+      "name" : "Deception",
+      "description" : "Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This deception can encompass everything from misleading others through ambiguity to telling outright lies. Typical situations include trying to fast- talk a guard, con a merchant, earn money through gambling, pass yourself off in a disguise, dull someone's suspicions with false assurances, or maintain a straight face while telling a blatant lie.",
+      "abilityScore" : "cha",
+      "id" : "deception"
+    },
+    "stealth" : {
+      "name" : "Stealth",
+      "description" : "Make a Dexterity (Stealth) check when you attempt to conceal yourself from enemies, slink past guards, slip away without being noticed, or sneak up on someone without being seen or heard.",
+      "abilityScore" : "dex",
+      "id" : "stealth"
+    },
+    "arcana" : {
+      "name" : "Arcana",
+      "description" : "Your Intelligence (Arcana) check measures your ability to recall lore about spells, magic items, eldritch symbols, magical traditions, the planes of existence, and the inhabitants of those planes.",
+      "abilityScore" : "int",
+      "id" : "arcana"
+    },
+    "investigation" : {
+      "name" : "Investigation",
+      "description" : "When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You might deduce the location of a hidden object, discern from the appearance of a wound what kind of weapon dealt it, or determine the weakest point in a tunnel that could cause it to collapse. Poring through ancient scrolls in search of a hidden fragment of knowledge might also call for an Intelligence (Investigation) check.",
+      "abilityScore" : "int",
+      "id" : "investigation"
+    },
+    "athletics" : {
+      "name" : "Athletics",
+      "description" : "Your Strength (Athletics) check covers difficult situations you encounter while climbing, jumping, or swimming.",
+      "abilityScore" : "str",
+      "id" : "athletics"
+    },
+    "intimidation" : {
+      "name" : "Intimidation",
+      "description" : "When you attempt to influence someone through overt threats, hostile actions, and physical violence, the GM might ask you to make a Charisma (Intimidation) check. Examples include trying to pry information out of a prisoner, convincing street thugs to back down from a confrontation, or using the edge of a broken bottle to convince a sneering vizier to reconsider a decision.",
+      "abilityScore" : "cha",
+      "id" : "intimidation"
+    }
+  },
+  "proficiencies" : {
+    "medium-armor" : {
+      "name" : "Medium Armor",
+      "type" : "Armor",
+      "id" : "medium-armor"
+    },
+    "weavers-tools" : {
+      "name" : "Weaver's Tools",
+      "type" : "Artisan's Tools",
+      "id" : "weavers-tools"
+    },
+    "longbows" : {
+      "name" : "Longbows",
+      "type" : "Weapons",
+      "id" : "longbows"
+    },
+    "ring-mail" : {
+      "name" : "Ring Mail",
+      "type" : "Armor",
+      "id" : "ring-mail"
+    },
+    "whips" : {
+      "name" : "Whips",
+      "type" : "Weapons",
+      "id" : "whips"
+    },
+    "shawm" : {
+      "name" : "Shawm",
+      "type" : "Musical Instruments",
+      "id" : "shawm"
+    },
+    "smiths-tools" : {
+      "name" : "Smith's Tools",
+      "type" : "Artisan's Tools",
+      "id" : "smiths-tools"
+    },
+    "glassblowers-tools" : {
+      "name" : "Glassblower's Tools",
+      "type" : "Artisan's Tools",
+      "id" : "glassblowers-tools"
+    },
+    "handaxes" : {
+      "name" : "Handaxes",
+      "type" : "Weapons",
+      "id" : "handaxes"
+    },
+    "maces" : {
+      "name" : "Maces",
+      "type" : "Weapons",
+      "id" : "maces"
+    },
+    "skill-athletics" : {
+      "name" : "Skill: Athletics",
+      "type" : "Skills",
+      "id" : "skill-athletics"
+    },
+    "skill-persuasion" : {
+      "name" : "Skill: Persuasion",
+      "type" : "Skills",
+      "id" : "skill-persuasion"
+    },
+    "chain-mail" : {
+      "name" : "Chain Mail",
+      "type" : "Armor",
+      "id" : "chain-mail"
+    },
+    "calligraphers-supplies" : {
+      "name" : "Calligrapher's Supplies",
+      "type" : "Artisan's Tools",
+      "id" : "calligraphers-supplies"
+    },
+    "carpenters-tools" : {
+      "name" : "Carpenter's Tools",
+      "type" : "Artisan's Tools",
+      "id" : "carpenters-tools"
+    },
+    "warhammers" : {
+      "name" : "Warhammers",
+      "type" : "Weapons",
+      "id" : "warhammers"
+    },
+    "skill-insight" : {
+      "name" : "Skill: Insight",
+      "type" : "Skills",
+      "id" : "skill-insight"
+    },
+    "sickles" : {
+      "name" : "Sickles",
+      "type" : "Weapons",
+      "id" : "sickles"
+    },
+    "padded-armor" : {
+      "name" : "Padded Armor",
+      "type" : "Armor",
+      "id" : "padded-armor"
+    },
+    "chain-shirt" : {
+      "name" : "Chain Shirt",
+      "type" : "Armor",
+      "id" : "chain-shirt"
+    },
+    "skill-medicine" : {
+      "name" : "Skill: Medicine",
+      "type" : "Skills",
+      "id" : "skill-medicine"
+    },
+    "spears" : {
+      "name" : "Spears",
+      "type" : "Weapons",
+      "id" : "spears"
+    },
+    "skill-religion" : {
+      "name" : "Skill: Religion",
+      "type" : "Skills",
+      "id" : "skill-religion"
+    },
+    "skill-acrobatics" : {
+      "name" : "Skill: Acrobatics",
+      "type" : "Skills",
+      "id" : "skill-acrobatics"
+    },
+    "simple-weapons" : {
+      "name" : "Simple Weapons",
+      "type" : "Weapons",
+      "id" : "simple-weapons"
+    },
+    "pan-flute" : {
+      "name" : "Pan flute",
+      "type" : "Musical Instruments",
+      "id" : "pan-flute"
+    },
+    "navigators-tools" : {
+      "name" : "Navigator's Tools",
+      "type" : "Other",
+      "id" : "navigators-tools"
+    },
+    "halberds" : {
+      "name" : "Halberds",
+      "type" : "Weapons",
+      "id" : "halberds"
+    },
+    "herbalism-kit" : {
+      "name" : "Herbalism Kit",
+      "type" : "Other",
+      "id" : "herbalism-kit"
+    },
+    "masons-tools" : {
+      "name" : "Mason's Tools",
+      "type" : "Artisan's Tools",
+      "id" : "masons-tools"
+    },
+    "shortbows" : {
+      "name" : "Shortbows",
+      "type" : "Weapons",
+      "id" : "shortbows"
+    },
+    "splint-armor" : {
+      "name" : "Splint Armor",
+      "type" : "Armor",
+      "id" : "splint-armor"
+    },
+    "saving-throw-str" : {
+      "name" : "Saving Throw: STR",
+      "type" : "Saving Throws",
+      "id" : "saving-throw-str"
+    },
+    "tinkers-tools" : {
+      "name" : "Tinker's Tools",
+      "type" : "Artisan's Tools",
+      "id" : "tinkers-tools"
+    },
+    "cobblers-tools" : {
+      "name" : "Cobbler's Tools",
+      "type" : "Artisan's Tools",
+      "id" : "cobblers-tools"
+    },
+    "nets" : {
+      "name" : "Nets",
+      "type" : "Weapons",
+      "id" : "nets"
+    },
+    "shortswords" : {
+      "name" : "Shortswords",
+      "type" : "Weapons",
+      "id" : "shortswords"
+    },
+    "forgery-kit" : {
+      "name" : "Forgery Kit",
+      "type" : "Artisan's Tools",
+      "id" : "forgery-kit"
+    },
+    "cooks-utensils" : {
+      "name" : "Cook's utensils",
+      "type" : "Artisan's Tools",
+      "id" : "cooks-utensils"
+    },
+    "leather-armor" : {
+      "name" : "Leather Armor",
+      "type" : "Armor",
+      "id" : "leather-armor"
+    },
+    "flails" : {
+      "name" : "Flails",
+      "type" : "Weapons",
+      "id" : "flails"
+    },
+    "scimitars" : {
+      "name" : "Scimitars",
+      "type" : "Weapons",
+      "id" : "scimitars"
+    },
+    "morningstars" : {
+      "name" : "Morningstars",
+      "type" : "Weapons",
+      "id" : "morningstars"
+    },
+    "thieves-tools" : {
+      "name" : "Thieves' Tools",
+      "type" : "Other",
+      "id" : "thieves-tools"
+    },
+    "alchemists-supplies" : {
+      "name" : "Alchemist's Supplies",
+      "type" : "Artisan's Tools",
+      "id" : "alchemists-supplies"
+    },
+    "light-hammers" : {
+      "name" : "Light hammers",
+      "type" : "Weapons",
+      "id" : "light-hammers"
+    },
+    "skill-survival" : {
+      "name" : "Skill: Survival",
+      "type" : "Skills",
+      "id" : "skill-survival"
+    },
+    "skill-perception" : {
+      "name" : "Skill: Perception",
+      "type" : "Skills",
+      "id" : "skill-perception"
+    },
+    "saving-throw-dex" : {
+      "name" : "Saving Throw: DEX",
+      "type" : "Saving Throws",
+      "id" : "saving-throw-dex"
+    },
+    "all-armor" : {
+      "name" : "All armor",
+      "type" : "Armor",
+      "id" : "all-armor"
+    },
+    "daggers" : {
+      "name" : "Daggers",
+      "type" : "Weapons",
+      "id" : "daggers"
+    },
+    "heavy-armor" : {
+      "name" : "Heavy Armor",
+      "type" : "Armor",
+      "id" : "heavy-armor"
+    },
+    "darts" : {
+      "name" : "Darts",
+      "type" : "Weapons",
+      "id" : "darts"
+    },
+    "potters-tools" : {
+      "name" : "Potter's Tools",
+      "type" : "Artisan's Tools",
+      "id" : "potters-tools"
+    },
+    "skill-history" : {
+      "name" : "Skill: History",
+      "type" : "Skills",
+      "id" : "skill-history"
+    },
+    "war-picks" : {
+      "name" : "War picks",
+      "type" : "Weapons",
+      "id" : "war-picks"
+    },
+    "saving-throw-int" : {
+      "name" : "Saving Throw: INT",
+      "type" : "Saving Throws",
+      "id" : "saving-throw-int"
+    },
+    "skill-intimidation" : {
+      "name" : "Skill: Intimidation",
+      "type" : "Skills",
+      "id" : "skill-intimidation"
+    },
+    "martial-weapons" : {
+      "name" : "Martial Weapons",
+      "type" : "Weapons",
+      "id" : "martial-weapons"
+    },
+    "mauls" : {
+      "name" : "Mauls",
+      "type" : "Weapons",
+      "id" : "mauls"
+    },
+    "dulcimer" : {
+      "name" : "Dulcimer",
+      "type" : "Musical Instruments",
+      "id" : "dulcimer"
+    },
+    "greataxes" : {
+      "name" : "Greataxes",
+      "type" : "Weapons",
+      "id" : "greataxes"
+    },
+    "lute" : {
+      "name" : "Lute",
+      "type" : "Musical Instruments",
+      "id" : "lute"
+    },
+    "drum" : {
+      "name" : "Drum",
+      "type" : "Musical Instruments",
+      "id" : "drum"
+    },
+    "light-armor" : {
+      "name" : "Light Armor",
+      "type" : "Armor",
+      "id" : "light-armor"
+    },
+    "saving-throw-wis" : {
+      "name" : "Saving Throw: WIS",
+      "type" : "Saving Throws",
+      "id" : "saving-throw-wis"
+    },
+    "brewers-supplies" : {
+      "name" : "Brewer's Supplies",
+      "type" : "Artisan's Tools",
+      "id" : "brewers-supplies"
+    },
+    "rapiers" : {
+      "name" : "Rapiers",
+      "type" : "Weapons",
+      "id" : "rapiers"
+    },
+    "longswords" : {
+      "name" : "Longswords",
+      "type" : "Weapons",
+      "id" : "longswords"
+    },
+    "pikes" : {
+      "name" : "Pikes",
+      "type" : "Weapons",
+      "id" : "pikes"
+    },
+    "playing-card-set" : {
+      "name" : "Playing Card Set",
+      "type" : "Gaming Sets",
+      "id" : "playing-card-set"
+    },
+    "blowguns" : {
+      "name" : "Blowguns",
+      "type" : "Weapons",
+      "id" : "blowguns"
+    },
+    "greatclubs" : {
+      "name" : "Greatclubs",
+      "type" : "Weapons",
+      "id" : "greatclubs"
+    },
+    "breastplate" : {
+      "name" : "Breastplate",
+      "type" : "Armor",
+      "id" : "breastplate"
+    },
+    "skill-animal-handling" : {
+      "name" : "Skill: Animal Handling",
+      "type" : "Skills",
+      "id" : "skill-animal-handling"
+    },
+    "skill-performance" : {
+      "name" : "Skill: Performance",
+      "type" : "Skills",
+      "id" : "skill-performance"
+    },
+    "crossbows-heavy" : {
+      "name" : "Crossbows, heavy",
+      "type" : "Weapons",
+      "id" : "crossbows-heavy"
+    },
+    "quarterstaffs" : {
+      "name" : "Quarterstaffs",
+      "type" : "Weapons",
+      "id" : "quarterstaffs"
+    },
+    "battleaxes" : {
+      "name" : "Battleaxes",
+      "type" : "Weapons",
+      "id" : "battleaxes"
+    },
+    "lyre" : {
+      "name" : "Lyre",
+      "type" : "Musical Instruments",
+      "id" : "lyre"
+    },
+    "horn" : {
+      "name" : "Horn",
+      "type" : "Musical Instruments",
+      "id" : "horn"
+    },
+    "crossbows-light" : {
+      "name" : "Crossbows, light",
+      "type" : "Weapons",
+      "id" : "crossbows-light"
+    },
+    "scale-mail" : {
+      "name" : "Scale Mail",
+      "type" : "Armor",
+      "id" : "scale-mail"
+    },
+    "jewelers-tools" : {
+      "name" : "Jeweler's Tools",
+      "type" : "Artisan's Tools",
+      "id" : "jewelers-tools"
+    },
+    "greatswords" : {
+      "name" : "Greatswords",
+      "type" : "Weapons",
+      "id" : "greatswords"
+    },
+    "painters-supplies" : {
+      "name" : "Painter's Supplies",
+      "type" : "Artisan's Tools",
+      "id" : "painters-supplies"
+    },
+    "poisoners-kit" : {
+      "name" : "Poisoner's Kit",
+      "type" : "Other",
+      "id" : "poisoners-kit"
+    },
+    "javelins" : {
+      "name" : "Javelins",
+      "type" : "Weapons",
+      "id" : "javelins"
+    },
+    "half-plate-armor" : {
+      "name" : "Half Plate Armor",
+      "type" : "Armor",
+      "id" : "half-plate-armor"
+    },
+    "skill-nature" : {
+      "name" : "Skill: Nature",
+      "type" : "Skills",
+      "id" : "skill-nature"
+    },
+    "glaives" : {
+      "name" : "Glaives",
+      "type" : "Weapons",
+      "id" : "glaives"
+    },
+    "dice-set" : {
+      "name" : "Dice Set",
+      "type" : "Gaming Sets",
+      "id" : "dice-set"
+    },
+    "skill-investigation" : {
+      "name" : "Skill: Investigation",
+      "type" : "Skills",
+      "id" : "skill-investigation"
+    },
+    "land-vehicles" : {
+      "name" : "Land Vehicles",
+      "type" : "Vehicles",
+      "id" : "land-vehicles"
+    },
+    "slings" : {
+      "name" : "Slings",
+      "type" : "Weapons",
+      "id" : "slings"
+    },
+    "lances" : {
+      "name" : "Lances",
+      "type" : "Weapons",
+      "id" : "lances"
+    },
+    "cartographers-tools" : {
+      "name" : "Cartographer's Tools",
+      "type" : "Artisan's Tools",
+      "id" : "cartographers-tools"
+    },
+    "saving-throw-cha" : {
+      "name" : "Saving Throw: CHA",
+      "type" : "Saving Throws",
+      "id" : "saving-throw-cha"
+    },
+    "clubs" : {
+      "name" : "Clubs",
+      "type" : "Weapons",
+      "id" : "clubs"
+    },
+    "leatherworkers-tools" : {
+      "name" : "Leatherworker's Tools",
+      "type" : "Artisan's Tools",
+      "id" : "leatherworkers-tools"
+    },
+    "plate-armor" : {
+      "name" : "Plate Armor",
+      "type" : "Armor",
+      "id" : "plate-armor"
+    },
+    "viol" : {
+      "name" : "Viol",
+      "type" : "Musical Instruments",
+      "id" : "viol"
+    },
+    "hand-crossbows" : {
+      "name" : "Hand crossbows",
+      "type" : "Weapons",
+      "id" : "hand-crossbows"
+    },
+    "skill-deception" : {
+      "name" : "Skill: Deception",
+      "type" : "Skills",
+      "id" : "skill-deception"
+    },
+    "skill-arcana" : {
+      "name" : "Skill: Arcana",
+      "type" : "Skills",
+      "id" : "skill-arcana"
+    },
+    "studded-leather-armor" : {
+      "name" : "Studded Leather Armor",
+      "type" : "Armor",
+      "id" : "studded-leather-armor"
+    },
+    "tridents" : {
+      "name" : "Tridents",
+      "type" : "Weapons",
+      "id" : "tridents"
+    },
+    "flute" : {
+      "name" : "Flute",
+      "type" : "Musical Instruments",
+      "id" : "flute"
+    },
+    "shields" : {
+      "name" : "Shields",
+      "type" : "Armor",
+      "id" : "shields"
+    },
+    "bagpipes" : {
+      "name" : "Bagpipes",
+      "type" : "Musical Instruments",
+      "id" : "bagpipes"
+    },
+    "skill-stealth" : {
+      "name" : "Skill: Stealth",
+      "type" : "Skills",
+      "id" : "skill-stealth"
+    },
+    "skill-sleight-of-hand" : {
+      "name" : "Skill: Sleight of Hand",
+      "type" : "Skills",
+      "id" : "skill-sleight-of-hand"
+    },
+    "disguise-kit" : {
+      "name" : "Disguise Kit",
+      "type" : "Artisan's Tools",
+      "id" : "disguise-kit"
+    },
+    "hide-armor" : {
+      "name" : "Hide Armor",
+      "type" : "Armor",
+      "id" : "hide-armor"
+    },
+    "saving-throw-con" : {
+      "name" : "Saving Throw: CON",
+      "type" : "Saving Throws",
+      "id" : "saving-throw-con"
+    },
+    "water-vehicles" : {
+      "name" : "Water Vehicles",
+      "type" : "Vehicles",
+      "id" : "water-vehicles"
+    },
+    "woodcarvers-tools" : {
+      "name" : "Woodcarver's Tools",
+      "type" : "Artisan's Tools",
+      "id" : "woodcarvers-tools"
+    }
+  },
+  "languages" : {
+    "draconic" : {
+      "name" : "Draconic",
+      "script" : "Draconic",
+      "id" : "draconic"
+    },
+    "deep-speech" : {
+      "name" : "Deep Speech",
+      "script" : "None",
+      "id" : "deep-speech"
+    },
+    "orc" : {
+      "name" : "Orc",
+      "script" : "Dwarvish",
+      "id" : "orc"
+    },
+    "sylvan" : {
+      "name" : "Sylvan",
+      "script" : "Elvish",
+      "id" : "sylvan"
+    },
+    "primordial" : {
+      "name" : "Primordial",
+      "script" : "Dwarvish",
+      "id" : "primordial"
+    },
+    "undercommon" : {
+      "name" : "Undercommon",
+      "script" : "Elvish",
+      "id" : "undercommon"
+    },
+    "celestial" : {
+      "name" : "Celestial",
+      "script" : "Celestial",
+      "id" : "celestial"
+    },
+    "elvish" : {
+      "name" : "Elvish",
+      "script" : "Elvish",
+      "id" : "elvish"
+    },
+    "infernal" : {
+      "name" : "Infernal",
+      "script" : "Infernal",
+      "id" : "infernal"
+    },
+    "dwarvish" : {
+      "name" : "Dwarvish",
+      "script" : "Dwarvish",
+      "id" : "dwarvish"
+    },
+    "common" : {
+      "name" : "Common",
+      "script" : "Common",
+      "id" : "common"
+    },
+    "abyssal" : {
+      "name" : "Abyssal",
+      "script" : "Infernal",
+      "id" : "abyssal"
+    },
+    "giant" : {
+      "name" : "Giant",
+      "script" : "Dwarvish",
+      "id" : "giant"
+    },
+    "goblin" : {
+      "name" : "Goblin",
+      "script" : "Dwarvish",
+      "id" : "goblin"
+    },
+    "halfling" : {
+      "name" : "Halfling",
+      "script" : "Common",
+      "id" : "halfling"
+    },
+    "gnomish" : {
+      "name" : "Gnomish",
+      "script" : "Dwarvish",
+      "id" : "gnomish"
+    }
+  },
+  "alignments" : {
+    "neutral-evil" : {
+      "shortName" : "NE",
+      "name" : "Neutral Evil",
+      "description" : "Neutral evil (NE) is the alignment of those who do whatever they can get away with, without compassion or qualms. Many drow, some cloud giants, and goblins are neutral evil.",
+      "id" : "neutral-evil"
+    },
+    "chaotic-good" : {
+      "shortName" : "CG",
+      "name" : "Chaotic Good",
+      "description" : "Chaotic good (CG) creatures act as their conscience directs, with little regard for what others expect. Copper dragons, many elves, and unicorns are chaotic good.",
+      "id" : "chaotic-good"
+    },
+    "lawful-evil" : {
+      "shortName" : "LE",
+      "name" : "Lawful Evil",
+      "description" : "Lawful evil (LE) creatures methodically take what they want, within the limits of a code of tradition, loyalty, or order. Devils, blue dragons, and hobgoblins are lawful evil.",
+      "id" : "lawful-evil"
+    },
+    "neutral-good" : {
+      "shortName" : "NG",
+      "name" : "Neutral Good",
+      "description" : "Neutral good (NG) folk do the best they can to help others according to their needs. Many celestials, some cloud giants, and most gnomes are neutral good.",
+      "id" : "neutral-good"
+    },
+    "lawful-neutral" : {
+      "shortName" : "LN",
+      "name" : "Lawful Neutral",
+      "description" : "Lawful neutral (LN) individuals act in accordance with law, tradition, or personal codes. Many monks and some wizards are lawful neutral.",
+      "id" : "lawful-neutral"
+    },
+    "neutral" : {
+      "shortName" : "N",
+      "name" : "Neutral",
+      "description" : "Neutral (N) is the alignment of those who prefer to steer clear of moral questions and don't take sides, doing what seems best at the time. Lizardfolk, most druids, and many humans are neutral.",
+      "id" : "neutral"
+    },
+    "lawful-good" : {
+      "shortName" : "LG",
+      "name" : "Lawful Good",
+      "description" : "Lawful good (LG) creatures can be counted on to do the right thing as expected by society. Gold dragons, paladins, and most dwarves are lawful good.",
+      "id" : "lawful-good"
+    },
+    "chaotic-evil" : {
+      "shortName" : "CE",
+      "name" : "Chaotic Evil",
+      "description" : "Chaotic evil (CE) creatures act with arbitrary violence, spurred by their greed, hatred, or bloodlust. Demons, red dragons, and orcs are chaotic evil.",
+      "id" : "chaotic-evil"
+    },
+    "chaotic-neutral" : {
+      "shortName" : "CN",
+      "name" : "Chaotic Neutral",
+      "description" : "Chaotic neutral (CN) creatures follow their whims, holding their personal freedom above all else. Many barbarians and rogues, and some bards, are chaotic neutral.",
+      "id" : "chaotic-neutral"
+    }
+  },
+  "equipment" : {
+    "weavers-tools" : {
+      "toolCategory" : "Artisan's Tools",
+      "name" : "Weaver's Tools",
+      "category" : "tools",
+      "description" : "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.",
+      "weight" : 5,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1
+      },
+      "id" : "weavers-tools"
+    },
+    "warhammer" : {
+      "weaponCategory" : "Martial",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Martial Melee",
+      "damageDice" : "1d8",
+      "damageType" : "bludgeoning",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "versatile" ],
+      "name" : "Warhammer",
+      "category" : "weapon",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 15
+      },
+      "id" : "warhammer"
+    },
+    "ring-mail" : {
+      "armorCategory" : "armor",
+      "armorClass" : 14,
+      "dexBonus" : false,
+      "maxBonus" : 0,
+      "minStrength" : 0,
+      "stealthDisadvantage" : true,
+      "name" : "Ring Mail",
+      "category" : "armor",
+      "weight" : 40,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 30
+      },
+      "id" : "ring-mail"
+    },
+    "greatsword" : {
+      "weaponCategory" : "Martial",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Martial Melee",
+      "damageDice" : "2d6",
+      "damageType" : "slashing",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "heavy", "two-handed" ],
+      "name" : "Greatsword",
+      "category" : "weapon",
+      "weight" : 6,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 50
+      },
+      "id" : "greatsword"
+    },
+    "shawm" : {
+      "toolCategory" : "Musical Instrument",
+      "name" : "Shawm",
+      "category" : "tools",
+      "description" : "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 2
+      },
+      "id" : "shawm"
+    },
+    "glassblowers-tools" : {
+      "toolCategory" : "Artisan's Tools",
+      "name" : "Glassblower's Tools",
+      "category" : "tools",
+      "description" : "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.",
+      "weight" : 5,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 30
+      },
+      "id" : "glassblowers-tools"
+    },
+    "amulet" : {
+      "gearCategory" : "holy-symbols",
+      "name" : "Amulet",
+      "category" : "adventuring-gear",
+      "description" : "A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same symbol carefully engraved or inlaid as an emblem on a shield, or a tiny box holding a fragment of a sacred relic.\nAppendix B lists the symbols commonly associated with many gods in the multiverse. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield.",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "amulet"
+    },
+    "component-pouch" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Component pouch",
+      "category" : "adventuring-gear",
+      "description" : " A component pouch is a small, watertight leather belt pouch that has compartments to hold all the material components and other special items you need to cast your spells, except for those components that have a specific cost (as indicated in a spell's description).",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 25
+      },
+      "id" : "component-pouch"
+    },
+    "chain-mail" : {
+      "armorCategory" : "armor",
+      "armorClass" : 16,
+      "dexBonus" : false,
+      "maxBonus" : 0,
+      "minStrength" : 13,
+      "stealthDisadvantage" : true,
+      "name" : "Chain Mail",
+      "category" : "armor",
+      "weight" : 55,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 75
+      },
+      "id" : "chain-mail"
+    },
+    "hourglass" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Hourglass",
+      "category" : "adventuring-gear",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 25
+      },
+      "id" : "hourglass"
+    },
+    "calligraphers-supplies" : {
+      "toolCategory" : "Artisan's Tools",
+      "name" : "Calligrapher's Supplies",
+      "category" : "tools",
+      "description" : "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.",
+      "weight" : 5,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10
+      },
+      "id" : "calligraphers-supplies"
+    },
+    "clothes-fine" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Clothes, fine",
+      "category" : "adventuring-gear",
+      "weight" : 6,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 15
+      },
+      "id" : "clothes-fine"
+    },
+    "mirror-steel" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Mirror, steel",
+      "category" : "adventuring-gear",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "mirror-steel"
+    },
+    "warship" : {
+      "vehicleCategory" : "Waterborne Vehicles",
+      "name" : "Warship",
+      "category" : "mounts-and-vehicles",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 25000
+      },
+      "id" : "warship"
+    },
+    "diplomats-pack" : {
+      "contents" : [ ],
+      "gearCategory" : "equipment-packs",
+      "name" : "Diplomat's Pack",
+      "category" : "adventuring-gear",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 39
+      },
+      "id" : "diplomats-pack"
+    },
+    "padded-armor" : {
+      "armorCategory" : "armor",
+      "armorClass" : 11,
+      "dexBonus" : true,
+      "maxBonus" : 0,
+      "minStrength" : 0,
+      "stealthDisadvantage" : true,
+      "name" : "Padded Armor",
+      "category" : "armor",
+      "weight" : 8,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "padded-armor"
+    },
+    "saddle-riding" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Saddle, Riding",
+      "category" : "mounts-and-vehicles",
+      "weight" : 25,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10
+      },
+      "id" : "saddle-riding"
+    },
+    "censer" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Censer",
+      "category" : "adventuring-gear",
+      "description" : "A censer, typically found in a priest's pack.",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 0
+      },
+      "id" : "censer"
+    },
+    "chain-shirt" : {
+      "armorCategory" : "armor",
+      "armorClass" : 13,
+      "dexBonus" : true,
+      "maxBonus" : 2,
+      "minStrength" : 0,
+      "stealthDisadvantage" : false,
+      "name" : "Chain Shirt",
+      "category" : "armor",
+      "weight" : 20,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 50
+      },
+      "id" : "chain-shirt"
+    },
+    "burglars-pack" : {
+      "contents" : [ ],
+      "gearCategory" : "equipment-packs",
+      "name" : "Burglar's Pack",
+      "category" : "adventuring-gear",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 16
+      },
+      "id" : "burglars-pack"
+    },
+    "vial" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Vial",
+      "category" : "adventuring-gear",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1
+      },
+      "id" : "vial"
+    },
+    "ladder-10-foot" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Ladder (10-foot)",
+      "category" : "adventuring-gear",
+      "weight" : 25,
+      "cost" : {
+        "unit" : "sp",
+        "quantity" : 1
+      },
+      "id" : "ladder-10-foot"
+    },
+    "keelboat" : {
+      "vehicleCategory" : "Waterborne Vehicles",
+      "name" : "Keelboat",
+      "category" : "mounts-and-vehicles",
+      "description" : "Keelboats and rowboats are used on lakes and rivers. If going downstream, add the speed of the current (typically 3 miles per hour) to the speed of the vehicle. These vehicles can't be rowed against any significant current, but they can be pulled upstream by draft animals on the shores. A rowboat weighs 100 pounds, in case adventurers carry it over land.",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 3000
+      },
+      "id" : "keelboat"
+    },
+    "barding-ring-mail" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Barding: Ring mail",
+      "category" : "mounts-and-vehicles",
+      "description" : "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.",
+      "weight" : 80,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 12
+      },
+      "id" : "barding-ring-mail"
+    },
+    "bucket" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Bucket",
+      "category" : "adventuring-gear",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 5
+      },
+      "id" : "bucket"
+    },
+    "horse-riding" : {
+      "vehicleCategory" : "Mounts and Other Animals",
+      "name" : "Horse, riding",
+      "category" : "mounts-and-vehicles",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 75
+      },
+      "id" : "horse-riding"
+    },
+    "hammer-sledge" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Hammer, sledge",
+      "category" : "adventuring-gear",
+      "weight" : 10,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 2
+      },
+      "id" : "hammer-sledge"
+    },
+    "jug-or-pitcher" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Jug or pitcher",
+      "category" : "adventuring-gear",
+      "weight" : 4,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 2
+      },
+      "id" : "jug-or-pitcher"
+    },
+    "wand" : {
+      "gearCategory" : "arcane-foci",
+      "name" : "Wand",
+      "category" : "adventuring-gear",
+      "description" : "An arcane focus is a special item--an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or some similar item--designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus.",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10
+      },
+      "id" : "wand"
+    },
+    "pan-flute" : {
+      "toolCategory" : "Musical Instrument",
+      "name" : "Pan flute",
+      "category" : "tools",
+      "description" : "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 12
+      },
+      "id" : "pan-flute"
+    },
+    "navigators-tools" : {
+      "toolCategory" : "Other Tools",
+      "name" : "Navigator's Tools",
+      "category" : "tools",
+      "description" : "This set of instruments is used for navigation at sea. Proficiency with navigator's tools lets you chart a ship's course and follow navigation charts. In addition, these tools allow you to add your proficiency bonus to any ability check you make to avoid getting lost at sea.",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 25
+      },
+      "id" : "navigators-tools"
+    },
+    "pony" : {
+      "vehicleCategory" : "Mounts and Other Animals",
+      "name" : "Pony",
+      "category" : "mounts-and-vehicles",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 30
+      },
+      "id" : "pony"
+    },
+    "barding-plate" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Barding: Plate",
+      "category" : "mounts-and-vehicles",
+      "description" : "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.",
+      "weight" : 130,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 6000
+      },
+      "id" : "barding-plate"
+    },
+    "splint-armor" : {
+      "armorCategory" : "armor",
+      "armorClass" : 17,
+      "dexBonus" : false,
+      "maxBonus" : 0,
+      "minStrength" : 15,
+      "stealthDisadvantage" : true,
+      "name" : "Splint Armor",
+      "category" : "armor",
+      "weight" : 60,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 200
+      },
+      "id" : "splint-armor"
+    },
+    "carriage" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Carriage",
+      "category" : "mounts-and-vehicles",
+      "weight" : 600,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 100
+      },
+      "id" : "carriage"
+    },
+    "tinkers-tools" : {
+      "toolCategory" : "Artisan's Tools",
+      "name" : "Tinker's Tools",
+      "category" : "tools",
+      "description" : "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.",
+      "weight" : 10,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 50
+      },
+      "id" : "tinkers-tools"
+    },
+    "cobblers-tools" : {
+      "toolCategory" : "Artisan's Tools",
+      "name" : "Cobbler's Tools",
+      "category" : "tools",
+      "description" : "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.",
+      "weight" : 5,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "cobblers-tools"
+    },
+    "tinderbox" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Tinderbox",
+      "category" : "adventuring-gear",
+      "description" : "This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch--or anything else with abundant, exposed fuel--takes an action.\nLighting any other fire takes 1 minute.",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "sp",
+        "quantity" : 5
+      },
+      "id" : "tinderbox"
+    },
+    "bedroll" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Bedroll",
+      "category" : "adventuring-gear",
+      "weight" : 7,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1
+      },
+      "id" : "bedroll"
+    },
+    "pole-10-foot" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Pole (10-foot)",
+      "category" : "adventuring-gear",
+      "weight" : 7,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 5
+      },
+      "id" : "pole-10-foot"
+    },
+    "caltrops" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Caltrops",
+      "category" : "adventuring-gear",
+      "description" : "As an action, you can spread a bag of caltrops to cover a square area that is 5 feet on a side.\nAny creature that enters the area must succeed on a DC 15 Dexterity saving throw or stop moving this turn and take 1 piercing damage.\nTaking this damage reduces the creature's walking speed by 10 feet until the creature regains at least 1 hit point.\nA creature moving through the area at half speed doesn't need to make the save.",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 5
+      },
+      "id" : "caltrops"
+    },
+    "cooks-utensils" : {
+      "toolCategory" : "Artisan's Tools",
+      "name" : "Cook's utensils",
+      "category" : "tools",
+      "description" : "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.",
+      "weight" : 8,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1
+      },
+      "id" : "cooks-utensils"
+    },
+    "dungeoneers-pack" : {
+      "contents" : [ ],
+      "gearCategory" : "equipment-packs",
+      "name" : "Dungeoneer's Pack",
+      "category" : "adventuring-gear",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 12
+      },
+      "id" : "dungeoneers-pack"
+    },
+    "leather-armor" : {
+      "armorCategory" : "armor",
+      "armorClass" : 11,
+      "dexBonus" : true,
+      "maxBonus" : 0,
+      "minStrength" : 0,
+      "stealthDisadvantage" : false,
+      "name" : "Leather Armor",
+      "category" : "armor",
+      "weight" : 10,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10
+      },
+      "id" : "leather-armor"
+    },
+    "shortbow" : {
+      "weaponCategory" : "Simple",
+      "weaponRange" : "Ranged",
+      "categoryRange" : "Simple Ranged",
+      "damageDice" : "1d6",
+      "damageType" : "piercing",
+      "normalRange" : 80,
+      "longRange" : 320,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "ammunition", "two-handed" ],
+      "name" : "Shortbow",
+      "category" : "weapon",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 25
+      },
+      "id" : "shortbow"
+    },
+    "antitoxin-vial" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Antitoxin (vial)",
+      "category" : "adventuring-gear",
+      "description" : "A creature that drinks this vial of liquid gains advantage on saving throws against poison for 1 hour. It confers no benefit to undead or constructs.",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 50
+      },
+      "id" : "antitoxin-vial"
+    },
+    "case-crossbow-bolt" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Case, crossbow bolt",
+      "category" : "adventuring-gear",
+      "description" : "This wooden case can hold up to twenty crossbow bolts.",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1
+      },
+      "id" : "case-crossbow-bolt"
+    },
+    "flask-or-tankard" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Flask or tankard",
+      "category" : "adventuring-gear",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 2
+      },
+      "id" : "flask-or-tankard"
+    },
+    "waterskin" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Waterskin",
+      "category" : "adventuring-gear",
+      "weight" : 5,
+      "cost" : {
+        "unit" : "sp",
+        "quantity" : 2
+      },
+      "id" : "waterskin"
+    },
+    "animal-feed-1-day" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Animal Feed (1 day)",
+      "category" : "mounts-and-vehicles",
+      "weight" : 10,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 5
+      },
+      "id" : "animal-feed-1-day"
+    },
+    "morningstar" : {
+      "weaponCategory" : "Martial",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Martial Melee",
+      "damageDice" : "1d8",
+      "damageType" : "piercing",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ ],
+      "name" : "Morningstar",
+      "category" : "weapon",
+      "weight" : 4,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 15
+      },
+      "id" : "morningstar"
+    },
+    "lantern-bullseye" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Lantern, bullseye",
+      "category" : "adventuring-gear",
+      "description" : "A bullseye lantern casts bright light in a 60-foot cone and dim light for an additional 60 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil.",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10
+      },
+      "id" : "lantern-bullseye"
+    },
+    "staff" : {
+      "gearCategory" : "arcane-foci",
+      "name" : "Staff",
+      "category" : "adventuring-gear",
+      "description" : "An arcane focus is a special item--an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or some similar item--designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus.",
+      "weight" : 4,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "staff"
+    },
+    "scholars-pack" : {
+      "contents" : [ ],
+      "gearCategory" : "equipment-packs",
+      "name" : "Scholar's Pack",
+      "category" : "adventuring-gear",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 40
+      },
+      "id" : "scholars-pack"
+    },
+    "sling" : {
+      "weaponCategory" : "Simple",
+      "weaponRange" : "Ranged",
+      "categoryRange" : "Simple Ranged",
+      "damageDice" : "1d4",
+      "damageType" : "bludgeoning",
+      "normalRange" : 30,
+      "longRange" : 120,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "ammunition" ],
+      "name" : "Sling",
+      "category" : "weapon",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "sp",
+        "quantity" : 1
+      },
+      "id" : "sling"
+    },
+    "greatclub" : {
+      "weaponCategory" : "Simple",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Simple Melee",
+      "damageDice" : "1d8",
+      "damageType" : "bludgeoning",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "two-handed" ],
+      "name" : "Greatclub",
+      "category" : "weapon",
+      "weight" : 10,
+      "cost" : {
+        "unit" : "sp",
+        "quantity" : 2
+      },
+      "id" : "greatclub"
+    },
+    "spyglass" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Spyglass",
+      "category" : "adventuring-gear",
+      "description" : "Objects viewed through a spyglass are magnified to twice their size.",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1000
+      },
+      "id" : "spyglass"
+    },
+    "potters-tools" : {
+      "toolCategory" : "Artisan's Tools",
+      "name" : "Potter's Tools",
+      "category" : "tools",
+      "description" : "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.",
+      "weight" : 3,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10
+      },
+      "id" : "potters-tools"
+    },
+    "shovel" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Shovel",
+      "category" : "adventuring-gear",
+      "weight" : 5,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 2
+      },
+      "id" : "shovel"
+    },
+    "sled" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Sled",
+      "category" : "mounts-and-vehicles",
+      "weight" : 300,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 20
+      },
+      "id" : "sled"
+    },
+    "blowgun" : {
+      "weaponCategory" : "Martial",
+      "weaponRange" : "Ranged",
+      "categoryRange" : "Martial Ranged",
+      "damageDice" : "1d1",
+      "damageType" : "piercing",
+      "normalRange" : 25,
+      "longRange" : 100,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "ammunition", "loading" ],
+      "name" : "Blowgun",
+      "category" : "weapon",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10
+      },
+      "id" : "blowgun"
+    },
+    "scale-merchants" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Scale, merchant's",
+      "category" : "adventuring-gear",
+      "description" : "A scale includes a small balance, pans, and a suitable assortment of weights up to 2 pounds. With it, you can measure the exact weight of small objects, such as raw precious metals or trade goods, to help determine their worth.",
+      "weight" : 3,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "scale-merchants"
+    },
+    "saddle-military" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Saddle, Military",
+      "category" : "mounts-and-vehicles",
+      "description" : "A military saddle braces the rider, helping you keep your seat on an active mount in battle. It gives you advantage on any check you make to remain mounted.",
+      "weight" : 30,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 20
+      },
+      "id" : "saddle-military"
+    },
+    "fishing-tackle" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Fishing tackle",
+      "category" : "adventuring-gear",
+      "description" : "This kit includes a wooden rod, silken line, corkwood bobbers, steel hooks, lead sinkers, velvet lures, and narrow netting.",
+      "weight" : 4,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1
+      },
+      "id" : "fishing-tackle"
+    },
+    "spellbook" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Spellbook",
+      "category" : "adventuring-gear",
+      "description" : "Essential for wizards, a spellbook is a leather-bound tome with 100 blank vellum pages suitable for recording spells.",
+      "weight" : 3,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 50
+      },
+      "id" : "spellbook"
+    },
+    "crossbow-bolt" : {
+      "quantity" : 20,
+      "gearCategory" : "ammunition",
+      "name" : "Crossbow bolt",
+      "category" : "adventuring-gear",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1
+      },
+      "id" : "crossbow-bolt"
+    },
+    "club" : {
+      "weaponCategory" : "Simple",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Simple Melee",
+      "damageDice" : "1d4",
+      "damageType" : "bludgeoning",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "light", "monk" ],
+      "name" : "Club",
+      "category" : "weapon",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "sp",
+        "quantity" : 1
+      },
+      "id" : "club"
+    },
+    "playing-card-set" : {
+      "toolCategory" : "Gaming Sets",
+      "name" : "Playing Card Set",
+      "category" : "tools",
+      "description" : "This item encompasses a wide range of game pieces, including dice and decks of cards (for games such as Three-Dragon Ante). A few common examples appear on the Tools table, but other kinds of gaming sets exist. If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency.",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "sp",
+        "quantity" : 5
+      },
+      "id" : "playing-card-set"
+    },
+    "scimitar" : {
+      "weaponCategory" : "Martial",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Martial Melee",
+      "damageDice" : "1d6",
+      "damageType" : "slashing",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "finesse", "light" ],
+      "name" : "Scimitar",
+      "category" : "weapon",
+      "weight" : 3,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 25
+      },
+      "id" : "scimitar"
+    },
+    "chest" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Chest",
+      "category" : "adventuring-gear",
+      "weight" : 25,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "chest"
+    },
+    "entertainers-pack" : {
+      "contents" : [ ],
+      "gearCategory" : "equipment-packs",
+      "name" : "Entertainer's Pack",
+      "category" : "adventuring-gear",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 40
+      },
+      "id" : "entertainers-pack"
+    },
+    "ram-portable" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Ram, portable",
+      "category" : "adventuring-gear",
+      "description" : "You can use a portable ram to break down doors. When doing so, you gain a +4 bonus on the Strength check. One other character can help you use the ram, giving you advantage on this check.",
+      "weight" : 35,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 4
+      },
+      "id" : "ram-portable"
+    },
+    "barding-leather" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Barding: Leather",
+      "category" : "mounts-and-vehicles",
+      "description" : "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.",
+      "weight" : 20,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 40
+      },
+      "id" : "barding-leather"
+    },
+    "warhorse" : {
+      "vehicleCategory" : "Mounts and Other Animals",
+      "name" : "Warhorse",
+      "category" : "mounts-and-vehicles",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 400
+      },
+      "id" : "warhorse"
+    },
+    "barding-splint" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Barding: Splint",
+      "category" : "mounts-and-vehicles",
+      "description" : "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.",
+      "weight" : 120,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 800
+      },
+      "id" : "barding-splint"
+    },
+    "signet-ring" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Signet ring",
+      "category" : "adventuring-gear",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "signet-ring"
+    },
+    "grappling-hook" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Grappling hook",
+      "category" : "adventuring-gear",
+      "weight" : 4,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 2
+      },
+      "id" : "grappling-hook"
+    },
+    "ink-pen" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Ink pen",
+      "category" : "adventuring-gear",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 2
+      },
+      "id" : "ink-pen"
+    },
+    "small-knife" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Small knife",
+      "category" : "adventuring-gear",
+      "description" : "A small knife, typically found in a scholar's pack.",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 0
+      },
+      "id" : "small-knife"
+    },
+    "rowboat" : {
+      "vehicleCategory" : "Waterborne Vehicles",
+      "name" : "Rowboat",
+      "category" : "mounts-and-vehicles",
+      "description" : "Keelboats and rowboats are used on lakes and rivers. If going downstream, add the speed of the current (typically 3 miles per hour) to the speed of the vehicle. These vehicles can't be rowed against any significant current, but they can be pulled upstream by draft animals on the shores. A rowboat weighs 100 pounds, in case adventurers carry it over land.",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 50
+      },
+      "id" : "rowboat"
+    },
+    "lyre" : {
+      "toolCategory" : "Musical Instrument",
+      "name" : "Lyre",
+      "category" : "tools",
+      "description" : "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 30
+      },
+      "id" : "lyre"
+    },
+    "crossbow-light" : {
+      "weaponCategory" : "Simple",
+      "weaponRange" : "Ranged",
+      "categoryRange" : "Simple Ranged",
+      "damageDice" : "1d8",
+      "damageType" : "piercing",
+      "normalRange" : 80,
+      "longRange" : 320,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "ammunition", "loading", "two-handed" ],
+      "name" : "Crossbow, light",
+      "category" : "weapon",
+      "weight" : 5,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 25
+      },
+      "id" : "crossbow-light"
+    },
+    "crossbow-hand" : {
+      "weaponCategory" : "Martial",
+      "weaponRange" : "Ranged",
+      "categoryRange" : "Martial Ranged",
+      "damageDice" : "1d6",
+      "damageType" : "piercing",
+      "normalRange" : 30,
+      "longRange" : 120,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "ammunition", "light", "loading" ],
+      "name" : "Crossbow, hand",
+      "category" : "weapon",
+      "weight" : 3,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 75
+      },
+      "id" : "crossbow-hand"
+    },
+    "elephant" : {
+      "vehicleCategory" : "Mounts and Other Animals",
+      "name" : "Elephant",
+      "category" : "mounts-and-vehicles",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 200
+      },
+      "id" : "elephant"
+    },
+    "painters-supplies" : {
+      "toolCategory" : "Artisan's Tools",
+      "name" : "Painter's Supplies",
+      "category" : "tools",
+      "description" : "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.",
+      "weight" : 5,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10
+      },
+      "id" : "painters-supplies"
+    },
+    "half-plate-armor" : {
+      "armorCategory" : "armor",
+      "armorClass" : 15,
+      "dexBonus" : true,
+      "maxBonus" : 2,
+      "minStrength" : 0,
+      "stealthDisadvantage" : true,
+      "name" : "Half Plate Armor",
+      "category" : "armor",
+      "weight" : 40,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 750
+      },
+      "id" : "half-plate-armor"
+    },
+    "alchemists-fire-flask" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Alchemist's fire (flask)",
+      "category" : "adventuring-gear",
+      "description" : "This sticky, adhesive fluid ignites when exposed to air.\nAs an action, you can throw this flask up to 20 feet, shattering it on impact. Make a ranged attack against a creature or object, treating the alchemist's fire as an improvised weapon.\nOn a hit, the target takes 1d4 fire damage at the start of each of its turns. A creature can end this damage by using its action to make a DC 10 Dexterity check to extinguish the flames.",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 50
+      },
+      "id" : "alchemists-fire-flask"
+    },
+    "mace" : {
+      "weaponCategory" : "Simple",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Simple Melee",
+      "damageDice" : "1d6",
+      "damageType" : "bludgeoning",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "monk" ],
+      "name" : "Mace",
+      "category" : "weapon",
+      "weight" : 4,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "mace"
+    },
+    "light-hammer" : {
+      "weaponCategory" : "Simple",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Simple Melee",
+      "damageDice" : "1d4",
+      "damageType" : "bludgeoning",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 20,
+      "longThrowRange" : 60,
+      "properties" : [ "light", "thrown", "monk" ],
+      "name" : "Light hammer",
+      "category" : "weapon",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 2
+      },
+      "id" : "light-hammer"
+    },
+    "magnifying-glass" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Magnifying glass",
+      "category" : "adventuring-gear",
+      "description" : "This lens allows a closer look at small objects. It is also useful as a substitute for flint and steel when starting fires. Lighting a fire with a magnifying glass requires light as bright as sunlight to focus, tinder to ignite, and about 5 minutes for the fire to ignite.\nA magnifying glass grants advantage on any ability check made to appraise or inspect an item that is small or highly detailed.",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 100
+      },
+      "id" : "magnifying-glass"
+    },
+    "book" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Book",
+      "category" : "adventuring-gear",
+      "description" : "A book might contain poetry, historical accounts, information pertaining to a particular field of lore, diagrams and notes on gnomish contraptions, or just about anything else that can be represented using text or pictures. A book of spells is a spellbook (described later in this section).",
+      "weight" : 5,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 25
+      },
+      "id" : "book"
+    },
+    "sprig-of-mistletoe" : {
+      "gearCategory" : "druidic-foci",
+      "name" : "Sprig of mistletoe",
+      "category" : "adventuring-gear",
+      "description" : "A druidic focus might be a sprig of mistletoe or holly, a wand or scepter made of yew or another special wood, a staff drawn whole out of a living tree, or a totem object incorporating feathers, fur, bones, and teeth from sacred animals. A druid can use such an object as a spellcasting focus.",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1
+      },
+      "id" : "sprig-of-mistletoe"
+    },
+    "donkey" : {
+      "vehicleCategory" : "Mounts and Other Animals",
+      "name" : "Donkey",
+      "category" : "mounts-and-vehicles",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 8
+      },
+      "id" : "donkey"
+    },
+    "manacles" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Manacles",
+      "category" : "adventuring-gear",
+      "description" : "These metal restraints can bind a Small or Medium creature. Escaping the manacles requires a successful DC 20 Dexterity check. Breaking them requires a successful DC 20 Strength check.\nEach set of manacles comes with one key. Without the key, a creature proficient with thieves' tools can pick the manacles' lock with a successful DC 15 Dexterity check. Manacles have 15 hit points.",
+      "weight" : 6,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 2
+      },
+      "id" : "manacles"
+    },
+    "longship" : {
+      "vehicleCategory" : "Waterborne Vehicles",
+      "name" : "Longship",
+      "category" : "mounts-and-vehicles",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10000
+      },
+      "id" : "longship"
+    },
+    "alms-box" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Alms box",
+      "category" : "adventuring-gear",
+      "description" : "A small box for alms, typically found in a priest's pack.",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 0
+      },
+      "id" : "alms-box"
+    },
+    "cartographers-tools" : {
+      "toolCategory" : "Artisan's Tools",
+      "name" : "Cartographer's Tools",
+      "category" : "tools",
+      "description" : "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.",
+      "weight" : 6,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 15
+      },
+      "id" : "cartographers-tools"
+    },
+    "case-map-or-scroll" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Case, map or scroll",
+      "category" : "adventuring-gear",
+      "description" : "This cylindrical leather case can hold up to ten rolled-up sheets of paper or five rolled-up sheets of parchment.",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1
+      },
+      "id" : "case-map-or-scroll"
+    },
+    "rations-1-day" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Rations (1 day)",
+      "category" : "adventuring-gear",
+      "description" : "Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts.",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "sp",
+        "quantity" : 5
+      },
+      "id" : "rations-1-day"
+    },
+    "sling-bullet" : {
+      "quantity" : 20,
+      "gearCategory" : "ammunition",
+      "name" : "Sling bullet",
+      "category" : "adventuring-gear",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 4
+      },
+      "id" : "sling-bullet"
+    },
+    "leatherworkers-tools" : {
+      "toolCategory" : "Artisan's Tools",
+      "name" : "Leatherworker's Tools",
+      "category" : "tools",
+      "description" : "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.",
+      "weight" : 5,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "leatherworkers-tools"
+    },
+    "glaive" : {
+      "weaponCategory" : "Martial",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Martial Melee",
+      "damageDice" : "1d10",
+      "damageType" : "slashing",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "heavy", "reach", "two-handed" ],
+      "name" : "Glaive",
+      "category" : "weapon",
+      "weight" : 6,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 20
+      },
+      "id" : "glaive"
+    },
+    "orb" : {
+      "gearCategory" : "arcane-foci",
+      "name" : "Orb",
+      "category" : "adventuring-gear",
+      "description" : "An arcane focus is a special item--an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or some similar item--designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus.",
+      "weight" : 3,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 20
+      },
+      "id" : "orb"
+    },
+    "piton" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Piton",
+      "category" : "adventuring-gear",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 5
+      },
+      "id" : "piton"
+    },
+    "trident" : {
+      "weaponCategory" : "Martial",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Martial Melee",
+      "damageDice" : "1d6",
+      "damageType" : "slashing",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 20,
+      "longThrowRange" : 60,
+      "properties" : [ "thrown", "versatile" ],
+      "name" : "Trident",
+      "category" : "weapon",
+      "weight" : 4,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "trident"
+    },
+    "acid-vial" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Acid (vial)",
+      "category" : "adventuring-gear",
+      "description" : "As an action, you can splash the contents of this vial onto a creature within 5 feet of you or throw the vial up to 20 feet, shattering it on impact. In either case, make a ranged attack against a creature or object, treating the acid as an improvised weapon.\nOn a hit, the target takes 2d6 acid damage.",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 25
+      },
+      "id" : "acid-vial"
+    },
+    "blowgun-needle" : {
+      "quantity" : 50,
+      "gearCategory" : "ammunition",
+      "name" : "Blowgun needle",
+      "category" : "adventuring-gear",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1
+      },
+      "id" : "blowgun-needle"
+    },
+    "studded-leather-armor" : {
+      "armorCategory" : "armor",
+      "armorClass" : 12,
+      "dexBonus" : true,
+      "maxBonus" : 0,
+      "minStrength" : 0,
+      "stealthDisadvantage" : false,
+      "name" : "Studded Leather Armor",
+      "category" : "armor",
+      "weight" : 13,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 45
+      },
+      "id" : "studded-leather-armor"
+    },
+    "flute" : {
+      "toolCategory" : "Musical Instrument",
+      "name" : "Flute",
+      "category" : "tools",
+      "description" : "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 2
+      },
+      "id" : "flute"
+    },
+    "bagpipes" : {
+      "toolCategory" : "Musical Instrument",
+      "name" : "Bagpipes",
+      "category" : "tools",
+      "description" : "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.",
+      "weight" : 6,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 30
+      },
+      "id" : "bagpipes"
+    },
+    "paper-one-sheet" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Paper (one sheet)",
+      "category" : "adventuring-gear",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "sp",
+        "quantity" : 2
+      },
+      "id" : "paper-one-sheet"
+    },
+    "stabling-1-day" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Stabling (1 day)",
+      "category" : "mounts-and-vehicles",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "sp",
+        "quantity" : 5
+      },
+      "id" : "stabling-1-day"
+    },
+    "chariot" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Chariot",
+      "category" : "mounts-and-vehicles",
+      "weight" : 100,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 250
+      },
+      "id" : "chariot"
+    },
+    "climbers-kit" : {
+      "gearCategory" : "kits",
+      "name" : "Climber's Kit",
+      "category" : "adventuring-gear",
+      "description" : "A climber's kit includes special pitons, boot tips, gloves, and a harness. You can use the climber's kit as an action to anchor yourself; when you do, you can't fall more than 25 feet from the point where you anchored yourself, and you can't climb more than 25 feet away from that point without undoing the anchor.",
+      "weight" : 12,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 25
+      },
+      "id" : "climbers-kit"
+    },
+    "abacus" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Abacus",
+      "category" : "adventuring-gear",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 2
+      },
+      "id" : "abacus"
+    },
+    "barding-studded-leather" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Barding: Studded Leather",
+      "category" : "mounts-and-vehicles",
+      "description" : "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.",
+      "weight" : 26,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 180
+      },
+      "id" : "barding-studded-leather"
+    },
+    "disguise-kit" : {
+      "gearCategory" : "kits",
+      "name" : "Disguise Kit",
+      "category" : "adventuring-gear",
+      "description" : "This pouch of cosmetics, hair dye, and small props lets you create disguises that change your physical appearance. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a visual disguise.",
+      "weight" : 3,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 25
+      },
+      "id" : "disguise-kit"
+    },
+    "oil-flask" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Oil (flask)",
+      "category" : "adventuring-gear",
+      "description" : "Oil usually comes in a clay flask that holds 1 pint.\nAs an action, you can splash the oil in this flask onto a creature within 5 feet of you or throw it up to 20 feet, shattering it on impact. Make a ranged attack against a target creature or object, treating the oil as an improvised weapon.\nOn a hit, the target is covered in oil. If the target takes any fire damage before the oil dries (after 1 minute), the target takes an additional 5 fire damage from the burning oil.\nYou can also pour a flask of oil on the ground to cover a 5-foot-square area, provided that the surface is level.\nIf lit, the oil burns for 2 rounds and deals 5 fire damage to any creature that enters the area or ends its turn in the area. A creature can take this damage only once per turn.",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "sp",
+        "quantity" : 1
+      },
+      "id" : "oil-flask"
+    },
+    "blanket" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Blanket",
+      "category" : "adventuring-gear",
+      "weight" : 3,
+      "cost" : {
+        "unit" : "sp",
+        "quantity" : 5
+      },
+      "id" : "blanket"
+    },
+    "woodcarvers-tools" : {
+      "toolCategory" : "Artisan's Tools",
+      "name" : "Woodcarver's Tools",
+      "category" : "tools",
+      "description" : "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.",
+      "weight" : 5,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1
+      },
+      "id" : "woodcarvers-tools"
+    },
+    "wooden-staff" : {
+      "gearCategory" : "druidic-foci",
+      "name" : "Wooden staff",
+      "category" : "adventuring-gear",
+      "description" : "A druidic focus might be a sprig of mistletoe or holly, a wand or scepter made of yew or another special wood, a staff drawn whole out of a living tree, or a totem object incorporating feathers, fur, bones, and teeth from sacred animals. A druid can use such an object as a spellcasting focus.",
+      "weight" : 4,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "wooden-staff"
+    },
+    "basket" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Basket",
+      "category" : "adventuring-gear",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "sp",
+        "quantity" : 4
+      },
+      "id" : "basket"
+    },
+    "sack" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Sack",
+      "category" : "adventuring-gear",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 1
+      },
+      "id" : "sack"
+    },
+    "sickle" : {
+      "weaponCategory" : "Simple",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Simple Melee",
+      "damageDice" : "1d4",
+      "damageType" : "slashing",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "light", "monk" ],
+      "name" : "Sickle",
+      "category" : "weapon",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1
+      },
+      "id" : "sickle"
+    },
+    "horse-draft" : {
+      "vehicleCategory" : "Mounts and Other Animals",
+      "name" : "Horse, draft",
+      "category" : "mounts-and-vehicles",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 50
+      },
+      "id" : "horse-draft"
+    },
+    "rapier" : {
+      "weaponCategory" : "Martial",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Martial Melee",
+      "damageDice" : "1d8",
+      "damageType" : "piercing",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "finesse" ],
+      "name" : "Rapier",
+      "category" : "weapon",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 25
+      },
+      "id" : "rapier"
+    },
+    "barding-breastplate" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Barding: Breastplate",
+      "category" : "mounts-and-vehicles",
+      "description" : "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.",
+      "weight" : 40,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1600
+      },
+      "id" : "barding-breastplate"
+    },
+    "longbow" : {
+      "weaponCategory" : "Martial",
+      "weaponRange" : "Ranged",
+      "categoryRange" : "Martial Ranged",
+      "damageDice" : "1d8",
+      "damageType" : "piercing",
+      "normalRange" : 150,
+      "longRange" : 600,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "ammunition", "heavy", "two-handed" ],
+      "name" : "Longbow",
+      "category" : "weapon",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 50
+      },
+      "id" : "longbow"
+    },
+    "smiths-tools" : {
+      "toolCategory" : "Artisan's Tools",
+      "name" : "Smith's Tools",
+      "category" : "tools",
+      "description" : "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.",
+      "weight" : 8,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 20
+      },
+      "id" : "smiths-tools"
+    },
+    "cart" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Cart",
+      "category" : "mounts-and-vehicles",
+      "weight" : 200,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 15
+      },
+      "id" : "cart"
+    },
+    "mule" : {
+      "vehicleCategory" : "Mounts and Other Animals",
+      "name" : "Mule",
+      "category" : "mounts-and-vehicles",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 8
+      },
+      "id" : "mule"
+    },
+    "block-and-tackle" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Block and tackle",
+      "category" : "adventuring-gear",
+      "description" : "A set of pulleys with a cable threaded through them and a hook to attach to objects, a block and tackle allows you to hoist up to four times the weight you can normally lift.",
+      "weight" : 5,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1
+      },
+      "id" : "block-and-tackle"
+    },
+    "camel" : {
+      "vehicleCategory" : "Mounts and Other Animals",
+      "name" : "Camel",
+      "category" : "mounts-and-vehicles",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 50
+      },
+      "id" : "camel"
+    },
+    "sailing-ship" : {
+      "vehicleCategory" : "Waterborne Vehicles",
+      "name" : "Sailing ship",
+      "category" : "mounts-and-vehicles",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10000
+      },
+      "id" : "sailing-ship"
+    },
+    "maul" : {
+      "weaponCategory" : "Martial",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Martial Melee",
+      "damageDice" : "2d6",
+      "damageType" : "bludgeoning",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "heavy", "two-handed" ],
+      "name" : "Maul",
+      "category" : "weapon",
+      "weight" : 10,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10
+      },
+      "id" : "maul"
+    },
+    "lock" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Lock",
+      "category" : "adventuring-gear",
+      "description" : "A key is provided with the lock. Without the key, a creature proficient with thieves' tools can pick this lock with a successful DC 15 Dexterity check. Your GM may decide that better locks are available for higher prices.",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10
+      },
+      "id" : "lock"
+    },
+    "carpenters-tools" : {
+      "toolCategory" : "Artisan's Tools",
+      "name" : "Carpenter's Tools",
+      "category" : "tools",
+      "description" : "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.",
+      "weight" : 6,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 8
+      },
+      "id" : "carpenters-tools"
+    },
+    "javelin" : {
+      "weaponCategory" : "Simple",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Simple Melee",
+      "damageDice" : "1d6",
+      "damageType" : "piercing",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 30,
+      "longThrowRange" : 120,
+      "properties" : [ "thrown", "monk" ],
+      "name" : "Javelin",
+      "category" : "weapon",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "sp",
+        "quantity" : 5
+      },
+      "id" : "javelin"
+    },
+    "pike" : {
+      "weaponCategory" : "Martial",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Martial Melee",
+      "damageDice" : "1d10",
+      "damageType" : "piercing",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "heavy", "reach", "two-handed" ],
+      "name" : "Pike",
+      "category" : "weapon",
+      "weight" : 18,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "pike"
+    },
+    "bit-and-bridle" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Bit and bridle",
+      "category" : "mounts-and-vehicles",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 2
+      },
+      "id" : "bit-and-bridle"
+    },
+    "bell" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Bell",
+      "category" : "adventuring-gear",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1
+      },
+      "id" : "bell"
+    },
+    "barding-hide" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Barding: Hide",
+      "category" : "mounts-and-vehicles",
+      "description" : "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.",
+      "weight" : 24,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 40
+      },
+      "id" : "barding-hide"
+    },
+    "hunting-trap" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Hunting trap",
+      "category" : "adventuring-gear",
+      "description" : "When you use your action to set it, this trap forms a saw-toothed steel ring that snaps shut when a creature steps on a pressure plate in the center. The trap is affixed by a heavy chain to an immobile object, such as a tree or a spike driven into the ground.\nA creature that steps on the plate must succeed on a DC 13 Dexterity saving throw or take 1d4 piercing damage and stop moving. Thereafter, until the creature breaks free of the trap, its movement is limited by the length of the chain (typically 3 feet long).\nA creature can use its action to make a DC 13 Strength check, freeing itself or another creature within its reach on a success. Each failed check deals 1 piercing damage to the trapped creature.",
+      "weight" : 25,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "hunting-trap"
+    },
+    "pick-miners" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Pick, miner's",
+      "category" : "adventuring-gear",
+      "weight" : 10,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 2
+      },
+      "id" : "pick-miners"
+    },
+    "chalk-1-piece" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Chalk (1 piece)",
+      "category" : "adventuring-gear",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 1
+      },
+      "id" : "chalk-1-piece"
+    },
+    "herbalism-kit" : {
+      "gearCategory" : "kits",
+      "name" : "Herbalism Kit",
+      "category" : "adventuring-gear",
+      "description" : "This kit contains a variety of instruments such as clippers, mortar and pestle, and pouches and vials used by herbalists to create remedies and potions. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to identify or apply herbs. Also, proficiency with this kit is required to create antitoxin and potions of healing.",
+      "weight" : 3,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "herbalism-kit"
+    },
+    "masons-tools" : {
+      "toolCategory" : "Artisan's Tools",
+      "name" : "Mason's Tools",
+      "category" : "tools",
+      "description" : "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.",
+      "weight" : 8,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10
+      },
+      "id" : "masons-tools"
+    },
+    "shield" : {
+      "armorCategory" : "armor",
+      "armorClass" : 2,
+      "dexBonus" : false,
+      "maxBonus" : 0,
+      "minStrength" : 0,
+      "stealthDisadvantage" : false,
+      "name" : "Shield",
+      "category" : "armor",
+      "weight" : 6,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10
+      },
+      "id" : "shield"
+    },
+    "galley" : {
+      "vehicleCategory" : "Waterborne Vehicles",
+      "name" : "Galley",
+      "category" : "mounts-and-vehicles",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 30000
+      },
+      "id" : "galley"
+    },
+    "lantern-hooded" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Lantern, hooded",
+      "category" : "adventuring-gear",
+      "description" : "A hooded lantern casts bright light in a 30-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil. As an action, you can lower the hood, reducing the light to dim light in a 5-foot radius.",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "lantern-hooded"
+    },
+    "bottle-glass" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Bottle, glass",
+      "category" : "adventuring-gear",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 2
+      },
+      "id" : "bottle-glass"
+    },
+    "crystal" : {
+      "gearCategory" : "arcane-foci",
+      "name" : "Crystal",
+      "category" : "adventuring-gear",
+      "description" : "An arcane focus is a special item--an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or some similar item--designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus.",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10
+      },
+      "id" : "crystal"
+    },
+    "robes" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Robes",
+      "category" : "adventuring-gear",
+      "weight" : 4,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1
+      },
+      "id" : "robes"
+    },
+    "rope-silk-50-feet" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Rope, silk (50 feet)",
+      "category" : "adventuring-gear",
+      "description" : "Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check.",
+      "weight" : 5,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10
+      },
+      "id" : "rope-silk-50-feet"
+    },
+    "ball-bearings-bag-of-1000" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Ball bearings (bag of 1,000)",
+      "category" : "adventuring-gear",
+      "description" : "As an action, you can spill these tiny metal balls from their pouch to cover a level, square area that is 10 feet on a side.\nA creature moving across the covered area must succeed on a DC 10 Dexterity saving throw or fall prone.\nA creature moving through the area at half speed doesn't need to make the save.",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1
+      },
+      "id" : "ball-bearings-bag-of-1000"
+    },
+    "dart" : {
+      "weaponCategory" : "Simple",
+      "weaponRange" : "Ranged",
+      "categoryRange" : "Simple Ranged",
+      "damageDice" : "1d4",
+      "damageType" : "piercing",
+      "normalRange" : 20,
+      "longRange" : 60,
+      "normalThrowRange" : 20,
+      "longThrowRange" : 60,
+      "properties" : [ "finesse", "thrown" ],
+      "name" : "Dart",
+      "category" : "weapon",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 5
+      },
+      "id" : "dart"
+    },
+    "forgery-kit" : {
+      "gearCategory" : "kits",
+      "name" : "Forgery Kit",
+      "category" : "adventuring-gear",
+      "description" : "This small box contains a variety of papers and parchments, pens and inks, seals and sealing wax, gold and silver leaf, and other supplies necessary to create convincing forgeries of physical documents. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a physical forgery of a document.",
+      "weight" : 5,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 15
+      },
+      "id" : "forgery-kit"
+    },
+    "spear" : {
+      "weaponCategory" : "Simple",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Simple Melee",
+      "damageDice" : "1d6",
+      "damageType" : "piercing",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 20,
+      "longThrowRange" : 60,
+      "properties" : [ "thrown", "versatile", "monk" ],
+      "name" : "Spear",
+      "category" : "weapon",
+      "weight" : 3,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1
+      },
+      "id" : "spear"
+    },
+    "rope-hempen-50-feet" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Rope, hempen (50 feet)",
+      "category" : "adventuring-gear",
+      "description" : "Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check.",
+      "weight" : 10,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1
+      },
+      "id" : "rope-hempen-50-feet"
+    },
+    "totem" : {
+      "gearCategory" : "druidic-foci",
+      "name" : "Totem",
+      "category" : "adventuring-gear",
+      "description" : "A druidic focus might be a sprig of mistletoe or holly, a wand or scepter made of yew or another special wood, a staff drawn whole out of a living tree, or a totem object incorporating feathers, fur, bones, and teeth from sacred animals. A druid can use such an object as a spellcasting focus.",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1
+      },
+      "id" : "totem"
+    },
+    "parchment-one-sheet" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Parchment (one sheet)",
+      "category" : "adventuring-gear",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "sp",
+        "quantity" : 1
+      },
+      "id" : "parchment-one-sheet"
+    },
+    "barrel" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Barrel",
+      "category" : "adventuring-gear",
+      "weight" : 70,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 2
+      },
+      "id" : "barrel"
+    },
+    "thieves-tools" : {
+      "toolCategory" : "Other Tools",
+      "name" : "Thieves' Tools",
+      "category" : "tools",
+      "description" : "This set of tools includes a small file, a set of lock picks, a small mirror mounted on a metal handle, a set of narrow-bladed scissors, and a pair of pliers. Proficiency with these tools lets you add your proficiency bonus to any ability checks you make to disarm traps or open locks.",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 25
+      },
+      "id" : "thieves-tools"
+    },
+    "alchemists-supplies" : {
+      "toolCategory" : "Artisan's Tools",
+      "name" : "Alchemist's Supplies",
+      "category" : "tools",
+      "description" : "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.",
+      "weight" : 8,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 50
+      },
+      "id" : "alchemists-supplies"
+    },
+    "pouch" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Pouch",
+      "category" : "adventuring-gear",
+      "description" : "A cloth or leather pouch can hold up to 20 sling bullets or 50 blowgun needles, among other things. A compartmentalized pouch for holding spell components is called a component pouch (described earlier in this section).",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "sp",
+        "quantity" : 5
+      },
+      "id" : "pouch"
+    },
+    "priests-pack" : {
+      "contents" : [ ],
+      "gearCategory" : "equipment-packs",
+      "name" : "Priest's Pack",
+      "category" : "adventuring-gear",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 19
+      },
+      "id" : "priests-pack"
+    },
+    "greataxe" : {
+      "weaponCategory" : "Martial",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Martial Melee",
+      "damageDice" : "1d12",
+      "damageType" : "slashing",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "heavy", "two-handed" ],
+      "name" : "Greataxe",
+      "category" : "weapon",
+      "weight" : 7,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 30
+      },
+      "id" : "greataxe"
+    },
+    "ink-1-ounce-bottle" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Ink (1 ounce bottle)",
+      "category" : "adventuring-gear",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10
+      },
+      "id" : "ink-1-ounce-bottle"
+    },
+    "torch" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Torch",
+      "category" : "adventuring-gear",
+      "description" : "A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage.",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 1
+      },
+      "id" : "torch"
+    },
+    "sealing-wax" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Sealing wax",
+      "category" : "adventuring-gear",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "sp",
+        "quantity" : 5
+      },
+      "id" : "sealing-wax"
+    },
+    "flail" : {
+      "weaponCategory" : "Martial",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Martial Melee",
+      "damageDice" : "1d8",
+      "damageType" : "bludgeoning",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ ],
+      "name" : "Flail",
+      "category" : "weapon",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10
+      },
+      "id" : "flail"
+    },
+    "shortsword" : {
+      "weaponCategory" : "Martial",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Martial Melee",
+      "damageDice" : "1d6",
+      "damageType" : "piercing",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "finesse", "light", "monk" ],
+      "name" : "Shortsword",
+      "category" : "weapon",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10
+      },
+      "id" : "shortsword"
+    },
+    "handaxe" : {
+      "weaponCategory" : "Simple",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Simple Melee",
+      "damageDice" : "1d6",
+      "damageType" : "slashing",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 20,
+      "longThrowRange" : 60,
+      "properties" : [ "light", "thrown", "monk" ],
+      "name" : "Handaxe",
+      "category" : "weapon",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "handaxe"
+    },
+    "vestments" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Vestments",
+      "category" : "adventuring-gear",
+      "description" : "Religious clothing, typically found in a priest's pack.",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 0
+      },
+      "id" : "vestments"
+    },
+    "barding-padded" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Barding: Padded",
+      "category" : "mounts-and-vehicles",
+      "description" : "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.",
+      "weight" : 16,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 20
+      },
+      "id" : "barding-padded"
+    },
+    "candle" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Candle",
+      "category" : "adventuring-gear",
+      "description" : "For 1 hour, a candle sheds bright light in a 5-foot radius and dim light for an additional 5 feet.",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 1
+      },
+      "id" : "candle"
+    },
+    "clothes-common" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Clothes, common",
+      "category" : "adventuring-gear",
+      "weight" : 3,
+      "cost" : {
+        "unit" : "sp",
+        "quantity" : 5
+      },
+      "id" : "clothes-common"
+    },
+    "holy-water-flask" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Holy water (flask)",
+      "category" : "adventuring-gear",
+      "description" : "As an action, you can splash the contents of this flask onto a creature within 5 feet of you or throw it up to 20 feet, shattering it on impact. In either case, make a ranged attack against a target creature, treating the holy water as an improvised weapon.\nIf the target is a fiend or undead, it takes 2d6 radiant damage.\nA cleric or paladin may create holy water by performing a special ritual.\nThe ritual takes 1 hour to perform, uses 25 gp worth of powdered silver, and requires the caster to expend a 1st-level spell slot.",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 25
+      },
+      "id" : "holy-water-flask"
+    },
+    "barding-chain-shirt" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Barding: Chain shirt",
+      "category" : "mounts-and-vehicles",
+      "description" : "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.",
+      "weight" : 40,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 200
+      },
+      "id" : "barding-chain-shirt"
+    },
+    "arrow" : {
+      "quantity" : 20,
+      "gearCategory" : "ammunition",
+      "name" : "Arrow",
+      "category" : "adventuring-gear",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1
+      },
+      "id" : "arrow"
+    },
+    "dulcimer" : {
+      "toolCategory" : "Musical Instrument",
+      "name" : "Dulcimer",
+      "category" : "tools",
+      "description" : "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.",
+      "weight" : 10,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 25
+      },
+      "id" : "dulcimer"
+    },
+    "lute" : {
+      "toolCategory" : "Musical Instrument",
+      "name" : "Lute",
+      "category" : "tools",
+      "description" : "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 35
+      },
+      "id" : "lute"
+    },
+    "poison-basic-vial" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Poison, basic (vial)",
+      "category" : "adventuring-gear",
+      "description" : "You can use the poison in this vial to coat one slashing or piercing weapon or up to three pieces of ammunition. Applying the poison takes an action. A creature hit by the poisoned weapon or ammunition must make a DC 10 Constitution saving throw or take 1d4 poison damage. Once applied, the poison retains potency for 1 minute before drying.",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 100
+      },
+      "id" : "poison-basic-vial"
+    },
+    "drum" : {
+      "toolCategory" : "Musical Instrument",
+      "name" : "Drum",
+      "category" : "tools",
+      "description" : "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.",
+      "weight" : 3,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 6
+      },
+      "id" : "drum"
+    },
+    "explorers-pack" : {
+      "contents" : [ ],
+      "gearCategory" : "equipment-packs",
+      "name" : "Explorer's Pack",
+      "category" : "adventuring-gear",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10
+      },
+      "id" : "explorers-pack"
+    },
+    "tent-two-person" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Tent, two-person",
+      "category" : "adventuring-gear",
+      "description" : "A simple and portable canvas shelter, a tent sleeps two.",
+      "weight" : 20,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 2
+      },
+      "id" : "tent-two-person"
+    },
+    "whip" : {
+      "weaponCategory" : "Martial",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Martial Melee",
+      "damageDice" : "1d4",
+      "damageType" : "slashing",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "finesse", "reach" ],
+      "name" : "Whip",
+      "category" : "weapon",
+      "weight" : 3,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 2
+      },
+      "id" : "whip"
+    },
+    "healers-kit" : {
+      "gearCategory" : "kits",
+      "name" : "Healer's Kit",
+      "category" : "adventuring-gear",
+      "description" : "This kit is a leather pouch containing bandages, salves, and splints. The kit has ten uses. As an action, you can expend one use of the kit to stabilize a creature that has 0 hit points, without needing to make a Wisdom (Medicine) check.",
+      "weight" : 3,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "healers-kit"
+    },
+    "brewers-supplies" : {
+      "toolCategory" : "Artisan's Tools",
+      "name" : "Brewer's Supplies",
+      "category" : "tools",
+      "description" : "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.",
+      "weight" : 9,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 20
+      },
+      "id" : "brewers-supplies"
+    },
+    "quarterstaff" : {
+      "weaponCategory" : "Simple",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Simple Melee",
+      "damageDice" : "1d6",
+      "damageType" : "bludgeoning",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "versatile", "monk" ],
+      "name" : "Quarterstaff",
+      "category" : "weapon",
+      "weight" : 4,
+      "cost" : {
+        "unit" : "sp",
+        "quantity" : 2
+      },
+      "id" : "quarterstaff"
+    },
+    "net" : {
+      "weaponCategory" : "Martial",
+      "weaponRange" : "Ranged",
+      "categoryRange" : "Martial Ranged",
+      "normalRange" : 5,
+      "longRange" : 15,
+      "normalThrowRange" : 5,
+      "longThrowRange" : 15,
+      "properties" : [ "thrown", "special" ],
+      "name" : "Net",
+      "category" : "weapon",
+      "weight" : 3,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1
+      },
+      "id" : "net"
+    },
+    "emblem" : {
+      "gearCategory" : "holy-symbols",
+      "name" : "Emblem",
+      "category" : "adventuring-gear",
+      "description" : "A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same symbol carefully engraved or inlaid as an emblem on a shield, or a tiny box holding a fragment of a sacred relic.\nAppendix B lists the symbols commonly associated with many gods in the multiverse. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield.",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "emblem"
+    },
+    "dagger" : {
+      "weaponCategory" : "Simple",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Simple Melee",
+      "damageDice" : "1d4",
+      "damageType" : "piercing",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 20,
+      "longThrowRange" : 60,
+      "properties" : [ "finesse", "light", "thrown", "monk" ],
+      "name" : "Dagger",
+      "category" : "weapon",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 2
+      },
+      "id" : "dagger"
+    },
+    "lance" : {
+      "weaponCategory" : "Martial",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Martial Melee",
+      "damageDice" : "1d12",
+      "damageType" : "piercing",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "reach", "special" ],
+      "name" : "Lance",
+      "category" : "weapon",
+      "weight" : 6,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10
+      },
+      "id" : "lance"
+    },
+    "spike-iron" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Spike, iron",
+      "category" : "adventuring-gear",
+      "weight" : 5,
+      "cost" : {
+        "unit" : "sp",
+        "quantity" : 1
+      },
+      "id" : "spike-iron"
+    },
+    "breastplate" : {
+      "armorCategory" : "armor",
+      "armorClass" : 14,
+      "dexBonus" : true,
+      "maxBonus" : 2,
+      "minStrength" : 0,
+      "stealthDisadvantage" : false,
+      "name" : "Breastplate",
+      "category" : "armor",
+      "weight" : 20,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 400
+      },
+      "id" : "breastplate"
+    },
+    "yew-wand" : {
+      "gearCategory" : "druidic-foci",
+      "name" : "Yew wand",
+      "category" : "adventuring-gear",
+      "description" : "A druidic focus might be a sprig of mistletoe or holly, a wand or scepter made of yew or another special wood, a staff drawn whole out of a living tree, or a totem object incorporating feathers, fur, bones, and teeth from sacred animals. A druid can use such an object as a spellcasting focus.",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10
+      },
+      "id" : "yew-wand"
+    },
+    "crossbow-heavy" : {
+      "weaponCategory" : "Martial",
+      "weaponRange" : "Ranged",
+      "categoryRange" : "Martial Ranged",
+      "damageDice" : "1d10",
+      "damageType" : "piercing",
+      "normalRange" : 100,
+      "longRange" : 400,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "ammunition", "heavy", "loading", "two-handed" ],
+      "name" : "Crossbow, heavy",
+      "category" : "weapon",
+      "weight" : 18,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 50
+      },
+      "id" : "crossbow-heavy"
+    },
+    "barding-scale-mail" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Barding: Scale mail",
+      "category" : "mounts-and-vehicles",
+      "description" : "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.",
+      "weight" : 90,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 200
+      },
+      "id" : "barding-scale-mail"
+    },
+    "chain-10-feet" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Chain (10 feet)",
+      "category" : "adventuring-gear",
+      "description" : "A chain has 10 hit points. It can be burst with a successful DC 20 Strength check.",
+      "weight" : 10,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "chain-10-feet"
+    },
+    "saddle-exotic" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Saddle, Exotic",
+      "category" : "mounts-and-vehicles",
+      "description" : "An exotic saddle is required for riding any aquatic or flying mount.",
+      "weight" : 50,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 60
+      },
+      "id" : "saddle-exotic"
+    },
+    "clothes-travelers" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Clothes, traveler's",
+      "category" : "adventuring-gear",
+      "weight" : 4,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 2
+      },
+      "id" : "clothes-travelers"
+    },
+    "horn" : {
+      "toolCategory" : "Musical Instrument",
+      "name" : "Horn",
+      "category" : "tools",
+      "description" : "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 3
+      },
+      "id" : "horn"
+    },
+    "scale-mail" : {
+      "armorCategory" : "armor",
+      "armorClass" : 14,
+      "dexBonus" : true,
+      "maxBonus" : 2,
+      "minStrength" : 0,
+      "stealthDisadvantage" : true,
+      "name" : "Scale Mail",
+      "category" : "armor",
+      "weight" : 45,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 50
+      },
+      "id" : "scale-mail"
+    },
+    "jewelers-tools" : {
+      "toolCategory" : "Artisan's Tools",
+      "name" : "Jeweler's Tools",
+      "category" : "tools",
+      "description" : "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 25
+      },
+      "id" : "jewelers-tools"
+    },
+    "pot-iron" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Pot, iron",
+      "category" : "adventuring-gear",
+      "weight" : 10,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 2
+      },
+      "id" : "pot-iron"
+    },
+    "saddle-pack" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Saddle, Pack",
+      "category" : "mounts-and-vehicles",
+      "weight" : 15,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "saddle-pack"
+    },
+    "clothes-costume" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Clothes, costume",
+      "category" : "adventuring-gear",
+      "weight" : 4,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "clothes-costume"
+    },
+    "whetstone" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Whetstone",
+      "category" : "adventuring-gear",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 1
+      },
+      "id" : "whetstone"
+    },
+    "battleaxe" : {
+      "weaponCategory" : "Martial",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Martial Melee",
+      "damageDice" : "1d8",
+      "damageType" : "slashing",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "versatile" ],
+      "name" : "Battleaxe",
+      "category" : "weapon",
+      "weight" : 4,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10
+      },
+      "id" : "battleaxe"
+    },
+    "poisoners-kit" : {
+      "gearCategory" : "kits",
+      "name" : "Poisoner's Kit",
+      "category" : "adventuring-gear",
+      "description" : "A poisoner's kit includes the vials, chemicals, and other equipment necessary for the creation of poisons. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to craft or use poisons.",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 50
+      },
+      "id" : "poisoners-kit"
+    },
+    "soap" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Soap",
+      "category" : "adventuring-gear",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 2
+      },
+      "id" : "soap"
+    },
+    "longsword" : {
+      "weaponCategory" : "Martial",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Martial Melee",
+      "damageDice" : "1d8",
+      "damageType" : "slashing",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "versatile" ],
+      "name" : "Longsword",
+      "category" : "weapon",
+      "weight" : 3,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 15
+      },
+      "id" : "longsword"
+    },
+    "hammer" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Hammer",
+      "category" : "adventuring-gear",
+      "weight" : 3,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1
+      },
+      "id" : "hammer"
+    },
+    "dice-set" : {
+      "toolCategory" : "Gaming Sets",
+      "name" : "Dice Set",
+      "category" : "tools",
+      "description" : "This item encompasses a wide range of game pieces, including dice and decks of cards (for games such as Three-Dragon Ante). A few common examples appear on the Tools table, but other kinds of gaming sets exist. If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency.",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "sp",
+        "quantity" : 1
+      },
+      "id" : "dice-set"
+    },
+    "rod" : {
+      "gearCategory" : "arcane-foci",
+      "name" : "Rod",
+      "category" : "adventuring-gear",
+      "description" : "An arcane focus is a special item--an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or some similar item--designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus.",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10
+      },
+      "id" : "rod"
+    },
+    "wagon" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Wagon",
+      "category" : "mounts-and-vehicles",
+      "weight" : 400,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 35
+      },
+      "id" : "wagon"
+    },
+    "block-of-incense" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Block of incense",
+      "category" : "adventuring-gear",
+      "description" : "A block of incense, typically found in a priest's pack.",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 0
+      },
+      "id" : "block-of-incense"
+    },
+    "quiver" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Quiver",
+      "category" : "adventuring-gear",
+      "description" : "A quiver can hold up to 20 arrows.",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1
+      },
+      "id" : "quiver"
+    },
+    "mastiff" : {
+      "vehicleCategory" : "Mounts and Other Animals",
+      "name" : "Mastiff",
+      "category" : "mounts-and-vehicles",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 25
+      },
+      "id" : "mastiff"
+    },
+    "signal-whistle" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Signal whistle",
+      "category" : "adventuring-gear",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 5
+      },
+      "id" : "signal-whistle"
+    },
+    "barding-half-plate" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Barding: Half plate",
+      "category" : "mounts-and-vehicles",
+      "description" : "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.",
+      "weight" : 80,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 3000
+      },
+      "id" : "barding-half-plate"
+    },
+    "little-bag-of-sand" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Little bag of sand",
+      "category" : "adventuring-gear",
+      "description" : "A small bag of sand, typically found in a scholar's pack.",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 0
+      },
+      "id" : "little-bag-of-sand"
+    },
+    "barding-chain-mail" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Barding: Chain mail",
+      "category" : "mounts-and-vehicles",
+      "description" : "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.",
+      "weight" : 110,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 300
+      },
+      "id" : "barding-chain-mail"
+    },
+    "reliquary" : {
+      "gearCategory" : "holy-symbols",
+      "name" : "Reliquary",
+      "category" : "adventuring-gear",
+      "description" : "A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same symbol carefully engraved or inlaid as an emblem on a shield, or a tiny box holding a fragment of a sacred relic.\nAppendix B lists the symbols commonly associated with many gods in the multiverse. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield.",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "reliquary"
+    },
+    "string-10-feet" : {
+      "gearCategory" : "standard-gear",
+      "name" : "String (10 feet)",
+      "category" : "adventuring-gear",
+      "description" : "A 10-foot length of string, typically found in a burglar's pack.",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "cp",
+        "quantity" : 0
+      },
+      "id" : "string-10-feet"
+    },
+    "mess-kit" : {
+      "gearCategory" : "kits",
+      "name" : "Mess Kit",
+      "category" : "adventuring-gear",
+      "description" : "This tin box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan and the other as a plate or shallow bowl.",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "sp",
+        "quantity" : 2
+      },
+      "id" : "mess-kit"
+    },
+    "perfume-vial" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Perfume (vial)",
+      "category" : "adventuring-gear",
+      "weight" : 0,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "perfume-vial"
+    },
+    "plate-armor" : {
+      "armorCategory" : "armor",
+      "armorClass" : 18,
+      "dexBonus" : false,
+      "maxBonus" : 0,
+      "minStrength" : 15,
+      "stealthDisadvantage" : true,
+      "name" : "Plate Armor",
+      "category" : "armor",
+      "weight" : 65,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 1500
+      },
+      "id" : "plate-armor"
+    },
+    "halberd" : {
+      "weaponCategory" : "Martial",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Martial Melee",
+      "damageDice" : "1d10",
+      "damageType" : "slashing",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ "heavy", "reach", "two-handed" ],
+      "name" : "Halberd",
+      "category" : "weapon",
+      "weight" : 6,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 20
+      },
+      "id" : "halberd"
+    },
+    "viol" : {
+      "toolCategory" : "Musical Instrument",
+      "name" : "Viol",
+      "category" : "tools",
+      "description" : "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 30
+      },
+      "id" : "viol"
+    },
+    "lamp" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Lamp",
+      "category" : "adventuring-gear",
+      "description" : "A lamp casts bright light in a 15-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil.",
+      "weight" : 1,
+      "cost" : {
+        "unit" : "sp",
+        "quantity" : 5
+      },
+      "id" : "lamp"
+    },
+    "saddlebags" : {
+      "vehicleCategory" : "Tack, Harness, and Drawn Vehicles",
+      "name" : "Saddlebags",
+      "category" : "mounts-and-vehicles",
+      "weight" : 8,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 4
+      },
+      "id" : "saddlebags"
+    },
+    "backpack" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Backpack",
+      "category" : "adventuring-gear",
+      "weight" : 5,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 2
+      },
+      "id" : "backpack"
+    },
+    "crowbar" : {
+      "gearCategory" : "standard-gear",
+      "name" : "Crowbar",
+      "category" : "adventuring-gear",
+      "description" : "Using a crowbar grants advantage to Strength checks where the crowbar's leverage can be applied.",
+      "weight" : 5,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 2
+      },
+      "id" : "crowbar"
+    },
+    "war-pick" : {
+      "weaponCategory" : "Martial",
+      "weaponRange" : "Melee",
+      "categoryRange" : "Martial Melee",
+      "damageDice" : "1d8",
+      "damageType" : "piercing",
+      "normalRange" : 5,
+      "longRange" : 0,
+      "normalThrowRange" : 0,
+      "longThrowRange" : 0,
+      "properties" : [ ],
+      "name" : "War pick",
+      "category" : "weapon",
+      "weight" : 2,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 5
+      },
+      "id" : "war-pick"
+    },
+    "hide-armor" : {
+      "armorCategory" : "armor",
+      "armorClass" : 12,
+      "dexBonus" : true,
+      "maxBonus" : 2,
+      "minStrength" : 0,
+      "stealthDisadvantage" : false,
+      "name" : "Hide Armor",
+      "category" : "armor",
+      "weight" : 12,
+      "cost" : {
+        "unit" : "gp",
+        "quantity" : 10
+      },
+      "id" : "hide-armor"
+    }
+  }
+}

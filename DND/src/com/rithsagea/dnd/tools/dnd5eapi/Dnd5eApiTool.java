@@ -19,6 +19,7 @@ import com.rithsagea.dnd.api.data.Alignment;
 import com.rithsagea.dnd.api.data.Language;
 import com.rithsagea.dnd.api.data.Proficiency;
 import com.rithsagea.dnd.api.data.Skill;
+import com.rithsagea.dnd.api.data.equipment.Equipment;
 
 public class Dnd5eApiTool {
 	
@@ -34,6 +35,8 @@ public class Dnd5eApiTool {
 		builder.registerTypeAdapter(Proficiency.class, new ProficiencyAdapter());
 		builder.registerTypeAdapter(Language.class, new LanguageAdapter());
 		builder.registerTypeAdapter(Alignment.class, new AlignmentAdapter());
+		
+		builder.registerTypeAdapter(Equipment.class, new EquipmentAdapter());
 		gson = builder.create();
 		
 		this.url = url;
@@ -111,5 +114,9 @@ public class Dnd5eApiTool {
 	
 	public List<Alignment> getAlignments() {
 		return getItems("/alignments", Alignment.class);
+	}
+	
+	public List<Equipment> getEquipment() {
+		return getItems("/equipment", Equipment.class);
 	}
 }

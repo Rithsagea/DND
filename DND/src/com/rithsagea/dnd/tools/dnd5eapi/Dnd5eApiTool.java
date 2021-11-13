@@ -35,7 +35,6 @@ public class Dnd5eApiTool {
 		builder.registerTypeAdapter(Proficiency.class, new ProficiencyAdapter());
 		builder.registerTypeAdapter(Language.class, new LanguageAdapter());
 		builder.registerTypeAdapter(Alignment.class, new AlignmentAdapter());
-		
 		builder.registerTypeAdapter(Equipment.class, new EquipmentAdapter());
 		Dnd5eApiTool.gson = builder.create();
 	}

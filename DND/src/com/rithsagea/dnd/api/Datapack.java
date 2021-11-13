@@ -40,7 +40,7 @@ public class Datapack {
 	public HashMap<String, Equipment> Equipment = new HashMap<>();
 	
 	@SerializedName("classes")
-	public HashMap<String, DndClass> Class = new HashMap<>();
+	public HashMap<String, DndClass> DndClass = new HashMap<>();
 	
 	private <T extends DndItem> void registerItems(HashMap<String, T> map, Collection<T> items) {
 		for(T item : items) {
@@ -74,7 +74,7 @@ public class Datapack {
 	}
 	
 	public void registerClasses(Collection<DndClass> items) {
-		registerItems(Class, items);
+		registerItems(DndClass, items);
 	}
 	
 	public void registerDatapack(Datapack data) {
@@ -84,7 +84,7 @@ public class Datapack {
 		registerLanguages(data.Language.values());
 		registerAlignments(data.Alignment.values());
 		registerEquipment(data.Equipment.values());
-		registerClasses(data.Class.values());
+		registerClasses(data.DndClass.values());
 	}
 	
 	private static final Gson gson = new GsonBuilder()

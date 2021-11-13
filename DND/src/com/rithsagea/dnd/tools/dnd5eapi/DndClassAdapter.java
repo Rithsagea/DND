@@ -166,7 +166,7 @@ public class DndClassAdapter implements JsonDeserializer<DndClass> {
 					classLevel.features.add(e2.getAsJsonObject().get("index").getAsString());
 				}
 				
-				classLevel.spellcasting = new ArrayList<>(Collections.nCopies(11, null));
+				classLevel.spellcasting = new ArrayList<>(Collections.nCopies(11, 0));
 				if(lvl.has("spellcasting")) {
 					JsonObject spellcasting = lvl.get("spellcasting").getAsJsonObject();
 					for(int x = 1; x <= 9; x++) {

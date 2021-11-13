@@ -10,9 +10,10 @@ public class Dnd5eApiRunner {
 		Dnd5eApiTool.setUrl("https://www.dnd5eapi.co/api");
 		
 		File file = new File("5e.json");
+		File backup = new File("5e Backup.json");
 		
 		Datapack data5e = new Datapack();
-		data5e = Datapack.loadDatapack(file);
+		
 		
 //		data5e.registerAbilityScores(Dnd5eApiTool.getAbilityScores());
 //		data5e.registerSkills(Dnd5eApiTool.getSkills());
@@ -21,7 +22,12 @@ public class Dnd5eApiRunner {
 //		data5e.registerAlignments(Dnd5eApiTool.getAlignments());
 //		data5e.registerEquipment(Dnd5eApiTool.getEquipment());
 //		data5e.registerClasses(Dnd5eApiTool.getClasses());
-		data5e.registerSubclasses(Dnd5eApiTool.getSubclasses());
+//		data5e.registerSubclasses(Dnd5eApiTool.getSubclasses());
+//		data5e.registerClassFeatures(Dnd5eApiTool.getClassFeatures());
+		
+		data5e = Datapack.loadDatapack(file);
+		data5e = Datapack.loadDatapack(backup);
+		
 		Datapack.saveDatapack(file, data5e);
 		
 		System.out.println();

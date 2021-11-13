@@ -20,6 +20,7 @@ import com.rithsagea.dnd.api.data.Language;
 import com.rithsagea.dnd.api.data.Proficiency;
 import com.rithsagea.dnd.api.data.Skill;
 import com.rithsagea.dnd.api.data.classes.DndClass;
+import com.rithsagea.dnd.api.data.classes.DndClassFeature;
 import com.rithsagea.dnd.api.data.classes.DndSubclass;
 import com.rithsagea.dnd.api.data.equipment.Equipment;
 
@@ -39,6 +40,7 @@ public class Dnd5eApiTool {
 		builder.registerTypeAdapter(Equipment.class, new EquipmentAdapter());
 		builder.registerTypeAdapter(DndClass.class, new DndClassAdapter());
 		builder.registerTypeAdapter(DndSubclass.class, new DndSubclassAdapter());
+		builder.registerTypeAdapter(DndClassFeature.class, new DndClassFeatureAdapter());
 		Dnd5eApiTool.gson = builder.create();
 	}
 	
@@ -130,5 +132,9 @@ public class Dnd5eApiTool {
 	
 	public static List<DndSubclass> getSubclasses() {
 		return getItems("/subclasses", DndSubclass.class);
+	}
+	
+	public static List<DndClassFeature> getClassFeatures() {
+		return getItems("/features", DndClassFeature.class);
 	}
 }

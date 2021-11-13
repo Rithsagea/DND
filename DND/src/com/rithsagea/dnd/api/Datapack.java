@@ -18,6 +18,7 @@ import com.rithsagea.dnd.api.data.Language;
 import com.rithsagea.dnd.api.data.Proficiency;
 import com.rithsagea.dnd.api.data.Skill;
 import com.rithsagea.dnd.api.data.classes.DndClass;
+import com.rithsagea.dnd.api.data.classes.DndClassFeature;
 import com.rithsagea.dnd.api.data.classes.DndSubclass;
 import com.rithsagea.dnd.api.data.equipment.Equipment;
 import com.rithsagea.dnd.api.data.equipment.EquipmentAdapter;
@@ -46,6 +47,9 @@ public class Datapack {
 	
 	@SerializedName("subclasses")
 	public Map<String, DndSubclass> DndSubclass = new HashMap<>();
+	
+	@SerializedName("class_features")
+	public Map<String, DndClassFeature> DndClassFeature = new HashMap<>();
 	
 	private <T extends DndItem> void registerItems(Map<String, T> map, Collection<T> items) {
 		for(T item : items) {
@@ -86,6 +90,10 @@ public class Datapack {
 		registerItems(DndSubclass, items);
 	}
 	
+	public void registerClassFeatures(Collection<DndClassFeature> items) {
+		registerItems(DndClassFeature, items);
+	}
+	
 	public void registerDatapack(Datapack data) {
 		registerAbilityScores(data.AbilityScore.values());
 		registerSkills(data.Skill.values());
@@ -95,6 +103,7 @@ public class Datapack {
 		registerEquipment(data.Equipment.values());
 		registerClasses(data.DndClass.values());
 		registerSubclasses(data.DndSubclass.values());
+		registerClassFeatures(data.DndClassFeature.values());
 	}
 	
 	private static final Gson gson = new GsonBuilder()

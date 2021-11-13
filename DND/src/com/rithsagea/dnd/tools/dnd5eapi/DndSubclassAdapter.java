@@ -38,6 +38,7 @@ public class DndSubclassAdapter implements JsonDeserializer<DndSubclass> {
 			builder.append(e.getAsString());
 			prefix = "\n";
 		}
+		subclass.description = builder.toString();
 		
 		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
 		for(JsonElement e1 : gson.fromJson(Dnd5eApiTool.get("/subclasses/" + subclass.id + "/levels"), JsonArray.class)) {

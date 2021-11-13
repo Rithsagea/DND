@@ -6833,5 +6833,355 @@
       },
       "id" : "bard"
     }
+  },
+  "subclasses" : {
+    "draconic" : {
+      "parentClass" : "sorcerer",
+      "name" : "Draconic",
+      "flavor" : "Sorcerous Origins",
+      "levels" : [ {
+        "level" : 1,
+        "features" : [ "dragon-ancestor", "draconic-resilience" ],
+        "specific" : { },
+        "id" : "draconic-1"
+      }, null, null, null, null, {
+        "level" : 6,
+        "features" : [ "elemental-affinity" ],
+        "specific" : { },
+        "id" : "draconic-6"
+      }, null, null, null, null, null, null, null, {
+        "level" : 14,
+        "features" : [ "dragon-wings" ],
+        "specific" : { },
+        "id" : "draconic-14"
+      }, null, null, null, {
+        "level" : 18,
+        "features" : [ "draconic-presence" ],
+        "specific" : { },
+        "id" : "draconic-18"
+      }, null, null ],
+      "id" : "draconic"
+    },
+    "lore" : {
+      "parentClass" : "bard",
+      "name" : "Lore",
+      "flavor" : "Bard College",
+      "levels" : [ null, null, {
+        "level" : 3,
+        "features" : [ "bonus-proficiencies", "cutting-words" ],
+        "specific" : {
+          "additional_magical_secrets_max_lvl" : 0
+        },
+        "id" : "lore-3"
+      }, null, null, {
+        "level" : 6,
+        "features" : [ "additional-magical-secrets" ],
+        "specific" : {
+          "additional_magical_secrets_max_lvl" : 3
+        },
+        "id" : "lore-6"
+      }, null, null, null, null, null, null, null, {
+        "level" : 14,
+        "features" : [ "peerless-skill" ],
+        "specific" : {
+          "additional_magical_secrets_max_lvl" : 3
+        },
+        "id" : "lore-14"
+      }, null, null, null, null, null, null ],
+      "id" : "lore"
+    },
+    "thief" : {
+      "parentClass" : "rogue",
+      "name" : "Thief",
+      "flavor" : "Roguish Archetype",
+      "levels" : [ null, null, {
+        "level" : 3,
+        "features" : [ "fast-hands", "second-story-work" ],
+        "specific" : { },
+        "id" : "thief-3"
+      }, null, null, null, null, null, {
+        "level" : 9,
+        "features" : [ "supreme-sneak" ],
+        "specific" : { },
+        "id" : "thief-9"
+      }, null, null, null, {
+        "level" : 13,
+        "features" : [ "use-magic-device" ],
+        "specific" : { },
+        "id" : "thief-13"
+      }, null, null, null, {
+        "level" : 17,
+        "features" : [ "thiefs-reflexes" ],
+        "specific" : { },
+        "id" : "thief-17"
+      }, null, null, null ],
+      "id" : "thief"
+    },
+    "berserker" : {
+      "parentClass" : "barbarian",
+      "name" : "Berserker",
+      "flavor" : "Primal Path",
+      "levels" : [ null, null, {
+        "level" : 3,
+        "features" : [ "frenzy" ],
+        "specific" : { },
+        "id" : "berserker-3"
+      }, null, null, {
+        "level" : 6,
+        "features" : [ "mindless-rage" ],
+        "specific" : { },
+        "id" : "berserker-6"
+      }, null, null, null, {
+        "level" : 10,
+        "features" : [ "intimidating-presence" ],
+        "specific" : { },
+        "id" : "berserker-10"
+      }, null, null, null, {
+        "level" : 14,
+        "features" : [ "retaliation" ],
+        "specific" : { },
+        "id" : "berserker-14"
+      }, null, null, null, null, null, null ],
+      "id" : "berserker"
+    },
+    "fiend" : {
+      "parentClass" : "warlock",
+      "name" : "Fiend",
+      "flavor" : "Otherworldly Patron",
+      "levels" : [ {
+        "level" : 1,
+        "features" : [ "dark-ones-blessing" ],
+        "specific" : { },
+        "id" : "fiend-1"
+      }, null, null, null, null, {
+        "level" : 6,
+        "features" : [ "dark-ones-own-luck" ],
+        "specific" : { },
+        "id" : "fiend-6"
+      }, null, null, null, {
+        "level" : 10,
+        "features" : [ "fiendish-resilience" ],
+        "specific" : { },
+        "id" : "fiend-10"
+      }, null, null, null, {
+        "level" : 14,
+        "features" : [ "hurl-through-hell" ],
+        "specific" : { },
+        "id" : "fiend-14"
+      }, null, null, null, null, null, null ],
+      "id" : "fiend"
+    },
+    "devotion" : {
+      "parentClass" : "paladin",
+      "name" : "Devotion",
+      "flavor" : "Sacred Oath",
+      "levels" : [ null, null, {
+        "level" : 3,
+        "features" : [ "channel-divinity" ],
+        "specific" : { },
+        "id" : "devotion-3"
+      }, null, null, null, {
+        "level" : 7,
+        "features" : [ "aura-of-devotion" ],
+        "specific" : {
+          "aura_range" : 10
+        },
+        "id" : "devotion-7"
+      }, null, null, null, null, null, null, null, {
+        "level" : 15,
+        "features" : [ "purity-of-spirit" ],
+        "specific" : {
+          "aura_range" : 10
+        },
+        "id" : "devotion-15"
+      }, null, null, {
+        "level" : 18,
+        "features" : [ ],
+        "specific" : {
+          "aura_range" : 30
+        },
+        "id" : "devotion-18"
+      }, null, {
+        "level" : 20,
+        "features" : [ "holy-nimbus" ],
+        "specific" : {
+          "aura_range" : 30
+        },
+        "id" : "devotion-20"
+      } ],
+      "id" : "devotion"
+    },
+    "open-hand" : {
+      "parentClass" : "monk",
+      "name" : "Open Hand",
+      "flavor" : "Monastic Tradition",
+      "levels" : [ null, null, {
+        "level" : 3,
+        "features" : [ "open-hand-technique" ],
+        "specific" : { },
+        "id" : "open-hand-3"
+      }, null, null, {
+        "level" : 6,
+        "features" : [ "wholeness-of-body" ],
+        "specific" : { },
+        "id" : "open-hand-6"
+      }, null, null, null, null, {
+        "level" : 11,
+        "features" : [ "tranquility" ],
+        "specific" : { },
+        "id" : "open-hand-11"
+      }, null, null, null, null, null, {
+        "level" : 17,
+        "features" : [ "quivering-palm" ],
+        "specific" : { },
+        "id" : "open-hand-17"
+      }, null, null, null ],
+      "id" : "open-hand"
+    },
+    "land" : {
+      "parentClass" : "druid",
+      "name" : "Land",
+      "flavor" : "Druid Circle",
+      "levels" : [ null, {
+        "level" : 2,
+        "features" : [ "bonus-cantrip", "natural-recovery" ],
+        "specific" : { },
+        "id" : "land-2"
+      }, null, null, null, {
+        "level" : 6,
+        "features" : [ "druid-lands-stride" ],
+        "specific" : { },
+        "id" : "land-6"
+      }, null, null, null, {
+        "level" : 10,
+        "features" : [ "natures-ward" ],
+        "specific" : { },
+        "id" : "land-10"
+      }, null, null, null, {
+        "level" : 14,
+        "features" : [ "natures-sanctuary" ],
+        "specific" : { },
+        "id" : "land-14"
+      }, null, null, null, null, null, null ],
+      "id" : "land"
+    },
+    "evocation" : {
+      "parentClass" : "wizard",
+      "name" : "Evocation",
+      "flavor" : "Arcane Tradition",
+      "levels" : [ null, {
+        "level" : 2,
+        "features" : [ "evocation-savant", "sculpt-spells" ],
+        "specific" : { },
+        "id" : "evocation-2"
+      }, null, null, null, {
+        "level" : 6,
+        "features" : [ "potent-cantrip" ],
+        "specific" : { },
+        "id" : "evocation-6"
+      }, null, null, null, {
+        "level" : 10,
+        "features" : [ "empowered-evocation" ],
+        "specific" : { },
+        "id" : "evocation-10"
+      }, null, null, null, {
+        "level" : 14,
+        "features" : [ "overchannel" ],
+        "specific" : { },
+        "id" : "evocation-14"
+      }, null, null, null, null, null, null ],
+      "id" : "evocation"
+    },
+    "hunter" : {
+      "parentClass" : "ranger",
+      "name" : "Hunter",
+      "flavor" : "Ranger Archetype",
+      "levels" : [ null, null, {
+        "level" : 3,
+        "features" : [ "hunters-prey" ],
+        "specific" : { },
+        "id" : "hunter-3"
+      }, null, null, null, {
+        "level" : 7,
+        "features" : [ "defensive-tactics" ],
+        "specific" : { },
+        "id" : "hunter-7"
+      }, null, null, null, {
+        "level" : 11,
+        "features" : [ "multiattack" ],
+        "specific" : { },
+        "id" : "hunter-11"
+      }, null, null, null, {
+        "level" : 15,
+        "features" : [ "superior-hunters-defense" ],
+        "specific" : { },
+        "id" : "hunter-15"
+      }, null, null, null, null, null ],
+      "id" : "hunter"
+    },
+    "champion" : {
+      "parentClass" : "fighter",
+      "name" : "Champion",
+      "flavor" : "Martial Archetype",
+      "levels" : [ null, null, {
+        "level" : 3,
+        "features" : [ "improved-critical" ],
+        "specific" : { },
+        "id" : "champion-3"
+      }, null, null, null, {
+        "level" : 7,
+        "features" : [ "remarkable-athlete" ],
+        "specific" : { },
+        "id" : "champion-7"
+      }, null, null, {
+        "level" : 10,
+        "features" : [ "additional-fighting-style" ],
+        "specific" : { },
+        "id" : "champion-10"
+      }, null, null, null, null, {
+        "level" : 15,
+        "features" : [ "superior-critical" ],
+        "specific" : { },
+        "id" : "champion-15"
+      }, null, null, {
+        "level" : 18,
+        "features" : [ "survivor" ],
+        "specific" : { },
+        "id" : "champion-18"
+      }, null, null ],
+      "id" : "champion"
+    },
+    "life" : {
+      "parentClass" : "cleric",
+      "name" : "Life",
+      "flavor" : "Divine Domain",
+      "levels" : [ {
+        "level" : 1,
+        "features" : [ "bonus-proficiency", "disciple-of-life" ],
+        "specific" : { },
+        "id" : "life-1"
+      }, {
+        "level" : 2,
+        "features" : [ "channel-divinity-preserve-life" ],
+        "specific" : { },
+        "id" : "life-2"
+      }, null, null, null, {
+        "level" : 6,
+        "features" : [ "blessed-healer" ],
+        "specific" : { },
+        "id" : "life-6"
+      }, null, {
+        "level" : 8,
+        "features" : [ "divine-strike" ],
+        "specific" : { },
+        "id" : "life-8"
+      }, null, null, null, null, null, null, null, null, {
+        "level" : 17,
+        "features" : [ "supreme-healing" ],
+        "specific" : { },
+        "id" : "life-17"
+      }, null, null, null ],
+      "id" : "life"
+    }
   }
 }

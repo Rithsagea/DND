@@ -1,8 +1,9 @@
-package com.rithsagea.dnd.api.data;
+package com.rithsagea.dnd.api.data.classes;
 
 import java.util.List;
 import java.util.Map;
 
+import com.rithsagea.dnd.api.data.DndItem;
 import com.rithsagea.dnd.api.data.extra.EquipmentOption;
 import com.rithsagea.dnd.api.data.extra.EquipmentStack;
 import com.rithsagea.dnd.api.data.extra.ProficiencyOptions;

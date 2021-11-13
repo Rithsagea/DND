@@ -6,43 +6,48 @@ import java.io.FileWriter;
 import java.io.Writer;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Map;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.SerializedName;
 import com.rithsagea.dnd.api.data.AbilityScore;
 import com.rithsagea.dnd.api.data.Alignment;
-import com.rithsagea.dnd.api.data.DndClass;
 import com.rithsagea.dnd.api.data.DndItem;
 import com.rithsagea.dnd.api.data.Language;
 import com.rithsagea.dnd.api.data.Proficiency;
 import com.rithsagea.dnd.api.data.Skill;
+import com.rithsagea.dnd.api.data.classes.DndClass;
+import com.rithsagea.dnd.api.data.classes.DndSubclass;
 import com.rithsagea.dnd.api.data.equipment.Equipment;
 import com.rithsagea.dnd.api.data.equipment.EquipmentAdapter;
 
 public class Datapack {
 	@SerializedName("ability_scores")
-	public HashMap<String, AbilityScore> AbilityScore = new HashMap<>();
+	public Map<String, AbilityScore> AbilityScore = new HashMap<>();
 	
 	@SerializedName("skills")
-	public HashMap<String, Skill> Skill = new HashMap<>();
+	public Map<String, Skill> Skill = new HashMap<>();
 	
 	@SerializedName("proficiencies")
-	public HashMap<String, Proficiency> Proficiency = new HashMap<>();
+	public Map<String, Proficiency> Proficiency = new HashMap<>();
 	
 	@SerializedName("languages")
-	public HashMap<String, Language> Language = new HashMap<>();
+	public Map<String, Language> Language = new HashMap<>();
 	
 	@SerializedName("alignments")
-	public HashMap<String, Alignment> Alignment = new HashMap<>();
+	public Map<String, Alignment> Alignment = new HashMap<>();
 	
 	@SerializedName("equipment")
-	public HashMap<String, Equipment> Equipment = new HashMap<>();
+	public Map<String, Equipment> Equipment = new HashMap<>();
 	
 	@SerializedName("classes")
-	public HashMap<String, DndClass> DndClass = new HashMap<>();
+	public Map<String, DndClass> DndClass = new HashMap<>();
 	
-	private <T extends DndItem> void registerItems(HashMap<String, T> map, Collection<T> items) {
+	@SerializedName("subclasses")
+	public Map<String, DndSubclass> DndSubclass = new HashMap<>();
+	
+	private <T extends DndItem> void registerItems(Map<String, T> map, Collection<T> items) {
 		for(T item : items) {
 			if(!map.containsKey(item.id))
 				map.put(item.id, item);
@@ -77,6 +82,10 @@ public class Datapack {
 		registerItems(DndClass, items);
 	}
 	
+	public void registerSubclasses(Collection<DndSubclass> items) {
+		registerItems(DndSubclass, items);
+	}
+	
 	public void registerDatapack(Datapack data) {
 		registerAbilityScores(data.AbilityScore.values());
 		registerSkills(data.Skill.values());
@@ -85,6 +94,7 @@ public class Datapack {
 		registerAlignments(data.Alignment.values());
 		registerEquipment(data.Equipment.values());
 		registerClasses(data.DndClass.values());
+		registerSubclasses(data.DndSubclass.values());
 	}
 	
 	private static final Gson gson = new GsonBuilder()

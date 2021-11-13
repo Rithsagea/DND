@@ -16,10 +16,11 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.rithsagea.dnd.api.data.AbilityScore;
 import com.rithsagea.dnd.api.data.Alignment;
-import com.rithsagea.dnd.api.data.DndClass;
 import com.rithsagea.dnd.api.data.Language;
 import com.rithsagea.dnd.api.data.Proficiency;
 import com.rithsagea.dnd.api.data.Skill;
+import com.rithsagea.dnd.api.data.classes.DndClass;
+import com.rithsagea.dnd.api.data.classes.DndSubclass;
 import com.rithsagea.dnd.api.data.equipment.Equipment;
 
 public class Dnd5eApiTool {
@@ -37,6 +38,7 @@ public class Dnd5eApiTool {
 		builder.registerTypeAdapter(Alignment.class, new AlignmentAdapter());
 		builder.registerTypeAdapter(Equipment.class, new EquipmentAdapter());
 		builder.registerTypeAdapter(DndClass.class, new DndClassAdapter());
+		builder.registerTypeAdapter(DndSubclass.class, new DndSubclassAdapter());
 		Dnd5eApiTool.gson = builder.create();
 	}
 	
@@ -124,5 +126,9 @@ public class Dnd5eApiTool {
 	
 	public static List<DndClass> getClasses() {
 		return getItems("/classes", DndClass.class);
+	}
+	
+	public static List<DndSubclass> getSubclasses() {
+		return getItems("/subclasses", DndSubclass.class);
 	}
 }

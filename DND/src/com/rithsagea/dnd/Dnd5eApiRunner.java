@@ -20,7 +20,7 @@ public class Dnd5eApiRunner {
 //		data5e.registerLanguages(Dnd5eApiTool.getLanguages());
 //		data5e.registerAlignments(Dnd5eApiTool.getAlignments());
 //		data5e.registerEquipment(Dnd5eApiTool.getEquipment());
-		data5e.registerClasses(Dnd5eApiTool.getClasses());
+//		data5e.registerClasses(Dnd5eApiTool.getClasses());
 		Datapack.saveDatapack(file, data5e);
 		
 		System.out.println();

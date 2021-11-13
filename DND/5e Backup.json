@@ -3394,7 +3394,7 @@
         "abilityScoreBonus" : 0,
         "proficiencyBonus" : 2,
         "features" : [ "rogue-expertise-1", "sneak-attack", "thieves-cant" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "dice_count" : 1,
           "dice_value" : 6
@@ -3405,7 +3405,7 @@
         "abilityScoreBonus" : 0,
         "proficiencyBonus" : 2,
         "features" : [ "cunning-action" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "dice_count" : 1,
           "dice_value" : 6
@@ -3416,7 +3416,7 @@
         "abilityScoreBonus" : 0,
         "proficiencyBonus" : 2,
         "features" : [ "roguish-archetype" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "dice_count" : 2,
           "dice_value" : 6
@@ -3427,7 +3427,7 @@
         "abilityScoreBonus" : 1,
         "proficiencyBonus" : 2,
         "features" : [ "rogue-ability-score-improvement-1" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "dice_count" : 2,
           "dice_value" : 6
@@ -3438,7 +3438,7 @@
         "abilityScoreBonus" : 1,
         "proficiencyBonus" : 3,
         "features" : [ "uncanny-dodge" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "dice_count" : 3,
           "dice_value" : 6
@@ -3449,7 +3449,7 @@
         "abilityScoreBonus" : 1,
         "proficiencyBonus" : 3,
         "features" : [ "rogue-expertise-2" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "dice_count" : 3,
           "dice_value" : 6
@@ -3460,7 +3460,7 @@
         "abilityScoreBonus" : 1,
         "proficiencyBonus" : 3,
         "features" : [ "rogue-evasion" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "dice_count" : 4,
           "dice_value" : 6
@@ -3471,7 +3471,7 @@
         "abilityScoreBonus" : 2,
         "proficiencyBonus" : 3,
         "features" : [ "rogue-ability-score-improvement-2" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "dice_count" : 4,
           "dice_value" : 6
@@ -3482,7 +3482,7 @@
         "abilityScoreBonus" : 2,
         "proficiencyBonus" : 4,
         "features" : [ ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "dice_count" : 5,
           "dice_value" : 6
@@ -3493,7 +3493,7 @@
         "abilityScoreBonus" : 3,
         "proficiencyBonus" : 4,
         "features" : [ "rogue-ability-score-improvement-3" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "dice_count" : 5,
           "dice_value" : 6
@@ -3504,7 +3504,7 @@
         "abilityScoreBonus" : 2,
         "proficiencyBonus" : 4,
         "features" : [ "reliable-talent" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "dice_count" : 6,
           "dice_value" : 6
@@ -3515,7 +3515,7 @@
         "abilityScoreBonus" : 4,
         "proficiencyBonus" : 4,
         "features" : [ "rogue-ability-score-improvement-4" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "dice_count" : 6,
           "dice_value" : 6
@@ -3526,7 +3526,7 @@
         "abilityScoreBonus" : 3,
         "proficiencyBonus" : 5,
         "features" : [ ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "dice_count" : 7,
           "dice_value" : 6
@@ -3537,7 +3537,7 @@
         "abilityScoreBonus" : 3,
         "proficiencyBonus" : 5,
         "features" : [ "blindsense" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "dice_count" : 7,
           "dice_value" : 6
@@ -3548,7 +3548,7 @@
         "abilityScoreBonus" : 3,
         "proficiencyBonus" : 5,
         "features" : [ "slippery-mind" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "dice_count" : 8,
           "dice_value" : 6
@@ -3559,7 +3559,7 @@
         "abilityScoreBonus" : 5,
         "proficiencyBonus" : 5,
         "features" : [ "rogue-ability-score-improvement-5" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "dice_count" : 8,
           "dice_value" : 6
@@ -3570,7 +3570,7 @@
         "abilityScoreBonus" : 4,
         "proficiencyBonus" : 6,
         "features" : [ ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "dice_count" : 9,
           "dice_value" : 6
@@ -3581,7 +3581,7 @@
         "abilityScoreBonus" : 4,
         "proficiencyBonus" : 6,
         "features" : [ "elusive" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "dice_count" : 9,
           "dice_value" : 6
@@ -3592,7 +3592,7 @@
         "abilityScoreBonus" : 6,
         "proficiencyBonus" : 6,
         "features" : [ "rogue-ability-score-improvement-6" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "dice_count" : 10,
           "dice_value" : 6
@@ -3603,7 +3603,7 @@
         "abilityScoreBonus" : 5,
         "proficiencyBonus" : 6,
         "features" : [ "stroke-of-luck" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "dice_count" : 10,
           "dice_value" : 6
@@ -4285,7 +4285,7 @@
         "abilityScoreBonus" : 0,
         "proficiencyBonus" : 2,
         "features" : [ "rage", "barbarian-unarmored-defense" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "rage_damage_bonus" : 2,
           "rage_count" : 2,
@@ -4297,7 +4297,7 @@
         "abilityScoreBonus" : 0,
         "proficiencyBonus" : 2,
         "features" : [ "reckless-attack", "danger-sense" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "rage_damage_bonus" : 2,
           "rage_count" : 2,
@@ -4309,7 +4309,7 @@
         "abilityScoreBonus" : 0,
         "proficiencyBonus" : 2,
         "features" : [ "primal-path" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "rage_damage_bonus" : 2,
           "rage_count" : 3,
@@ -4321,7 +4321,7 @@
         "abilityScoreBonus" : 1,
         "proficiencyBonus" : 2,
         "features" : [ "barbarian-ability-score-improvement-1" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "rage_damage_bonus" : 2,
           "rage_count" : 3,
@@ -4333,7 +4333,7 @@
         "abilityScoreBonus" : 1,
         "proficiencyBonus" : 3,
         "features" : [ "barbarian-extra-attack", "fast-movement" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "rage_damage_bonus" : 2,
           "rage_count" : 3,
@@ -4345,7 +4345,7 @@
         "abilityScoreBonus" : 1,
         "proficiencyBonus" : 3,
         "features" : [ ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "rage_damage_bonus" : 2,
           "rage_count" : 4,
@@ -4357,7 +4357,7 @@
         "abilityScoreBonus" : 1,
         "proficiencyBonus" : 3,
         "features" : [ "feral-instinct" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "rage_damage_bonus" : 2,
           "rage_count" : 4,
@@ -4369,7 +4369,7 @@
         "abilityScoreBonus" : 2,
         "proficiencyBonus" : 3,
         "features" : [ "barbarian-ability-score-improvement-2" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "rage_damage_bonus" : 2,
           "rage_count" : 4,
@@ -4381,7 +4381,7 @@
         "abilityScoreBonus" : 2,
         "proficiencyBonus" : 4,
         "features" : [ "brutal-critical-1-die" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "rage_damage_bonus" : 3,
           "rage_count" : 4,
@@ -4393,7 +4393,7 @@
         "abilityScoreBonus" : 2,
         "proficiencyBonus" : 4,
         "features" : [ ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "rage_damage_bonus" : 3,
           "rage_count" : 4,
@@ -4405,7 +4405,7 @@
         "abilityScoreBonus" : 2,
         "proficiencyBonus" : 4,
         "features" : [ "relentless-rage" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "rage_damage_bonus" : 3,
           "rage_count" : 4,
@@ -4417,7 +4417,7 @@
         "abilityScoreBonus" : 3,
         "proficiencyBonus" : 4,
         "features" : [ "barbarian-ability-score-improvement-3" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "rage_damage_bonus" : 3,
           "rage_count" : 5,
@@ -4429,7 +4429,7 @@
         "abilityScoreBonus" : 3,
         "proficiencyBonus" : 5,
         "features" : [ "brutal-critical-2-dice" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "rage_damage_bonus" : 3,
           "rage_count" : 5,
@@ -4441,7 +4441,7 @@
         "abilityScoreBonus" : 3,
         "proficiencyBonus" : 5,
         "features" : [ ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "rage_damage_bonus" : 3,
           "rage_count" : 5,
@@ -4453,7 +4453,7 @@
         "abilityScoreBonus" : 3,
         "proficiencyBonus" : 5,
         "features" : [ "persistent-rage" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "rage_damage_bonus" : 3,
           "rage_count" : 5,
@@ -4465,7 +4465,7 @@
         "abilityScoreBonus" : 4,
         "proficiencyBonus" : 5,
         "features" : [ "barbarian-ability-score-improvement-4" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "rage_damage_bonus" : 4,
           "rage_count" : 5,
@@ -4477,7 +4477,7 @@
         "abilityScoreBonus" : 4,
         "proficiencyBonus" : 6,
         "features" : [ "brutal-critical-3-dice" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "rage_damage_bonus" : 4,
           "rage_count" : 6,
@@ -4489,7 +4489,7 @@
         "abilityScoreBonus" : 4,
         "proficiencyBonus" : 6,
         "features" : [ "indomitable-might" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "rage_damage_bonus" : 4,
           "rage_count" : 6,
@@ -4501,7 +4501,7 @@
         "abilityScoreBonus" : 5,
         "proficiencyBonus" : 6,
         "features" : [ "barbarian-ability-score-improvement-5" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "rage_damage_bonus" : 4,
           "rage_count" : 6,
@@ -4513,7 +4513,7 @@
         "abilityScoreBonus" : 5,
         "proficiencyBonus" : 6,
         "features" : [ "primal-champion" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "rage_damage_bonus" : 4,
           "rage_count" : 9999,
@@ -5451,7 +5451,7 @@
         "abilityScoreBonus" : 0,
         "proficiencyBonus" : 2,
         "features" : [ "fighter-fighting-style", "second-wind" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "extra_attacks" : 0,
           "action_surges" : 0,
@@ -5463,7 +5463,7 @@
         "abilityScoreBonus" : 0,
         "proficiencyBonus" : 2,
         "features" : [ "action-surge-1-use" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "extra_attacks" : 0,
           "action_surges" : 1,
@@ -5475,7 +5475,7 @@
         "abilityScoreBonus" : 0,
         "proficiencyBonus" : 2,
         "features" : [ "martial-archetype" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "extra_attacks" : 0,
           "action_surges" : 1,
@@ -5487,7 +5487,7 @@
         "abilityScoreBonus" : 1,
         "proficiencyBonus" : 2,
         "features" : [ "fighter-ability-score-improvement-1" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "extra_attacks" : 0,
           "action_surges" : 1,
@@ -5499,7 +5499,7 @@
         "abilityScoreBonus" : 1,
         "proficiencyBonus" : 3,
         "features" : [ "extra-attack-1" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "extra_attacks" : 1,
           "action_surges" : 1,
@@ -5511,7 +5511,7 @@
         "abilityScoreBonus" : 2,
         "proficiencyBonus" : 3,
         "features" : [ "fighter-ability-score-improvement-2" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "extra_attacks" : 1,
           "action_surges" : 1,
@@ -5523,7 +5523,7 @@
         "abilityScoreBonus" : 2,
         "proficiencyBonus" : 3,
         "features" : [ ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "extra_attacks" : 1,
           "action_surges" : 1,
@@ -5535,7 +5535,7 @@
         "abilityScoreBonus" : 3,
         "proficiencyBonus" : 3,
         "features" : [ "fighter-ability-score-improvement-3" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "extra_attacks" : 1,
           "action_surges" : 1,
@@ -5547,7 +5547,7 @@
         "abilityScoreBonus" : 3,
         "proficiencyBonus" : 4,
         "features" : [ "indomitable-1-use" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "extra_attacks" : 1,
           "action_surges" : 1,
@@ -5559,7 +5559,7 @@
         "abilityScoreBonus" : 3,
         "proficiencyBonus" : 4,
         "features" : [ ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "extra_attacks" : 1,
           "action_surges" : 1,
@@ -5571,7 +5571,7 @@
         "abilityScoreBonus" : 3,
         "proficiencyBonus" : 4,
         "features" : [ "extra-attack-2" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "extra_attacks" : 2,
           "action_surges" : 1,
@@ -5583,7 +5583,7 @@
         "abilityScoreBonus" : 4,
         "proficiencyBonus" : 4,
         "features" : [ "fighter-ability-score-improvement-4" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "extra_attacks" : 2,
           "action_surges" : 1,
@@ -5595,7 +5595,7 @@
         "abilityScoreBonus" : 4,
         "proficiencyBonus" : 5,
         "features" : [ "indomitable-2-uses" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "extra_attacks" : 2,
           "action_surges" : 1,
@@ -5607,7 +5607,7 @@
         "abilityScoreBonus" : 5,
         "proficiencyBonus" : 5,
         "features" : [ "fighter-ability-score-improvement-5" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "extra_attacks" : 2,
           "action_surges" : 1,
@@ -5619,7 +5619,7 @@
         "abilityScoreBonus" : 5,
         "proficiencyBonus" : 5,
         "features" : [ ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "extra_attacks" : 2,
           "action_surges" : 1,
@@ -5631,7 +5631,7 @@
         "abilityScoreBonus" : 6,
         "proficiencyBonus" : 5,
         "features" : [ "fighter-ability-score-improvement-6" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "extra_attacks" : 2,
           "action_surges" : 1,
@@ -5643,7 +5643,7 @@
         "abilityScoreBonus" : 6,
         "proficiencyBonus" : 6,
         "features" : [ "action-surge-2-uses", "indomitable-3-uses" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "extra_attacks" : 2,
           "action_surges" : 2,
@@ -5655,7 +5655,7 @@
         "abilityScoreBonus" : 6,
         "proficiencyBonus" : 6,
         "features" : [ ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "extra_attacks" : 2,
           "action_surges" : 2,
@@ -5667,7 +5667,7 @@
         "abilityScoreBonus" : 7,
         "proficiencyBonus" : 6,
         "features" : [ "fighter-ability-score-improvement-7" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "extra_attacks" : 2,
           "action_surges" : 2,
@@ -5679,7 +5679,7 @@
         "abilityScoreBonus" : 7,
         "proficiencyBonus" : 6,
         "features" : [ "extra-attack-3" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "extra_attacks" : 3,
           "action_surges" : 2,
@@ -5978,7 +5978,7 @@
         "abilityScoreBonus" : 0,
         "proficiencyBonus" : 2,
         "features" : [ "monk-unarmored-defense", "martial-arts" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "ki_points" : 0,
           "dice_count" : 1,
@@ -5991,7 +5991,7 @@
         "abilityScoreBonus" : 0,
         "proficiencyBonus" : 2,
         "features" : [ "ki", "flurry-of-blows", "patient-defense", "step-of-the-wind", "unarmored-movement-1" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "ki_points" : 2,
           "dice_count" : 1,
@@ -6004,7 +6004,7 @@
         "abilityScoreBonus" : 0,
         "proficiencyBonus" : 2,
         "features" : [ "monastic-tradition", "deflect-missiles" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "ki_points" : 3,
           "dice_count" : 1,
@@ -6017,7 +6017,7 @@
         "abilityScoreBonus" : 1,
         "proficiencyBonus" : 2,
         "features" : [ "monk-ability-score-improvement-1", "slow-fall" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "ki_points" : 4,
           "dice_count" : 1,
@@ -6030,7 +6030,7 @@
         "abilityScoreBonus" : 1,
         "proficiencyBonus" : 3,
         "features" : [ "monk-extra-attack", "stunning-strike" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "ki_points" : 5,
           "dice_count" : 1,
@@ -6043,7 +6043,7 @@
         "abilityScoreBonus" : 1,
         "proficiencyBonus" : 3,
         "features" : [ "ki-empowered-strikes" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "ki_points" : 6,
           "dice_count" : 1,
@@ -6056,7 +6056,7 @@
         "abilityScoreBonus" : 1,
         "proficiencyBonus" : 3,
         "features" : [ "monk-evasion", "stillness-of-mind" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "ki_points" : 7,
           "dice_count" : 1,
@@ -6069,7 +6069,7 @@
         "abilityScoreBonus" : 2,
         "proficiencyBonus" : 3,
         "features" : [ "monk-ability-score-improvement-2" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "ki_points" : 8,
           "dice_count" : 1,
@@ -6082,7 +6082,7 @@
         "abilityScoreBonus" : 2,
         "proficiencyBonus" : 4,
         "features" : [ "unarmored-movement-2" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "ki_points" : 9,
           "dice_count" : 1,
@@ -6095,7 +6095,7 @@
         "abilityScoreBonus" : 2,
         "proficiencyBonus" : 4,
         "features" : [ "purity-of-body" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "ki_points" : 10,
           "dice_count" : 1,
@@ -6108,7 +6108,7 @@
         "abilityScoreBonus" : 2,
         "proficiencyBonus" : 4,
         "features" : [ ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "ki_points" : 11,
           "dice_count" : 1,
@@ -6121,7 +6121,7 @@
         "abilityScoreBonus" : 3,
         "proficiencyBonus" : 4,
         "features" : [ "monk-ability-score-improvement-3" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "ki_points" : 12,
           "dice_count" : 1,
@@ -6134,7 +6134,7 @@
         "abilityScoreBonus" : 3,
         "proficiencyBonus" : 5,
         "features" : [ "tongue-of-the-sun-and-moon" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "ki_points" : 13,
           "dice_count" : 1,
@@ -6147,7 +6147,7 @@
         "abilityScoreBonus" : 3,
         "proficiencyBonus" : 5,
         "features" : [ "diamond-soul" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "ki_points" : 14,
           "dice_count" : 1,
@@ -6160,7 +6160,7 @@
         "abilityScoreBonus" : 3,
         "proficiencyBonus" : 5,
         "features" : [ "monk-timeless-body" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "ki_points" : 15,
           "dice_count" : 1,
@@ -6173,7 +6173,7 @@
         "abilityScoreBonus" : 4,
         "proficiencyBonus" : 5,
         "features" : [ "monk-ability-score-improvement-4" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "ki_points" : 16,
           "dice_count" : 1,
@@ -6186,7 +6186,7 @@
         "abilityScoreBonus" : 4,
         "proficiencyBonus" : 6,
         "features" : [ ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "ki_points" : 17,
           "dice_count" : 1,
@@ -6199,7 +6199,7 @@
         "abilityScoreBonus" : 4,
         "proficiencyBonus" : 6,
         "features" : [ "empty-body" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "ki_points" : 18,
           "dice_count" : 1,
@@ -6212,7 +6212,7 @@
         "abilityScoreBonus" : 5,
         "proficiencyBonus" : 6,
         "features" : [ "monk-ability-score-improvement-5" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "ki_points" : 19,
           "dice_count" : 1,
@@ -6225,7 +6225,7 @@
         "abilityScoreBonus" : 5,
         "proficiencyBonus" : 6,
         "features" : [ "perfect-self" ],
-        "spellcasting" : [ null, null, null, null, null, null, null, null, null, null, null ],
+        "spellcasting" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         "classSpecific" : {
           "ki_points" : 20,
           "dice_count" : 1,

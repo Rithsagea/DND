@@ -17,6 +17,7 @@ import com.rithsagea.dnd.api.data.Language;
 import com.rithsagea.dnd.api.data.Proficiency;
 import com.rithsagea.dnd.api.data.Skill;
 import com.rithsagea.dnd.api.data.equipment.Equipment;
+import com.rithsagea.dnd.api.data.equipment.EquipmentAdapter;
 
 public class Datapack {
 	@SerializedName("ability_scores")
@@ -78,6 +79,7 @@ public class Datapack {
 	}
 	
 	private static final Gson gson = new GsonBuilder()
+			.registerTypeAdapter(Equipment.class, new EquipmentAdapter())
 			.create();
 	
 	public static Datapack loadDatapack(File file) {

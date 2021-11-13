@@ -12,6 +12,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.SerializedName;
 import com.rithsagea.dnd.api.data.AbilityScore;
 import com.rithsagea.dnd.api.data.Alignment;
+import com.rithsagea.dnd.api.data.DndClass;
 import com.rithsagea.dnd.api.data.DndItem;
 import com.rithsagea.dnd.api.data.Language;
 import com.rithsagea.dnd.api.data.Proficiency;
@@ -37,6 +38,9 @@ public class Datapack {
 	
 	@SerializedName("equipment")
 	public HashMap<String, Equipment> Equipment = new HashMap<>();
+	
+	@SerializedName("classes")
+	public HashMap<String, DndClass> Class = new HashMap<>();
 	
 	private <T extends DndItem> void registerItems(HashMap<String, T> map, Collection<T> items) {
 		for(T item : items) {
@@ -69,6 +73,10 @@ public class Datapack {
 		registerItems(Equipment, items);
 	}
 	
+	public void registerClasses(Collection<DndClass> items) {
+		registerItems(Class, items);
+	}
+	
 	public void registerDatapack(Datapack data) {
 		registerAbilityScores(data.AbilityScore.values());
 		registerSkills(data.Skill.values());
@@ -76,6 +84,7 @@ public class Datapack {
 		registerLanguages(data.Language.values());
 		registerAlignments(data.Alignment.values());
 		registerEquipment(data.Equipment.values());
+		registerClasses(data.Class.values());
 	}
 	
 	private static final Gson gson = new GsonBuilder()

@@ -16,6 +16,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.rithsagea.dnd.api.data.AbilityScore;
 import com.rithsagea.dnd.api.data.Alignment;
+import com.rithsagea.dnd.api.data.DndClass;
 import com.rithsagea.dnd.api.data.Language;
 import com.rithsagea.dnd.api.data.Proficiency;
 import com.rithsagea.dnd.api.data.Skill;
@@ -23,11 +24,10 @@ import com.rithsagea.dnd.api.data.equipment.Equipment;
 
 public class Dnd5eApiTool {
 	
-	private String url;
-	private Gson gson;
+	private static String url;
+	private static Gson gson;
 	
-	public Dnd5eApiTool(String url) {
-		
+	static {
 		GsonBuilder builder = new GsonBuilder();
 		builder.setPrettyPrinting();
 		builder.registerTypeAdapter(AbilityScore.class, new AbilityScoreAdapter());
@@ -37,19 +37,21 @@ public class Dnd5eApiTool {
 		builder.registerTypeAdapter(Alignment.class, new AlignmentAdapter());
 		
 		builder.registerTypeAdapter(Equipment.class, new EquipmentAdapter());
-		gson = builder.create();
-		
-		this.url = url;
+		Dnd5eApiTool.gson = builder.create();
 	}
 	
-	public String get(String header) {
+	public static void setUrl(String url) {
+		Dnd5eApiTool.url = url;
+	}
+	
+	public static String get(String header) {
 		URL url;
 		HttpURLConnection conn;
 		StringBuilder builder = new StringBuilder();
 		InputStream is = null;
 		
 		try {
-			url = new URL(this.url + header);
+			url = new URL(Dnd5eApiTool.url + header);
 			conn = (HttpURLConnection) url.openConnection();
 			conn.connect();
 			
@@ -74,7 +76,7 @@ public class Dnd5eApiTool {
 		return builder.toString();
 	}
 	
-	public List<String> getIndex(String header) {
+	public static List<String> getIndex(String header) {
 		JsonObject obj = gson.fromJson(get(header), JsonObject.class);
 		
 		List<String> index = new ArrayList<String>();
@@ -85,7 +87,7 @@ public class Dnd5eApiTool {
 		return index;
 	}
 	
-	public <T> List<T> getItems(String header, Class<T> clazz) {
+	public static <T> List<T> getItems(String header, Class<T> clazz) {
 		List<String> index = getIndex(header);
 		List<T> res = new ArrayList<>();
 		
@@ -96,27 +98,31 @@ public class Dnd5eApiTool {
 		return res;
 	}
 	
-	public List<AbilityScore> getAbilityScores() {
+	public static List<AbilityScore> getAbilityScores() {
 		return getItems("/ability-scores", AbilityScore.class);
 	}
 	
-	public List<Skill> getSkills() {
+	public static List<Skill> getSkills() {
 		return getItems("/skills", Skill.class);
 	}
 	
-	public List<Proficiency> getProficiencies() {
+	public static List<Proficiency> getProficiencies() {
 		return getItems("/proficiencies", Proficiency.class);
 	}
 	
-	public List<Language> getLanguages() {
+	public static List<Language> getLanguages() {
 		return getItems("/languages", Language.class);
 	}
 	
-	public List<Alignment> getAlignments() {
+	public static List<Alignment> getAlignments() {
 		return getItems("/alignments", Alignment.class);
 	}
 	
-	public List<Equipment> getEquipment() {
+	public static List<Equipment> getEquipment() {
 		return getItems("/equipment", Equipment.class);
+	}
+	
+	public static List<DndClass> getClasses() {
+		return getItems("/classes", DndClass.class);
 	}
 }

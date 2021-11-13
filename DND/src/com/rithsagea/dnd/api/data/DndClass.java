@@ -1,10 +1,12 @@
 package com.rithsagea.dnd.api.data;
 
 import java.util.List;
+import java.util.Map;
 
 import com.rithsagea.dnd.api.data.extra.EquipmentOption;
 import com.rithsagea.dnd.api.data.extra.EquipmentStack;
 import com.rithsagea.dnd.api.data.extra.ProficiencyOptions;
+import com.rithsagea.dnd.api.data.extra.SpellcastingInfo;
 
 public class DndClass extends DndItem {
 	public String name;
@@ -21,6 +23,11 @@ public class DndClass extends DndItem {
 	
 	public List<String> subclasses;
 	
-	//TODO Spells
-	//TODO Spellcasting
+	public Map<String, Integer> abilityScoreRequirement;
+	public int abilityScoreRequirementCount;
+	public List<String> multiclassingProficiencies;
+	public List<ProficiencyOptions> multiclassingProficiencyOptions;
+	
+	public List<String> spells;
+	public SpellcastingInfo spellcastingInfo;
 }

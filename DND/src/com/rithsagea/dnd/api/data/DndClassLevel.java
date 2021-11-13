@@ -9,7 +9,7 @@ public class DndClassLevel extends DndItem {
 	public int proficiencyBonus;
 	
 	public List<String> features;
-	public List<Integer> spellcasting; // 0 cantrip 1-9 spell slots
+	public List<Integer> spellcasting; // 0 spells known 1-9 spell slots 10 cantrips known
 	public Map<String, Integer> classSpecific;
 	
 	public String className;

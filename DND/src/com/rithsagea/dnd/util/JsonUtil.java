@@ -26,18 +26,30 @@ public class JsonUtil {
 	}
 	
 	public static String getString(JsonElement elem, String path) {
-		return get(elem, path).getAsString();
+		JsonElement e = get(elem, path);
+		if(e == null) return "";
+		return e.getAsString();
 	}
 	
 	public static int getInt(JsonElement elem, String path) {
-		return get(elem, path).getAsInt();
+		JsonElement e = get(elem, path);
+		if(e == null) return 0;
+		return e.getAsInt();
 	}
 	
 	public static JsonObject getObject(JsonElement elem, String path) {
-		return get(elem, path).getAsJsonObject();
+		JsonElement e = get(elem, path);
+		if(e == null) return null;
+		return e.getAsJsonObject();
 	}
 	
 	public static JsonArray getArray(JsonElement elem, String path) {
-		return get(elem, path).getAsJsonArray();
+		JsonElement e = get(elem, path);
+		if(e == null) return new JsonArray();
+		return e.getAsJsonArray();
+	}
+	
+	public static boolean exists(JsonElement elem, String path) {
+		return get(elem, path) != null;
 	}
 }

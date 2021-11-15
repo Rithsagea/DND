@@ -23,6 +23,9 @@ import com.rithsagea.dnd.api.data.classes.DndClass;
 import com.rithsagea.dnd.api.data.classes.DndClassFeature;
 import com.rithsagea.dnd.api.data.classes.DndSubclass;
 import com.rithsagea.dnd.api.data.equipment.Equipment;
+import com.rithsagea.dnd.api.data.races.DndRace;
+import com.rithsagea.dnd.api.data.races.DndRaceTrait;
+import com.rithsagea.dnd.api.data.races.DndSubrace;
 
 public class Dnd5eApiTool {
 	
@@ -41,6 +44,9 @@ public class Dnd5eApiTool {
 		builder.registerTypeAdapter(DndClass.class, new DndClassAdapter());
 		builder.registerTypeAdapter(DndSubclass.class, new DndSubclassAdapter());
 		builder.registerTypeAdapter(DndClassFeature.class, new DndClassFeatureAdapter());
+		builder.registerTypeAdapter(DndRace.class, new DndRaceAdapter());
+		builder.registerTypeAdapter(DndSubrace.class, new DndSubraceAdapter());
+		builder.registerTypeAdapter(DndRaceTrait.class, new DndTraitAdapter());
 		Dnd5eApiTool.gson = builder.create();
 	}
 	
@@ -136,5 +142,17 @@ public class Dnd5eApiTool {
 	
 	public static List<DndClassFeature> getClassFeatures() {
 		return getItems("/features", DndClassFeature.class);
+	}
+	
+	public static List<DndRace> getRaces() {
+		return getItems("/races", DndRace.class);
+	}
+	
+	public static List<DndSubrace> getSubraces() {
+		return getItems("/subraces", DndSubrace.class);
+	}
+	
+	public static List<DndRaceTrait> getTraits() {
+		return getItems("/traits", DndRaceTrait.class);
 	}
 }

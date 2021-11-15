@@ -13,7 +13,7 @@ public class Dnd5eApiRunner {
 		File backup = new File("5e Backup.json");
 		
 		Datapack data5e = new Datapack();
-		
+//		data5e = Datapack.loadDatapack(file);
 		
 //		data5e.registerAbilityScores(Dnd5eApiTool.getAbilityScores());
 //		data5e.registerSkills(Dnd5eApiTool.getSkills());
@@ -24,9 +24,11 @@ public class Dnd5eApiRunner {
 //		data5e.registerClasses(Dnd5eApiTool.getClasses());
 //		data5e.registerSubclasses(Dnd5eApiTool.getSubclasses());
 //		data5e.registerClassFeatures(Dnd5eApiTool.getClassFeatures());
+		data5e.registerSubraces(Dnd5eApiTool.getSubraces());
+		data5e.registerRaces(Dnd5eApiTool.getRaces());
+		data5e.registerTraits(Dnd5eApiTool.getTraits());
 		
-		data5e = Datapack.loadDatapack(file);
-		data5e = Datapack.loadDatapack(backup);
+		data5e.registerDatapack(Datapack.loadDatapack(backup));
 		
 		Datapack.saveDatapack(file, data5e);
 		

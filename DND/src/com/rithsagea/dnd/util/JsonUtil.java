@@ -43,6 +43,12 @@ public class JsonUtil {
 		return e.getAsBoolean();
 	}
 	
+	public static double getDec(JsonElement elem, String path) {
+		JsonElement e = get(elem, path);
+		if(e == null) return Double.NaN;
+		return e.getAsDouble();
+	}
+	
 	public static JsonObject getObject(JsonElement elem, String path) {
 		JsonElement e = get(elem, path);
 		if(e == null) return null;

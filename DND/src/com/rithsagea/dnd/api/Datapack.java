@@ -15,8 +15,10 @@ import com.rithsagea.dnd.api.data.AbilityScore;
 import com.rithsagea.dnd.api.data.Alignment;
 import com.rithsagea.dnd.api.data.DndItem;
 import com.rithsagea.dnd.api.data.Language;
+import com.rithsagea.dnd.api.data.Monster;
 import com.rithsagea.dnd.api.data.Proficiency;
 import com.rithsagea.dnd.api.data.Skill;
+import com.rithsagea.dnd.api.data.Spell;
 import com.rithsagea.dnd.api.data.classes.DndClass;
 import com.rithsagea.dnd.api.data.classes.DndClassFeature;
 import com.rithsagea.dnd.api.data.classes.DndSubclass;
@@ -62,6 +64,12 @@ public class Datapack {
 	
 	@SerializedName("traits")
 	public Map<String, DndRaceTrait> DndRaceTrait = new HashMap<>();
+	
+	@SerializedName("spells")
+	public Map<String, Spell> Spell = new HashMap<>();
+	
+	@SerializedName("monsters")
+	public Map<String, Monster> Monster = new HashMap<>();
 	
 	private <T extends DndItem> void registerItems(Map<String, T> map, Collection<T> items) {
 		for(T item : items) {
@@ -118,6 +126,14 @@ public class Datapack {
 		registerItems(DndRaceTrait, items);
 	}
 	
+	public void registerSpells(Collection<Spell> items) {
+		registerItems(Spell, items);
+	}
+	
+	public void registerMonsters(Collection<Monster> items) {
+		registerItems(Monster, items);
+	}
+	
 	public void registerDatapack(Datapack data) {
 		registerAbilityScores(data.AbilityScore.values());
 		registerSkills(data.Skill.values());
@@ -131,6 +147,8 @@ public class Datapack {
 		registerRaces(data.DndRace.values());
 		registerSubraces(data.DndSubrace.values());
 		registerTraits(data.DndRaceTrait.values());
+		registerSpells(data.Spell.values());
+		registerMonsters(data.Monster.values());
 	}
 	
 	private static final Gson gson = new GsonBuilder()

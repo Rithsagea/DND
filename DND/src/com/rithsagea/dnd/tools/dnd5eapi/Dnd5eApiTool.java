@@ -17,8 +17,10 @@ import com.google.gson.JsonObject;
 import com.rithsagea.dnd.api.data.AbilityScore;
 import com.rithsagea.dnd.api.data.Alignment;
 import com.rithsagea.dnd.api.data.Language;
+import com.rithsagea.dnd.api.data.Monster;
 import com.rithsagea.dnd.api.data.Proficiency;
 import com.rithsagea.dnd.api.data.Skill;
+import com.rithsagea.dnd.api.data.Spell;
 import com.rithsagea.dnd.api.data.classes.DndClass;
 import com.rithsagea.dnd.api.data.classes.DndClassFeature;
 import com.rithsagea.dnd.api.data.classes.DndSubclass;
@@ -47,6 +49,8 @@ public class Dnd5eApiTool {
 		builder.registerTypeAdapter(DndRace.class, new DndRaceAdapter());
 		builder.registerTypeAdapter(DndSubrace.class, new DndSubraceAdapter());
 		builder.registerTypeAdapter(DndRaceTrait.class, new DndTraitAdapter());
+		builder.registerTypeAdapter(Spell.class, new SpellAdapter());
+		builder.registerTypeAdapter(Monster.class, new MonsterAdapter());
 		Dnd5eApiTool.gson = builder.create();
 	}
 	
@@ -102,7 +106,13 @@ public class Dnd5eApiTool {
 		List<T> res = new ArrayList<>();
 		
 		for(String item : index) {
+			System.out.println("Getting: " + header + "/" + item);
 			res.add(gson.fromJson(get(header + "/" + item), clazz));
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
 		
 		return res;
@@ -158,5 +168,13 @@ public class Dnd5eApiTool {
 	
 	public static List<DndRaceTrait> getTraits() {
 		return getItems("/traits", DndRaceTrait.class);
+	}
+	
+	public static List<Spell> getSpells() {
+		return getItems("/spells", Spell.class);
+	}
+	
+	public static List<Monster> getMonsters() {
+		return getItems("/monsters", Monster.class);
 	}
 }

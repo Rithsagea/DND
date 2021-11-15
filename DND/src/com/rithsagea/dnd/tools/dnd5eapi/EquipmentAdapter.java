@@ -195,6 +195,12 @@ public class EquipmentAdapter implements JsonDeserializer<Equipment> {
 		case "weapon": t = EquipmentWeapon.class; break;
 		case "armor": t = EquipmentArmor.class; break;
 		
+		case "potion":
+		case "wand":
+		case "ring":
+		case "staff":
+		case "scroll":
+		case "rod":
 		case "wondrous-items":
 		case "ammunition": t = null; break;
 

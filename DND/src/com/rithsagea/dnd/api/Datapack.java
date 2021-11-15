@@ -13,6 +13,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.SerializedName;
 import com.rithsagea.dnd.api.data.AbilityScore;
 import com.rithsagea.dnd.api.data.Alignment;
+import com.rithsagea.dnd.api.data.Condition;
 import com.rithsagea.dnd.api.data.DndItem;
 import com.rithsagea.dnd.api.data.Language;
 import com.rithsagea.dnd.api.data.Monster;
@@ -70,6 +71,9 @@ public class Datapack {
 	
 	@SerializedName("monsters")
 	public Map<String, Monster> Monster = new HashMap<>();
+	
+	@SerializedName("conditions")
+	public Map<String, Condition> Condition = new HashMap<>();
 	
 	private <T extends DndItem> void registerItems(Map<String, T> map, Collection<T> items) {
 		for(T item : items) {
@@ -132,6 +136,10 @@ public class Datapack {
 	
 	public void registerMonsters(Collection<Monster> items) {
 		registerItems(Monster, items);
+	}
+	
+	public void registerConditions(Collection<Condition> items) {
+		registerItems(Condition, items);
 	}
 	
 	public void registerDatapack(Datapack data) {

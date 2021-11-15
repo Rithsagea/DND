@@ -16,6 +16,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.rithsagea.dnd.api.data.AbilityScore;
 import com.rithsagea.dnd.api.data.Alignment;
+import com.rithsagea.dnd.api.data.Condition;
 import com.rithsagea.dnd.api.data.Language;
 import com.rithsagea.dnd.api.data.Monster;
 import com.rithsagea.dnd.api.data.Proficiency;
@@ -51,6 +52,7 @@ public class Dnd5eApiTool {
 		builder.registerTypeAdapter(DndRaceTrait.class, new DndTraitAdapter());
 		builder.registerTypeAdapter(Spell.class, new SpellAdapter());
 		builder.registerTypeAdapter(Monster.class, new MonsterAdapter());
+		builder.registerTypeAdapter(Condition.class, new ConditionAdapter());
 		Dnd5eApiTool.gson = builder.create();
 	}
 	
@@ -176,5 +178,9 @@ public class Dnd5eApiTool {
 	
 	public static List<Monster> getMonsters() {
 		return getItems("/monsters", Monster.class);
+	}
+	
+	public static List<Condition> getConditions() {
+		return getItems("/conditions", Condition.class);
 	}
 }

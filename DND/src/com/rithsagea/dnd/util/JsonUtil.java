@@ -27,37 +27,37 @@ public class JsonUtil {
 	
 	public static String getString(JsonElement elem, String path) {
 		JsonElement e = get(elem, path);
-		if(e == null) return "";
+		if(e == null || e.isJsonNull()) return "";
 		return e.getAsString();
 	}
 	
 	public static int getInt(JsonElement elem, String path) {
 		JsonElement e = get(elem, path);
-		if(e == null) return 0;
+		if(e == null || e.isJsonNull()) return 0;
 		return e.getAsInt();
 	}
 	
 	public static boolean getBool(JsonElement elem, String path) {
 		JsonElement e = get(elem, path);
-		if(e == null) return false;
+		if(e == null || e.isJsonNull()) return false;
 		return e.getAsBoolean();
 	}
 	
 	public static double getDec(JsonElement elem, String path) {
 		JsonElement e = get(elem, path);
-		if(e == null) return Double.NaN;
+		if(e == null || e.isJsonNull()) return Double.NaN;
 		return e.getAsDouble();
 	}
 	
 	public static JsonObject getObject(JsonElement elem, String path) {
 		JsonElement e = get(elem, path);
-		if(e == null) return null;
+		if(e == null || e.isJsonNull()) return null;
 		return e.getAsJsonObject();
 	}
 	
 	public static JsonArray getArray(JsonElement elem, String path) {
 		JsonElement e = get(elem, path);
-		if(e == null) return new JsonArray();
+		if(e == null || e.isJsonNull()) return new JsonArray();
 		return e.getAsJsonArray();
 	}
 	

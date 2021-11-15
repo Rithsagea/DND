@@ -48333,81 +48333,114 @@
       "id" : "giant-weasel"
     }
   },
-  "conditions" : {
-    "unconscious" : {
-      "name" : "Unconscious",
-      "description" : "- An unconscious creature is incapacitated (see the condition), can't move or speak, and is unaware of its surroundings.\n- The creature drops whatever it's holding and falls prone.\n- The creature automatically fails Strength and Dexterity saving throws.\n- Attack rolls against the creature have advantage.\n- Any attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.",
-      "id" : "unconscious"
+  "conditions" : { },
+  "damage_types" : {
+    "lightning" : {
+      "name" : "Lightning",
+      "description" : "A lightning bolt spell and a blue dragon's breath deal lightning damage.",
+      "id" : "lightning"
     },
-    "petrified" : {
-      "name" : "Petrified",
-      "description" : "- A petrified creature is transformed, along with any nonmagical object it is wearing or carrying, into a solid inanimate substance (usually stone). Its weight increases by a factor of ten, and it ceases aging.\n- The creature is incapacitated (see the condition), can't move or speak, and is unaware of its surroundings.\n- Attack rolls against the creature have advantage.\n- The creature automatically fails Strength and Dexterity saving throws.\n- The creature has resistance to all damage.\n- The creature is immune to poison and disease, although a poison or disease already in its system is suspended, not neutralized.",
-      "id" : "petrified"
+    "bludgeoning" : {
+      "name" : "Bludgeoning",
+      "description" : "Blunt force attacks, falling, constriction, and the like deal bludgeoning damage.",
+      "id" : "bludgeoning"
     },
-    "exhaustion" : {
-      "name" : "Exhaustion",
-      "description" : "Some special abilities and environmental hazards, such as starvation and the long-term effects of freezing or scorching temperatures, can lead to a special condition called exhaustion. Exhaustion is measured in six levels. An effect can give a creature one or more levels of exhaustion, as specified in the effect's description.\n1 - Disadvantage on ability checks\n2 - Speed halved\n3 - Disadvantage on attack rolls and saving throws\n4 - Hit point maximum halved\n5 - Speed reduced to 0\n6 - Death\nIf an already exhausted creature suffers another effect that causes exhaustion, its current level of exhaustion increases by the amount specified in the effect's description.\nA creature suffers the effect of its current level of exhaustion as well as all lower levels. For example, a creature suffering level 2 exhaustion has its speed halved and has disadvantage on ability checks.\nAn effect that removes exhaustion reduces its level as specified in the effect's description, with all exhaustion effects ending if a creature's exhaustion level is reduced below 1.\nFinishing a long rest reduces a creature's exhaustion level by 1, provided that the creature has also ingested some food and drink.",
-      "id" : "exhaustion"
+    "necrotic" : {
+      "name" : "Necrotic",
+      "description" : "Necrotic damage, dealt by certain undead and a spell such as chill touch, withers matter and even the soul.",
+      "id" : "necrotic"
     },
-    "invisible" : {
-      "name" : "Invisible",
-      "description" : "- An invisible creature is impossible to see without the aid of magic or a special sense. For the purpose of hiding, the creature is heavily obscured. The creature's location can be detected by any noise it makes or any tracks it leaves.\n- Attack rolls against the creature have disadvantage, and the creature's attack rolls have advantage.",
-      "id" : "invisible"
+    "poison" : {
+      "name" : "Poison",
+      "description" : "Venomous stings and the toxic gas of a green dragon's breath deal poison damage.",
+      "id" : "poison"
     },
-    "poisoned" : {
-      "name" : "Poisoned",
-      "description" : "- A poisoned creature has disadvantage on attack rolls and ability checks.",
-      "id" : "poisoned"
+    "piercing" : {
+      "name" : "Piercing",
+      "description" : "Puncturing and impaling attacks, including spears and monsters' bites, deal piercing damage.",
+      "id" : "piercing"
     },
-    "incapacitated" : {
-      "name" : "Incapacitated",
-      "description" : "- An incapacitated creature can't take actions or reactions.",
-      "id" : "incapacitated"
+    "cold" : {
+      "name" : "Cold",
+      "description" : "The infernal chill radiating from an ice devil's spear and the frigid blast of a white dragon's breath deal cold damage.",
+      "id" : "cold"
     },
-    "stunned" : {
-      "name" : "Stunned",
-      "description" : "- A stunned creature is incapacitated (see the condition), can't move, and can speak only falteringly.\n- The creature automatically fails Strength and Dexterity saving throws.\n- Attack rolls against the creature have advantage.",
-      "id" : "stunned"
+    "thunder" : {
+      "name" : "Thunder",
+      "description" : "A concussive burst of sound, such as the effect of the thunderwave spell, deals thunder damage.",
+      "id" : "thunder"
     },
-    "grappled" : {
-      "name" : "Grappled",
-      "description" : "- A grappled creature's speed becomes 0, and it can't benefit from any bonus to its speed.\n- The condition ends if the grappler is incapacitated (see the condition).\n- The condition also ends if an effect removes the grappled creature from the reach of the grappler or grappling effect, such as when a creature is hurled away by the thunderwave spell.",
-      "id" : "grappled"
+    "radiant" : {
+      "name" : "Radiant",
+      "description" : "Radiant damage, dealt by a cleric's flame strike spell or an angel's smiting weapon, sears the flesh like fire and overloads the spirit with power.",
+      "id" : "radiant"
     },
-    "deafened" : {
-      "name" : "Deafened",
-      "description" : "- A deafened creature can't hear and automatically fails any ability check that requires hearing.",
-      "id" : "deafened"
+    "acid" : {
+      "name" : "Acid",
+      "description" : "The corrosive spray of a black dragon's breath and the dissolving enzymes secreted by a black pudding deal acid damage.",
+      "id" : "acid"
     },
-    "paralyzed" : {
-      "name" : "Paralyzed",
-      "description" : "- A paralyzed creature is incapacitated (see the condition) and can't move or speak.\n- The creature automatically fails Strength and Dexterity saving throws.\n- Attack rolls against the creature have advantage.\n- Any attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.",
-      "id" : "paralyzed"
+    "slashing" : {
+      "name" : "Slashing",
+      "description" : "Swords, axes, and monsters' claws deal slashing damage.",
+      "id" : "slashing"
     },
-    "restrained" : {
-      "name" : "Restrained",
-      "description" : "- A restrained creature's speed becomes 0, and it can't benefit from any bonus to its speed.\n- Attack rolls against the creature have advantage, and the creature's attack rolls have disadvantage.\n- The creature has disadvantage on Dexterity saving throws.",
-      "id" : "restrained"
+    "fire" : {
+      "name" : "Fire",
+      "description" : "Red dragons breathe fire, and many spells conjure flames to deal fire damage.",
+      "id" : "fire"
     },
-    "charmed" : {
-      "name" : "Charmed",
-      "description" : "- A charmed creature can't attack the charmer or target the charmer with harmful abilities or magical effects.\n- The charmer has advantage on any ability check to interact socially with the creature.",
-      "id" : "charmed"
+    "force" : {
+      "name" : "Force",
+      "description" : "Force is pure magical energy focused into a damaging form. Most effects that deal force damage are spells, including magic missile and spiritual weapon.",
+      "id" : "force"
     },
-    "prone" : {
-      "name" : "Prone",
-      "description" : "- A prone creature's only movement option is to crawl, unless it stands up and thereby ends the condition.\n- The creature has disadvantage on attack rolls.\n- An attack roll against the creature has advantage if the attacker is within 5 feet of the creature. Otherwise, the attack roll has disadvantage.",
-      "id" : "prone"
+    "psychic" : {
+      "name" : "Psychic",
+      "description" : "Mental abilities such as a psionic blast deal psychic damage.",
+      "id" : "psychic"
+    }
+  },
+  "magic_school" : {
+    "divination" : {
+      "name" : "Divination",
+      "description" : "Divination spells reveal information, whether in the form of secrets long forgotten, glimpses of the future, the locations of hidden things, the truth behind illusions, or visions of distant people or places.",
+      "id" : "divination"
     },
-    "blinded" : {
-      "name" : "Blinded",
-      "description" : "- A blinded creature can't see and automatically fails any ability check that requires sight.\n- Attack rolls against the creature have advantage, and the creature's attack rolls have disadvantage.",
-      "id" : "blinded"
+    "enchantment" : {
+      "name" : "Enchantment",
+      "description" : "Enchantment spells affect the minds of others, influencing or controlling their behavior. Such spells can make enemies see the caster as a friend, force creatures to take a course of action, or even control another creature like a puppet.",
+      "id" : "enchantment"
     },
-    "frightened" : {
-      "name" : "Frightened",
-      "description" : "- A frightened creature has disadvantage on ability checks and attack rolls while the source of its fear is within line of sight.\n- The creature can't willingly move closer to the source of its fear.",
-      "id" : "frightened"
+    "transmutation" : {
+      "name" : "Transmutation",
+      "description" : "Transmutation spells change the properties of a creature, object, or environment. They might turn an enemy into a harmless creature, bolster the strength of an ally, make an object move at the caster's command, or enhance a creature's innate healing abilities to rapidly recover from injury.",
+      "id" : "transmutation"
+    },
+    "necromancy" : {
+      "name" : "Necromancy",
+      "description" : "Necromancy spells manipulate the energies of life and death. Such spells can grant an extra reserve of life force, drain the life energy from another creature, create the undead, or even bring the dead back to life.",
+      "id" : "necromancy"
+    },
+    "evocation" : {
+      "name" : "Evocation",
+      "description" : "Evocation spells manipulate magical energy to produce a desired effect. Some call up blasts of fire or lightning. Others channel positive energy to heal wounds.",
+      "id" : "evocation"
+    },
+    "conjuration" : {
+      "name" : "Conjuration",
+      "description" : "Conjuration spells involve the transportation of objects and creatures from one location to another. Some spells summon creatures or objects to the caster's side, whereas others allow the caster to teleport to another location. Some conjurations create objects or effects out of nothing.",
+      "id" : "conjuration"
+    },
+    "abjuration" : {
+      "name" : "Abjuration",
+      "description" : "Abjuration spells are protective in nature, though some of them have aggressive uses. They create magical barriers, negate harmful effects, harm trespassers, or banish creatures to other planes of existence.",
+      "id" : "abjuration"
+    },
+    "illusion" : {
+      "name" : "Illusion",
+      "description" : "Illusion spells deceive the senses or minds of others. They cause people to see things that are not there, to miss things that are there, to hear phantom noises, or to remember things that never happened. Some illusions create phantom images that any creature can see, but the most insidious illusions plant an image directly in the mind of a creature.",
+      "id" : "illusion"
     }
   }
 }

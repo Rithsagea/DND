@@ -29,7 +29,9 @@ public class Dnd5eApiRunner {
 //		data5e.registerTraits(Dnd5eApiTool.getTraits());
 //		data5e.registerSpells(Dnd5eApiTool.getSpells());
 //		data5e.registerMonsters(Dnd5eApiTool.getMonsters());
-		data5e.registerConditions(Dnd5eApiTool.getConditions());
+//		data5e.registerConditions(Dnd5eApiTool.getConditions());
+//		data5e.registerDamageTypes(Dnd5eApiTool.getDamageTypes());
+//		data5e.registerMagicSchools(Dnd5eApiTool.getMagicSchools());
 		
 		data5e.registerDatapack(Datapack.loadDatapack(backup));
 		

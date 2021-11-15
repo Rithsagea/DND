@@ -1,5 +1,5 @@
 package com.rithsagea.dnd.api5e.data;
 
-public class DndItem {
+public class IndexedItem {
 	public String id;
 }

@@ -3,9 +3,9 @@ package com.rithsagea.dnd.api5e.data.classes;
 import java.util.HashMap;
 import java.util.List;
 
-import com.rithsagea.dnd.api5e.data.DndItem;
+import com.rithsagea.dnd.api5e.data.IndexedItem;
 
-public class DndSubclass extends DndItem {
+public class DndSubclass extends IndexedItem {
 	public String parentClass;
 	public String name;
 	public String flavor;

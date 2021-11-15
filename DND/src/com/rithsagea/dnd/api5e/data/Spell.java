@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.google.gson.JsonElement;
 
-public class Spell extends DndItem {
+public class Spell extends IndexedItem {
 	public String name;
 	public String description;
 	public String higherDescription;

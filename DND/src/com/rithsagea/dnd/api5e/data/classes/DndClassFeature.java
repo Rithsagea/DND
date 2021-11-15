@@ -2,9 +2,9 @@ package com.rithsagea.dnd.api5e.data.classes;
 
 import java.util.List;
 
-import com.rithsagea.dnd.api5e.data.DndItem;
+import com.rithsagea.dnd.api5e.data.IndexedItem;
 
-public class DndClassFeature extends DndItem {
+public class DndClassFeature extends IndexedItem {
 	public String name;
 	public String description;
 	

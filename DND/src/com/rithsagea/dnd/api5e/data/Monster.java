@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.google.gson.JsonElement;
 
-public class Monster extends DndItem {
+public class Monster extends IndexedItem {
 	public String name;
 	public String size;
 	public String type;

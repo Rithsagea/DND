@@ -14,8 +14,10 @@ import com.google.gson.annotations.SerializedName;
 import com.rithsagea.dnd.api5e.data.AbilityScore;
 import com.rithsagea.dnd.api5e.data.Alignment;
 import com.rithsagea.dnd.api5e.data.Condition;
-import com.rithsagea.dnd.api5e.data.DndItem;
+import com.rithsagea.dnd.api5e.data.DamageType;
+import com.rithsagea.dnd.api5e.data.IndexedItem;
 import com.rithsagea.dnd.api5e.data.Language;
+import com.rithsagea.dnd.api5e.data.MagicSchool;
 import com.rithsagea.dnd.api5e.data.Monster;
 import com.rithsagea.dnd.api5e.data.Proficiency;
 import com.rithsagea.dnd.api5e.data.Skill;
@@ -75,7 +77,13 @@ public class Datapack {
 	@SerializedName("conditions")
 	public Map<String, Condition> Condition = new HashMap<>();
 	
-	private <T extends DndItem> void registerItems(Map<String, T> map, Collection<T> items) {
+	@SerializedName("damage_types")
+	public Map<String, DamageType> DamageType = new HashMap<>();
+	
+	@SerializedName("magic_school")
+	public Map<String, MagicSchool> MagicSchool = new HashMap<>();
+	
+	private <T extends IndexedItem> void registerItems(Map<String, T> map, Collection<T> items) {
 		for(T item : items) {
 			if(!map.containsKey(item.id))
 				map.put(item.id, item);
@@ -142,6 +150,14 @@ public class Datapack {
 		registerItems(Condition, items);
 	}
 	
+	public void registerDamageTypes(Collection<DamageType> items) {
+		registerItems(DamageType, items);
+	}
+	
+	public void registerMagicSchools(Collection<MagicSchool> items) {
+		registerItems(MagicSchool, items);
+	}
+	
 	public void registerDatapack(Datapack data) {
 		registerAbilityScores(data.AbilityScore.values());
 		registerSkills(data.Skill.values());
@@ -157,6 +173,8 @@ public class Datapack {
 		registerTraits(data.DndRaceTrait.values());
 		registerSpells(data.Spell.values());
 		registerMonsters(data.Monster.values());
+		registerDamageTypes(data.DamageType.values());
+		registerMagicSchools(data.MagicSchool.values());
 	}
 	
 	private static final Gson gson = new GsonBuilder()

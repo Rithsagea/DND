@@ -20,6 +20,8 @@ import com.rithsagea.dnd.api5e.data.Language;
 import com.rithsagea.dnd.api5e.data.MagicSchool;
 import com.rithsagea.dnd.api5e.data.Monster;
 import com.rithsagea.dnd.api5e.data.Proficiency;
+import com.rithsagea.dnd.api5e.data.Rule;
+import com.rithsagea.dnd.api5e.data.RuleSection;
 import com.rithsagea.dnd.api5e.data.Skill;
 import com.rithsagea.dnd.api5e.data.Spell;
 import com.rithsagea.dnd.api5e.data.classes.DndClass;
@@ -82,6 +84,12 @@ public class Datapack {
 	
 	@SerializedName("magic_school")
 	public Map<String, MagicSchool> MagicSchool = new HashMap<>();
+	
+	@SerializedName("rules")
+	public Map<String, Rule> Rule = new HashMap<>();
+	
+	@SerializedName("rule_sections")
+	public Map<String, RuleSection> RuleSection = new HashMap<>();
 	
 	private <T extends IndexedItem> void registerItems(Map<String, T> map, Collection<T> items) {
 		for(T item : items) {
@@ -158,6 +166,14 @@ public class Datapack {
 		registerItems(MagicSchool, items);
 	}
 	
+	public void registerRules(Collection<Rule> items) {
+		registerItems(Rule, items);
+	}
+	
+	public void registerRuleSections(Collection<RuleSection> items) {
+		registerItems(RuleSection, items);
+	}
+	
 	public void registerDatapack(Datapack data) {
 		registerAbilityScores(data.AbilityScore.values());
 		registerSkills(data.Skill.values());
@@ -175,6 +191,8 @@ public class Datapack {
 		registerMonsters(data.Monster.values());
 		registerDamageTypes(data.DamageType.values());
 		registerMagicSchools(data.MagicSchool.values());
+		registerRules(data.Rule.values());
+		registerRuleSections(data.RuleSection.values());
 	}
 	
 	private static final Gson gson = new GsonBuilder()

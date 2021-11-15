@@ -14,24 +14,26 @@ public class Dnd5eApiRunner {
 		Datapack data5e = new Datapack();
 //		data5e = Datapack.loadDatapack(file);
 		
-//		data5e.registerAbilityScores(Dnd5eApiTool.getAbilityScores());
-//		data5e.registerSkills(Dnd5eApiTool.getSkills());
-//		data5e.registerProficiencies(Dnd5eApiTool.getProficiencies());
-//		data5e.registerLanguages(Dnd5eApiTool.getLanguages());
-//		data5e.registerAlignments(Dnd5eApiTool.getAlignments());
-//		data5e.registerEquipment(Dnd5eApiTool.getEquipment());
-//		data5e.registerEquipment(Dnd5eApiTool.getMagicEquipment());
-//		data5e.registerClasses(Dnd5eApiTool.getClasses());
-//		data5e.registerSubclasses(Dnd5eApiTool.getSubclasses());
-//		data5e.registerClassFeatures(Dnd5eApiTool.getClassFeatures());
-//		data5e.registerSubraces(Dnd5eApiTool.getSubraces());
-//		data5e.registerRaces(Dnd5eApiTool.getRaces());
-//		data5e.registerTraits(Dnd5eApiTool.getTraits());
-//		data5e.registerSpells(Dnd5eApiTool.getSpells());
-//		data5e.registerMonsters(Dnd5eApiTool.getMonsters());
-//		data5e.registerConditions(Dnd5eApiTool.getConditions());
-//		data5e.registerDamageTypes(Dnd5eApiTool.getDamageTypes());
-//		data5e.registerMagicSchools(Dnd5eApiTool.getMagicSchools());
+		data5e.registerAbilityScores(Dnd5eApiTool.getAbilityScores());
+		data5e.registerSkills(Dnd5eApiTool.getSkills());
+		data5e.registerProficiencies(Dnd5eApiTool.getProficiencies());
+		data5e.registerLanguages(Dnd5eApiTool.getLanguages());
+		data5e.registerAlignments(Dnd5eApiTool.getAlignments());
+		data5e.registerEquipment(Dnd5eApiTool.getEquipment());
+		data5e.registerEquipment(Dnd5eApiTool.getMagicEquipment());
+		data5e.registerClasses(Dnd5eApiTool.getClasses());
+		data5e.registerSubclasses(Dnd5eApiTool.getSubclasses());
+		data5e.registerClassFeatures(Dnd5eApiTool.getClassFeatures());
+		data5e.registerSubraces(Dnd5eApiTool.getSubraces());
+		data5e.registerRaces(Dnd5eApiTool.getRaces());
+		data5e.registerTraits(Dnd5eApiTool.getTraits());
+		data5e.registerSpells(Dnd5eApiTool.getSpells());
+		data5e.registerMonsters(Dnd5eApiTool.getMonsters());
+		data5e.registerConditions(Dnd5eApiTool.getConditions());
+		data5e.registerDamageTypes(Dnd5eApiTool.getDamageTypes());
+		data5e.registerMagicSchools(Dnd5eApiTool.getMagicSchools());
+		data5e.registerRules(Dnd5eApiTool.getRules());
+		data5e.registerRuleSections(Dnd5eApiTool.getRuleSections());
 		
 		data5e.registerDatapack(Datapack.loadDatapack(backup));
 		

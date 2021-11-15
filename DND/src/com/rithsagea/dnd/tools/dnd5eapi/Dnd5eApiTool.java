@@ -22,6 +22,8 @@ import com.rithsagea.dnd.api5e.data.Language;
 import com.rithsagea.dnd.api5e.data.MagicSchool;
 import com.rithsagea.dnd.api5e.data.Monster;
 import com.rithsagea.dnd.api5e.data.Proficiency;
+import com.rithsagea.dnd.api5e.data.Rule;
+import com.rithsagea.dnd.api5e.data.RuleSection;
 import com.rithsagea.dnd.api5e.data.Skill;
 import com.rithsagea.dnd.api5e.data.Spell;
 import com.rithsagea.dnd.api5e.data.classes.DndClass;
@@ -57,6 +59,8 @@ public class Dnd5eApiTool {
 		builder.registerTypeAdapter(Condition.class, new ConditionAdapter());
 		builder.registerTypeAdapter(DamageType.class, new DamageTypeAdapter());
 		builder.registerTypeAdapter(MagicSchool.class, new MagicSchoolAdapter());
+		builder.registerTypeAdapter(Rule.class, new RuleAdapter());
+		builder.registerTypeAdapter(RuleSection.class, new RuleSectionAdapter());
 		Dnd5eApiTool.gson = builder.create();
 	}
 	
@@ -194,5 +198,13 @@ public class Dnd5eApiTool {
 	
 	public static List<MagicSchool> getMagicSchools() {
 		return getItems("/magic-schools", MagicSchool.class);
+	}
+	
+	public static List<Rule> getRules() {
+		return getItems("/rules", Rule.class);
+	}
+	
+	public static List<RuleSection> getRuleSections() {
+		return getItems("/rule-sections", RuleSection.class);
 	}
 }

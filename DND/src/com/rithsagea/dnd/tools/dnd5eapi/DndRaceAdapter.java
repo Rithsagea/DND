@@ -7,9 +7,9 @@ import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
-import com.rithsagea.dnd.api.data.extra.AbilityBonus;
-import com.rithsagea.dnd.api.data.extra.ProficiencyOptions;
-import com.rithsagea.dnd.api.data.races.DndRace;
+import com.rithsagea.dnd.api5e.data.extra.AbilityBonus;
+import com.rithsagea.dnd.api5e.data.extra.ProficiencyOptions;
+import com.rithsagea.dnd.api5e.data.races.DndRace;
 import com.rithsagea.dnd.util.JsonUtil;
 
 public class DndRaceAdapter implements JsonDeserializer<DndRace> {

@@ -7,7 +7,7 @@ import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
-import com.rithsagea.dnd.api.data.Spell;
+import com.rithsagea.dnd.api5e.data.Spell;
 import com.rithsagea.dnd.util.JsonUtil;
 
 public class SpellAdapter implements JsonDeserializer<Spell> {

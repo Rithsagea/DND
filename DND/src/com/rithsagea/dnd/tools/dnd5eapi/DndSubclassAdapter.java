@@ -12,8 +12,8 @@ import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
-import com.rithsagea.dnd.api.data.classes.DndSubclass;
-import com.rithsagea.dnd.api.data.classes.DndSubclassLevel;
+import com.rithsagea.dnd.api5e.data.classes.DndSubclass;
+import com.rithsagea.dnd.api5e.data.classes.DndSubclassLevel;
 
 public class DndSubclassAdapter implements JsonDeserializer<DndSubclass> {
 

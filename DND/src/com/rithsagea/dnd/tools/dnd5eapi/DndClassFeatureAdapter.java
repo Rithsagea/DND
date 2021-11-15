@@ -8,7 +8,7 @@ import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
-import com.rithsagea.dnd.api.data.classes.DndClassFeature;
+import com.rithsagea.dnd.api5e.data.classes.DndClassFeature;
 import com.rithsagea.dnd.util.JsonUtil;
 
 public class DndClassFeatureAdapter implements JsonDeserializer<DndClassFeature> {

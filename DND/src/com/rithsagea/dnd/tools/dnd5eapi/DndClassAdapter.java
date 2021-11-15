@@ -12,12 +12,12 @@ import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
-import com.rithsagea.dnd.api.data.classes.DndClass;
-import com.rithsagea.dnd.api.data.classes.DndClassLevel;
-import com.rithsagea.dnd.api.data.extra.EquipmentOption;
-import com.rithsagea.dnd.api.data.extra.EquipmentStack;
-import com.rithsagea.dnd.api.data.extra.ProficiencyOptions;
-import com.rithsagea.dnd.api.data.extra.SpellcastingInfo;
+import com.rithsagea.dnd.api5e.data.classes.DndClass;
+import com.rithsagea.dnd.api5e.data.classes.DndClassLevel;
+import com.rithsagea.dnd.api5e.data.extra.EquipmentOption;
+import com.rithsagea.dnd.api5e.data.extra.EquipmentStack;
+import com.rithsagea.dnd.api5e.data.extra.ProficiencyOptions;
+import com.rithsagea.dnd.api5e.data.extra.SpellcastingInfo;
 
 public class DndClassAdapter implements JsonDeserializer<DndClass> {
 

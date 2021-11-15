@@ -6,7 +6,7 @@ import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.rithsagea.dnd.api.data.Language;
+import com.rithsagea.dnd.api5e.data.Language;
 
 public class LanguageAdapter implements JsonDeserializer<Language> {
 

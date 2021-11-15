@@ -14,21 +14,21 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.rithsagea.dnd.api.data.AbilityScore;
-import com.rithsagea.dnd.api.data.Alignment;
-import com.rithsagea.dnd.api.data.Condition;
-import com.rithsagea.dnd.api.data.Language;
-import com.rithsagea.dnd.api.data.Monster;
-import com.rithsagea.dnd.api.data.Proficiency;
-import com.rithsagea.dnd.api.data.Skill;
-import com.rithsagea.dnd.api.data.Spell;
-import com.rithsagea.dnd.api.data.classes.DndClass;
-import com.rithsagea.dnd.api.data.classes.DndClassFeature;
-import com.rithsagea.dnd.api.data.classes.DndSubclass;
-import com.rithsagea.dnd.api.data.equipment.Equipment;
-import com.rithsagea.dnd.api.data.races.DndRace;
-import com.rithsagea.dnd.api.data.races.DndRaceTrait;
-import com.rithsagea.dnd.api.data.races.DndSubrace;
+import com.rithsagea.dnd.api5e.data.AbilityScore;
+import com.rithsagea.dnd.api5e.data.Alignment;
+import com.rithsagea.dnd.api5e.data.Condition;
+import com.rithsagea.dnd.api5e.data.Language;
+import com.rithsagea.dnd.api5e.data.Monster;
+import com.rithsagea.dnd.api5e.data.Proficiency;
+import com.rithsagea.dnd.api5e.data.Skill;
+import com.rithsagea.dnd.api5e.data.Spell;
+import com.rithsagea.dnd.api5e.data.classes.DndClass;
+import com.rithsagea.dnd.api5e.data.classes.DndClassFeature;
+import com.rithsagea.dnd.api5e.data.classes.DndSubclass;
+import com.rithsagea.dnd.api5e.data.equipment.Equipment;
+import com.rithsagea.dnd.api5e.data.races.DndRace;
+import com.rithsagea.dnd.api5e.data.races.DndRaceTrait;
+import com.rithsagea.dnd.api5e.data.races.DndSubrace;
 
 public class Dnd5eApiTool {
 	

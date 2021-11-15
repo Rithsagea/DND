@@ -7,8 +7,8 @@ import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
-import com.rithsagea.dnd.api.data.extra.Choice;
-import com.rithsagea.dnd.api.data.races.DndRaceTrait;
+import com.rithsagea.dnd.api5e.data.extra.Choice;
+import com.rithsagea.dnd.api5e.data.races.DndRaceTrait;
 import com.rithsagea.dnd.util.JsonUtil;
 
 public class DndTraitAdapter implements JsonDeserializer<DndRaceTrait> {

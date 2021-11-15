@@ -10,16 +10,16 @@ import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
-import com.rithsagea.dnd.api.data.equipment.Equipment;
-import com.rithsagea.dnd.api.data.equipment.EquipmentAmmunition;
-import com.rithsagea.dnd.api.data.equipment.EquipmentArmor;
-import com.rithsagea.dnd.api.data.equipment.EquipmentGear;
-import com.rithsagea.dnd.api.data.equipment.EquipmentMount;
-import com.rithsagea.dnd.api.data.equipment.EquipmentPack;
-import com.rithsagea.dnd.api.data.equipment.EquipmentTool;
-import com.rithsagea.dnd.api.data.equipment.EquipmentWeapon;
-import com.rithsagea.dnd.api.data.extra.CoinQuantity;
-import com.rithsagea.dnd.api.data.extra.EquipmentStack;
+import com.rithsagea.dnd.api5e.data.equipment.Equipment;
+import com.rithsagea.dnd.api5e.data.equipment.EquipmentAmmunition;
+import com.rithsagea.dnd.api5e.data.equipment.EquipmentArmor;
+import com.rithsagea.dnd.api5e.data.equipment.EquipmentGear;
+import com.rithsagea.dnd.api5e.data.equipment.EquipmentMount;
+import com.rithsagea.dnd.api5e.data.equipment.EquipmentPack;
+import com.rithsagea.dnd.api5e.data.equipment.EquipmentTool;
+import com.rithsagea.dnd.api5e.data.equipment.EquipmentWeapon;
+import com.rithsagea.dnd.api5e.data.extra.CoinQuantity;
+import com.rithsagea.dnd.api5e.data.extra.EquipmentStack;
 import com.rithsagea.dnd.util.JsonUtil;
 
 public class EquipmentAdapter implements JsonDeserializer<Equipment> {

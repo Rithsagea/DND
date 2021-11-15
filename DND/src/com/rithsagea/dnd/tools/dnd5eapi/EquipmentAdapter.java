@@ -20,6 +20,7 @@ import com.rithsagea.dnd.api.data.equipment.EquipmentTool;
 import com.rithsagea.dnd.api.data.equipment.EquipmentWeapon;
 import com.rithsagea.dnd.api.data.extra.CoinQuantity;
 import com.rithsagea.dnd.api.data.extra.EquipmentStack;
+import com.rithsagea.dnd.util.JsonUtil;
 
 public class EquipmentAdapter implements JsonDeserializer<Equipment> {
 
@@ -56,7 +57,7 @@ public class EquipmentAdapter implements JsonDeserializer<Equipment> {
 			case "ammunition":
 				EquipmentAmmunition ammunition = new EquipmentAmmunition();
 				equipment = ammunition;
-				ammunition.quantity = obj.get("quantity").getAsInt();
+				ammunition.quantity = JsonUtil.getInt(elem, "quantity");
 				break;
 			default:
 				equipment = new EquipmentGear();
@@ -107,9 +108,9 @@ public class EquipmentAdapter implements JsonDeserializer<Equipment> {
 			JsonObject temp, obj = elem.getAsJsonObject();
 			EquipmentWeapon equipment = new EquipmentWeapon();
 			
-			equipment.weaponCategory = obj.get("weapon_category").getAsString();
-			equipment.weaponRange = obj.get("weapon_range").getAsString();
-			equipment.categoryRange = obj.get("category_range").getAsString();
+			equipment.weaponCategory = JsonUtil.getString(elem, "weapon_category");
+			equipment.weaponRange = JsonUtil.getString(elem, "weapon_range");
+			equipment.categoryRange = JsonUtil.getString(elem, "category_range");
 			
 			if(obj.has("damage")) {
 				temp = obj.get("damage").getAsJsonObject();
@@ -118,12 +119,12 @@ public class EquipmentAdapter implements JsonDeserializer<Equipment> {
 						.get("index").getAsString();
 			}
 			
-			temp = obj.get("range").getAsJsonObject();
-			equipment.normalRange = temp.get("normal").isJsonNull() ? 0 : temp.get("normal").getAsInt();
-			equipment.longRange = temp.get("long").isJsonNull() ? 0 : temp.get("long").getAsInt();
+			temp = JsonUtil.getObject(elem, "range");
+			equipment.normalRange = JsonUtil.getInt(temp, "normal");
+			equipment.longRange = JsonUtil.getInt(temp, "long");
 			
 			equipment.properties = new ArrayList<>();
-			for(JsonElement e : obj.get("properties").getAsJsonArray()) {
+			for(JsonElement e : JsonUtil.getArray(elem, "properties")) {
 				equipment.properties.add(e.getAsJsonObject().get("index").getAsString());
 			}
 			
@@ -149,13 +150,15 @@ public class EquipmentAdapter implements JsonDeserializer<Equipment> {
 			equipment.armorCategory = obj.get("equipment_category").getAsJsonObject()
 					.get("index").getAsString();
 			
-			temp = obj.get("armor_class").getAsJsonObject();
-			equipment.armorClass = temp.get("base").getAsInt();
-			equipment.dexBonus = temp.get("dex_bonus").getAsBoolean();
-			equipment.maxBonus = temp.get("max_bonus").isJsonNull() ? 0 : temp.get("max_bonus").getAsInt();
+			temp = JsonUtil.getObject(elem, "armor_class");
+			if(temp != null) {
+				equipment.armorClass = temp.get("base").getAsInt();
+				equipment.dexBonus = temp.get("dex_bonus").getAsBoolean();
+				equipment.maxBonus = temp.get("max_bonus").isJsonNull() ? 0 : temp.get("max_bonus").getAsInt();
+			}
 			
-			equipment.minStrength = obj.get("str_minimum").getAsInt();
-			equipment.stealthDisadvantage = obj.get("stealth_disadvantage").getAsBoolean();
+			equipment.minStrength = JsonUtil.getInt(elem, "str_minimum");
+			equipment.stealthDisadvantage = JsonUtil.getBool(elem, "stealth_disadvantage");
 			
 			return equipment;
 		}
@@ -192,6 +195,9 @@ public class EquipmentAdapter implements JsonDeserializer<Equipment> {
 		case "weapon": t = EquipmentWeapon.class; break;
 		case "armor": t = EquipmentArmor.class; break;
 		
+		case "wondrous-items":
+		case "ammunition": t = null; break;
+
 		default: t = null; System.out.println("Unknown Equipment Category: " + category);
 		
 		}
@@ -212,7 +218,7 @@ public class EquipmentAdapter implements JsonDeserializer<Equipment> {
 			equipment.description = builder.toString();
 		}
 		
-		equipment.weight = obj.has("weight") ? obj.get("weight").getAsInt() : 0;
+		equipment.weight = JsonUtil.getInt(elem, "weight");
 		equipment.cost = gson.fromJson(obj.get("cost"), CoinQuantity.class);
 		
 		

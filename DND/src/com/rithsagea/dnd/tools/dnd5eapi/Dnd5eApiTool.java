@@ -132,6 +132,10 @@ public class Dnd5eApiTool {
 		return getItems("/equipment", Equipment.class);
 	}
 	
+	public static List<Equipment> getMagicEquipment() {
+		return getItems("/magic-items", Equipment.class);
+	}
+	
 	public static List<DndClass> getClasses() {
 		return getItems("/classes", DndClass.class);
 	}

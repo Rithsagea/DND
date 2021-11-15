@@ -21,12 +21,13 @@ public class Dnd5eApiRunner {
 //		data5e.registerLanguages(Dnd5eApiTool.getLanguages());
 //		data5e.registerAlignments(Dnd5eApiTool.getAlignments());
 //		data5e.registerEquipment(Dnd5eApiTool.getEquipment());
+		data5e.registerEquipment(Dnd5eApiTool.getMagicEquipment());
 //		data5e.registerClasses(Dnd5eApiTool.getClasses());
 //		data5e.registerSubclasses(Dnd5eApiTool.getSubclasses());
 //		data5e.registerClassFeatures(Dnd5eApiTool.getClassFeatures());
-		data5e.registerSubraces(Dnd5eApiTool.getSubraces());
-		data5e.registerRaces(Dnd5eApiTool.getRaces());
-		data5e.registerTraits(Dnd5eApiTool.getTraits());
+//		data5e.registerSubraces(Dnd5eApiTool.getSubraces());
+//		data5e.registerRaces(Dnd5eApiTool.getRaces());
+//		data5e.registerTraits(Dnd5eApiTool.getTraits());
 		
 		data5e.registerDatapack(Datapack.loadDatapack(backup));
 		

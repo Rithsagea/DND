@@ -37,6 +37,12 @@ public class JsonUtil {
 		return e.getAsInt();
 	}
 	
+	public static boolean getBool(JsonElement elem, String path) {
+		JsonElement e = get(elem, path);
+		if(e == null) return false;
+		return e.getAsBoolean();
+	}
+	
 	public static JsonObject getObject(JsonElement elem, String path) {
 		JsonElement e = get(elem, path);
 		if(e == null) return null;

@@ -2,7 +2,7 @@ package com.rithsagea.dnd.api5e.data.classes;
 
 import java.util.List;
 
-import com.rithsagea.dnd.api5e.data.IndexedItem;
+import com.rithsagea.dnd.api.types.IndexedItem;
 
 public class DndClassFeature extends IndexedItem {
 	public String name;

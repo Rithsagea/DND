@@ -1,4 +1,4 @@
-package com.rithsagea.dnd.api5e.data;
+package com.rithsagea.dnd.api.types;
 
 public class Alignment extends IndexedItem {
 	public String shortName;

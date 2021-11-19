@@ -2,7 +2,7 @@ package com.rithsagea.dnd.api5e.data.races;
 
 import java.util.List;
 
-import com.rithsagea.dnd.api5e.data.IndexedItem;
+import com.rithsagea.dnd.api.types.IndexedItem;
 import com.rithsagea.dnd.api5e.data.extra.AbilityBonus;
 import com.rithsagea.dnd.api5e.data.extra.Choice;
 

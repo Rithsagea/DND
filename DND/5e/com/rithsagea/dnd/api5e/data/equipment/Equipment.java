@@ -1,6 +1,6 @@
 package com.rithsagea.dnd.api5e.data.equipment;
 
-import com.rithsagea.dnd.api5e.data.IndexedItem;
+import com.rithsagea.dnd.api.types.IndexedItem;
 import com.rithsagea.dnd.api5e.data.extra.CoinQuantity;
 
 public class Equipment extends IndexedItem {

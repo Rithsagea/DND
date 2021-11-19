@@ -27,4 +27,8 @@ public class SourceRegistry {
 	public File getDir() {
 		return dir;
 	}
+	
+	public <T> T getItem(String id, Class<?> clazz) {
+		return null;
+	}
 }

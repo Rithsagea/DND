@@ -6,7 +6,7 @@ import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.rithsagea.dnd.api5e.data.Alignment;
+import com.rithsagea.dnd.api.types.Alignment;
 
 public class AlignmentAdapter implements JsonDeserializer<Alignment> {
 

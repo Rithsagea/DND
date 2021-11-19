@@ -3,7 +3,7 @@ package com.rithsagea.dnd.api5e.data.classes;
 import java.util.List;
 import java.util.Map;
 
-import com.rithsagea.dnd.api5e.data.IndexedItem;
+import com.rithsagea.dnd.api.types.IndexedItem;
 import com.rithsagea.dnd.api5e.data.extra.EquipmentOption;
 import com.rithsagea.dnd.api5e.data.extra.EquipmentStack;
 import com.rithsagea.dnd.api5e.data.extra.ProficiencyOptions;

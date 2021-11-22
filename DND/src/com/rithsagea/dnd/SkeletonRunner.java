@@ -1,12 +1,10 @@
 package com.rithsagea.dnd;
 
 import java.io.File;
-import java.util.HashMap;
 
 import com.rithsagea.dnd.api.CharacterSheet;
 import com.rithsagea.dnd.api.SourceBook;
 import com.rithsagea.dnd.api.SourceRegistry;
-import com.rithsagea.dnd.api.types.AbilityScore;
 import com.rithsagea.dnd.api.types.Skill;
 import com.rithsagea.dnd.api5e.Datapack;
 
@@ -31,6 +29,8 @@ public class SkeletonRunner {
 		c.playerName = "Rithsagea Aquadom";
 		c.alignment = "neutral";
 		
+		c.experiencePoints = 500;
+		
 		c.abilityScores.put("str", 8);
 		c.abilityScores.put("dex", 14);
 		c.abilityScores.put("con", 10);
@@ -40,6 +40,8 @@ public class SkeletonRunner {
 		
 		c.calc();
 		
-		System.out.println(SourceRegistry.getKeys(Skill.class));
+		System.out.println("Level: " + c.level);
+		System.out.println(c.proficiencyBonus);
+//		System.out.println(SourceRegistry.getKeys(Skill.class));
 	}
 }

@@ -53,6 +53,7 @@ public class SourceRegistry {
 			Map<String, Object> values = book.data.get(clazz);
 			Map<String, Object> registryMap = registry.get(clazz);
 			
+			if(values != null)
 			for(Entry<String, Object> entry : values.entrySet()) {
 				if(!registryMap.containsKey(entry.getKey())) // TODO add override flag
 					registryMap.put(entry.getKey(), entry.getValue());
@@ -60,8 +61,18 @@ public class SourceRegistry {
 		}
 	}
 	
+	public static void saveBooks() {
+		for(SourceBook book : books.values()) {
+			book.save();
+		}
+	}
+	
 	public static File getDir() {
 		return dir;
+	}
+	
+	public static Map<String, SourceBook> getBooks() {
+		return books;
 	}
 	
 	@SuppressWarnings("unchecked")

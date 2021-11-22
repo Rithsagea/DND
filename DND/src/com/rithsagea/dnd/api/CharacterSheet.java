@@ -15,7 +15,7 @@ public class CharacterSheet {
 	public String alignment; //Alignment.class
 	
 	public int experiencePoints;
-	public int level = 1;
+	public int level;
 	
 	public static final int[] EXPERIENCE_TABLE = {
 		0,
@@ -111,7 +111,7 @@ public class CharacterSheet {
 			skills.put(key, abilityModifiers.get(skill.abilityScore));
 		}
 		
-		while(level < 20 && experiencePoints > EXPERIENCE_TABLE[level]) level++;
+		while(level < 20 && experiencePoints >= EXPERIENCE_TABLE[level]) level++;
 		
 		proficiencyBonus = 2 + (level - 1) / 4;
 	}

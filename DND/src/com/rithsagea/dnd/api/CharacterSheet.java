@@ -41,7 +41,7 @@ public class CharacterSheet {
 	};
 	
 	public Map<String, Integer> abilityScores = new HashMap<>(); //AbilityScore.class
-	public Map<String, Integer> abilityModifiers = new HashMap<>(); //TODO: these might not need to be transient
+	public Map<String, Integer> abilityModifiers = new HashMap<>();
 	public Map<String, Integer> savingThrows = new HashMap<>();
 	public Map<String, Integer> skills = new HashMap<>(); //Skill.class
 	
@@ -50,20 +50,24 @@ public class CharacterSheet {
 	public int passiveWisdom;
 	public int initiative;
 	
-	//UNFINISHED VVV
-	
-	public String characterClass; // TODO: this includes level, replace this with an object later
-	public String characterRace;
-	
+	//Character lore stuffs
 	public String background;
 	public String personalityTraits;
 	public String ideals;
 	public String bonds;
 	public String flaws;
-	public String featuresAndTraits;
+	
+	//UNFINISHED VVV
+	
+	public String characterClass; // TODO: this includes level, replace this with an object later
+	public String characterRace;
+	
+	//the feature and traits section of the character sheet
+	public List<String> features;
+	public List<String> traits;
 
 	public String backstory;
-	public String extraTraits; // not sure if this is necessary
+//	public String extraTraits; // merge into the above features, traits, objects
 	public String treasure; // this is technically inventory, reimplement later
 	
 	public String skin;

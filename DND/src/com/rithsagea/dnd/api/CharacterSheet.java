@@ -1,7 +1,11 @@
 package com.rithsagea.dnd.api;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.rithsagea.dnd.api.types.AbilityScore;
+import com.rithsagea.dnd.api.types.Skill;
 
 public class CharacterSheet {
 	
@@ -10,7 +14,13 @@ public class CharacterSheet {
 	
 	public String alignment; //Alignment.class
 	
-	public Map<String, Integer> abilityScores;
+	public Map<String, Integer> abilityScores = new HashMap<>(); //AbilityScore.class
+	public Map<String, Integer> abilityModifiers = new HashMap<>(); //TODO: these might not need to be transient
+	public Map<String, Integer> savingThrows = new HashMap<>();
+	public Map<String, Integer> skills = new HashMap<>(); //Skill.class
+	
+	public int passiveWisdom;
+	public int initiative;
 	
 	//UNFINISHED VVV
 	
@@ -38,10 +48,6 @@ public class CharacterSheet {
 	public int experiencePoints;
 	public int level;
 	
-	public Map<String, Integer> abilityModifiers; //TODO: these might not need to be transient
-	public Map<String, Integer> savingThrows;
-	public Map<String, Integer> skills;
-	
 	public int inspiration;
 	public int proficiencyBonus;
 	
@@ -49,14 +55,11 @@ public class CharacterSheet {
 	public int maxHitPoints;
 	public String hitDie; //TODO: maybe represent this as an object
 	
-	public int initiative;
 	public int armorClass;
 	public int speed;
 	
 	public int failedDeathSaves;
 	public int succeededDeathSaves;
-	
-	public int passiveWisdom;
 	
 	public List<String> proficiencies; // TODO: change to new class, should include languages
 	public Map<String, Integer> money; // TODO: change to wrapper class or replace string with enum
@@ -73,11 +76,16 @@ public class CharacterSheet {
 	public int spellAttackBonus;
 	
 	public void calc() {
-		for(String ability : abilityScores.keySet()) {
-			abilityModifiers.put(ability, (abilityScores.get(ability) - 10) / 2);
+		for(String key : SourceRegistry.getKeys(AbilityScore.class)) {
+			abilityModifiers.put(key, (abilityScores.get(key) - 10) / 2);
 		}
 		
-		passiveWisdom = 10 + abilityModifiers.get("wisdom"); // TODO: replace with enum or smth
-		initiative = abilityModifiers.get("dexterity");
+		passiveWisdom = 10 + abilityModifiers.get("wis"); // TODO: replace with enum or smth
+		initiative = abilityModifiers.get("dex");
+		
+		for(String key : SourceRegistry.getKeys(Skill.class)) {
+			Skill skill = SourceRegistry.getItem(key, Skill.class);
+			skills.put(key, abilityModifiers.get(skill.abilityScore));
+		}
 	}
 }

@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
 
 public class SourceRegistry {
 	
@@ -75,8 +76,12 @@ public class SourceRegistry {
 		return books;
 	}
 	
+	public static Set<String> getKeys(Class<?> clazz) {
+		return registry.containsKey(clazz) ? registry.get(clazz).keySet() : null;
+	}
+	
 	@SuppressWarnings("unchecked")
-	public static <T> T getItem(String id, Class<?> clazz) {
+	public static <T> T getItem(String id, Class<T> clazz) {
 		if(!registry.containsKey(clazz)) return null; // registry doesn't exist
 		return (T) (registry.get(clazz).get(id));
 	}

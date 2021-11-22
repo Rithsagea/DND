@@ -1,6 +1,4 @@
-package com.rithsagea.dnd.api5e.data;
-
-import com.rithsagea.dnd.api.types.IndexedItem;
+package com.rithsagea.dnd.api.types;
 
 public class AbilityScore extends IndexedItem {
 	public String shortName;

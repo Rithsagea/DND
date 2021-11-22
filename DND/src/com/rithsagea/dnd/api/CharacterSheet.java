@@ -3,14 +3,14 @@ package com.rithsagea.dnd.api;
 import java.util.List;
 import java.util.Map;
 
-import com.rithsagea.dnd.api.types.*;
-
 public class CharacterSheet {
 	
 	public String name;
 	public String playerName;
 	
-	public Alignment alignment;
+	public String alignment; //Alignment.class
+	
+	public Map<String, Integer> abilityScores;
 	
 	//UNFINISHED VVV
 	
@@ -38,7 +38,6 @@ public class CharacterSheet {
 	public int experiencePoints;
 	public int level;
 	
-	public Map<String, Integer> abilityScores;
 	public Map<String, Integer> abilityModifiers; //TODO: these might not need to be transient
 	public Map<String, Integer> savingThrows;
 	public Map<String, Integer> skills;

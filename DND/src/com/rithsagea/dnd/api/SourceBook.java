@@ -13,6 +13,7 @@ import java.util.Map.Entry;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+import com.rithsagea.dnd.api.types.AbilityScore;
 import com.rithsagea.dnd.api.types.Alignment;
 
 public class SourceBook implements Comparable<SourceBook> {
@@ -21,6 +22,7 @@ public class SourceBook implements Comparable<SourceBook> {
 	public static final Map<Class<?>, String> TYPE_LABELS = new HashMap<>();
 	static {
 		DATA_TYPES.put("alignments", Alignment.class);
+		DATA_TYPES.put("ability-scores", AbilityScore.class);
 		
 		for(Entry<String, Class<?>> entry : DATA_TYPES.entrySet()) {
 			TYPE_LABELS.put(entry.getValue(), entry.getKey());

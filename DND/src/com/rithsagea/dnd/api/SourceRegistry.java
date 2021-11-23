@@ -1,6 +1,7 @@
 package com.rithsagea.dnd.api;
 
 import java.io.File;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -78,6 +79,11 @@ public class SourceRegistry {
 	
 	public static Set<String> getKeys(Class<?> clazz) {
 		return registry.containsKey(clazz) ? registry.get(clazz).keySet() : null;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public static <T> Collection<T> getItems(Class<T> clazz) {
+		return (Collection<T>) registry.get(clazz).values();
 	}
 	
 	@SuppressWarnings("unchecked")

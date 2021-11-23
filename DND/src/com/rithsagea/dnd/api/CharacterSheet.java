@@ -40,10 +40,12 @@ public class CharacterSheet {
 		355000
 	};
 	
-	public Map<String, Integer> abilityScores = new HashMap<>(); //AbilityScore.class
+	/** AbilityScore.class */
+	public Map<String, Integer> abilityScores = new HashMap<>();
 	public Map<String, Integer> abilityModifiers = new HashMap<>();
 	public Map<String, Integer> savingThrows = new HashMap<>();
-	public Map<String, Integer> skills = new HashMap<>(); //Skill.class
+	/** Skill.class */
+	public Map<String, Integer> skills = new HashMap<>();
 	
 	public int inspiration;
 	public int proficiencyBonus;
@@ -56,6 +58,9 @@ public class CharacterSheet {
 	public String ideals;
 	public String bonds;
 	public String flaws;
+	
+	/** Coin.class */
+	public Map<String, Integer> money = new HashMap<>();
 	
 	//UNFINISHED VVV
 	
@@ -88,7 +93,6 @@ public class CharacterSheet {
 	public int succeededDeathSaves;
 	
 	public List<String> proficiencies; // TODO: change to new class, should include languages
-	public Map<String, Integer> money; // TODO: change to wrapper class or replace string with enum
 	public Map<String, Integer> equipment; // TODO: box this, quantitize maybe ahhhh
 	
 	//MAGIC

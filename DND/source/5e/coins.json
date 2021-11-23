@@ -1,0 +1,27 @@
+{
+  "cp": {
+    "name": "Copper",
+    "value": 1,
+    "id": "cp"
+  },
+  "sp": {
+    "name": "Silver",
+    "value": 10,
+    "id": "sp"
+  },
+  "ep": {
+    "name": "Electrum",
+    "value": 50,
+    "id": "ep"
+  },
+  "gp": {
+    "name": "Gold",
+    "value": 100,
+    "id": "gp"
+  },
+  "pp": {
+    "name": "Platinum",
+    "value": 1000,
+    "id": "pp"
+  }
+}

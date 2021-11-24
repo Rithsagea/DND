@@ -20,7 +20,7 @@ public class Dnd5eClass extends IndexedItem {
 	public List<EquipmentStack> startingEquipment;
 	public List<EquipmentOption> equipmentOptions;
 	
-	public List<DndClassLevel> levels;
+	public List<Dnd5eClassLevel> levels; //TODO: procrastinate this
 	
 	public List<String> subclasses;
 	

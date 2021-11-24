@@ -13,7 +13,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.rithsagea.dnd.api5e.data.classes.Dnd5eClass;
-import com.rithsagea.dnd.api5e.data.classes.DndClassLevel;
+import com.rithsagea.dnd.api5e.data.classes.Dnd5eClassLevel;
 import com.rithsagea.dnd.api5e.data.extra.EquipmentOption;
 import com.rithsagea.dnd.api5e.data.extra.EquipmentStack;
 import com.rithsagea.dnd.api5e.data.extra.ProficiencyOptions;
@@ -153,7 +153,7 @@ public class DndClassAdapter implements JsonDeserializer<Dnd5eClass> {
 		for(JsonElement e1 : gson.fromJson(Dnd5eApiTool.get("/classes/" + dndClass.id + "/levels"), JsonArray.class)) {
 			JsonObject lvl = e1.getAsJsonObject();
 			if(!lvl.has("subclass")) {
-				DndClassLevel classLevel = new DndClassLevel();
+				Dnd5eClassLevel classLevel = new Dnd5eClassLevel();
 				classLevel.level = lvl.get("level").getAsInt();
 				classLevel.id = lvl.get("index").getAsString();
 				dndClass.levels.set(classLevel.level - 1, classLevel);

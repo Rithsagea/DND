@@ -1,9 +1,9 @@
 package com.rithsagea.dnd.api.types.extras;
 
 import java.lang.reflect.Type;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.TreeMap;
 
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
@@ -16,12 +16,12 @@ import com.google.gson.JsonSerializer;
 
 public class ExtrasAdapter implements JsonSerializer<Map<String, Object>>, JsonDeserializer<Map<String, Object>> {
 
-	private static final String TYPE_LABEL = "extra_type";
+	private static final String TYPE_LABEL = "__type";
 	
 	@Override
 	public Map<String, Object> deserialize(JsonElement elem, Type type, JsonDeserializationContext context) throws JsonParseException {
 		JsonObject obj = elem.getAsJsonObject();
-		Map<String, Object> extras = new TreeMap<>();
+		Map<String, Object> extras = new LinkedHashMap<>();
 		
 		for(Entry<String, JsonElement> entry : obj.entrySet()) {
 			if(entry.getValue().isJsonPrimitive()) {

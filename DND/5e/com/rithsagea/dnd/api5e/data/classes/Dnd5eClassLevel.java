@@ -5,7 +5,7 @@ import java.util.Map;
 
 import com.rithsagea.dnd.api.types.IndexedItem;
 
-public class DndClassLevel extends IndexedItem {
+public class Dnd5eClassLevel extends IndexedItem {
 	public int level;
 	public int abilityScoreBonus;
 	public int proficiencyBonus;

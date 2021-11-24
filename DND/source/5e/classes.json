@@ -1,53 +1,54 @@
 {
   "rogue": {
+    "name": "Rogue",
     "hitDie": 8,
     "proficiencyOptions": [
       {
         "count": 4,
-        "option": [
+        "options": [
           {
             "value": "skill-acrobatics",
-            "type": "proficiency"
+            "__type": "proficiency"
           },
           {
             "value": "skill-athletics",
-            "type": "proficiency"
+            "__type": "proficiency"
           },
           {
             "value": "skill-deception",
-            "type": "proficiency"
+            "__type": "proficiency"
           },
           {
             "value": "skill-insight",
-            "type": "proficiency"
+            "__type": "proficiency"
           },
           {
             "value": "skill-intimidation",
-            "type": "proficiency"
+            "__type": "proficiency"
           },
           {
             "value": "skill-investigation",
-            "type": "proficiency"
+            "__type": "proficiency"
           },
           {
             "value": "skill-perception",
-            "type": "proficiency"
+            "__type": "proficiency"
           },
           {
             "value": "skill-performance",
-            "type": "proficiency"
+            "__type": "proficiency"
           },
           {
             "value": "skill-persuasion",
-            "type": "proficiency"
+            "__type": "proficiency"
           },
           {
             "value": "skill-sleight-of-hand",
-            "type": "proficiency"
+            "__type": "proficiency"
           },
           {
             "value": "skill-stealth",
-            "type": "proficiency"
+            "__type": "proficiency"
           }
         ]
       }
@@ -65,6 +66,167 @@
       "dex",
       "int"
     ],
+    "startingEquipment": [
+      {
+        "item": "leather-armor",
+        "count": 1
+      },
+      {
+        "item": "dagger",
+        "count": 2
+      },
+      {
+        "item": "thieves-tools",
+        "count": 1
+      }
+    ],
+    "equipmentOptions": [
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "item": "rapier",
+              "count": 1
+            },
+            "__type": "item"
+          },
+          {
+            "value": {
+              "item": "shortsword",
+              "count": 1
+            },
+            "__type": "item"
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "item": "shortsword",
+              "count": 1
+            },
+            "__type": "item"
+          },
+          [
+            {
+              "value": {
+                "item": "shortbow",
+                "count": 1
+              },
+              "__type": "item"
+            },
+            {
+              "value": {
+                "item": "arrow",
+                "count": 20
+              },
+              "__type": "item"
+            }
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "item": "burglars-pack",
+              "count": 1
+            },
+            "__type": "item"
+          },
+          {
+            "value": {
+              "item": "dungeoneers-pack",
+              "count": 1
+            },
+            "__type": "item"
+          },
+          {
+            "value": {
+              "item": "explorers-pack",
+              "count": 1
+            },
+            "__type": "item"
+          }
+        ]
+      }
+    ],
+    "subclasses": [
+      "thief"
+    ],
+    "multiclassing": {
+      "abilityScoreRequirements": {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "abilityScore": "dex",
+              "value": 13
+            },
+            "__type": "ability_score"
+          }
+        ]
+      },
+      "proficiencies": [
+        "light-armor",
+        "thieves-tools"
+      ],
+      "proficiencyOptions": [
+        {
+          "count": 4,
+          "options": [
+            {
+              "value": "skill-acrobatics",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-athletics",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-deception",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-insight",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-intimidation",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-investigation",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-perception",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-performance",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-persuasion",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-sleight-of-hand",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-stealth",
+              "__type": "proficiency"
+            }
+          ]
+        }
+      ]
+    },
     "id": "rogue"
   }
 }

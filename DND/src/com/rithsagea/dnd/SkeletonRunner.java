@@ -17,11 +17,11 @@ public class SkeletonRunner {
 		SourceRegistry.init(SOURCE_DIRECTORY);
 		SourceRegistry.load();
 		
-		Datapack data5e = Datapack.loadDatapack(new File("5e.json"));
-		SourceBook book = SourceRegistry.getBooks().get("5e");
-		for(Language item : data5e.Language.values()) {
-			book.register(item.id, item);
-		}
+//		Datapack data5e = Datapack.loadDatapack(new File("5e.json"));
+//		SourceBook book = SourceRegistry.getBooks().get("5e");
+//		for(Language item : data5e.Language.values()) {
+//			book.register(item.id, item);
+//		}
 		SourceRegistry.saveBooks();
 		
 		CharacterSheet c = new CharacterSheet();

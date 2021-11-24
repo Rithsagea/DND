@@ -9,7 +9,7 @@ import com.rithsagea.dnd.api5e.data.extra.EquipmentStack;
 import com.rithsagea.dnd.api5e.data.extra.ProficiencyOptions;
 import com.rithsagea.dnd.api5e.data.extra.SpellcastingInfo;
 
-public class DndClass extends IndexedItem {
+public class Dnd5eClass extends IndexedItem {
 	public String name;
 	public int hitDie;
 	

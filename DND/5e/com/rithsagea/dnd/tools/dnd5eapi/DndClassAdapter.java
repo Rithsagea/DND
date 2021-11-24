@@ -12,21 +12,21 @@ import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
-import com.rithsagea.dnd.api5e.data.classes.DndClass;
+import com.rithsagea.dnd.api5e.data.classes.Dnd5eClass;
 import com.rithsagea.dnd.api5e.data.classes.DndClassLevel;
 import com.rithsagea.dnd.api5e.data.extra.EquipmentOption;
 import com.rithsagea.dnd.api5e.data.extra.EquipmentStack;
 import com.rithsagea.dnd.api5e.data.extra.ProficiencyOptions;
 import com.rithsagea.dnd.api5e.data.extra.SpellcastingInfo;
 
-public class DndClassAdapter implements JsonDeserializer<DndClass> {
+public class DndClassAdapter implements JsonDeserializer<Dnd5eClass> {
 
 	private Gson gson = new Gson();
 	
 	@Override
-	public DndClass deserialize(JsonElement elem, Type type, JsonDeserializationContext context)
+	public Dnd5eClass deserialize(JsonElement elem, Type type, JsonDeserializationContext context)
 			throws JsonParseException {
-		DndClass dndClass = new DndClass();
+		Dnd5eClass dndClass = new Dnd5eClass();
 		JsonObject obj = elem.getAsJsonObject();
 		dndClass.id = obj.get("index").getAsString();
 		dndClass.name = obj.get("name").getAsString();

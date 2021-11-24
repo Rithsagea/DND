@@ -3,11 +3,8 @@ package com.rithsagea.dnd;
 import java.io.File;
 
 import com.rithsagea.dnd.api.CharacterSheet;
-import com.rithsagea.dnd.api.SourceBook;
 import com.rithsagea.dnd.api.SourceRegistry;
 import com.rithsagea.dnd.api.types.Coin;
-import com.rithsagea.dnd.api.types.Language;
-import com.rithsagea.dnd.api5e.Datapack;
 
 public class SkeletonRunner {
 	
@@ -16,14 +13,6 @@ public class SkeletonRunner {
 	public static void main(String[] args) {
 		SourceRegistry.init(SOURCE_DIRECTORY);
 		SourceRegistry.load();
-		
-//		Datapack data5e = Datapack.loadDatapack(new File("5e.json"));
-//		SourceBook book = SourceRegistry.getBooks().get("5e");
-//		for(Language item : data5e.Language.values()) {
-//			book.register(item.id, item);
-//		}
-		SourceRegistry.saveBooks();
-		
 		CharacterSheet c = new CharacterSheet();
 		
 		c.name = "Varikane";

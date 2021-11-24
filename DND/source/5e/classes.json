@@ -1,0 +1,70 @@
+{
+  "rogue": {
+    "hitDie": 8,
+    "proficiencyOptions": [
+      {
+        "count": 4,
+        "option": [
+          {
+            "value": "skill-acrobatics",
+            "type": "proficiency"
+          },
+          {
+            "value": "skill-athletics",
+            "type": "proficiency"
+          },
+          {
+            "value": "skill-deception",
+            "type": "proficiency"
+          },
+          {
+            "value": "skill-insight",
+            "type": "proficiency"
+          },
+          {
+            "value": "skill-intimidation",
+            "type": "proficiency"
+          },
+          {
+            "value": "skill-investigation",
+            "type": "proficiency"
+          },
+          {
+            "value": "skill-perception",
+            "type": "proficiency"
+          },
+          {
+            "value": "skill-performance",
+            "type": "proficiency"
+          },
+          {
+            "value": "skill-persuasion",
+            "type": "proficiency"
+          },
+          {
+            "value": "skill-sleight-of-hand",
+            "type": "proficiency"
+          },
+          {
+            "value": "skill-stealth",
+            "type": "proficiency"
+          }
+        ]
+      }
+    ],
+    "proficiencies": [
+      "light-armor",
+      "simple-weapons",
+      "longswords",
+      "rapiers",
+      "shortswords",
+      "hand-crossbows",
+      "thieves-tools"
+    ],
+    "savingThrows": [
+      "dex",
+      "int"
+    ],
+    "id": "rogue"
+  }
+}

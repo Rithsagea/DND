@@ -1,4 +1,4 @@
-package com.rithsagea.dnd.api.types;
+package com.rithsagea.dnd.api.types.extras;
 
 import java.lang.reflect.Type;
 import java.util.Map;

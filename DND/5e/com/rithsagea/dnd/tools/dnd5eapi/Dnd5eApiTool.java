@@ -26,7 +26,7 @@ import com.rithsagea.dnd.api5e.data.Proficiency;
 import com.rithsagea.dnd.api5e.data.Rule;
 import com.rithsagea.dnd.api5e.data.RuleSection;
 import com.rithsagea.dnd.api5e.data.Spell;
-import com.rithsagea.dnd.api5e.data.classes.DndClass;
+import com.rithsagea.dnd.api5e.data.classes.Dnd5eClass;
 import com.rithsagea.dnd.api5e.data.classes.DndClassFeature;
 import com.rithsagea.dnd.api5e.data.classes.DndSubclass;
 import com.rithsagea.dnd.api5e.data.equipment.Equipment;
@@ -48,7 +48,7 @@ public class Dnd5eApiTool {
 		builder.registerTypeAdapter(Language.class, new LanguageAdapter());
 		builder.registerTypeAdapter(Alignment.class, new AlignmentAdapter());
 		builder.registerTypeAdapter(Equipment.class, new EquipmentAdapter());
-		builder.registerTypeAdapter(DndClass.class, new DndClassAdapter());
+		builder.registerTypeAdapter(Dnd5eClass.class, new DndClassAdapter());
 		builder.registerTypeAdapter(DndSubclass.class, new DndSubclassAdapter());
 		builder.registerTypeAdapter(DndClassFeature.class, new DndClassFeatureAdapter());
 		builder.registerTypeAdapter(DndRace.class, new DndRaceAdapter());
@@ -156,8 +156,8 @@ public class Dnd5eApiTool {
 		return getItems("/magic-items", Equipment.class);
 	}
 	
-	public static List<DndClass> getClasses() {
-		return getItems("/classes", DndClass.class);
+	public static List<Dnd5eClass> getClasses() {
+		return getItems("/classes", Dnd5eClass.class);
 	}
 	
 	public static List<DndSubclass> getSubclasses() {

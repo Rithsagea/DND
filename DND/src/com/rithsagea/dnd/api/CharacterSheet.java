@@ -1,5 +1,6 @@
 package com.rithsagea.dnd.api;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -61,6 +62,9 @@ public class CharacterSheet {
 	
 	/** Coin.class */
 	public Map<String, Integer> money = new HashMap<>();
+	
+	/** Language.class */
+	public List<String> languages = new ArrayList<>();
 	
 	//UNFINISHED VVV
 	

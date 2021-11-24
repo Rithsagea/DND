@@ -1,0 +1,82 @@
+{
+  "draconic": {
+    "name": "Draconic",
+    "script": "Draconic",
+    "id": "draconic"
+  },
+  "deep-speech": {
+    "name": "Deep Speech",
+    "script": "None",
+    "id": "deep-speech"
+  },
+  "orc": {
+    "name": "Orc",
+    "script": "Dwarvish",
+    "id": "orc"
+  },
+  "sylvan": {
+    "name": "Sylvan",
+    "script": "Elvish",
+    "id": "sylvan"
+  },
+  "primordial": {
+    "name": "Primordial",
+    "script": "Dwarvish",
+    "id": "primordial"
+  },
+  "undercommon": {
+    "name": "Undercommon",
+    "script": "Elvish",
+    "id": "undercommon"
+  },
+  "celestial": {
+    "name": "Celestial",
+    "script": "Celestial",
+    "id": "celestial"
+  },
+  "elvish": {
+    "name": "Elvish",
+    "script": "Elvish",
+    "id": "elvish"
+  },
+  "infernal": {
+    "name": "Infernal",
+    "script": "Infernal",
+    "id": "infernal"
+  },
+  "dwarvish": {
+    "name": "Dwarvish",
+    "script": "Dwarvish",
+    "id": "dwarvish"
+  },
+  "common": {
+    "name": "Common",
+    "script": "Common",
+    "id": "common"
+  },
+  "abyssal": {
+    "name": "Abyssal",
+    "script": "Infernal",
+    "id": "abyssal"
+  },
+  "giant": {
+    "name": "Giant",
+    "script": "Dwarvish",
+    "id": "giant"
+  },
+  "goblin": {
+    "name": "Goblin",
+    "script": "Dwarvish",
+    "id": "goblin"
+  },
+  "halfling": {
+    "name": "Halfling",
+    "script": "Common",
+    "id": "halfling"
+  },
+  "gnomish": {
+    "name": "Gnomish",
+    "script": "Dwarvish",
+    "id": "gnomish"
+  }
+}

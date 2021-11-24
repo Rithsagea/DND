@@ -6,6 +6,7 @@ import com.rithsagea.dnd.api.CharacterSheet;
 import com.rithsagea.dnd.api.SourceBook;
 import com.rithsagea.dnd.api.SourceRegistry;
 import com.rithsagea.dnd.api.types.Coin;
+import com.rithsagea.dnd.api.types.Language;
 import com.rithsagea.dnd.api5e.Datapack;
 
 public class SkeletonRunner {
@@ -18,9 +19,9 @@ public class SkeletonRunner {
 		
 		Datapack data5e = Datapack.loadDatapack(new File("5e.json"));
 		SourceBook book = SourceRegistry.getBooks().get("5e");
-//		for(Skill item : data5e.Skill.values()) {
-//			book.register(item.id, item);
-//		}
+		for(Language item : data5e.Language.values()) {
+			book.register(item.id, item);
+		}
 		SourceRegistry.saveBooks();
 		
 		CharacterSheet c = new CharacterSheet();
@@ -45,6 +46,8 @@ public class SkeletonRunner {
 		c.money.put("ep", 0);
 		c.money.put("gp", 50);
 		c.money.put("pp", 0);
+		
+		c.languages.add("common");
 		
 		System.out.println("Level: " + c.level);
 		System.out.println(c.proficiencyBonus);

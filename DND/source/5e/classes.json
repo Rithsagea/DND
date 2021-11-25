@@ -868,5 +868,454 @@
       ]
     },
     "id": "cleric"
+  },
+  "barbarian": {
+    "name": "Barbarian",
+    "hitDie": 12,
+    "proficiencyOptions": [
+      {
+        "count": 2,
+        "options": [
+          {
+            "value": "skill-animal-handling",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-athletics",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-intimidation",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-nature",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-perception",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-survival",
+            "__type": "proficiency"
+          }
+        ]
+      }
+    ],
+    "proficiencies": [
+      "light-armor",
+      "medium-armor",
+      "shields",
+      "simple-weapons",
+      "martial-weapons"
+    ],
+    "savingThrows": [
+      "str",
+      "con"
+    ],
+    "startingEquipment": [
+      {
+        "item": "explorers-pack",
+        "count": 1
+      },
+      {
+        "item": "javelin",
+        "count": 4
+      }
+    ],
+    "equipmentOptions": [
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "item": "greataxe",
+              "count": 1
+            },
+            "__type": "item"
+          },
+          {
+            "value": {
+              "item": "martial-melee-weapons",
+              "count": 1
+            },
+            "__type": "item"
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "item": "handaxe",
+              "count": 2
+            },
+            "__type": "item"
+          },
+          {
+            "value": {
+              "item": "simple-weapons",
+              "count": 1
+            },
+            "__type": "item"
+          }
+        ]
+      }
+    ],
+    "levels": [
+      {
+        "className": "barbarian",
+        "level": 1,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [
+          "rage",
+          "barbarian-unarmored-defense"
+        ],
+        "id": "barbarian-1",
+        "extra": {
+          "rage_count": 2,
+          "rage_damage_bonus": 2,
+          "brutal_critical_dice": 0
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 2,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [
+          "reckless-attack",
+          "danger-sense"
+        ],
+        "id": "barbarian-2",
+        "extra": {
+          "rage_count": 2,
+          "rage_damage_bonus": 2,
+          "brutal_critical_dice": 0
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 3,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [
+          "primal-path"
+        ],
+        "id": "barbarian-3",
+        "extra": {
+          "rage_count": 3,
+          "rage_damage_bonus": 2,
+          "brutal_critical_dice": 0
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 4,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          "barbarian-ability-score-improvement-1"
+        ],
+        "id": "barbarian-4",
+        "extra": {
+          "rage_count": 3,
+          "rage_damage_bonus": 2,
+          "brutal_critical_dice": 0
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 5,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 3,
+        "features": [
+          "barbarian-extra-attack",
+          "fast-movement"
+        ],
+        "id": "barbarian-5",
+        "extra": {
+          "rage_count": 3,
+          "rage_damage_bonus": 2,
+          "brutal_critical_dice": 0
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 6,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 3,
+        "features": [],
+        "id": "barbarian-6",
+        "extra": {
+          "rage_count": 4,
+          "rage_damage_bonus": 2,
+          "brutal_critical_dice": 0
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 7,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 3,
+        "features": [
+          "feral-instinct"
+        ],
+        "id": "barbarian-7",
+        "extra": {
+          "rage_count": 4,
+          "rage_damage_bonus": 2,
+          "brutal_critical_dice": 0
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 8,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 3,
+        "features": [
+          "barbarian-ability-score-improvement-2"
+        ],
+        "id": "barbarian-8",
+        "extra": {
+          "rage_count": 4,
+          "rage_damage_bonus": 2,
+          "brutal_critical_dice": 0
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 9,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 4,
+        "features": [
+          "brutal-critical-1-die"
+        ],
+        "id": "barbarian-9",
+        "extra": {
+          "rage_count": 4,
+          "rage_damage_bonus": 3,
+          "brutal_critical_dice": 1
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 10,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 4,
+        "features": [],
+        "id": "barbarian-10",
+        "extra": {
+          "rage_count": 4,
+          "rage_damage_bonus": 3,
+          "brutal_critical_dice": 1
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 11,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 4,
+        "features": [
+          "relentless-rage"
+        ],
+        "id": "barbarian-11",
+        "extra": {
+          "rage_count": 4,
+          "rage_damage_bonus": 3,
+          "brutal_critical_dice": 1
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 12,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 4,
+        "features": [
+          "barbarian-ability-score-improvement-3"
+        ],
+        "id": "barbarian-12",
+        "extra": {
+          "rage_count": 5,
+          "rage_damage_bonus": 3,
+          "brutal_critical_dice": 1
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 13,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 5,
+        "features": [
+          "brutal-critical-2-dice"
+        ],
+        "id": "barbarian-13",
+        "extra": {
+          "rage_count": 5,
+          "rage_damage_bonus": 3,
+          "brutal_critical_dice": 2
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 14,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 5,
+        "features": [],
+        "id": "barbarian-14",
+        "extra": {
+          "rage_count": 5,
+          "rage_damage_bonus": 3,
+          "brutal_critical_dice": 2
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 15,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 5,
+        "features": [
+          "persistent-rage"
+        ],
+        "id": "barbarian-15",
+        "extra": {
+          "rage_count": 5,
+          "rage_damage_bonus": 3,
+          "brutal_critical_dice": 2
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 16,
+        "abilityScoreBonus": 4,
+        "proficiencyBonus": 5,
+        "features": [
+          "barbarian-ability-score-improvement-4"
+        ],
+        "id": "barbarian-16",
+        "extra": {
+          "rage_count": 5,
+          "rage_damage_bonus": 4,
+          "brutal_critical_dice": 2
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 17,
+        "abilityScoreBonus": 4,
+        "proficiencyBonus": 6,
+        "features": [
+          "brutal-critical-3-dice"
+        ],
+        "id": "barbarian-17",
+        "extra": {
+          "rage_count": 6,
+          "rage_damage_bonus": 4,
+          "brutal_critical_dice": 3
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 18,
+        "abilityScoreBonus": 4,
+        "proficiencyBonus": 6,
+        "features": [
+          "indomitable-might"
+        ],
+        "id": "barbarian-18",
+        "extra": {
+          "rage_count": 6,
+          "rage_damage_bonus": 4,
+          "brutal_critical_dice": 3
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 19,
+        "abilityScoreBonus": 5,
+        "proficiencyBonus": 6,
+        "features": [
+          "barbarian-ability-score-improvement-5"
+        ],
+        "id": "barbarian-19",
+        "extra": {
+          "rage_count": 6,
+          "rage_damage_bonus": 4,
+          "brutal_critical_dice": 3
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 20,
+        "abilityScoreBonus": 5,
+        "proficiencyBonus": 6,
+        "features": [
+          "primal-champion"
+        ],
+        "id": "barbarian-20",
+        "extra": {
+          "rage_count": 9999,
+          "rage_damage_bonus": 4,
+          "brutal_critical_dice": 3
+        }
+      }
+    ],
+    "subclasses": [
+      "berserker"
+    ],
+    "multiclassing": {
+      "abilityScoreRequirements": {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "abilityScore": "str",
+              "value": 13
+            },
+            "__type": "ability_score"
+          }
+        ]
+      },
+      "proficiencies": [
+        "shields",
+        "simple-weapons",
+        "martial-weapons"
+      ],
+      "proficiencyOptions": [
+        {
+          "count": 2,
+          "options": [
+            {
+              "value": "skill-animal-handling",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-athletics",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-intimidation",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-nature",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-perception",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-survival",
+              "__type": "proficiency"
+            }
+          ]
+        }
+      ]
+    },
+    "id": "barbarian"
   }
 }

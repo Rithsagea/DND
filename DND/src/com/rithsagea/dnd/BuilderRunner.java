@@ -128,6 +128,20 @@ public class BuilderRunner {
 		return res;
 	}
 	
+	@SuppressWarnings("unchecked")
+	private static DndClass createBarbarian() {
+		Dnd5eClass model = data5e.DndClass.get("barbarian");
+		DndClass c = createClass(model);
+		
+		((OptionItem<ItemStack>)c.equipmentOptions.get(1).options.get(0)).value.count = 2;
+		
+		for(int x = 0; x < 20; x++) {
+			c.levels.get(x).extra = new HashMap<>(model.levels.get(x).classSpecific);
+		}
+		
+		return c;
+	}
+	
 	private static DndClass createRogue() {
 		Dnd5eClass model = data5e.DndClass.get("rogue");
 		DndClass c = createClass(model);
@@ -160,8 +174,9 @@ public class BuilderRunner {
 		SourceBook book = SourceRegistry.getBooks().get("5e");
 		
 		System.out.println(data5e.DndClass.keySet());
-		SourceRegistry.getItem("cleric", DndClass.class);
+		SourceRegistry.getItem("barbarian", DndClass.class);
 		
+		book.register("barbarian", createBarbarian());
 		book.register("rogue", createRogue());
 		book.register("cleric", createCleric());
 		

@@ -70,7 +70,7 @@
               "item": "martial-melee-weapons",
               "count": 1
             },
-            "__type": "item"
+            "__type": "category"
           }
         ]
       },
@@ -89,7 +89,7 @@
               "item": "simple-weapons",
               "count": 1
             },
-            "__type": "item"
+            "__type": "category"
           }
         ]
       }
@@ -620,7 +620,7 @@
               "item": "simple-weapons",
               "count": 1
             },
-            "__type": "item"
+            "__type": "category"
           }
         ]
       },
@@ -658,7 +658,7 @@
               "item": "musical-instruments",
               "count": 1
             },
-            "__type": "item"
+            "__type": "category"
           }
         ]
       }
@@ -1476,8 +1476,7 @@
         }
       ]
     },
-    "id": "bard",
-    "extra": {}
+    "id": "bard"
   },
   "rogue": {
     "name": "Rogue",
@@ -2067,8 +2066,24 @@
               "item": "simple-weapons",
               "count": 1
             },
-            "__type": "item"
-          }
+            "__type": "category"
+          },
+          [
+            {
+              "value": {
+                "item": "crossbow-light",
+                "count": 1
+              },
+              "__type": "item"
+            },
+            {
+              "value": {
+                "item": "crossbow-bolt",
+                "count": 20
+              },
+              "__type": "item"
+            }
+          ]
         ]
       },
       {
@@ -2092,8 +2107,135 @@
       },
       {
         "count": 1,
-        "options": []
+        "options": [
+          {
+            "value": {
+              "item": "holy-symbols",
+              "count": 1
+            },
+            "__type": "category"
+          }
+        ]
       }
+    ],
+    "spellcasting": {
+      "level": 1,
+      "spellcastingAbility": "wis",
+      "info": {
+        "Ritual Casting": "You can cast a cleric spell as a ritual if that spell has the ritual tag and you have the spell prepared.",
+        "Spellcasting Ability": "Wisdom is your spellcasting ability for your cleric spells. The power of your spells comes from your devotion to your deity. You use your Wisdom whenever a cleric spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a cleric spell you cast and when making an attack roll with one.\nSpell save DC \u003d 8 + your proficiency bonus + your Wisdom modifier\nSpell attack modifier \u003d your proficiency bonus + your Wisdom modifier",
+        "Cantrips": "At 1st level, you know three cantrips of your choice from the cleric spell list. You learn additional cleric cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Cleric table.",
+        "Preparing and Casting Spells": "The Cleric table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell\u0027s level or higher. You regain all expended spell slots when you finish a long rest.\nYou prepare the list of cleric spells that are available for you to cast, choosing from the cleric spell list. When you do so, choose a number of cleric spells equal to your Wisdom modifier + your cleric level (minimum of one spell). The spells must be of a level for which you have spell slots.\nFor example, if you are a 3rd-level cleric, you have four 1st-level and two 2nd-level spell slots. With a Wisdom of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell cure wounds, you can cast it using a 1st-level or 2nd-level slot. Casting the spell doesn\u0027t remove it from your list of prepared spells.\nYou can change your list of prepared spells when you finish a long rest. Preparing a new list of cleric spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list.",
+        "Spellcasting Focus": "You can use a holy symbol (see Equipment) as a spellcasting focus for your cleric spells."
+      }
+    },
+    "spells": [
+      "guidance",
+      "light",
+      "mending",
+      "resistance",
+      "sacred-flame",
+      "spare-the-dying",
+      "thaumaturgy",
+      "animal-friendship",
+      "bane",
+      "bless",
+      "command",
+      "create-or-destroy-water",
+      "cure-wounds",
+      "detect-evil-and-good",
+      "detect-magic",
+      "detect-poison-and-disease",
+      "guiding-bolt",
+      "healing-word",
+      "inflict-wounds",
+      "protection-from-evil-and-good",
+      "purify-food-and-drink",
+      "sanctuary",
+      "shield-of-faith",
+      "aid",
+      "augury",
+      "blindness-deafness",
+      "calm-emotions",
+      "continual-flame",
+      "enhance-ability",
+      "find-traps",
+      "gentle-repose",
+      "hold-person",
+      "lesser-restoration",
+      "locate-object",
+      "prayer-of-healing",
+      "protection-from-poison",
+      "silence",
+      "spiritual-weapon",
+      "warding-bond",
+      "zone-of-truth",
+      "animate-dead",
+      "beacon-of-hope",
+      "bestow-curse",
+      "clairvoyance",
+      "create-food-and-water",
+      "daylight",
+      "dispel-magic",
+      "glyph-of-warding",
+      "magic-circle",
+      "mass-healing-word",
+      "meld-into-stone",
+      "protection-from-energy",
+      "remove-curse",
+      "revivify",
+      "sending",
+      "speak-with-dead",
+      "spirit-guardians",
+      "tongues",
+      "water-walk",
+      "arcane-eye",
+      "banishment",
+      "control-water",
+      "death-ward",
+      "freedom-of-movement",
+      "guardian-of-faith",
+      "locate-creature",
+      "stone-shape",
+      "commune",
+      "contagion",
+      "dispel-evil-and-good",
+      "flame-strike",
+      "geas",
+      "greater-restoration",
+      "hallow",
+      "insect-plague",
+      "legend-lore",
+      "mass-cure-wounds",
+      "planar-binding",
+      "raise-dead",
+      "scrying",
+      "blade-barrier",
+      "create-undead",
+      "find-the-path",
+      "forbiddance",
+      "harm",
+      "heal",
+      "heroes-feast",
+      "planar-ally",
+      "true-seeing",
+      "word-of-recall",
+      "conjure-celestial",
+      "divine-word",
+      "etherealness",
+      "fire-storm",
+      "plane-shift",
+      "regenerate",
+      "resurrection",
+      "symbol",
+      "antimagic-field",
+      "control-weather",
+      "earthquake",
+      "holy-aura",
+      "astral-projection",
+      "gate",
+      "mass-heal",
+      "true-resurrection"
     ],
     "levels": [
       {
@@ -2106,7 +2248,24 @@
           "divine-domain",
           "domain-spells-1"
         ],
-        "id": "cleric-1"
+        "spellcasting": {
+          "cantripsKnown": 3,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 2,
+          "spellSlotsLevel2": 0,
+          "spellSlotsLevel3": 0,
+          "spellSlotsLevel4": 0,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "cleric-1",
+        "extra": {
+          "destroyUndeadChallengeRating": 0,
+          "channelDivinityCharges": 0
+        }
       },
       {
         "className": "cleric",
@@ -2117,7 +2276,24 @@
           "channel-divinity-1-rest",
           "channel-divinity-turn-undead"
         ],
-        "id": "cleric-2"
+        "spellcasting": {
+          "cantripsKnown": 3,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 3,
+          "spellSlotsLevel2": 0,
+          "spellSlotsLevel3": 0,
+          "spellSlotsLevel4": 0,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "cleric-2",
+        "extra": {
+          "destroyUndeadChallengeRating": 0,
+          "channelDivinityCharges": 1
+        }
       },
       {
         "className": "cleric",
@@ -2127,7 +2303,24 @@
         "features": [
           "domain-spells-2"
         ],
-        "id": "cleric-3"
+        "spellcasting": {
+          "cantripsKnown": 3,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 2,
+          "spellSlotsLevel3": 0,
+          "spellSlotsLevel4": 0,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "cleric-3",
+        "extra": {
+          "destroyUndeadChallengeRating": 0,
+          "channelDivinityCharges": 1
+        }
       },
       {
         "className": "cleric",
@@ -2137,7 +2330,24 @@
         "features": [
           "cleric-ability-score-improvement-1"
         ],
-        "id": "cleric-4"
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 0,
+          "spellSlotsLevel4": 0,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "cleric-4",
+        "extra": {
+          "destroyUndeadChallengeRating": 0,
+          "channelDivinityCharges": 1
+        }
       },
       {
         "className": "cleric",
@@ -2148,7 +2358,24 @@
           "domain-spells-3",
           "destroy-undead-cr-1-2-or-below"
         ],
-        "id": "cleric-5"
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 2,
+          "spellSlotsLevel4": 0,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "cleric-5",
+        "extra": {
+          "destroyUndeadChallengeRating": 0,
+          "channelDivinityCharges": 1
+        }
       },
       {
         "className": "cleric",
@@ -2158,7 +2385,24 @@
         "features": [
           "channel-divinity-2-rest"
         ],
-        "id": "cleric-6"
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 0,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "cleric-6",
+        "extra": {
+          "destroyUndeadChallengeRating": 0,
+          "channelDivinityCharges": 2
+        }
       },
       {
         "className": "cleric",
@@ -2168,7 +2412,24 @@
         "features": [
           "domain-spells-4"
         ],
-        "id": "cleric-7"
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 1,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "cleric-7",
+        "extra": {
+          "destroyUndeadChallengeRating": 0,
+          "channelDivinityCharges": 2
+        }
       },
       {
         "className": "cleric",
@@ -2179,7 +2440,24 @@
           "cleric-ability-score-improvement-2",
           "destroy-undead-cr-1-or-below"
         ],
-        "id": "cleric-8"
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 2,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "cleric-8",
+        "extra": {
+          "destroyUndeadChallengeRating": 1,
+          "channelDivinityCharges": 2
+        }
       },
       {
         "className": "cleric",
@@ -2189,7 +2467,24 @@
         "features": [
           "domain-spells-5"
         ],
-        "id": "cleric-9"
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 1,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "cleric-9",
+        "extra": {
+          "destroyUndeadChallengeRating": 1,
+          "channelDivinityCharges": 2
+        }
       },
       {
         "className": "cleric",
@@ -2199,7 +2494,24 @@
         "features": [
           "divine-intervention"
         ],
-        "id": "cleric-10"
+        "spellcasting": {
+          "cantripsKnown": 5,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "cleric-10",
+        "extra": {
+          "destroyUndeadChallengeRating": 1,
+          "channelDivinityCharges": 2
+        }
       },
       {
         "className": "cleric",
@@ -2209,7 +2521,24 @@
         "features": [
           "destroy-undead-cr-2-or-below"
         ],
-        "id": "cleric-11"
+        "spellcasting": {
+          "cantripsKnown": 5,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "cleric-11",
+        "extra": {
+          "destroyUndeadChallengeRating": 2,
+          "channelDivinityCharges": 2
+        }
       },
       {
         "className": "cleric",
@@ -2219,7 +2548,24 @@
         "features": [
           "cleric-ability-score-improvement-3"
         ],
-        "id": "cleric-12"
+        "spellcasting": {
+          "cantripsKnown": 5,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "cleric-12",
+        "extra": {
+          "destroyUndeadChallengeRating": 2,
+          "channelDivinityCharges": 2
+        }
       },
       {
         "className": "cleric",
@@ -2227,7 +2573,24 @@
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
         "features": [],
-        "id": "cleric-13"
+        "spellcasting": {
+          "cantripsKnown": 5,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 1,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "cleric-13",
+        "extra": {
+          "destroyUndeadChallengeRating": 2,
+          "channelDivinityCharges": 2
+        }
       },
       {
         "className": "cleric",
@@ -2237,7 +2600,24 @@
         "features": [
           "destroy-undead-cr-3-or-below"
         ],
-        "id": "cleric-14"
+        "spellcasting": {
+          "cantripsKnown": 5,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 1,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "cleric-14",
+        "extra": {
+          "destroyUndeadChallengeRating": 3,
+          "channelDivinityCharges": 2
+        }
       },
       {
         "className": "cleric",
@@ -2245,7 +2625,24 @@
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
         "features": [],
-        "id": "cleric-15"
+        "spellcasting": {
+          "cantripsKnown": 5,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 1,
+          "spellSlotsLevel8": 1,
+          "spellSlotsLevel9": 0
+        },
+        "id": "cleric-15",
+        "extra": {
+          "destroyUndeadChallengeRating": 3,
+          "channelDivinityCharges": 2
+        }
       },
       {
         "className": "cleric",
@@ -2255,7 +2652,24 @@
         "features": [
           "cleric-ability-score-improvement-4"
         ],
-        "id": "cleric-16"
+        "spellcasting": {
+          "cantripsKnown": 5,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 1,
+          "spellSlotsLevel8": 1,
+          "spellSlotsLevel9": 0
+        },
+        "id": "cleric-16",
+        "extra": {
+          "destroyUndeadChallengeRating": 3,
+          "channelDivinityCharges": 2
+        }
       },
       {
         "className": "cleric",
@@ -2265,7 +2679,24 @@
         "features": [
           "destroy-undead-cr-4-or-below"
         ],
-        "id": "cleric-17"
+        "spellcasting": {
+          "cantripsKnown": 5,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 1,
+          "spellSlotsLevel8": 1,
+          "spellSlotsLevel9": 1
+        },
+        "id": "cleric-17",
+        "extra": {
+          "destroyUndeadChallengeRating": 4,
+          "channelDivinityCharges": 2
+        }
       },
       {
         "className": "cleric",
@@ -2275,7 +2706,24 @@
         "features": [
           "channel-divinity-3-rest"
         ],
-        "id": "cleric-18"
+        "spellcasting": {
+          "cantripsKnown": 5,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 3,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 1,
+          "spellSlotsLevel8": 1,
+          "spellSlotsLevel9": 1
+        },
+        "id": "cleric-18",
+        "extra": {
+          "destroyUndeadChallengeRating": 4,
+          "channelDivinityCharges": 3
+        }
       },
       {
         "className": "cleric",
@@ -2285,7 +2733,24 @@
         "features": [
           "cleric-ability-score-improvement-5"
         ],
-        "id": "cleric-19"
+        "spellcasting": {
+          "cantripsKnown": 5,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 3,
+          "spellSlotsLevel6": 2,
+          "spellSlotsLevel7": 1,
+          "spellSlotsLevel8": 1,
+          "spellSlotsLevel9": 1
+        },
+        "id": "cleric-19",
+        "extra": {
+          "destroyUndeadChallengeRating": 4,
+          "channelDivinityCharges": 3
+        }
       },
       {
         "className": "cleric",
@@ -2295,7 +2760,24 @@
         "features": [
           "divine-intervention-improvement"
         ],
-        "id": "cleric-20"
+        "spellcasting": {
+          "cantripsKnown": 5,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 3,
+          "spellSlotsLevel6": 2,
+          "spellSlotsLevel7": 2,
+          "spellSlotsLevel8": 1,
+          "spellSlotsLevel9": 1
+        },
+        "id": "cleric-20",
+        "extra": {
+          "destroyUndeadChallengeRating": 4,
+          "channelDivinityCharges": 3
+        }
       }
     ],
     "subclasses": [

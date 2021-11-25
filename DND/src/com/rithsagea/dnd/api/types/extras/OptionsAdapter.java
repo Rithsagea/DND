@@ -24,6 +24,7 @@ public class OptionsAdapter implements JsonDeserializer<OptionType>{
 		switch(JsonUtil.getString(elem, "__type")) {
 		
 		case "option": return context.deserialize(elem, Options.class);
+		case "category":
 		case "item": clazz = ItemStack.class; break;
 		case "ability_score": clazz = AbilityScoreRequirement.class; break;
 		default: clazz = String.class; break;

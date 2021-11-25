@@ -143,8 +143,6 @@ public class BuilderRunner {
 			}
 		}
 		
-		//TODO magic. add to "extras" on a per class basis
-		//TODO magic for levels
 		return res;
 	}
 	
@@ -153,7 +151,9 @@ public class BuilderRunner {
 		Dnd5eClass model = data5e.DndClass.get("barbarian");
 		DndClass c = createClass(model);
 		
+		((OptionItem<ItemStack>)c.equipmentOptions.get(0).options.get(1)).type = "category";
 		((OptionItem<ItemStack>)c.equipmentOptions.get(1).options.get(0)).value.count = 2;
+		((OptionItem<ItemStack>)c.equipmentOptions.get(1).options.get(1)).type = "category";
 		
 		for(int x = 0; x < 20; x++) {
 			c.levels.get(x).extra = new HashMap<>(model.levels.get(x).classSpecific);
@@ -162,9 +162,16 @@ public class BuilderRunner {
 		return c;
 	}
 	
+	@SuppressWarnings("unchecked")
 	private static DndClass createBard() {
 		Dnd5eClass model = data5e.DndClass.get("bard");
 		DndClass c = createClass(model);
+		
+		((OptionItem<ItemStack>)c.equipmentOptions.get(0).options.get(2)).type = "category";
+		((OptionItem<ItemStack>)c.equipmentOptions.get(2).options.get(1)).type = "category";
+		
+		c.spellcasting = model.spellcastingInfo;
+		c.spells = model.spells;
 		
 		for(int x = 0; x < 20; x++) {
 			c.levels.get(x).extra = new HashMap<>();
@@ -174,9 +181,30 @@ public class BuilderRunner {
 			c.levels.get(x).extra.put("songOfRestDie", "1d" + model.levels.get(x).classSpecific.get("song_of_rest_die"));
 		}
 		
-		c.extra = new HashMap<>();
+		return c;
+	}
+	
+	@SuppressWarnings("unchecked")
+	private static DndClass createCleric() {
+		Dnd5eClass model = data5e.DndClass.get("cleric");
+		DndClass c = createClass(model);
+		
+		c.equipmentOptions.get(2).options.add(new OptionList(Arrays.asList(
+				new OptionItem<ItemStack>("item", new ItemStack("crossbow-light", 1)),
+				new OptionItem<ItemStack>("item", new ItemStack("crossbow-bolt", 20)))));
+		((OptionItem<ItemStack>)c.equipmentOptions.get(2).options.get(0)).type = "category";
+		c.equipmentOptions.get(4).options.add(new OptionItem<ItemStack>("category", new ItemStack("holy-symbols", 1)));
+		
 		c.spellcasting = model.spellcastingInfo;
-		c.spells = model.spells;
+		c.spells = model.spells; // TODO: cleric is weird, and has several domains; implement in features
+		
+		for(int x = 0; x < 20; x++) {
+			c.levels.get(x).extra = new HashMap<>();
+			
+			c.levels.get(x).spellcasting = toSpellcasting(model.levels.get(x).spellcasting);
+			c.levels.get(x).extra.put("channelDivinityCharges", model.levels.get(x).classSpecific.get("channel_divinity_charges"));
+			c.levels.get(x).extra.put("destroyUndeadChallengeRating", model.levels.get(x).classSpecific.get("destroy_undead_cr"));
+		}
 		
 		return c;
 	}
@@ -198,13 +226,6 @@ public class BuilderRunner {
 		return c;
 	}
 	
-	private static DndClass createCleric() {
-		Dnd5eClass model = data5e.DndClass.get("cleric");
-		DndClass c = createClass(model);
-		
-		return c;
-	}
-	
 	public static void main(String[] args) {
 		SourceRegistry.init(SOURCE_DIRECTORY);
 		SourceRegistry.load();
@@ -213,12 +234,12 @@ public class BuilderRunner {
 		SourceBook book = SourceRegistry.getBooks().get("5e");
 		
 		System.out.println(data5e.DndClass.keySet());
-		SourceRegistry.getItem("bard", DndClass.class);
+		SourceRegistry.getItem("cleric", DndClass.class);
 		
 		book.register("barbarian", createBarbarian());
 		book.register("bard", createBard());
-		book.register("rogue", createRogue());
 		book.register("cleric", createCleric());
+		book.register("rogue", createRogue());
 		
 		SourceRegistry.saveBooks();
 	}

@@ -269,6 +269,25 @@ public class BuilderRunner {
 		return c;
 	}
 	
+	@SuppressWarnings("unchecked")
+	private static DndClass createMonk() {
+		Dnd5eClass model = data5e.DndClass.get("monk");
+		DndClass c = createClass(model);
+		
+		((OptionItem<ItemStack>)c.equipmentOptions.get(0).options.get(1)).type = "category";
+		
+		for(int x = 0; x < 20; x++) {
+			c.levels.get(x).extra = new HashMap<>();
+			c.levels.get(x).extra.put("martialArts", String.format("%dd%d", 
+					model.levels.get(x).classSpecific.get("dice_count"),
+					model.levels.get(x).classSpecific.get("dice_value")));
+			c.levels.get(x).extra.put("kiPoints", model.levels.get(x).classSpecific.get("ki_points"));
+			c.levels.get(x).extra.put("unarmoredMovement", model.levels.get(x).classSpecific.get("unarmored_movement"));
+		}
+		
+		return c;
+	}
+	
 	private static DndClass createRogue() {
 		Dnd5eClass model = data5e.DndClass.get("rogue");
 		DndClass c = createClass(model);
@@ -294,13 +313,14 @@ public class BuilderRunner {
 		SourceBook book = SourceRegistry.getBooks().get("5e");
 		
 		System.out.println(data5e.DndClass.keySet().stream().sorted().collect(Collectors.toList()));
-		SourceRegistry.getItem("druid", DndClass.class);
+		SourceRegistry.getItem("monk", DndClass.class);
 		
 		book.register("barbarian", createBarbarian());
 		book.register("bard", createBard());
 		book.register("cleric", createCleric());
 		book.register("druid", createDruid());
 		book.register("fighter", createFighter());
+		book.register("monk", createMonk());
 		
 		book.register("rogue", createRogue());
 		

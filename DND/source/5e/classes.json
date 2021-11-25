@@ -4212,5 +4212,713 @@
       ]
     },
     "id": "fighter"
+  },
+  "monk": {
+    "name": "Monk",
+    "hitDie": 8,
+    "proficiencyOptions": [
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": "alchemists-supplies",
+            "__type": "proficiency"
+          },
+          {
+            "value": "brewers-supplies",
+            "__type": "proficiency"
+          },
+          {
+            "value": "calligraphers-supplies",
+            "__type": "proficiency"
+          },
+          {
+            "value": "carpenters-tools",
+            "__type": "proficiency"
+          },
+          {
+            "value": "cartographers-tools",
+            "__type": "proficiency"
+          },
+          {
+            "value": "cobblers-tools",
+            "__type": "proficiency"
+          },
+          {
+            "value": "cooks-utensils",
+            "__type": "proficiency"
+          },
+          {
+            "value": "glassblowers-tools",
+            "__type": "proficiency"
+          },
+          {
+            "value": "jewelers-tools",
+            "__type": "proficiency"
+          },
+          {
+            "value": "leatherworkers-tools",
+            "__type": "proficiency"
+          },
+          {
+            "value": "masons-tools",
+            "__type": "proficiency"
+          },
+          {
+            "value": "painters-supplies",
+            "__type": "proficiency"
+          },
+          {
+            "value": "potters-tools",
+            "__type": "proficiency"
+          },
+          {
+            "value": "smiths-tools",
+            "__type": "proficiency"
+          },
+          {
+            "value": "tinkers-tools",
+            "__type": "proficiency"
+          },
+          {
+            "value": "weavers-tools",
+            "__type": "proficiency"
+          },
+          {
+            "value": "woodcarvers-tools",
+            "__type": "proficiency"
+          },
+          {
+            "value": "disguise-kit",
+            "__type": "proficiency"
+          },
+          {
+            "value": "forgery-kit",
+            "__type": "proficiency"
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": "bagpipes",
+            "__type": "proficiency"
+          },
+          {
+            "value": "drum",
+            "__type": "proficiency"
+          },
+          {
+            "value": "dulcimer",
+            "__type": "proficiency"
+          },
+          {
+            "value": "flute",
+            "__type": "proficiency"
+          },
+          {
+            "value": "lute",
+            "__type": "proficiency"
+          },
+          {
+            "value": "lyre",
+            "__type": "proficiency"
+          },
+          {
+            "value": "horn",
+            "__type": "proficiency"
+          },
+          {
+            "value": "pan-flute",
+            "__type": "proficiency"
+          },
+          {
+            "value": "shawm",
+            "__type": "proficiency"
+          },
+          {
+            "value": "viol",
+            "__type": "proficiency"
+          }
+        ]
+      },
+      {
+        "count": 2,
+        "options": [
+          {
+            "value": "skill-acrobatics",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-athletics",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-history",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-insight",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-religion",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-stealth",
+            "__type": "proficiency"
+          }
+        ]
+      }
+    ],
+    "proficiencies": [
+      "simple-weapons",
+      "shortswords"
+    ],
+    "savingThrows": [
+      "str",
+      "dex"
+    ],
+    "startingEquipment": [
+      {
+        "item": "dart",
+        "count": 10
+      }
+    ],
+    "equipmentOptions": [
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "item": "shortsword",
+              "count": 1
+            },
+            "__type": "item"
+          },
+          {
+            "value": {
+              "item": "simple-weapons",
+              "count": 1
+            },
+            "__type": "category"
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "item": "dungeoneers-pack",
+              "count": 1
+            },
+            "__type": "item"
+          },
+          {
+            "value": {
+              "item": "explorers-pack",
+              "count": 1
+            },
+            "__type": "item"
+          }
+        ]
+      }
+    ],
+    "levels": [
+      {
+        "className": "monk",
+        "level": 1,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [
+          "monk-unarmored-defense",
+          "martial-arts"
+        ],
+        "id": "monk-1",
+        "extra": {
+          "unarmoredMovement": 0,
+          "martialArts": "1d4",
+          "kiPoints": 0
+        }
+      },
+      {
+        "className": "monk",
+        "level": 2,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [
+          "ki",
+          "flurry-of-blows",
+          "patient-defense",
+          "step-of-the-wind",
+          "unarmored-movement-1"
+        ],
+        "id": "monk-2",
+        "extra": {
+          "unarmoredMovement": 10,
+          "martialArts": "1d4",
+          "kiPoints": 2
+        }
+      },
+      {
+        "className": "monk",
+        "level": 3,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [
+          "monastic-tradition",
+          "deflect-missiles"
+        ],
+        "id": "monk-3",
+        "extra": {
+          "unarmoredMovement": 10,
+          "martialArts": "1d4",
+          "kiPoints": 3
+        }
+      },
+      {
+        "className": "monk",
+        "level": 4,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          "monk-ability-score-improvement-1",
+          "slow-fall"
+        ],
+        "id": "monk-4",
+        "extra": {
+          "unarmoredMovement": 10,
+          "martialArts": "1d4",
+          "kiPoints": 4
+        }
+      },
+      {
+        "className": "monk",
+        "level": 5,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 3,
+        "features": [
+          "monk-extra-attack",
+          "stunning-strike"
+        ],
+        "id": "monk-5",
+        "extra": {
+          "unarmoredMovement": 10,
+          "martialArts": "1d6",
+          "kiPoints": 5
+        }
+      },
+      {
+        "className": "monk",
+        "level": 6,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 3,
+        "features": [
+          "ki-empowered-strikes"
+        ],
+        "id": "monk-6",
+        "extra": {
+          "unarmoredMovement": 15,
+          "martialArts": "1d6",
+          "kiPoints": 6
+        }
+      },
+      {
+        "className": "monk",
+        "level": 7,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 3,
+        "features": [
+          "monk-evasion",
+          "stillness-of-mind"
+        ],
+        "id": "monk-7",
+        "extra": {
+          "unarmoredMovement": 15,
+          "martialArts": "1d6",
+          "kiPoints": 7
+        }
+      },
+      {
+        "className": "monk",
+        "level": 8,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 3,
+        "features": [
+          "monk-ability-score-improvement-2"
+        ],
+        "id": "monk-8",
+        "extra": {
+          "unarmoredMovement": 15,
+          "martialArts": "1d6",
+          "kiPoints": 8
+        }
+      },
+      {
+        "className": "monk",
+        "level": 9,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 4,
+        "features": [
+          "unarmored-movement-2"
+        ],
+        "id": "monk-9",
+        "extra": {
+          "unarmoredMovement": 15,
+          "martialArts": "1d6",
+          "kiPoints": 9
+        }
+      },
+      {
+        "className": "monk",
+        "level": 10,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 4,
+        "features": [
+          "purity-of-body"
+        ],
+        "id": "monk-10",
+        "extra": {
+          "unarmoredMovement": 20,
+          "martialArts": "1d6",
+          "kiPoints": 10
+        }
+      },
+      {
+        "className": "monk",
+        "level": 11,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 4,
+        "features": [],
+        "id": "monk-11",
+        "extra": {
+          "unarmoredMovement": 20,
+          "martialArts": "1d8",
+          "kiPoints": 11
+        }
+      },
+      {
+        "className": "monk",
+        "level": 12,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 4,
+        "features": [
+          "monk-ability-score-improvement-3"
+        ],
+        "id": "monk-12",
+        "extra": {
+          "unarmoredMovement": 20,
+          "martialArts": "1d8",
+          "kiPoints": 12
+        }
+      },
+      {
+        "className": "monk",
+        "level": 13,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 5,
+        "features": [
+          "tongue-of-the-sun-and-moon"
+        ],
+        "id": "monk-13",
+        "extra": {
+          "unarmoredMovement": 20,
+          "martialArts": "1d8",
+          "kiPoints": 13
+        }
+      },
+      {
+        "className": "monk",
+        "level": 14,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 5,
+        "features": [
+          "diamond-soul"
+        ],
+        "id": "monk-14",
+        "extra": {
+          "unarmoredMovement": 25,
+          "martialArts": "1d8",
+          "kiPoints": 14
+        }
+      },
+      {
+        "className": "monk",
+        "level": 15,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 5,
+        "features": [
+          "monk-timeless-body"
+        ],
+        "id": "monk-15",
+        "extra": {
+          "unarmoredMovement": 25,
+          "martialArts": "1d8",
+          "kiPoints": 15
+        }
+      },
+      {
+        "className": "monk",
+        "level": 16,
+        "abilityScoreBonus": 4,
+        "proficiencyBonus": 5,
+        "features": [
+          "monk-ability-score-improvement-4"
+        ],
+        "id": "monk-16",
+        "extra": {
+          "unarmoredMovement": 25,
+          "martialArts": "1d8",
+          "kiPoints": 16
+        }
+      },
+      {
+        "className": "monk",
+        "level": 17,
+        "abilityScoreBonus": 4,
+        "proficiencyBonus": 6,
+        "features": [],
+        "id": "monk-17",
+        "extra": {
+          "unarmoredMovement": 25,
+          "martialArts": "1d10",
+          "kiPoints": 17
+        }
+      },
+      {
+        "className": "monk",
+        "level": 18,
+        "abilityScoreBonus": 4,
+        "proficiencyBonus": 6,
+        "features": [
+          "empty-body"
+        ],
+        "id": "monk-18",
+        "extra": {
+          "unarmoredMovement": 30,
+          "martialArts": "1d10",
+          "kiPoints": 18
+        }
+      },
+      {
+        "className": "monk",
+        "level": 19,
+        "abilityScoreBonus": 5,
+        "proficiencyBonus": 6,
+        "features": [
+          "monk-ability-score-improvement-5"
+        ],
+        "id": "monk-19",
+        "extra": {
+          "unarmoredMovement": 30,
+          "martialArts": "1d10",
+          "kiPoints": 19
+        }
+      },
+      {
+        "className": "monk",
+        "level": 20,
+        "abilityScoreBonus": 5,
+        "proficiencyBonus": 6,
+        "features": [
+          "perfect-self"
+        ],
+        "id": "monk-20",
+        "extra": {
+          "unarmoredMovement": 30,
+          "martialArts": "1d10",
+          "kiPoints": 20
+        }
+      }
+    ],
+    "subclasses": [
+      "open-hand"
+    ],
+    "multiclassing": {
+      "abilityScoreRequirements": {
+        "count": 2,
+        "options": [
+          {
+            "value": {
+              "abilityScore": "wis",
+              "value": 13
+            },
+            "__type": "ability_score"
+          },
+          {
+            "value": {
+              "abilityScore": "dex",
+              "value": 13
+            },
+            "__type": "ability_score"
+          }
+        ]
+      },
+      "proficiencies": [
+        "simple-weapons",
+        "shortswords"
+      ],
+      "proficiencyOptions": [
+        {
+          "count": 1,
+          "options": [
+            {
+              "value": "alchemists-supplies",
+              "__type": "proficiency"
+            },
+            {
+              "value": "brewers-supplies",
+              "__type": "proficiency"
+            },
+            {
+              "value": "calligraphers-supplies",
+              "__type": "proficiency"
+            },
+            {
+              "value": "carpenters-tools",
+              "__type": "proficiency"
+            },
+            {
+              "value": "cartographers-tools",
+              "__type": "proficiency"
+            },
+            {
+              "value": "cobblers-tools",
+              "__type": "proficiency"
+            },
+            {
+              "value": "cooks-utensils",
+              "__type": "proficiency"
+            },
+            {
+              "value": "glassblowers-tools",
+              "__type": "proficiency"
+            },
+            {
+              "value": "jewelers-tools",
+              "__type": "proficiency"
+            },
+            {
+              "value": "leatherworkers-tools",
+              "__type": "proficiency"
+            },
+            {
+              "value": "masons-tools",
+              "__type": "proficiency"
+            },
+            {
+              "value": "painters-supplies",
+              "__type": "proficiency"
+            },
+            {
+              "value": "potters-tools",
+              "__type": "proficiency"
+            },
+            {
+              "value": "smiths-tools",
+              "__type": "proficiency"
+            },
+            {
+              "value": "tinkers-tools",
+              "__type": "proficiency"
+            },
+            {
+              "value": "weavers-tools",
+              "__type": "proficiency"
+            },
+            {
+              "value": "woodcarvers-tools",
+              "__type": "proficiency"
+            },
+            {
+              "value": "disguise-kit",
+              "__type": "proficiency"
+            },
+            {
+              "value": "forgery-kit",
+              "__type": "proficiency"
+            }
+          ]
+        },
+        {
+          "count": 1,
+          "options": [
+            {
+              "value": "bagpipes",
+              "__type": "proficiency"
+            },
+            {
+              "value": "drum",
+              "__type": "proficiency"
+            },
+            {
+              "value": "dulcimer",
+              "__type": "proficiency"
+            },
+            {
+              "value": "flute",
+              "__type": "proficiency"
+            },
+            {
+              "value": "lute",
+              "__type": "proficiency"
+            },
+            {
+              "value": "lyre",
+              "__type": "proficiency"
+            },
+            {
+              "value": "horn",
+              "__type": "proficiency"
+            },
+            {
+              "value": "pan-flute",
+              "__type": "proficiency"
+            },
+            {
+              "value": "shawm",
+              "__type": "proficiency"
+            },
+            {
+              "value": "viol",
+              "__type": "proficiency"
+            }
+          ]
+        },
+        {
+          "count": 2,
+          "options": [
+            {
+              "value": "skill-acrobatics",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-athletics",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-history",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-insight",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-religion",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-stealth",
+              "__type": "proficiency"
+            }
+          ]
+        }
+      ]
+    },
+    "id": "monk"
   }
 }

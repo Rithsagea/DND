@@ -216,6 +216,7 @@ public class BuilderRunner {
 		DndClass c = createClass(model);
 		
 		((OptionItem<ItemStack>)c.equipmentOptions.get(0).options.get(1)).type = "category";
+		((OptionItem<ItemStack>)c.equipmentOptions.get(1).options.get(1)).value.item = "simple-melee-weapons";
 		((OptionItem<ItemStack>)c.equipmentOptions.get(1).options.get(1)).type = "category"; // TODO: this is simple melee weapons
 		c.equipmentOptions.get(2).options.add(new OptionItem<ItemStack>("category", new ItemStack("druidic-foci", 1)));
 		
@@ -288,6 +289,56 @@ public class BuilderRunner {
 		return c;
 	}
 	
+	@SuppressWarnings("unchecked")
+	private static DndClass createPaladin() {
+		Dnd5eClass model = data5e.DndClass.get("paladin");
+		DndClass c = createClass(model);
+		
+		c.equipmentOptions.get(0).options.set(0, new OptionList(Arrays.asList(
+				new OptionItem<ItemStack>("category", new ItemStack("martial-weapons", 1)),
+				new OptionItem<ItemStack>("item", new ItemStack("shield", 1)))));
+		c.equipmentOptions.get(0).options.add(new OptionItem<ItemStack>("category", new ItemStack("martial-weapons", 2)));
+		((OptionItem<ItemStack>)c.equipmentOptions.get(1).options.get(0)).value.count = 5;
+		((OptionItem<ItemStack>)c.equipmentOptions.get(1).options.get(1)).type = "category";
+		c.equipmentOptions.get(3).options.add(new OptionItem<ItemStack>("category", new ItemStack("holy-symbols", 1)));
+		
+		c.spellcasting = model.spellcastingInfo;
+		c.spells = model.spells;
+		
+		for(int x = 0; x < 20; x++) {
+			c.levels.get(x).spellcasting = toSpellcasting(model.levels.get(x).spellcasting);
+			c.levels.get(x).extra = new HashMap<>();
+			
+			c.levels.get(x).extra.put("auraRange", model.levels.get(x).classSpecific.get("aura_range"));
+		}
+		
+		return c;
+	}
+	
+	@SuppressWarnings("unchecked")
+	private static DndClass createRanger() {
+		Dnd5eClass model = data5e.DndClass.get("ranger");
+		DndClass c = createClass(model);
+		
+		((OptionItem<ItemStack>)c.equipmentOptions.get(1).options.get(0)).value.count = 2;
+		((OptionItem<ItemStack>)c.equipmentOptions.get(1).options.get(1)).type = "category";
+		((OptionItem<ItemStack>)c.equipmentOptions.get(1).options.get(1)).value.count = 2;
+		
+		c.spellcasting = model.spellcastingInfo;
+		c.spells = model.spells;
+		
+		for(int x = 0; x < 20; x++) {
+			c.levels.get(x).spellcasting = toSpellcasting(model.levels.get(x).spellcasting);
+			
+			c.levels.get(x).extra = new HashMap<>();
+			
+			c.levels.get(x).extra.put("favoredEnemies", model.levels.get(x).classSpecific.get("favored_enemies"));
+			c.levels.get(x).extra.put("favoredTerrain", model.levels.get(x).classSpecific.get("favored_terrain"));
+		}
+		
+		return c;
+	}
+	
 	private static DndClass createRogue() {
 		Dnd5eClass model = data5e.DndClass.get("rogue");
 		DndClass c = createClass(model);
@@ -321,6 +372,8 @@ public class BuilderRunner {
 		book.register("druid", createDruid());
 		book.register("fighter", createFighter());
 		book.register("monk", createMonk());
+		book.register("paladin", createPaladin());
+		book.register("ranger", createRanger());
 		
 		book.register("rogue", createRogue());
 		

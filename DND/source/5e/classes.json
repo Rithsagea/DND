@@ -2830,5 +2830,854 @@
       ]
     },
     "id": "cleric"
+  },
+  "druid": {
+    "name": "Druid",
+    "hitDie": 8,
+    "proficiencyOptions": [
+      {
+        "count": 2,
+        "options": [
+          {
+            "value": "skill-animal-handling",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-arcana",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-insight",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-medicine",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-nature",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-perception",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-religion",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-survival",
+            "__type": "proficiency"
+          }
+        ]
+      }
+    ],
+    "proficiencies": [
+      "light-armor",
+      "medium-armor",
+      "shields",
+      "clubs",
+      "daggers",
+      "javelins",
+      "maces",
+      "quarterstaffs",
+      "sickles",
+      "spears",
+      "darts",
+      "slings",
+      "scimitars",
+      "herbalism-kit"
+    ],
+    "savingThrows": [
+      "int",
+      "wis"
+    ],
+    "startingEquipment": [
+      {
+        "item": "leather-armor",
+        "count": 1
+      },
+      {
+        "item": "explorers-pack",
+        "count": 1
+      }
+    ],
+    "equipmentOptions": [
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "item": "shield",
+              "count": 1
+            },
+            "__type": "item"
+          },
+          {
+            "value": {
+              "item": "simple-weapons",
+              "count": 1
+            },
+            "__type": "category"
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "item": "scimitar",
+              "count": 1
+            },
+            "__type": "item"
+          },
+          {
+            "value": {
+              "item": "simple-weapons",
+              "count": 1
+            },
+            "__type": "category"
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "item": "druidic-foci",
+              "count": 1
+            },
+            "__type": "category"
+          }
+        ]
+      }
+    ],
+    "spellcasting": {
+      "level": 1,
+      "spellcastingAbility": "wis",
+      "info": {
+        "Ritual Casting": "You can cast a druid spell as a ritual if that spell has the ritual tag and you have the spell prepared.",
+        "Spellcasting Ability": "Wisdom is your spellcasting ability for your druid spells, since your magic draws upon your devotion and attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a druid spell you cast and when making an attack roll with one.\nSpell save DC \u003d 8 + your proficiency bonus + your Wisdom modifier.\nSpell attack modifier \u003d your proficiency bonus + your Wisdom modifier.",
+        "Cantrips": "At 1st level, you know two cantrips of your choice from the druid spell list. You learn additional druid cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Druid table.",
+        "Preparing and Casting Spells": "The Druid table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these druid spells, you must expend a slot of the spell\u0027s level or higher. You regain all expended spell slots when you finish a long rest.\nYou prepare the list of druid spells that are available for you to cast, choosing from the druid spell list. When you do so, choose a number of druid spells equal to your Wisdom modifier + your druid level (minimum of one spell). The spells must be of a level for which you have spell slots.\nFor example, if you are a 3rd-level druid, you have four 1st-level and two 2nd-level spell slots. With a Wisdom of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell cure wounds, you can cast it using a 1st-level or 2nd-level slot. Casting the spell doesn\u0027t remove it from your list of prepared spells.\nYou can also change your list of prepared spells when you finish a long rest. Preparing a new list of druid spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list.",
+        "Spellcasting Focus": "You can use a druidic focus (see chapter 5, \"Equipment\") as a spellcasting focus for your druid spells."
+      }
+    },
+    "spells": [
+      "druidcraft",
+      "guidance",
+      "mending",
+      "produce-flame",
+      "resistance",
+      "shillelagh",
+      "animal-friendship",
+      "charm-person",
+      "create-or-destroy-water",
+      "cure-wounds",
+      "detect-magic",
+      "detect-poison-and-disease",
+      "entangle",
+      "faerie-fire",
+      "fog-cloud",
+      "goodberry",
+      "healing-word",
+      "jump",
+      "longstrider",
+      "purify-food-and-drink",
+      "speak-with-animals",
+      "thunderwave",
+      "animal-messenger",
+      "barkskin",
+      "darkvision",
+      "enhance-ability",
+      "find-traps",
+      "flame-blade",
+      "flaming-sphere",
+      "gust-of-wind",
+      "heat-metal",
+      "hold-person",
+      "lesser-restoration",
+      "locate-animals-or-plants",
+      "locate-object",
+      "moonbeam",
+      "pass-without-trace",
+      "protection-from-poison",
+      "spike-growth",
+      "call-lightning",
+      "conjure-animals",
+      "create-food-and-water",
+      "daylight",
+      "dispel-magic",
+      "plant-growth",
+      "protection-from-energy",
+      "sleet-storm",
+      "speak-with-plants",
+      "water-breathing",
+      "water-walk",
+      "wind-wall",
+      "blight",
+      "confusion",
+      "conjure-minor-elementals",
+      "conjure-woodland-beings",
+      "control-water",
+      "divination",
+      "dominate-beast",
+      "freedom-of-movement",
+      "giant-insect",
+      "hallucinatory-terrain",
+      "ice-storm",
+      "locate-creature",
+      "polymorph",
+      "stone-shape",
+      "stoneskin",
+      "wall-of-fire",
+      "antilife-shell",
+      "awaken",
+      "commune-with-nature",
+      "conjure-elemental",
+      "contagion",
+      "geas",
+      "greater-restoration",
+      "insect-plague",
+      "mass-cure-wounds",
+      "planar-binding",
+      "reincarnate",
+      "scrying",
+      "tree-stride",
+      "wall-of-stone",
+      "conjure-fey",
+      "heal",
+      "heroes-feast",
+      "move-earth",
+      "sunbeam",
+      "transport-via-plants",
+      "wall-of-thorns",
+      "wind-walk",
+      "fire-storm",
+      "mirage-arcane",
+      "plane-shift",
+      "regenerate",
+      "reverse-gravity",
+      "animal-shapes",
+      "antipathy-sympathy",
+      "control-weather",
+      "earthquake",
+      "feeblemind",
+      "sunburst",
+      "foresight",
+      "shapechange",
+      "storm-of-vengeance",
+      "true-resurrection"
+    ],
+    "levels": [
+      {
+        "className": "druid",
+        "level": 1,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [
+          "spellcasting-druid",
+          "druidic"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 2,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 2,
+          "spellSlotsLevel2": 0,
+          "spellSlotsLevel3": 0,
+          "spellSlotsLevel4": 0,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "druid-1",
+        "extra": {
+          "wildShapeMaxChallengeRating": 0.25,
+          "wildShapeSwim": false,
+          "wildShapeFly": false
+        }
+      },
+      {
+        "className": "druid",
+        "level": 2,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [
+          "wild-shape-cr-1-4-or-below-no-flying-or-swim-speed",
+          "druid-circle"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 2,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 3,
+          "spellSlotsLevel2": 0,
+          "spellSlotsLevel3": 0,
+          "spellSlotsLevel4": 0,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "druid-2",
+        "extra": {
+          "wildShapeMaxChallengeRating": 0.25,
+          "wildShapeSwim": false,
+          "wildShapeFly": false
+        }
+      },
+      {
+        "className": "druid",
+        "level": 3,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [],
+        "spellcasting": {
+          "cantripsKnown": 2,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 2,
+          "spellSlotsLevel3": 0,
+          "spellSlotsLevel4": 0,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "druid-3",
+        "extra": {
+          "wildShapeMaxChallengeRating": 0.5,
+          "wildShapeSwim": false,
+          "wildShapeFly": false
+        }
+      },
+      {
+        "className": "druid",
+        "level": 4,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          "wild-shape-cr-1-2-or-below-no-flying-speed",
+          "druid-ability-score-improvement-1"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 3,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 0,
+          "spellSlotsLevel4": 0,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "druid-4",
+        "extra": {
+          "wildShapeMaxChallengeRating": 0.5,
+          "wildShapeSwim": true,
+          "wildShapeFly": false
+        }
+      },
+      {
+        "className": "druid",
+        "level": 5,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellcasting": {
+          "cantripsKnown": 3,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 2,
+          "spellSlotsLevel4": 0,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "druid-5",
+        "extra": {
+          "wildShapeMaxChallengeRating": 1.0,
+          "wildShapeSwim": true,
+          "wildShapeFly": false
+        }
+      },
+      {
+        "className": "druid",
+        "level": 6,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellcasting": {
+          "cantripsKnown": 3,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 0,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "druid-6",
+        "extra": {
+          "wildShapeMaxChallengeRating": 1.0,
+          "wildShapeSwim": true,
+          "wildShapeFly": false
+        }
+      },
+      {
+        "className": "druid",
+        "level": 7,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellcasting": {
+          "cantripsKnown": 3,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 1,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "druid-7",
+        "extra": {
+          "wildShapeMaxChallengeRating": 1.0,
+          "wildShapeSwim": true,
+          "wildShapeFly": false
+        }
+      },
+      {
+        "className": "druid",
+        "level": 8,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 3,
+        "features": [
+          "wild-shape-cr-1-or-below",
+          "druid-ability-score-improvement-2"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 3,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 2,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "druid-8",
+        "extra": {
+          "wildShapeMaxChallengeRating": 1.0,
+          "wildShapeSwim": true,
+          "wildShapeFly": true
+        }
+      },
+      {
+        "className": "druid",
+        "level": 9,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellcasting": {
+          "cantripsKnown": 3,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 1,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "druid-9",
+        "extra": {
+          "wildShapeMaxChallengeRating": 1.0,
+          "wildShapeSwim": true,
+          "wildShapeFly": true
+        }
+      },
+      {
+        "className": "druid",
+        "level": 10,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "druid-10",
+        "extra": {
+          "wildShapeMaxChallengeRating": 1.0,
+          "wildShapeSwim": true,
+          "wildShapeFly": true
+        }
+      },
+      {
+        "className": "druid",
+        "level": 11,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "druid-11",
+        "extra": {
+          "wildShapeMaxChallengeRating": 1.0,
+          "wildShapeSwim": true,
+          "wildShapeFly": true
+        }
+      },
+      {
+        "className": "druid",
+        "level": 12,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 4,
+        "features": [
+          "druid-ability-score-improvement-3"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "druid-12",
+        "extra": {
+          "wildShapeMaxChallengeRating": 1.0,
+          "wildShapeSwim": true,
+          "wildShapeFly": true
+        }
+      },
+      {
+        "className": "druid",
+        "level": 13,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 1,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "druid-13",
+        "extra": {
+          "wildShapeMaxChallengeRating": 1.0,
+          "wildShapeSwim": true,
+          "wildShapeFly": true
+        }
+      },
+      {
+        "className": "druid",
+        "level": 14,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 1,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "druid-14",
+        "extra": {
+          "wildShapeMaxChallengeRating": 1.0,
+          "wildShapeSwim": true,
+          "wildShapeFly": true
+        }
+      },
+      {
+        "className": "druid",
+        "level": 15,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 1,
+          "spellSlotsLevel8": 1,
+          "spellSlotsLevel9": 0
+        },
+        "id": "druid-15",
+        "extra": {
+          "wildShapeMaxChallengeRating": 1.0,
+          "wildShapeSwim": true,
+          "wildShapeFly": true
+        }
+      },
+      {
+        "className": "druid",
+        "level": 16,
+        "abilityScoreBonus": 4,
+        "proficiencyBonus": 5,
+        "features": [
+          "druid-ability-score-improvement-4"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 1,
+          "spellSlotsLevel8": 1,
+          "spellSlotsLevel9": 0
+        },
+        "id": "druid-16",
+        "extra": {
+          "wildShapeMaxChallengeRating": 1.0,
+          "wildShapeSwim": true,
+          "wildShapeFly": true
+        }
+      },
+      {
+        "className": "druid",
+        "level": 17,
+        "abilityScoreBonus": 4,
+        "proficiencyBonus": 6,
+        "features": [],
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 1,
+          "spellSlotsLevel8": 1,
+          "spellSlotsLevel9": 1
+        },
+        "id": "druid-17",
+        "extra": {
+          "wildShapeMaxChallengeRating": 1.0,
+          "wildShapeSwim": true,
+          "wildShapeFly": true
+        }
+      },
+      {
+        "className": "druid",
+        "level": 18,
+        "abilityScoreBonus": 4,
+        "proficiencyBonus": 6,
+        "features": [
+          "druid-timeless-body",
+          "beast-spells"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 3,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 1,
+          "spellSlotsLevel8": 1,
+          "spellSlotsLevel9": 1
+        },
+        "id": "druid-18",
+        "extra": {
+          "wildShapeMaxChallengeRating": 1.0,
+          "wildShapeSwim": true,
+          "wildShapeFly": true
+        }
+      },
+      {
+        "className": "druid",
+        "level": 19,
+        "abilityScoreBonus": 5,
+        "proficiencyBonus": 6,
+        "features": [
+          "druid-ability-score-improvement-5"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 3,
+          "spellSlotsLevel6": 2,
+          "spellSlotsLevel7": 1,
+          "spellSlotsLevel8": 1,
+          "spellSlotsLevel9": 1
+        },
+        "id": "druid-19",
+        "extra": {
+          "wildShapeMaxChallengeRating": 1.0,
+          "wildShapeSwim": true,
+          "wildShapeFly": true
+        }
+      },
+      {
+        "className": "druid",
+        "level": 20,
+        "abilityScoreBonus": 5,
+        "proficiencyBonus": 6,
+        "features": [
+          "archdruid"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 0,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 3,
+          "spellSlotsLevel6": 2,
+          "spellSlotsLevel7": 2,
+          "spellSlotsLevel8": 1,
+          "spellSlotsLevel9": 1
+        },
+        "id": "druid-20",
+        "extra": {
+          "wildShapeMaxChallengeRating": 1.0,
+          "wildShapeSwim": true,
+          "wildShapeFly": true
+        }
+      }
+    ],
+    "subclasses": [
+      "land"
+    ],
+    "multiclassing": {
+      "abilityScoreRequirements": {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "abilityScore": "wis",
+              "value": 13
+            },
+            "__type": "ability_score"
+          }
+        ]
+      },
+      "proficiencies": [
+        "light-armor",
+        "medium-armor",
+        "shields"
+      ],
+      "proficiencyOptions": [
+        {
+          "count": 2,
+          "options": [
+            {
+              "value": "skill-animal-handling",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-arcana",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-insight",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-medicine",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-nature",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-perception",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-religion",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-survival",
+              "__type": "proficiency"
+            }
+          ]
+        }
+      ]
+    },
+    "id": "druid"
   }
 }

@@ -209,6 +209,34 @@ public class BuilderRunner {
 		return c;
 	}
 	
+	@SuppressWarnings("unchecked")
+	private static DndClass createDruid() {
+		Dnd5eClass model = data5e.DndClass.get("druid");
+		DndClass c = createClass(model);
+		
+		((OptionItem<ItemStack>)c.equipmentOptions.get(0).options.get(1)).type = "category";
+		((OptionItem<ItemStack>)c.equipmentOptions.get(1).options.get(1)).type = "category"; // TODO: this is simple melee weapons
+		c.equipmentOptions.get(2).options.add(new OptionItem<ItemStack>("category", new ItemStack("druidic-foci", 1)));
+		
+		c.spellcasting = model.spellcastingInfo; //TODO: spells like cleric ahhhh
+		c.spells = model.spells;
+		
+		for(int x = 0; x < 20; x++) {
+			c.levels.get(x).extra = new HashMap<>();
+			
+			c.levels.get(x).spellcasting = toSpellcasting(model.levels.get(x).spellcasting);
+			
+			if(x < 2)
+				c.levels.get(x).extra.put("wildShapeMaxChallengeRating", 0.25d);
+			else if(x < 4) c.levels.get(x).extra.put("wildShapeMaxChallengeRating", 0.5d);
+			else c.levels.get(x).extra.put("wildShapeMaxChallengeRating", 1d);
+			c.levels.get(x).extra.put("wildShapeSwim", model.levels.get(x).classSpecific.get("wild_shape_swim") == 1);
+			c.levels.get(x).extra.put("wildShapeFly", model.levels.get(x).classSpecific.get("wild_shape_fly") == 1);
+		}
+		
+		return c;
+	}
+	
 	private static DndClass createRogue() {
 		Dnd5eClass model = data5e.DndClass.get("rogue");
 		DndClass c = createClass(model);
@@ -234,11 +262,12 @@ public class BuilderRunner {
 		SourceBook book = SourceRegistry.getBooks().get("5e");
 		
 		System.out.println(data5e.DndClass.keySet());
-		SourceRegistry.getItem("cleric", DndClass.class);
+		SourceRegistry.getItem("druid", DndClass.class);
 		
 		book.register("barbarian", createBarbarian());
 		book.register("bard", createBard());
 		book.register("cleric", createCleric());
+		book.register("druid", createDruid());
 		book.register("rogue", createRogue());
 		
 		SourceRegistry.saveBooks();

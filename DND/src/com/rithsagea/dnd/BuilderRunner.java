@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -18,6 +19,7 @@ import com.rithsagea.dnd.api.types.extras.MulticlassingInfo;
 import com.rithsagea.dnd.api.types.extras.OptionItem;
 import com.rithsagea.dnd.api.types.extras.OptionList;
 import com.rithsagea.dnd.api.types.extras.Options;
+import com.rithsagea.dnd.api.types.extras.SpellcastingSlots;
 import com.rithsagea.dnd.api5e.Datapack;
 import com.rithsagea.dnd.api5e.data.classes.Dnd5eClass;
 import com.rithsagea.dnd.api5e.data.classes.Dnd5eClassLevel;
@@ -63,6 +65,24 @@ public class BuilderRunner {
 		}
 		
 		return options;
+	}
+	
+	private static SpellcastingSlots toSpellcasting(List<Integer> list) {
+		SpellcastingSlots spellcasting = new SpellcastingSlots();
+		
+		spellcasting.spellsKnown = list.get(0);
+		spellcasting.cantripsKnown = list.get(10);
+		spellcasting.spellSlotsLevel1 = list.get(1);
+		spellcasting.spellSlotsLevel2 = list.get(2);
+		spellcasting.spellSlotsLevel3 = list.get(3);
+		spellcasting.spellSlotsLevel4 = list.get(4);
+		spellcasting.spellSlotsLevel5 = list.get(5);
+		spellcasting.spellSlotsLevel6 = list.get(6);
+		spellcasting.spellSlotsLevel7 = list.get(7);
+		spellcasting.spellSlotsLevel8 = list.get(8);
+		spellcasting.spellSlotsLevel9 = list.get(9);
+		
+		return spellcasting;
 	}
 	
 	private static DndClass createClass(Dnd5eClass model) {
@@ -142,6 +162,25 @@ public class BuilderRunner {
 		return c;
 	}
 	
+	private static DndClass createBard() {
+		Dnd5eClass model = data5e.DndClass.get("bard");
+		DndClass c = createClass(model);
+		
+		for(int x = 0; x < 20; x++) {
+			c.levels.get(x).extra = new HashMap<>();
+			
+			c.levels.get(x).spellcasting = toSpellcasting(model.levels.get(x).spellcasting);
+			c.levels.get(x).extra.put("bardicInspirationDie", "1d" + model.levels.get(x).classSpecific.get("bardic_inspiration_die"));
+			c.levels.get(x).extra.put("songOfRestDie", "1d" + model.levels.get(x).classSpecific.get("song_of_rest_die"));
+		}
+		
+		c.extra = new HashMap<>();
+		c.spellcasting = model.spellcastingInfo;
+		c.spells = model.spells;
+		
+		return c;
+	}
+	
 	private static DndClass createRogue() {
 		Dnd5eClass model = data5e.DndClass.get("rogue");
 		DndClass c = createClass(model);
@@ -151,7 +190,7 @@ public class BuilderRunner {
 		for(int x = 0; x < 20; x++) {
 			Map<String, Integer> sneakAttackData = model.levels.get(x).classSpecific;
 			c.levels.get(x).extra = new HashMap<>();
-			c.levels.get(x).extra.put("sneak_attack", String.format("%dd%d",
+			c.levels.get(x).extra.put("sneakAttack", String.format("%dd%d",
 					sneakAttackData.get("dice_count"),
 					sneakAttackData.get("dice_value")));
 		}
@@ -174,9 +213,10 @@ public class BuilderRunner {
 		SourceBook book = SourceRegistry.getBooks().get("5e");
 		
 		System.out.println(data5e.DndClass.keySet());
-		SourceRegistry.getItem("barbarian", DndClass.class);
+		SourceRegistry.getItem("bard", DndClass.class);
 		
 		book.register("barbarian", createBarbarian());
+		book.register("bard", createBard());
 		book.register("rogue", createRogue());
 		book.register("cleric", createCleric());
 		

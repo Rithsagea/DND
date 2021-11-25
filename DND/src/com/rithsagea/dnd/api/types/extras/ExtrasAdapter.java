@@ -59,6 +59,7 @@ public class ExtrasAdapter implements JsonSerializer<Map<String, Object>>, JsonD
 		
 			JsonElement val = context.serialize(extra);
 			val.getAsJsonObject().addProperty(TYPE_LABEL, extra.getClass().getName());
+			obj.add(entry.getKey(), val);
 		}
 		
 		return obj;

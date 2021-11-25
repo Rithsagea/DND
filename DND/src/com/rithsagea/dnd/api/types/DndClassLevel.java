@@ -2,6 +2,8 @@ package com.rithsagea.dnd.api.types;
 
 import java.util.List;
 
+import com.rithsagea.dnd.api.types.extras.SpellcastingSlots;
+
 public class DndClassLevel extends IndexedItem {
 	public String className;
 	
@@ -10,4 +12,6 @@ public class DndClassLevel extends IndexedItem {
 	public int proficiencyBonus;
 	
 	public List<String> features;
+	
+	public SpellcastingSlots spellcasting;
 }

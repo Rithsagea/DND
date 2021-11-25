@@ -1,4 +1,1484 @@
 {
+  "barbarian": {
+    "name": "Barbarian",
+    "hitDie": 12,
+    "proficiencyOptions": [
+      {
+        "count": 2,
+        "options": [
+          {
+            "value": "skill-animal-handling",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-athletics",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-intimidation",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-nature",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-perception",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-survival",
+            "__type": "proficiency"
+          }
+        ]
+      }
+    ],
+    "proficiencies": [
+      "light-armor",
+      "medium-armor",
+      "shields",
+      "simple-weapons",
+      "martial-weapons"
+    ],
+    "savingThrows": [
+      "str",
+      "con"
+    ],
+    "startingEquipment": [
+      {
+        "item": "explorers-pack",
+        "count": 1
+      },
+      {
+        "item": "javelin",
+        "count": 4
+      }
+    ],
+    "equipmentOptions": [
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "item": "greataxe",
+              "count": 1
+            },
+            "__type": "item"
+          },
+          {
+            "value": {
+              "item": "martial-melee-weapons",
+              "count": 1
+            },
+            "__type": "item"
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "item": "handaxe",
+              "count": 2
+            },
+            "__type": "item"
+          },
+          {
+            "value": {
+              "item": "simple-weapons",
+              "count": 1
+            },
+            "__type": "item"
+          }
+        ]
+      }
+    ],
+    "levels": [
+      {
+        "className": "barbarian",
+        "level": 1,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [
+          "rage",
+          "barbarian-unarmored-defense"
+        ],
+        "id": "barbarian-1",
+        "extra": {
+          "rage_count": 2,
+          "rage_damage_bonus": 2,
+          "brutal_critical_dice": 0
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 2,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [
+          "reckless-attack",
+          "danger-sense"
+        ],
+        "id": "barbarian-2",
+        "extra": {
+          "rage_count": 2,
+          "rage_damage_bonus": 2,
+          "brutal_critical_dice": 0
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 3,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [
+          "primal-path"
+        ],
+        "id": "barbarian-3",
+        "extra": {
+          "rage_count": 3,
+          "rage_damage_bonus": 2,
+          "brutal_critical_dice": 0
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 4,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          "barbarian-ability-score-improvement-1"
+        ],
+        "id": "barbarian-4",
+        "extra": {
+          "rage_count": 3,
+          "rage_damage_bonus": 2,
+          "brutal_critical_dice": 0
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 5,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 3,
+        "features": [
+          "barbarian-extra-attack",
+          "fast-movement"
+        ],
+        "id": "barbarian-5",
+        "extra": {
+          "rage_count": 3,
+          "rage_damage_bonus": 2,
+          "brutal_critical_dice": 0
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 6,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 3,
+        "features": [],
+        "id": "barbarian-6",
+        "extra": {
+          "rage_count": 4,
+          "rage_damage_bonus": 2,
+          "brutal_critical_dice": 0
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 7,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 3,
+        "features": [
+          "feral-instinct"
+        ],
+        "id": "barbarian-7",
+        "extra": {
+          "rage_count": 4,
+          "rage_damage_bonus": 2,
+          "brutal_critical_dice": 0
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 8,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 3,
+        "features": [
+          "barbarian-ability-score-improvement-2"
+        ],
+        "id": "barbarian-8",
+        "extra": {
+          "rage_count": 4,
+          "rage_damage_bonus": 2,
+          "brutal_critical_dice": 0
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 9,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 4,
+        "features": [
+          "brutal-critical-1-die"
+        ],
+        "id": "barbarian-9",
+        "extra": {
+          "rage_count": 4,
+          "rage_damage_bonus": 3,
+          "brutal_critical_dice": 1
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 10,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 4,
+        "features": [],
+        "id": "barbarian-10",
+        "extra": {
+          "rage_count": 4,
+          "rage_damage_bonus": 3,
+          "brutal_critical_dice": 1
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 11,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 4,
+        "features": [
+          "relentless-rage"
+        ],
+        "id": "barbarian-11",
+        "extra": {
+          "rage_count": 4,
+          "rage_damage_bonus": 3,
+          "brutal_critical_dice": 1
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 12,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 4,
+        "features": [
+          "barbarian-ability-score-improvement-3"
+        ],
+        "id": "barbarian-12",
+        "extra": {
+          "rage_count": 5,
+          "rage_damage_bonus": 3,
+          "brutal_critical_dice": 1
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 13,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 5,
+        "features": [
+          "brutal-critical-2-dice"
+        ],
+        "id": "barbarian-13",
+        "extra": {
+          "rage_count": 5,
+          "rage_damage_bonus": 3,
+          "brutal_critical_dice": 2
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 14,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 5,
+        "features": [],
+        "id": "barbarian-14",
+        "extra": {
+          "rage_count": 5,
+          "rage_damage_bonus": 3,
+          "brutal_critical_dice": 2
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 15,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 5,
+        "features": [
+          "persistent-rage"
+        ],
+        "id": "barbarian-15",
+        "extra": {
+          "rage_count": 5,
+          "rage_damage_bonus": 3,
+          "brutal_critical_dice": 2
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 16,
+        "abilityScoreBonus": 4,
+        "proficiencyBonus": 5,
+        "features": [
+          "barbarian-ability-score-improvement-4"
+        ],
+        "id": "barbarian-16",
+        "extra": {
+          "rage_count": 5,
+          "rage_damage_bonus": 4,
+          "brutal_critical_dice": 2
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 17,
+        "abilityScoreBonus": 4,
+        "proficiencyBonus": 6,
+        "features": [
+          "brutal-critical-3-dice"
+        ],
+        "id": "barbarian-17",
+        "extra": {
+          "rage_count": 6,
+          "rage_damage_bonus": 4,
+          "brutal_critical_dice": 3
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 18,
+        "abilityScoreBonus": 4,
+        "proficiencyBonus": 6,
+        "features": [
+          "indomitable-might"
+        ],
+        "id": "barbarian-18",
+        "extra": {
+          "rage_count": 6,
+          "rage_damage_bonus": 4,
+          "brutal_critical_dice": 3
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 19,
+        "abilityScoreBonus": 5,
+        "proficiencyBonus": 6,
+        "features": [
+          "barbarian-ability-score-improvement-5"
+        ],
+        "id": "barbarian-19",
+        "extra": {
+          "rage_count": 6,
+          "rage_damage_bonus": 4,
+          "brutal_critical_dice": 3
+        }
+      },
+      {
+        "className": "barbarian",
+        "level": 20,
+        "abilityScoreBonus": 5,
+        "proficiencyBonus": 6,
+        "features": [
+          "primal-champion"
+        ],
+        "id": "barbarian-20",
+        "extra": {
+          "rage_count": 9999,
+          "rage_damage_bonus": 4,
+          "brutal_critical_dice": 3
+        }
+      }
+    ],
+    "subclasses": [
+      "berserker"
+    ],
+    "multiclassing": {
+      "abilityScoreRequirements": {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "abilityScore": "str",
+              "value": 13
+            },
+            "__type": "ability_score"
+          }
+        ]
+      },
+      "proficiencies": [
+        "shields",
+        "simple-weapons",
+        "martial-weapons"
+      ],
+      "proficiencyOptions": [
+        {
+          "count": 2,
+          "options": [
+            {
+              "value": "skill-animal-handling",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-athletics",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-intimidation",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-nature",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-perception",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-survival",
+              "__type": "proficiency"
+            }
+          ]
+        }
+      ]
+    },
+    "id": "barbarian"
+  },
+  "bard": {
+    "name": "Bard",
+    "hitDie": 8,
+    "proficiencyOptions": [
+      {
+        "count": 3,
+        "options": [
+          {
+            "value": "skill-acrobatics",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-animal-handling",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-arcana",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-athletics",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-deception",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-history",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-insight",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-intimidation",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-investigation",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-medicine",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-nature",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-perception",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-performance",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-persuasion",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-religion",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-sleight-of-hand",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-stealth",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-survival",
+            "__type": "proficiency"
+          }
+        ]
+      },
+      {
+        "count": 3,
+        "options": [
+          {
+            "value": "bagpipes",
+            "__type": "proficiency"
+          },
+          {
+            "value": "drum",
+            "__type": "proficiency"
+          },
+          {
+            "value": "dulcimer",
+            "__type": "proficiency"
+          },
+          {
+            "value": "flute",
+            "__type": "proficiency"
+          },
+          {
+            "value": "lute",
+            "__type": "proficiency"
+          },
+          {
+            "value": "lyre",
+            "__type": "proficiency"
+          },
+          {
+            "value": "horn",
+            "__type": "proficiency"
+          },
+          {
+            "value": "pan-flute",
+            "__type": "proficiency"
+          },
+          {
+            "value": "shawm",
+            "__type": "proficiency"
+          },
+          {
+            "value": "viol",
+            "__type": "proficiency"
+          }
+        ]
+      }
+    ],
+    "proficiencies": [
+      "light-armor",
+      "simple-weapons",
+      "longswords",
+      "rapiers",
+      "shortswords",
+      "hand-crossbows"
+    ],
+    "savingThrows": [
+      "dex",
+      "cha"
+    ],
+    "startingEquipment": [
+      {
+        "item": "leather-armor",
+        "count": 1
+      },
+      {
+        "item": "dagger",
+        "count": 1
+      }
+    ],
+    "equipmentOptions": [
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "item": "rapier",
+              "count": 1
+            },
+            "__type": "item"
+          },
+          {
+            "value": {
+              "item": "longsword",
+              "count": 1
+            },
+            "__type": "item"
+          },
+          {
+            "value": {
+              "item": "simple-weapons",
+              "count": 1
+            },
+            "__type": "item"
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "item": "diplomats-pack",
+              "count": 1
+            },
+            "__type": "item"
+          },
+          {
+            "value": {
+              "item": "entertainers-pack",
+              "count": 1
+            },
+            "__type": "item"
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "item": "lute",
+              "count": 1
+            },
+            "__type": "item"
+          },
+          {
+            "value": {
+              "item": "musical-instruments",
+              "count": 1
+            },
+            "__type": "item"
+          }
+        ]
+      }
+    ],
+    "spellcasting": {
+      "level": 1,
+      "spellcastingAbility": "cha",
+      "info": {
+        "Ritual Casting": "You can cast any bard spell you know as a ritual if that spell has the ritual tag.",
+        "Spellcasting Ability": "Charisma is your spellcasting ability for your bard spells. Your magic comes from the heart and soul you pour into the performance of your music or oration. You use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a bard spell you cast and when making an attack roll with one.\nSpell save DC \u003d 8 + your proficiency bonus + your Charisma modifier.\nSpell attack modifier \u003d your proficiency bonus + your Charisma modifier.",
+        "Spells Known of 1st Level and Higher": "You know four 1st-level spells of your choice from the bard spell list.\nThe Spells Known column of the Bard table shows when you learn more bard spells of your choice.\nEach of these spells must be of a level for which you have spell slots, as shown on the table. For instance, when you reach 3rd level in this class, you can learn one new spell of 1st or 2nd level.\nAdditionally, when you gain a level in this class, you can choose one of the bard spells you know and replace it with another spell from the bard spell list, which also must be of a level for which you have spell slots.",
+        "Cantrips": "You know two cantrips of your choice from the bard spell list. You learn additional bard cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Bard table.",
+        "Spell Slots": "The Bard table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell\u0027s level or higher. You regain all expended spell slots when you finish a long rest.\nFor example, if you know the 1st-level spell cure wounds and have a 1st-level and a 2nd-level spell slot available, you can cast cure wounds using either slot.",
+        "Spellcasting Focus": "You can use a musical instrument (see Equipment) as a spellcasting focus for your bard spells."
+      }
+    },
+    "spells": [
+      "dancing-lights",
+      "light",
+      "mage-hand",
+      "mending",
+      "message",
+      "minor-illusion",
+      "prestidigitation",
+      "true-strike",
+      "vicious-mockery",
+      "animal-friendship",
+      "bane",
+      "charm-person",
+      "comprehend-languages",
+      "cure-wounds",
+      "detect-magic",
+      "disguise-self",
+      "feather-fall",
+      "healing-word",
+      "heroism",
+      "hideous-laughter",
+      "identify",
+      "illusory-script",
+      "longstrider",
+      "silent-image",
+      "sleep",
+      "speak-with-animals",
+      "thunderwave",
+      "unseen-servant",
+      "animal-messenger",
+      "blindness-deafness",
+      "calm-emotions",
+      "detect-thoughts",
+      "enhance-ability",
+      "enthrall",
+      "heat-metal",
+      "hold-person",
+      "invisibility",
+      "knock",
+      "lesser-restoration",
+      "locate-animals-or-plants",
+      "locate-object",
+      "magic-mouth",
+      "see-invisibility",
+      "shatter",
+      "silence",
+      "suggestion",
+      "zone-of-truth",
+      "bestow-curse",
+      "clairvoyance",
+      "dispel-magic",
+      "fear",
+      "glyph-of-warding",
+      "hypnotic-pattern",
+      "major-image",
+      "nondetection",
+      "plant-growth",
+      "sending",
+      "speak-with-dead",
+      "speak-with-plants",
+      "stinking-cloud",
+      "tiny-hut",
+      "tongues",
+      "compulsion",
+      "confusion",
+      "dimension-door",
+      "freedom-of-movement",
+      "greater-invisibility",
+      "hallucinatory-terrain",
+      "locate-creature",
+      "polymorph",
+      "animate-objects",
+      "awaken",
+      "dominate-person",
+      "dream",
+      "geas",
+      "greater-restoration",
+      "hold-monster",
+      "legend-lore",
+      "mass-cure-wounds",
+      "mislead",
+      "modify-memory",
+      "planar-binding",
+      "raise-dead",
+      "scrying",
+      "seeming",
+      "teleportation-circle",
+      "eyebite",
+      "find-the-path",
+      "guards-and-wards",
+      "irresistible-dance",
+      "mass-suggestion",
+      "programmed-illusion",
+      "true-seeing",
+      "arcane-sword",
+      "etherealness",
+      "forcecage",
+      "magnificent-mansion",
+      "mirage-arcane",
+      "project-image",
+      "regenerate",
+      "resurrection",
+      "symbol",
+      "teleport",
+      "dominate-monster",
+      "feeblemind",
+      "glibness",
+      "mind-blank",
+      "power-word-stun",
+      "foresight",
+      "power-word-kill",
+      "true-polymorph"
+    ],
+    "levels": [
+      {
+        "className": "bard",
+        "level": 1,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [
+          "spellcasting-bard",
+          "bardic-inspiration-d6"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 2,
+          "spellsKnown": 4,
+          "spellSlotsLevel1": 2,
+          "spellSlotsLevel2": 0,
+          "spellSlotsLevel3": 0,
+          "spellSlotsLevel4": 0,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "bard-1",
+        "extra": {
+          "bardicInspirationDie": "1d6",
+          "songOfRestDie": "1d0"
+        }
+      },
+      {
+        "className": "bard",
+        "level": 2,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [
+          "jack-of-all-trades",
+          "song-of-rest-d6"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 2,
+          "spellsKnown": 5,
+          "spellSlotsLevel1": 3,
+          "spellSlotsLevel2": 0,
+          "spellSlotsLevel3": 0,
+          "spellSlotsLevel4": 0,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "bard-2",
+        "extra": {
+          "bardicInspirationDie": "1d6",
+          "songOfRestDie": "1d6"
+        }
+      },
+      {
+        "className": "bard",
+        "level": 3,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [
+          "bard-expertise-1",
+          "bard-college"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 2,
+          "spellsKnown": 6,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 2,
+          "spellSlotsLevel3": 0,
+          "spellSlotsLevel4": 0,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "bard-3",
+        "extra": {
+          "bardicInspirationDie": "1d6",
+          "songOfRestDie": "1d6"
+        }
+      },
+      {
+        "className": "bard",
+        "level": 4,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          "bard-ability-score-improvement-1"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 3,
+          "spellsKnown": 7,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 0,
+          "spellSlotsLevel4": 0,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "bard-4",
+        "extra": {
+          "bardicInspirationDie": "1d6",
+          "songOfRestDie": "1d6"
+        }
+      },
+      {
+        "className": "bard",
+        "level": 5,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 3,
+        "features": [
+          "bardic-inspiration-d8",
+          "font-of-inspiration"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 3,
+          "spellsKnown": 8,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 2,
+          "spellSlotsLevel4": 0,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "bard-5",
+        "extra": {
+          "bardicInspirationDie": "1d8",
+          "songOfRestDie": "1d6"
+        }
+      },
+      {
+        "className": "bard",
+        "level": 6,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 3,
+        "features": [
+          "countercharm"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 3,
+          "spellsKnown": 9,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 0,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "bard-6",
+        "extra": {
+          "bardicInspirationDie": "1d8",
+          "songOfRestDie": "1d6"
+        }
+      },
+      {
+        "className": "bard",
+        "level": 7,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellcasting": {
+          "cantripsKnown": 3,
+          "spellsKnown": 10,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 1,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "bard-7",
+        "extra": {
+          "bardicInspirationDie": "1d8",
+          "songOfRestDie": "1d6"
+        }
+      },
+      {
+        "className": "bard",
+        "level": 8,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 3,
+        "features": [
+          "bard-ability-score-improvement-2"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 3,
+          "spellsKnown": 11,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 2,
+          "spellSlotsLevel5": 0,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "bard-8",
+        "extra": {
+          "bardicInspirationDie": "1d8",
+          "songOfRestDie": "1d6"
+        }
+      },
+      {
+        "className": "bard",
+        "level": 9,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 4,
+        "features": [
+          "song-of-rest-d8"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 3,
+          "spellsKnown": 12,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 1,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "bard-9",
+        "extra": {
+          "bardicInspirationDie": "1d8",
+          "songOfRestDie": "1d8"
+        }
+      },
+      {
+        "className": "bard",
+        "level": 10,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 4,
+        "features": [
+          "bard-expertise-2",
+          "bardic-inspiration-d10",
+          "magical-secrets-1"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 14,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 0,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "bard-10",
+        "extra": {
+          "bardicInspirationDie": "1d10",
+          "songOfRestDie": "1d8"
+        }
+      },
+      {
+        "className": "bard",
+        "level": 11,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 15,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "bard-11",
+        "extra": {
+          "bardicInspirationDie": "1d10",
+          "songOfRestDie": "1d8"
+        }
+      },
+      {
+        "className": "bard",
+        "level": 12,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 4,
+        "features": [
+          "bard-ability-score-improvement-3"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 15,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 0,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "bard-12",
+        "extra": {
+          "bardicInspirationDie": "1d10",
+          "songOfRestDie": "1d8"
+        }
+      },
+      {
+        "className": "bard",
+        "level": 13,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 5,
+        "features": [
+          "song-of-rest-d10"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 16,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 1,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "bard-13",
+        "extra": {
+          "bardicInspirationDie": "1d10",
+          "songOfRestDie": "1d10"
+        }
+      },
+      {
+        "className": "bard",
+        "level": 14,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 5,
+        "features": [
+          "magical-secrets-2"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 18,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 1,
+          "spellSlotsLevel8": 0,
+          "spellSlotsLevel9": 0
+        },
+        "id": "bard-14",
+        "extra": {
+          "bardicInspirationDie": "1d10",
+          "songOfRestDie": "1d10"
+        }
+      },
+      {
+        "className": "bard",
+        "level": 15,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 5,
+        "features": [
+          "bardic-inspiration-d12"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 19,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 1,
+          "spellSlotsLevel8": 1,
+          "spellSlotsLevel9": 0
+        },
+        "id": "bard-15",
+        "extra": {
+          "bardicInspirationDie": "1d12",
+          "songOfRestDie": "1d10"
+        }
+      },
+      {
+        "className": "bard",
+        "level": 16,
+        "abilityScoreBonus": 4,
+        "proficiencyBonus": 5,
+        "features": [
+          "bard-ability-score-improvement-4"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 19,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 1,
+          "spellSlotsLevel8": 1,
+          "spellSlotsLevel9": 0
+        },
+        "id": "bard-16",
+        "extra": {
+          "bardicInspirationDie": "1d12",
+          "songOfRestDie": "1d10"
+        }
+      },
+      {
+        "className": "bard",
+        "level": 17,
+        "abilityScoreBonus": 4,
+        "proficiencyBonus": 6,
+        "features": [
+          "song-of-rest-d12"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 20,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 2,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 1,
+          "spellSlotsLevel8": 1,
+          "spellSlotsLevel9": 1
+        },
+        "id": "bard-17",
+        "extra": {
+          "bardicInspirationDie": "1d12",
+          "songOfRestDie": "1d12"
+        }
+      },
+      {
+        "className": "bard",
+        "level": 18,
+        "abilityScoreBonus": 4,
+        "proficiencyBonus": 6,
+        "features": [
+          "magical-secrets-3"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 22,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 3,
+          "spellSlotsLevel6": 1,
+          "spellSlotsLevel7": 1,
+          "spellSlotsLevel8": 1,
+          "spellSlotsLevel9": 1
+        },
+        "id": "bard-18",
+        "extra": {
+          "bardicInspirationDie": "1d12",
+          "songOfRestDie": "1d12"
+        }
+      },
+      {
+        "className": "bard",
+        "level": 19,
+        "abilityScoreBonus": 5,
+        "proficiencyBonus": 6,
+        "features": [
+          "bard-ability-score-improvement-5"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 22,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 3,
+          "spellSlotsLevel6": 2,
+          "spellSlotsLevel7": 1,
+          "spellSlotsLevel8": 1,
+          "spellSlotsLevel9": 1
+        },
+        "id": "bard-19",
+        "extra": {
+          "bardicInspirationDie": "1d12",
+          "songOfRestDie": "1d12"
+        }
+      },
+      {
+        "className": "bard",
+        "level": 20,
+        "abilityScoreBonus": 5,
+        "proficiencyBonus": 6,
+        "features": [
+          "superior-inspiration"
+        ],
+        "spellcasting": {
+          "cantripsKnown": 4,
+          "spellsKnown": 22,
+          "spellSlotsLevel1": 4,
+          "spellSlotsLevel2": 3,
+          "spellSlotsLevel3": 3,
+          "spellSlotsLevel4": 3,
+          "spellSlotsLevel5": 3,
+          "spellSlotsLevel6": 2,
+          "spellSlotsLevel7": 2,
+          "spellSlotsLevel8": 1,
+          "spellSlotsLevel9": 1
+        },
+        "id": "bard-20",
+        "extra": {
+          "bardicInspirationDie": "1d12",
+          "songOfRestDie": "1d12"
+        }
+      }
+    ],
+    "subclasses": [
+      "lore"
+    ],
+    "multiclassing": {
+      "abilityScoreRequirements": {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "abilityScore": "cha",
+              "value": 13
+            },
+            "__type": "ability_score"
+          }
+        ]
+      },
+      "proficiencies": [
+        "light-armor"
+      ],
+      "proficiencyOptions": [
+        {
+          "count": 3,
+          "options": [
+            {
+              "value": "skill-acrobatics",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-animal-handling",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-arcana",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-athletics",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-deception",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-history",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-insight",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-intimidation",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-investigation",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-medicine",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-nature",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-perception",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-performance",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-persuasion",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-religion",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-sleight-of-hand",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-stealth",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-survival",
+              "__type": "proficiency"
+            }
+          ]
+        },
+        {
+          "count": 3,
+          "options": [
+            {
+              "value": "bagpipes",
+              "__type": "proficiency"
+            },
+            {
+              "value": "drum",
+              "__type": "proficiency"
+            },
+            {
+              "value": "dulcimer",
+              "__type": "proficiency"
+            },
+            {
+              "value": "flute",
+              "__type": "proficiency"
+            },
+            {
+              "value": "lute",
+              "__type": "proficiency"
+            },
+            {
+              "value": "lyre",
+              "__type": "proficiency"
+            },
+            {
+              "value": "horn",
+              "__type": "proficiency"
+            },
+            {
+              "value": "pan-flute",
+              "__type": "proficiency"
+            },
+            {
+              "value": "shawm",
+              "__type": "proficiency"
+            },
+            {
+              "value": "viol",
+              "__type": "proficiency"
+            }
+          ]
+        }
+      ]
+    },
+    "id": "bard",
+    "extra": {}
+  },
   "rogue": {
     "name": "Rogue",
     "hitDie": 8,
@@ -168,7 +1648,7 @@
         ],
         "id": "rogue-1",
         "extra": {
-          "sneak_attack": "1d6"
+          "sneakAttack": "1d6"
         }
       },
       {
@@ -181,7 +1661,7 @@
         ],
         "id": "rogue-2",
         "extra": {
-          "sneak_attack": "1d6"
+          "sneakAttack": "1d6"
         }
       },
       {
@@ -194,7 +1674,7 @@
         ],
         "id": "rogue-3",
         "extra": {
-          "sneak_attack": "2d6"
+          "sneakAttack": "2d6"
         }
       },
       {
@@ -207,7 +1687,7 @@
         ],
         "id": "rogue-4",
         "extra": {
-          "sneak_attack": "2d6"
+          "sneakAttack": "2d6"
         }
       },
       {
@@ -220,7 +1700,7 @@
         ],
         "id": "rogue-5",
         "extra": {
-          "sneak_attack": "3d6"
+          "sneakAttack": "3d6"
         }
       },
       {
@@ -233,7 +1713,7 @@
         ],
         "id": "rogue-6",
         "extra": {
-          "sneak_attack": "3d6"
+          "sneakAttack": "3d6"
         }
       },
       {
@@ -246,7 +1726,7 @@
         ],
         "id": "rogue-7",
         "extra": {
-          "sneak_attack": "4d6"
+          "sneakAttack": "4d6"
         }
       },
       {
@@ -259,7 +1739,7 @@
         ],
         "id": "rogue-8",
         "extra": {
-          "sneak_attack": "4d6"
+          "sneakAttack": "4d6"
         }
       },
       {
@@ -270,7 +1750,7 @@
         "features": [],
         "id": "rogue-9",
         "extra": {
-          "sneak_attack": "5d6"
+          "sneakAttack": "5d6"
         }
       },
       {
@@ -283,7 +1763,7 @@
         ],
         "id": "rogue-10",
         "extra": {
-          "sneak_attack": "5d6"
+          "sneakAttack": "5d6"
         }
       },
       {
@@ -296,7 +1776,7 @@
         ],
         "id": "rogue-11",
         "extra": {
-          "sneak_attack": "6d6"
+          "sneakAttack": "6d6"
         }
       },
       {
@@ -309,7 +1789,7 @@
         ],
         "id": "rogue-12",
         "extra": {
-          "sneak_attack": "6d6"
+          "sneakAttack": "6d6"
         }
       },
       {
@@ -320,7 +1800,7 @@
         "features": [],
         "id": "rogue-13",
         "extra": {
-          "sneak_attack": "7d6"
+          "sneakAttack": "7d6"
         }
       },
       {
@@ -333,7 +1813,7 @@
         ],
         "id": "rogue-14",
         "extra": {
-          "sneak_attack": "7d6"
+          "sneakAttack": "7d6"
         }
       },
       {
@@ -346,7 +1826,7 @@
         ],
         "id": "rogue-15",
         "extra": {
-          "sneak_attack": "8d6"
+          "sneakAttack": "8d6"
         }
       },
       {
@@ -359,7 +1839,7 @@
         ],
         "id": "rogue-16",
         "extra": {
-          "sneak_attack": "8d6"
+          "sneakAttack": "8d6"
         }
       },
       {
@@ -370,7 +1850,7 @@
         "features": [],
         "id": "rogue-17",
         "extra": {
-          "sneak_attack": "9d6"
+          "sneakAttack": "9d6"
         }
       },
       {
@@ -383,7 +1863,7 @@
         ],
         "id": "rogue-18",
         "extra": {
-          "sneak_attack": "9d6"
+          "sneakAttack": "9d6"
         }
       },
       {
@@ -396,7 +1876,7 @@
         ],
         "id": "rogue-19",
         "extra": {
-          "sneak_attack": "10d6"
+          "sneakAttack": "10d6"
         }
       },
       {
@@ -409,7 +1889,7 @@
         ],
         "id": "rogue-20",
         "extra": {
-          "sneak_attack": "10d6"
+          "sneakAttack": "10d6"
         }
       }
     ],
@@ -868,454 +2348,5 @@
       ]
     },
     "id": "cleric"
-  },
-  "barbarian": {
-    "name": "Barbarian",
-    "hitDie": 12,
-    "proficiencyOptions": [
-      {
-        "count": 2,
-        "options": [
-          {
-            "value": "skill-animal-handling",
-            "__type": "proficiency"
-          },
-          {
-            "value": "skill-athletics",
-            "__type": "proficiency"
-          },
-          {
-            "value": "skill-intimidation",
-            "__type": "proficiency"
-          },
-          {
-            "value": "skill-nature",
-            "__type": "proficiency"
-          },
-          {
-            "value": "skill-perception",
-            "__type": "proficiency"
-          },
-          {
-            "value": "skill-survival",
-            "__type": "proficiency"
-          }
-        ]
-      }
-    ],
-    "proficiencies": [
-      "light-armor",
-      "medium-armor",
-      "shields",
-      "simple-weapons",
-      "martial-weapons"
-    ],
-    "savingThrows": [
-      "str",
-      "con"
-    ],
-    "startingEquipment": [
-      {
-        "item": "explorers-pack",
-        "count": 1
-      },
-      {
-        "item": "javelin",
-        "count": 4
-      }
-    ],
-    "equipmentOptions": [
-      {
-        "count": 1,
-        "options": [
-          {
-            "value": {
-              "item": "greataxe",
-              "count": 1
-            },
-            "__type": "item"
-          },
-          {
-            "value": {
-              "item": "martial-melee-weapons",
-              "count": 1
-            },
-            "__type": "item"
-          }
-        ]
-      },
-      {
-        "count": 1,
-        "options": [
-          {
-            "value": {
-              "item": "handaxe",
-              "count": 2
-            },
-            "__type": "item"
-          },
-          {
-            "value": {
-              "item": "simple-weapons",
-              "count": 1
-            },
-            "__type": "item"
-          }
-        ]
-      }
-    ],
-    "levels": [
-      {
-        "className": "barbarian",
-        "level": 1,
-        "abilityScoreBonus": 0,
-        "proficiencyBonus": 2,
-        "features": [
-          "rage",
-          "barbarian-unarmored-defense"
-        ],
-        "id": "barbarian-1",
-        "extra": {
-          "rage_count": 2,
-          "rage_damage_bonus": 2,
-          "brutal_critical_dice": 0
-        }
-      },
-      {
-        "className": "barbarian",
-        "level": 2,
-        "abilityScoreBonus": 0,
-        "proficiencyBonus": 2,
-        "features": [
-          "reckless-attack",
-          "danger-sense"
-        ],
-        "id": "barbarian-2",
-        "extra": {
-          "rage_count": 2,
-          "rage_damage_bonus": 2,
-          "brutal_critical_dice": 0
-        }
-      },
-      {
-        "className": "barbarian",
-        "level": 3,
-        "abilityScoreBonus": 0,
-        "proficiencyBonus": 2,
-        "features": [
-          "primal-path"
-        ],
-        "id": "barbarian-3",
-        "extra": {
-          "rage_count": 3,
-          "rage_damage_bonus": 2,
-          "brutal_critical_dice": 0
-        }
-      },
-      {
-        "className": "barbarian",
-        "level": 4,
-        "abilityScoreBonus": 1,
-        "proficiencyBonus": 2,
-        "features": [
-          "barbarian-ability-score-improvement-1"
-        ],
-        "id": "barbarian-4",
-        "extra": {
-          "rage_count": 3,
-          "rage_damage_bonus": 2,
-          "brutal_critical_dice": 0
-        }
-      },
-      {
-        "className": "barbarian",
-        "level": 5,
-        "abilityScoreBonus": 1,
-        "proficiencyBonus": 3,
-        "features": [
-          "barbarian-extra-attack",
-          "fast-movement"
-        ],
-        "id": "barbarian-5",
-        "extra": {
-          "rage_count": 3,
-          "rage_damage_bonus": 2,
-          "brutal_critical_dice": 0
-        }
-      },
-      {
-        "className": "barbarian",
-        "level": 6,
-        "abilityScoreBonus": 1,
-        "proficiencyBonus": 3,
-        "features": [],
-        "id": "barbarian-6",
-        "extra": {
-          "rage_count": 4,
-          "rage_damage_bonus": 2,
-          "brutal_critical_dice": 0
-        }
-      },
-      {
-        "className": "barbarian",
-        "level": 7,
-        "abilityScoreBonus": 1,
-        "proficiencyBonus": 3,
-        "features": [
-          "feral-instinct"
-        ],
-        "id": "barbarian-7",
-        "extra": {
-          "rage_count": 4,
-          "rage_damage_bonus": 2,
-          "brutal_critical_dice": 0
-        }
-      },
-      {
-        "className": "barbarian",
-        "level": 8,
-        "abilityScoreBonus": 2,
-        "proficiencyBonus": 3,
-        "features": [
-          "barbarian-ability-score-improvement-2"
-        ],
-        "id": "barbarian-8",
-        "extra": {
-          "rage_count": 4,
-          "rage_damage_bonus": 2,
-          "brutal_critical_dice": 0
-        }
-      },
-      {
-        "className": "barbarian",
-        "level": 9,
-        "abilityScoreBonus": 2,
-        "proficiencyBonus": 4,
-        "features": [
-          "brutal-critical-1-die"
-        ],
-        "id": "barbarian-9",
-        "extra": {
-          "rage_count": 4,
-          "rage_damage_bonus": 3,
-          "brutal_critical_dice": 1
-        }
-      },
-      {
-        "className": "barbarian",
-        "level": 10,
-        "abilityScoreBonus": 2,
-        "proficiencyBonus": 4,
-        "features": [],
-        "id": "barbarian-10",
-        "extra": {
-          "rage_count": 4,
-          "rage_damage_bonus": 3,
-          "brutal_critical_dice": 1
-        }
-      },
-      {
-        "className": "barbarian",
-        "level": 11,
-        "abilityScoreBonus": 2,
-        "proficiencyBonus": 4,
-        "features": [
-          "relentless-rage"
-        ],
-        "id": "barbarian-11",
-        "extra": {
-          "rage_count": 4,
-          "rage_damage_bonus": 3,
-          "brutal_critical_dice": 1
-        }
-      },
-      {
-        "className": "barbarian",
-        "level": 12,
-        "abilityScoreBonus": 3,
-        "proficiencyBonus": 4,
-        "features": [
-          "barbarian-ability-score-improvement-3"
-        ],
-        "id": "barbarian-12",
-        "extra": {
-          "rage_count": 5,
-          "rage_damage_bonus": 3,
-          "brutal_critical_dice": 1
-        }
-      },
-      {
-        "className": "barbarian",
-        "level": 13,
-        "abilityScoreBonus": 3,
-        "proficiencyBonus": 5,
-        "features": [
-          "brutal-critical-2-dice"
-        ],
-        "id": "barbarian-13",
-        "extra": {
-          "rage_count": 5,
-          "rage_damage_bonus": 3,
-          "brutal_critical_dice": 2
-        }
-      },
-      {
-        "className": "barbarian",
-        "level": 14,
-        "abilityScoreBonus": 3,
-        "proficiencyBonus": 5,
-        "features": [],
-        "id": "barbarian-14",
-        "extra": {
-          "rage_count": 5,
-          "rage_damage_bonus": 3,
-          "brutal_critical_dice": 2
-        }
-      },
-      {
-        "className": "barbarian",
-        "level": 15,
-        "abilityScoreBonus": 3,
-        "proficiencyBonus": 5,
-        "features": [
-          "persistent-rage"
-        ],
-        "id": "barbarian-15",
-        "extra": {
-          "rage_count": 5,
-          "rage_damage_bonus": 3,
-          "brutal_critical_dice": 2
-        }
-      },
-      {
-        "className": "barbarian",
-        "level": 16,
-        "abilityScoreBonus": 4,
-        "proficiencyBonus": 5,
-        "features": [
-          "barbarian-ability-score-improvement-4"
-        ],
-        "id": "barbarian-16",
-        "extra": {
-          "rage_count": 5,
-          "rage_damage_bonus": 4,
-          "brutal_critical_dice": 2
-        }
-      },
-      {
-        "className": "barbarian",
-        "level": 17,
-        "abilityScoreBonus": 4,
-        "proficiencyBonus": 6,
-        "features": [
-          "brutal-critical-3-dice"
-        ],
-        "id": "barbarian-17",
-        "extra": {
-          "rage_count": 6,
-          "rage_damage_bonus": 4,
-          "brutal_critical_dice": 3
-        }
-      },
-      {
-        "className": "barbarian",
-        "level": 18,
-        "abilityScoreBonus": 4,
-        "proficiencyBonus": 6,
-        "features": [
-          "indomitable-might"
-        ],
-        "id": "barbarian-18",
-        "extra": {
-          "rage_count": 6,
-          "rage_damage_bonus": 4,
-          "brutal_critical_dice": 3
-        }
-      },
-      {
-        "className": "barbarian",
-        "level": 19,
-        "abilityScoreBonus": 5,
-        "proficiencyBonus": 6,
-        "features": [
-          "barbarian-ability-score-improvement-5"
-        ],
-        "id": "barbarian-19",
-        "extra": {
-          "rage_count": 6,
-          "rage_damage_bonus": 4,
-          "brutal_critical_dice": 3
-        }
-      },
-      {
-        "className": "barbarian",
-        "level": 20,
-        "abilityScoreBonus": 5,
-        "proficiencyBonus": 6,
-        "features": [
-          "primal-champion"
-        ],
-        "id": "barbarian-20",
-        "extra": {
-          "rage_count": 9999,
-          "rage_damage_bonus": 4,
-          "brutal_critical_dice": 3
-        }
-      }
-    ],
-    "subclasses": [
-      "berserker"
-    ],
-    "multiclassing": {
-      "abilityScoreRequirements": {
-        "count": 1,
-        "options": [
-          {
-            "value": {
-              "abilityScore": "str",
-              "value": 13
-            },
-            "__type": "ability_score"
-          }
-        ]
-      },
-      "proficiencies": [
-        "shields",
-        "simple-weapons",
-        "martial-weapons"
-      ],
-      "proficiencyOptions": [
-        {
-          "count": 2,
-          "options": [
-            {
-              "value": "skill-animal-handling",
-              "__type": "proficiency"
-            },
-            {
-              "value": "skill-athletics",
-              "__type": "proficiency"
-            },
-            {
-              "value": "skill-intimidation",
-              "__type": "proficiency"
-            },
-            {
-              "value": "skill-nature",
-              "__type": "proficiency"
-            },
-            {
-              "value": "skill-perception",
-              "__type": "proficiency"
-            },
-            {
-              "value": "skill-survival",
-              "__type": "proficiency"
-            }
-          ]
-        }
-      ]
-    },
-    "id": "barbarian"
   }
 }

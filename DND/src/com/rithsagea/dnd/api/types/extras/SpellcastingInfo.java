@@ -1,4 +1,4 @@
-package com.rithsagea.dnd.api5e.data.extra;
+package com.rithsagea.dnd.api.types.extras;
 
 import java.util.Map;
 

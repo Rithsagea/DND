@@ -3,11 +3,15 @@ package com.rithsagea.dnd;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Map.Entry;
 
 import com.rithsagea.dnd.api.SourceBook;
 import com.rithsagea.dnd.api.SourceRegistry;
 import com.rithsagea.dnd.api.types.DndClass;
+import com.rithsagea.dnd.api.types.DndClassLevel;
 import com.rithsagea.dnd.api.types.extras.AbilityScoreRequirement;
 import com.rithsagea.dnd.api.types.extras.ItemStack;
 import com.rithsagea.dnd.api.types.extras.MulticlassingInfo;
@@ -16,6 +20,7 @@ import com.rithsagea.dnd.api.types.extras.OptionList;
 import com.rithsagea.dnd.api.types.extras.Options;
 import com.rithsagea.dnd.api5e.Datapack;
 import com.rithsagea.dnd.api5e.data.classes.Dnd5eClass;
+import com.rithsagea.dnd.api5e.data.classes.Dnd5eClassLevel;
 import com.rithsagea.dnd.api5e.data.extra.EquipmentOption;
 import com.rithsagea.dnd.api5e.data.extra.EquipmentStack;
 import com.rithsagea.dnd.api5e.data.extra.ProficiencyOptions;
@@ -60,9 +65,8 @@ public class BuilderRunner {
 		return options;
 	}
 	
-	private static DndClass createClass(String id) {
+	private static DndClass createClass(Dnd5eClass model) {
 		DndClass res = new DndClass();
-		Dnd5eClass model = data5e.DndClass.get(id);
 		
 		res.id = model.id;
 		res.name = model.name;
@@ -101,7 +105,51 @@ public class BuilderRunner {
 		for(ProficiencyOptions op : model.proficiencyOptions)
 			res.multiclassing.proficiencyOptions.add(toOptions(op));
 		
+		res.levels = new ArrayList<>();
+		res.levels.addAll(Collections.nCopies(20, null));
+		for(int x = 0; x < model.levels.size(); x++) {
+			if(model.levels.get(x) != null) {
+				Dnd5eClassLevel mlvl = model.levels.get(x);
+				DndClassLevel lvl = new DndClassLevel();
+				
+				lvl.id = mlvl.id;
+				lvl.className = res.id;
+				lvl.level = mlvl.level;
+				lvl.abilityScoreBonus = mlvl.abilityScoreBonus;
+				lvl.proficiencyBonus = mlvl.proficiencyBonus;
+				lvl.features = mlvl.features;
+				
+				res.levels.set(x, lvl);
+			}
+		}
+		
+		//TODO magic. add to "extras" on a per class basis
+		//TODO magic for levels
 		return res;
+	}
+	
+	private static DndClass createRogue() {
+		Dnd5eClass model = data5e.DndClass.get("rogue");
+		DndClass c = createClass(model);
+		c.equipmentOptions.get(1).options.add(new OptionList(Arrays.asList(
+				new OptionItem<ItemStack>("item", new ItemStack("shortbow", 1)),
+				new OptionItem<ItemStack>("item", new ItemStack("arrow", 20)))));
+		for(int x = 0; x < 20; x++) {
+			Map<String, Integer> sneakAttackData = model.levels.get(x).classSpecific;
+			c.levels.get(x).extra = new HashMap<>();
+			c.levels.get(x).extra.put("sneak_attack", String.format("%dd%d",
+					sneakAttackData.get("dice_count"),
+					sneakAttackData.get("dice_value")));
+		}
+		
+		return c;
+	}
+	
+	private static DndClass createCleric() {
+		Dnd5eClass model = data5e.DndClass.get("cleric");
+		DndClass c = createClass(model);
+		
+		return c;
 	}
 	
 	public static void main(String[] args) {
@@ -112,18 +160,10 @@ public class BuilderRunner {
 		SourceBook book = SourceRegistry.getBooks().get("5e");
 		
 		System.out.println(data5e.DndClass.keySet());
-		String id = "rogue";
-		DndClass item = SourceRegistry.getItem(id, DndClass.class);
+		SourceRegistry.getItem("cleric", DndClass.class);
 		
-		item = createClass("rogue");
-		item.equipmentOptions.get(1).options.add(new OptionList(Arrays.asList(
-				new OptionItem<ItemStack>("item", new ItemStack("shortbow", 1)),
-				new OptionItem<ItemStack>("item", new ItemStack("arrow", 20)))));
-		
-		book.register("rogue", item);
-//		for(Language item : data5e.Language.values()) {
-//			book.register(item.id, item);
-//		}
+		book.register("rogue", createRogue());
+		book.register("cleric", createCleric());
 		
 		SourceRegistry.saveBooks();
 	}

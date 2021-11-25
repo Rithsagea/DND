@@ -91,4 +91,11 @@ public class SourceRegistry {
 		if(!registry.containsKey(clazz)) return null; // registry doesn't exist
 		return (T) (registry.get(clazz).get(id));
 	}
+	
+	protected static void registerItem(String id, Object obj) {
+		Class<?> clazz = obj.getClass();
+		if(!registry.containsKey(clazz))
+			registry.put(clazz, new HashMap<>());
+		registry.get(clazz).put(id, obj);
+	}
 }

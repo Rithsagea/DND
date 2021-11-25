@@ -1,5 +1,13 @@
 package com.rithsagea.dnd.api.types;
 
-public class DndClassLevel extends IndexedItem {
+import java.util.List;
 
+public class DndClassLevel extends IndexedItem {
+	public String className;
+	
+	public int level;
+	public int abilityScoreBonus;
+	public int proficiencyBonus;
+	
+	public List<String> features;
 }

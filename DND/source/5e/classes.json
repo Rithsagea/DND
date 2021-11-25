@@ -155,6 +155,264 @@
         ]
       }
     ],
+    "levels": [
+      {
+        "className": "rogue",
+        "level": 1,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [
+          "rogue-expertise-1",
+          "sneak-attack",
+          "thieves-cant"
+        ],
+        "id": "rogue-1",
+        "extra": {
+          "sneak_attack": "1d6"
+        }
+      },
+      {
+        "className": "rogue",
+        "level": 2,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [
+          "cunning-action"
+        ],
+        "id": "rogue-2",
+        "extra": {
+          "sneak_attack": "1d6"
+        }
+      },
+      {
+        "className": "rogue",
+        "level": 3,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [
+          "roguish-archetype"
+        ],
+        "id": "rogue-3",
+        "extra": {
+          "sneak_attack": "2d6"
+        }
+      },
+      {
+        "className": "rogue",
+        "level": 4,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          "rogue-ability-score-improvement-1"
+        ],
+        "id": "rogue-4",
+        "extra": {
+          "sneak_attack": "2d6"
+        }
+      },
+      {
+        "className": "rogue",
+        "level": 5,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 3,
+        "features": [
+          "uncanny-dodge"
+        ],
+        "id": "rogue-5",
+        "extra": {
+          "sneak_attack": "3d6"
+        }
+      },
+      {
+        "className": "rogue",
+        "level": 6,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 3,
+        "features": [
+          "rogue-expertise-2"
+        ],
+        "id": "rogue-6",
+        "extra": {
+          "sneak_attack": "3d6"
+        }
+      },
+      {
+        "className": "rogue",
+        "level": 7,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 3,
+        "features": [
+          "rogue-evasion"
+        ],
+        "id": "rogue-7",
+        "extra": {
+          "sneak_attack": "4d6"
+        }
+      },
+      {
+        "className": "rogue",
+        "level": 8,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 3,
+        "features": [
+          "rogue-ability-score-improvement-2"
+        ],
+        "id": "rogue-8",
+        "extra": {
+          "sneak_attack": "4d6"
+        }
+      },
+      {
+        "className": "rogue",
+        "level": 9,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 4,
+        "features": [],
+        "id": "rogue-9",
+        "extra": {
+          "sneak_attack": "5d6"
+        }
+      },
+      {
+        "className": "rogue",
+        "level": 10,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 4,
+        "features": [
+          "rogue-ability-score-improvement-3"
+        ],
+        "id": "rogue-10",
+        "extra": {
+          "sneak_attack": "5d6"
+        }
+      },
+      {
+        "className": "rogue",
+        "level": 11,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 4,
+        "features": [
+          "reliable-talent"
+        ],
+        "id": "rogue-11",
+        "extra": {
+          "sneak_attack": "6d6"
+        }
+      },
+      {
+        "className": "rogue",
+        "level": 12,
+        "abilityScoreBonus": 4,
+        "proficiencyBonus": 4,
+        "features": [
+          "rogue-ability-score-improvement-4"
+        ],
+        "id": "rogue-12",
+        "extra": {
+          "sneak_attack": "6d6"
+        }
+      },
+      {
+        "className": "rogue",
+        "level": 13,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 5,
+        "features": [],
+        "id": "rogue-13",
+        "extra": {
+          "sneak_attack": "7d6"
+        }
+      },
+      {
+        "className": "rogue",
+        "level": 14,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 5,
+        "features": [
+          "blindsense"
+        ],
+        "id": "rogue-14",
+        "extra": {
+          "sneak_attack": "7d6"
+        }
+      },
+      {
+        "className": "rogue",
+        "level": 15,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 5,
+        "features": [
+          "slippery-mind"
+        ],
+        "id": "rogue-15",
+        "extra": {
+          "sneak_attack": "8d6"
+        }
+      },
+      {
+        "className": "rogue",
+        "level": 16,
+        "abilityScoreBonus": 5,
+        "proficiencyBonus": 5,
+        "features": [
+          "rogue-ability-score-improvement-5"
+        ],
+        "id": "rogue-16",
+        "extra": {
+          "sneak_attack": "8d6"
+        }
+      },
+      {
+        "className": "rogue",
+        "level": 17,
+        "abilityScoreBonus": 4,
+        "proficiencyBonus": 6,
+        "features": [],
+        "id": "rogue-17",
+        "extra": {
+          "sneak_attack": "9d6"
+        }
+      },
+      {
+        "className": "rogue",
+        "level": 18,
+        "abilityScoreBonus": 4,
+        "proficiencyBonus": 6,
+        "features": [
+          "elusive"
+        ],
+        "id": "rogue-18",
+        "extra": {
+          "sneak_attack": "9d6"
+        }
+      },
+      {
+        "className": "rogue",
+        "level": 19,
+        "abilityScoreBonus": 6,
+        "proficiencyBonus": 6,
+        "features": [
+          "rogue-ability-score-improvement-6"
+        ],
+        "id": "rogue-19",
+        "extra": {
+          "sneak_attack": "10d6"
+        }
+      },
+      {
+        "className": "rogue",
+        "level": 20,
+        "abilityScoreBonus": 5,
+        "proficiencyBonus": 6,
+        "features": [
+          "stroke-of-luck"
+        ],
+        "id": "rogue-20",
+        "extra": {
+          "sneak_attack": "10d6"
+        }
+      }
+    ],
     "subclasses": [
       "thief"
     ],
@@ -228,5 +486,387 @@
       ]
     },
     "id": "rogue"
+  },
+  "cleric": {
+    "name": "Cleric",
+    "hitDie": 8,
+    "proficiencyOptions": [
+      {
+        "count": 2,
+        "options": [
+          {
+            "value": "skill-history",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-insight",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-medicine",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-persuasion",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-religion",
+            "__type": "proficiency"
+          }
+        ]
+      }
+    ],
+    "proficiencies": [
+      "light-armor",
+      "medium-armor",
+      "shields",
+      "simple-weapons"
+    ],
+    "savingThrows": [
+      "wis",
+      "cha"
+    ],
+    "startingEquipment": [
+      {
+        "item": "shield",
+        "count": 1
+      }
+    ],
+    "equipmentOptions": [
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "item": "mace",
+              "count": 1
+            },
+            "__type": "item"
+          },
+          {
+            "value": {
+              "item": "warhammer",
+              "count": 1
+            },
+            "__type": "item"
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "item": "scale-mail",
+              "count": 1
+            },
+            "__type": "item"
+          },
+          {
+            "value": {
+              "item": "leather-armor",
+              "count": 1
+            },
+            "__type": "item"
+          },
+          {
+            "value": {
+              "item": "chain-mail",
+              "count": 1
+            },
+            "__type": "item"
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "item": "simple-weapons",
+              "count": 1
+            },
+            "__type": "item"
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "item": "priests-pack",
+              "count": 1
+            },
+            "__type": "item"
+          },
+          {
+            "value": {
+              "item": "explorers-pack",
+              "count": 1
+            },
+            "__type": "item"
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "options": []
+      }
+    ],
+    "levels": [
+      {
+        "className": "cleric",
+        "level": 1,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [
+          "spellcasting-cleric",
+          "divine-domain",
+          "domain-spells-1"
+        ],
+        "id": "cleric-1"
+      },
+      {
+        "className": "cleric",
+        "level": 2,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [
+          "channel-divinity-1-rest",
+          "channel-divinity-turn-undead"
+        ],
+        "id": "cleric-2"
+      },
+      {
+        "className": "cleric",
+        "level": 3,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [
+          "domain-spells-2"
+        ],
+        "id": "cleric-3"
+      },
+      {
+        "className": "cleric",
+        "level": 4,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          "cleric-ability-score-improvement-1"
+        ],
+        "id": "cleric-4"
+      },
+      {
+        "className": "cleric",
+        "level": 5,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 3,
+        "features": [
+          "domain-spells-3",
+          "destroy-undead-cr-1-2-or-below"
+        ],
+        "id": "cleric-5"
+      },
+      {
+        "className": "cleric",
+        "level": 6,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 3,
+        "features": [
+          "channel-divinity-2-rest"
+        ],
+        "id": "cleric-6"
+      },
+      {
+        "className": "cleric",
+        "level": 7,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 3,
+        "features": [
+          "domain-spells-4"
+        ],
+        "id": "cleric-7"
+      },
+      {
+        "className": "cleric",
+        "level": 8,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 3,
+        "features": [
+          "cleric-ability-score-improvement-2",
+          "destroy-undead-cr-1-or-below"
+        ],
+        "id": "cleric-8"
+      },
+      {
+        "className": "cleric",
+        "level": 9,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 4,
+        "features": [
+          "domain-spells-5"
+        ],
+        "id": "cleric-9"
+      },
+      {
+        "className": "cleric",
+        "level": 10,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 4,
+        "features": [
+          "divine-intervention"
+        ],
+        "id": "cleric-10"
+      },
+      {
+        "className": "cleric",
+        "level": 11,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 4,
+        "features": [
+          "destroy-undead-cr-2-or-below"
+        ],
+        "id": "cleric-11"
+      },
+      {
+        "className": "cleric",
+        "level": 12,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 4,
+        "features": [
+          "cleric-ability-score-improvement-3"
+        ],
+        "id": "cleric-12"
+      },
+      {
+        "className": "cleric",
+        "level": 13,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 5,
+        "features": [],
+        "id": "cleric-13"
+      },
+      {
+        "className": "cleric",
+        "level": 14,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 5,
+        "features": [
+          "destroy-undead-cr-3-or-below"
+        ],
+        "id": "cleric-14"
+      },
+      {
+        "className": "cleric",
+        "level": 15,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 5,
+        "features": [],
+        "id": "cleric-15"
+      },
+      {
+        "className": "cleric",
+        "level": 16,
+        "abilityScoreBonus": 4,
+        "proficiencyBonus": 5,
+        "features": [
+          "cleric-ability-score-improvement-4"
+        ],
+        "id": "cleric-16"
+      },
+      {
+        "className": "cleric",
+        "level": 17,
+        "abilityScoreBonus": 4,
+        "proficiencyBonus": 6,
+        "features": [
+          "destroy-undead-cr-4-or-below"
+        ],
+        "id": "cleric-17"
+      },
+      {
+        "className": "cleric",
+        "level": 18,
+        "abilityScoreBonus": 4,
+        "proficiencyBonus": 6,
+        "features": [
+          "channel-divinity-3-rest"
+        ],
+        "id": "cleric-18"
+      },
+      {
+        "className": "cleric",
+        "level": 19,
+        "abilityScoreBonus": 5,
+        "proficiencyBonus": 6,
+        "features": [
+          "cleric-ability-score-improvement-5"
+        ],
+        "id": "cleric-19"
+      },
+      {
+        "className": "cleric",
+        "level": 20,
+        "abilityScoreBonus": 5,
+        "proficiencyBonus": 6,
+        "features": [
+          "divine-intervention-improvement"
+        ],
+        "id": "cleric-20"
+      }
+    ],
+    "subclasses": [
+      "life"
+    ],
+    "multiclassing": {
+      "abilityScoreRequirements": {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "abilityScore": "wis",
+              "value": 13
+            },
+            "__type": "ability_score"
+          }
+        ]
+      },
+      "proficiencies": [
+        "light-armor",
+        "medium-armor",
+        "shields"
+      ],
+      "proficiencyOptions": [
+        {
+          "count": 2,
+          "options": [
+            {
+              "value": "skill-history",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-insight",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-medicine",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-persuasion",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-religion",
+              "__type": "proficiency"
+            }
+          ]
+        }
+      ]
+    },
+    "id": "cleric"
   }
 }

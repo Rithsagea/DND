@@ -16,6 +16,8 @@ public class DndClass extends IndexedItem {
 	public List<ItemStack> startingEquipment;
 	public List<Options> equipmentOptions;
 	
+	public List<DndClassLevel> levels;
+	
 	public List<String> subclasses;
 	
 	public MulticlassingInfo multiclassing;

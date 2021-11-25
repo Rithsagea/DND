@@ -96,6 +96,8 @@ public class SourceBook implements Comparable<SourceBook> {
 		Class<?> clazz = obj.getClass();
 		if(!data.containsKey(clazz)) data.put(clazz, new LinkedHashMap<>());
 		data.get(clazz).put(key, obj);
+		
+		SourceRegistry.registerItem(key, obj);
 	}
 	
 	public File getDir() {

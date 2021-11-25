@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.stream.Collectors;
 
 import com.rithsagea.dnd.api.SourceBook;
 import com.rithsagea.dnd.api.SourceRegistry;
@@ -237,6 +238,37 @@ public class BuilderRunner {
 		return c;
 	}
 	
+	@SuppressWarnings("unchecked")
+	private static DndClass createFighter() {
+		Dnd5eClass model = data5e.DndClass.get("fighter");
+		DndClass c = createClass(model);
+		
+		c.equipmentOptions.get(0).options.add(new OptionList(Arrays.asList(
+				new OptionItem<ItemStack>("item", new ItemStack("leather-armor", 1)),
+				new OptionItem<ItemStack>("item", new ItemStack("longbow", 1)),
+				new OptionItem<ItemStack>("item", new ItemStack("arrow", 20)))));
+		
+		((OptionItem<ItemStack>)c.equipmentOptions.get(1).options.get(0)).type = "category";
+		((OptionItem<ItemStack>)c.equipmentOptions.get(1).options.get(0)).value.count = 2;
+		c.equipmentOptions.get(1).options.add(0, new OptionList(Arrays.asList(
+				new OptionItem<ItemStack>("item", new ItemStack("shield", 1)),
+				new OptionItem<ItemStack>("category", new ItemStack("martial-weapons", 1)))));
+		
+		c.equipmentOptions.get(2).options.add(new OptionList(Arrays.asList(
+				new OptionItem<ItemStack>("item", new ItemStack("crossbow-light", 1)),
+				new OptionItem<ItemStack>("item", new ItemStack("crossbow-bolt", 20)))));
+		
+		for(int x = 0; x < 20; x++) {
+			c.levels.get(x).extra = new HashMap<>();
+			
+			c.levels.get(x).extra.put("actionSurges", model.levels.get(x).classSpecific.get("action_surges"));
+			c.levels.get(x).extra.put("indomitableUses", model.levels.get(x).classSpecific.get("indomitable_uses"));
+			c.levels.get(x).extra.put("extraAttacks", model.levels.get(x).classSpecific.get("extra_attacks"));
+		}
+		
+		return c;
+	}
+	
 	private static DndClass createRogue() {
 		Dnd5eClass model = data5e.DndClass.get("rogue");
 		DndClass c = createClass(model);
@@ -261,13 +293,15 @@ public class BuilderRunner {
 		data5e = Datapack.loadDatapack(new File("5e.json"));
 		SourceBook book = SourceRegistry.getBooks().get("5e");
 		
-		System.out.println(data5e.DndClass.keySet());
+		System.out.println(data5e.DndClass.keySet().stream().sorted().collect(Collectors.toList()));
 		SourceRegistry.getItem("druid", DndClass.class);
 		
 		book.register("barbarian", createBarbarian());
 		book.register("bard", createBard());
 		book.register("cleric", createCleric());
 		book.register("druid", createDruid());
+		book.register("fighter", createFighter());
+		
 		book.register("rogue", createRogue());
 		
 		SourceRegistry.saveBooks();

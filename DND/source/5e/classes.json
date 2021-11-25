@@ -3679,5 +3679,538 @@
       ]
     },
     "id": "druid"
+  },
+  "fighter": {
+    "name": "Fighter",
+    "hitDie": 10,
+    "proficiencyOptions": [
+      {
+        "count": 2,
+        "options": [
+          {
+            "value": "skill-acrobatics",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-animal-handling",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-athletics",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-history",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-insight",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-intimidation",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-perception",
+            "__type": "proficiency"
+          },
+          {
+            "value": "skill-survival",
+            "__type": "proficiency"
+          }
+        ]
+      }
+    ],
+    "proficiencies": [
+      "all-armor",
+      "shields",
+      "simple-weapons",
+      "martial-weapons"
+    ],
+    "savingThrows": [
+      "str",
+      "con"
+    ],
+    "startingEquipment": [],
+    "equipmentOptions": [
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "item": "chain-mail",
+              "count": 1
+            },
+            "__type": "item"
+          },
+          [
+            {
+              "value": {
+                "item": "leather-armor",
+                "count": 1
+              },
+              "__type": "item"
+            },
+            {
+              "value": {
+                "item": "longbow",
+                "count": 1
+              },
+              "__type": "item"
+            },
+            {
+              "value": {
+                "item": "arrow",
+                "count": 20
+              },
+              "__type": "item"
+            }
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "options": [
+          [
+            {
+              "value": {
+                "item": "shield",
+                "count": 1
+              },
+              "__type": "item"
+            },
+            {
+              "value": {
+                "item": "martial-weapons",
+                "count": 1
+              },
+              "__type": "category"
+            }
+          ],
+          {
+            "value": {
+              "item": "martial-weapons",
+              "count": 2
+            },
+            "__type": "category"
+          }
+        ]
+      },
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "item": "handaxe",
+              "count": 1
+            },
+            "__type": "item"
+          },
+          [
+            {
+              "value": {
+                "item": "crossbow-light",
+                "count": 1
+              },
+              "__type": "item"
+            },
+            {
+              "value": {
+                "item": "crossbow-bolt",
+                "count": 20
+              },
+              "__type": "item"
+            }
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "item": "dungeoneers-pack",
+              "count": 1
+            },
+            "__type": "item"
+          },
+          {
+            "value": {
+              "item": "explorers-pack",
+              "count": 1
+            },
+            "__type": "item"
+          }
+        ]
+      }
+    ],
+    "levels": [
+      {
+        "className": "fighter",
+        "level": 1,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [
+          "fighter-fighting-style",
+          "second-wind"
+        ],
+        "id": "fighter-1",
+        "extra": {
+          "indomitableUses": 0,
+          "actionSurges": 0,
+          "extraAttacks": 0
+        }
+      },
+      {
+        "className": "fighter",
+        "level": 2,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [
+          "action-surge-1-use"
+        ],
+        "id": "fighter-2",
+        "extra": {
+          "indomitableUses": 0,
+          "actionSurges": 1,
+          "extraAttacks": 0
+        }
+      },
+      {
+        "className": "fighter",
+        "level": 3,
+        "abilityScoreBonus": 0,
+        "proficiencyBonus": 2,
+        "features": [
+          "martial-archetype"
+        ],
+        "id": "fighter-3",
+        "extra": {
+          "indomitableUses": 0,
+          "actionSurges": 1,
+          "extraAttacks": 0
+        }
+      },
+      {
+        "className": "fighter",
+        "level": 4,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          "fighter-ability-score-improvement-1"
+        ],
+        "id": "fighter-4",
+        "extra": {
+          "indomitableUses": 0,
+          "actionSurges": 1,
+          "extraAttacks": 0
+        }
+      },
+      {
+        "className": "fighter",
+        "level": 5,
+        "abilityScoreBonus": 1,
+        "proficiencyBonus": 3,
+        "features": [
+          "extra-attack-1"
+        ],
+        "id": "fighter-5",
+        "extra": {
+          "indomitableUses": 0,
+          "actionSurges": 1,
+          "extraAttacks": 1
+        }
+      },
+      {
+        "className": "fighter",
+        "level": 6,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 3,
+        "features": [
+          "fighter-ability-score-improvement-2"
+        ],
+        "id": "fighter-6",
+        "extra": {
+          "indomitableUses": 0,
+          "actionSurges": 1,
+          "extraAttacks": 1
+        }
+      },
+      {
+        "className": "fighter",
+        "level": 7,
+        "abilityScoreBonus": 2,
+        "proficiencyBonus": 3,
+        "features": [],
+        "id": "fighter-7",
+        "extra": {
+          "indomitableUses": 0,
+          "actionSurges": 1,
+          "extraAttacks": 1
+        }
+      },
+      {
+        "className": "fighter",
+        "level": 8,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 3,
+        "features": [
+          "fighter-ability-score-improvement-3"
+        ],
+        "id": "fighter-8",
+        "extra": {
+          "indomitableUses": 0,
+          "actionSurges": 1,
+          "extraAttacks": 1
+        }
+      },
+      {
+        "className": "fighter",
+        "level": 9,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 4,
+        "features": [
+          "indomitable-1-use"
+        ],
+        "id": "fighter-9",
+        "extra": {
+          "indomitableUses": 1,
+          "actionSurges": 1,
+          "extraAttacks": 1
+        }
+      },
+      {
+        "className": "fighter",
+        "level": 10,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 4,
+        "features": [],
+        "id": "fighter-10",
+        "extra": {
+          "indomitableUses": 1,
+          "actionSurges": 1,
+          "extraAttacks": 1
+        }
+      },
+      {
+        "className": "fighter",
+        "level": 11,
+        "abilityScoreBonus": 3,
+        "proficiencyBonus": 4,
+        "features": [
+          "extra-attack-2"
+        ],
+        "id": "fighter-11",
+        "extra": {
+          "indomitableUses": 1,
+          "actionSurges": 1,
+          "extraAttacks": 2
+        }
+      },
+      {
+        "className": "fighter",
+        "level": 12,
+        "abilityScoreBonus": 4,
+        "proficiencyBonus": 4,
+        "features": [
+          "fighter-ability-score-improvement-4"
+        ],
+        "id": "fighter-12",
+        "extra": {
+          "indomitableUses": 1,
+          "actionSurges": 1,
+          "extraAttacks": 2
+        }
+      },
+      {
+        "className": "fighter",
+        "level": 13,
+        "abilityScoreBonus": 4,
+        "proficiencyBonus": 5,
+        "features": [
+          "indomitable-2-uses"
+        ],
+        "id": "fighter-13",
+        "extra": {
+          "indomitableUses": 2,
+          "actionSurges": 1,
+          "extraAttacks": 2
+        }
+      },
+      {
+        "className": "fighter",
+        "level": 14,
+        "abilityScoreBonus": 5,
+        "proficiencyBonus": 5,
+        "features": [
+          "fighter-ability-score-improvement-5"
+        ],
+        "id": "fighter-14",
+        "extra": {
+          "indomitableUses": 2,
+          "actionSurges": 1,
+          "extraAttacks": 2
+        }
+      },
+      {
+        "className": "fighter",
+        "level": 15,
+        "abilityScoreBonus": 5,
+        "proficiencyBonus": 5,
+        "features": [],
+        "id": "fighter-15",
+        "extra": {
+          "indomitableUses": 2,
+          "actionSurges": 1,
+          "extraAttacks": 2
+        }
+      },
+      {
+        "className": "fighter",
+        "level": 16,
+        "abilityScoreBonus": 6,
+        "proficiencyBonus": 5,
+        "features": [
+          "fighter-ability-score-improvement-6"
+        ],
+        "id": "fighter-16",
+        "extra": {
+          "indomitableUses": 2,
+          "actionSurges": 1,
+          "extraAttacks": 2
+        }
+      },
+      {
+        "className": "fighter",
+        "level": 17,
+        "abilityScoreBonus": 6,
+        "proficiencyBonus": 6,
+        "features": [
+          "action-surge-2-uses",
+          "indomitable-3-uses"
+        ],
+        "id": "fighter-17",
+        "extra": {
+          "indomitableUses": 3,
+          "actionSurges": 2,
+          "extraAttacks": 2
+        }
+      },
+      {
+        "className": "fighter",
+        "level": 18,
+        "abilityScoreBonus": 6,
+        "proficiencyBonus": 6,
+        "features": [],
+        "id": "fighter-18",
+        "extra": {
+          "indomitableUses": 3,
+          "actionSurges": 2,
+          "extraAttacks": 2
+        }
+      },
+      {
+        "className": "fighter",
+        "level": 19,
+        "abilityScoreBonus": 7,
+        "proficiencyBonus": 6,
+        "features": [
+          "fighter-ability-score-improvement-7"
+        ],
+        "id": "fighter-19",
+        "extra": {
+          "indomitableUses": 3,
+          "actionSurges": 2,
+          "extraAttacks": 2
+        }
+      },
+      {
+        "className": "fighter",
+        "level": 20,
+        "abilityScoreBonus": 7,
+        "proficiencyBonus": 6,
+        "features": [
+          "extra-attack-3"
+        ],
+        "id": "fighter-20",
+        "extra": {
+          "indomitableUses": 3,
+          "actionSurges": 2,
+          "extraAttacks": 3
+        }
+      }
+    ],
+    "subclasses": [
+      "champion"
+    ],
+    "multiclassing": {
+      "abilityScoreRequirements": {
+        "count": 1,
+        "options": [
+          {
+            "value": {
+              "abilityScore": "str",
+              "value": 13
+            },
+            "__type": "ability_score"
+          },
+          {
+            "value": {
+              "abilityScore": "dex",
+              "value": 13
+            },
+            "__type": "ability_score"
+          }
+        ]
+      },
+      "proficiencies": [
+        "light-armor",
+        "medium-armor",
+        "shields",
+        "simple-weapons",
+        "martial-weapons"
+      ],
+      "proficiencyOptions": [
+        {
+          "count": 2,
+          "options": [
+            {
+              "value": "skill-acrobatics",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-animal-handling",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-athletics",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-history",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-insight",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-intimidation",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-perception",
+              "__type": "proficiency"
+            },
+            {
+              "value": "skill-survival",
+              "__type": "proficiency"
+            }
+          ]
+        }
+      ]
+    },
+    "id": "fighter"
   }
 }

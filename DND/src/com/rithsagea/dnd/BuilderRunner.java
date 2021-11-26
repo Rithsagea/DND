@@ -27,6 +27,8 @@ import com.rithsagea.dnd.api5e.data.classes.Dnd5eClassLevel;
 import com.rithsagea.dnd.api5e.data.extra.EquipmentOption;
 import com.rithsagea.dnd.api5e.data.extra.EquipmentStack;
 import com.rithsagea.dnd.api5e.data.extra.ProficiencyOptions;
+import com.rithsagea.dnd.base.MysticArcanumInfo;
+import com.rithsagea.dnd.base.SpellSlotCosts;
 
 public class BuilderRunner {
 	
@@ -99,13 +101,13 @@ public class BuilderRunner {
 		for(ProficiencyOptions op : model.proficiencyOptions)
 			res.proficiencyOptions.add(toOptions(op));
 		
-		res.startingEquipment = new ArrayList<>();
+		res.equipment = new ArrayList<>();
 		for(EquipmentStack eq : model.startingEquipment) {
 			ItemStack stack = new ItemStack();
 			stack.count = eq.count;
 			stack.item = eq.equipment;
 			
-			res.startingEquipment.add(stack);
+			res.equipment.add(stack);
 		}
 		
 		res.equipmentOptions = new ArrayList<>();
@@ -356,6 +358,96 @@ public class BuilderRunner {
 		return c;
 	}
 	
+	private static int getFromMap(Map<String, Integer> map, String key) {
+		if(map.containsKey(key)) return map.get(key);
+		return -1;
+	}
+	
+	@SuppressWarnings("unchecked")
+	private static DndClass createSorcerer() {
+		Dnd5eClass model = data5e.DndClass.get("sorcerer");
+		DndClass c = createClass(model);
+		
+		c.equipmentOptions.get(0).options.add(0, new OptionList(Arrays.asList(
+				new OptionItem<ItemStack>("item", new ItemStack("crossbow-light", 1)),
+				new OptionItem<ItemStack>("item", new ItemStack("crossbow-bolt", 20)))));
+		
+		((OptionItem<ItemStack>)c.equipmentOptions.get(1).options.get(1)).type = "category";
+		
+		c.spellcasting = model.spellcastingInfo;
+		c.spells = model.spells;
+		
+		for(int x = 0; x < 20; x++) {
+			c.levels.get(x).spellcasting = toSpellcasting(model.levels.get(x).spellcasting);
+			
+			c.levels.get(x).extra = new HashMap<>();
+			
+			c.levels.get(x).extra.put("sorceryPoints", model.levels.get(x).classSpecific.get("sorcery_points"));
+			c.levels.get(x).extra.put("metamagicKnown", model.levels.get(x).classSpecific.get("metamagic_known"));
+			SpellSlotCosts costs = new SpellSlotCosts();
+			costs.spellSlotLevel1Cost = getFromMap(model.levels.get(x).classSpecific, "spell_slot_level_1");
+			costs.spellSlotLevel2Cost = getFromMap(model.levels.get(x).classSpecific, "spell_slot_level_2");
+			costs.spellSlotLevel3Cost = getFromMap(model.levels.get(x).classSpecific, "spell_slot_level_3");
+			costs.spellSlotLevel4Cost = getFromMap(model.levels.get(x).classSpecific, "spell_slot_level_4");
+			costs.spellSlotLevel5Cost = getFromMap(model.levels.get(x).classSpecific, "spell_slot_level_5");
+			
+			c.levels.get(x).extra.put("spellSlotCosts", costs);
+		}
+		
+		return c;
+	}
+	
+	@SuppressWarnings("unchecked")
+	private static DndClass createWarlock() {
+		Dnd5eClass model = data5e.DndClass.get("warlock");
+		DndClass c = createClass(model);
+		
+		((OptionItem<ItemStack>)c.equipmentOptions.get(0).options.get(0)).type = "category";
+		c.equipmentOptions.get(0).options.add(0, new OptionList(Arrays.asList(
+				new OptionItem<ItemStack>("item", new ItemStack("crossbow-light", 1)),
+				new OptionItem<ItemStack>("item", new ItemStack("crossbow-bolt", 20)))));
+		((OptionItem<ItemStack>)c.equipmentOptions.get(1).options.get(1)).type = "category";
+		c.equipmentOptions.get(3).options.add(new OptionItem<ItemStack>("category", new ItemStack("simple-weapons", 1)));
+		
+		c.spellcasting = model.spellcastingInfo;
+		c.spells = model.spells;
+		
+		for(int x = 0; x < 20; x++) {
+			c.levels.get(x).spellcasting = toSpellcasting(model.levels.get(x).spellcasting);
+			c.levels.get(x).extra = new HashMap<>();
+			c.levels.get(x).extra.put("invocationsKnown", model.levels.get(x).classSpecific.get("invocations_known"));
+			
+			MysticArcanumInfo arcana = new MysticArcanumInfo();
+			arcana.mysticArcanumLevel6 = getFromMap(model.levels.get(x).classSpecific, "mystic_arcanum_level_6");
+			arcana.mysticArcanumLevel7 = getFromMap(model.levels.get(x).classSpecific, "mystic_arcanum_level_7");
+			arcana.mysticArcanumLevel8 = getFromMap(model.levels.get(x).classSpecific, "mystic_arcanum_level_8");
+			arcana.mysticArcanumLevel9 = getFromMap(model.levels.get(x).classSpecific, "mystic_arcanum_level_9");
+			c.levels.get(x).extra.put("mystic_arcana", arcana);
+		}
+		
+		return c;
+	}
+	
+	@SuppressWarnings("unchecked")
+	private static DndClass createWizard() {
+		Dnd5eClass model = data5e.DndClass.get("wizard");
+		DndClass c = createClass(model);
+		
+		((OptionItem<ItemStack>)c.equipmentOptions.get(1).options.get(1)).type = "category";
+		((OptionItem<ItemStack>)c.equipmentOptions.get(2).options.get(1)).value.item = "explorers-pack";
+		
+		c.spellcasting = model.spellcastingInfo;
+		c.spells = model.spells;
+		
+		for(int x = 0; x < 20; x++) {
+			c.levels.get(x).spellcasting = toSpellcasting(model.levels.get(x).spellcasting);
+			c.levels.get(x).extra = new HashMap<>();
+			c.levels.get(x).extra.put("arcaneRecoveryLevels", model.levels.get(x).classSpecific.get("arcane_recovery_levels"));
+		}
+		
+		return c;
+	}
+	
 	public static void main(String[] args) {
 		SourceRegistry.init(SOURCE_DIRECTORY);
 		SourceRegistry.load();
@@ -374,8 +466,10 @@ public class BuilderRunner {
 		book.register("monk", createMonk());
 		book.register("paladin", createPaladin());
 		book.register("ranger", createRanger());
-		
 		book.register("rogue", createRogue());
+		book.register("sorcerer", createSorcerer());
+		book.register("warlock", createWarlock());
+		book.register("wizard", createWizard());
 		
 		SourceRegistry.saveBooks();
 	}

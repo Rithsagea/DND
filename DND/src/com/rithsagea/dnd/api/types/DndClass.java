@@ -14,7 +14,7 @@ public class DndClass extends IndexedItem {
 	public List<String> proficiencies;
 	public List<String> savingThrows;
 	
-	public List<ItemStack> startingEquipment;
+	public List<ItemStack> equipment;
 	public List<Options> equipmentOptions;
 	
 	public SpellcastingInfo spellcasting;

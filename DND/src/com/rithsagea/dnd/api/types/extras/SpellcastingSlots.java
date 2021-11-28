@@ -1,5 +1,8 @@
 package com.rithsagea.dnd.api.types.extras;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class SpellcastingSlots {
 	public int cantripsKnown;
 	public int spellsKnown;
@@ -12,4 +15,17 @@ public class SpellcastingSlots {
 	public int spellSlotsLevel7;
 	public int spellSlotsLevel8;
 	public int spellSlotsLevel9;
+	
+	public List<Integer> getSlots() {
+		return Arrays.asList(
+				spellSlotsLevel1,
+				spellSlotsLevel2,
+				spellSlotsLevel3,
+				spellSlotsLevel4,
+				spellSlotsLevel5,
+				spellSlotsLevel6,
+				spellSlotsLevel7,
+				spellSlotsLevel8,
+				spellSlotsLevel9);
+	}
 }

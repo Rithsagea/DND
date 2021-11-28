@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.rithsagea.dnd.api.types.AbilityScore;
+import com.rithsagea.dnd.api.types.DndClass;
+import com.rithsagea.dnd.api.types.DndClassLevel;
 import com.rithsagea.dnd.api.types.Skill;
 
 public class CharacterSheet {
@@ -70,6 +72,17 @@ public class CharacterSheet {
 	/** DndClass.class **/
 	public String characterClass;
 	
+	/** Feature.class **/
+	public List<String> features;
+	
+	public List<Integer> maxSpellSlots;
+	public List<Integer> spellSlots;
+	public List<List<String>> spells; // TODO: actually write model for spells
+	
+	public String spellcastingClass;
+	public String spellcastingAbility;
+	public int spellAttackBonus;
+	
 	//UNFINISHED VVV
 	
 	public String characterSubclass;
@@ -77,11 +90,9 @@ public class CharacterSheet {
 	public String characterSubrace;
 	
 	//the feature and traits section of the character sheet
-	public List<String> features;
 	public List<String> traits;
 
 	public String backstory;
-//	public String extraTraits; // merge into the above features, traits, objects
 	public String treasure; // this is technically inventory, reimplement later
 	
 	public String skin;
@@ -104,16 +115,6 @@ public class CharacterSheet {
 	public List<String> proficiencies; // TODO: change to new class, should include languages
 	public Map<String, Integer> equipment; // TODO: box this, quantitize maybe ahhhh
 	
-	//MAGIC
-	
-	public List<Integer> maxSpellSlots;
-	public List<Integer> spellSlots;
-	public List<List<String>> spells;
-	
-	public String spellcastingClass;
-	public String spellcastingAbility;
-	public int spellAttackBonus;
-	
 	public void calc() {
 		for(String key : SourceRegistry.getKeys(AbilityScore.class)) {
 			abilityModifiers.put(key, (abilityScores.get(key) - 10) / 2);
@@ -130,6 +131,20 @@ public class CharacterSheet {
 		
 		while(level < 20 && experiencePoints >= EXPERIENCE_TABLE[level]) level++;
 		
-		proficiencyBonus = 2 + (level - 1) / 4;
+		DndClass charClass = SourceRegistry.getItem(characterClass, DndClass.class);
+		if(features == null) features = new ArrayList<>();
+		for(int x = 0; x < level; x++) {
+			features.addAll(charClass.levels.get(x).features);
+		}
+		DndClassLevel classLvl = charClass.levels.get(level - 1);
+		proficiencyBonus = 2 + (level - 1) / 4; //not sure if this is different
+		maxSpellSlots = classLvl.spellcasting.getSlots();
+		//max spell slots and learned spells need to be stored
+		
+		//TODO ability score improvement
+		
+		spellcastingAbility = charClass.spellcasting.spellcastingAbility;
+		spellcastingClass = charClass.name;
+		
 	}
 }

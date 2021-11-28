@@ -28,8 +28,6 @@ public class SkeletonRunner {
 		c.abilityScores.put("wis", 14);
 		c.abilityScores.put("cha", 14);
 		
-		c.calc();
-		
 		c.money.put("cp", 50);
 		c.money.put("sp", 20);
 		c.money.put("ep", 0);
@@ -38,10 +36,13 @@ public class SkeletonRunner {
 		
 		c.languages.add("common");
 		
+		c.characterClass = "wizard";
+		
+		c.calc();
+		
 		System.out.println("Level: " + c.level);
 		System.out.println(c.proficiencyBonus);
-		
-		c.characterClass = "wizard";
+		System.out.println(c.spellcastingAbility);
 		
 		for(Coin coin : SourceRegistry.getItems(Coin.class)) {
 			System.out.println(coin.name + ": " + c.money.get(coin.id) + coin.id);

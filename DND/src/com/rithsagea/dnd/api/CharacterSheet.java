@@ -13,7 +13,8 @@ public class CharacterSheet {
 	public String name;
 	public String playerName;
 	
-	public String alignment; //Alignment.class
+	/** Alignment.class **/
+	public String alignment;
 	
 	public int experiencePoints;
 	public int level;
@@ -41,11 +42,11 @@ public class CharacterSheet {
 		355000
 	};
 	
-	/** AbilityScore.class */
+	/** AbilityScore.class **/
 	public Map<String, Integer> abilityScores = new HashMap<>();
 	public Map<String, Integer> abilityModifiers = new HashMap<>();
 	public Map<String, Integer> savingThrows = new HashMap<>();
-	/** Skill.class */
+	/** Skill.class **/
 	public Map<String, Integer> skills = new HashMap<>();
 	
 	public int inspiration;
@@ -60,16 +61,20 @@ public class CharacterSheet {
 	public String bonds;
 	public String flaws;
 	
-	/** Coin.class */
+	/** Coin.class **/
 	public Map<String, Integer> money = new HashMap<>();
 	
-	/** Language.class */
+	/** Language.class **/
 	public List<String> languages = new ArrayList<>();
+	
+	/** DndClass.class **/
+	public String characterClass;
 	
 	//UNFINISHED VVV
 	
-	public String characterClass; // TODO: this includes level, replace this with an object later
+	public String characterSubclass;
 	public String characterRace;
+	public String characterSubrace;
 	
 	//the feature and traits section of the character sheet
 	public List<String> features;

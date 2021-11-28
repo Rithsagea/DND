@@ -41,6 +41,8 @@ public class SkeletonRunner {
 		System.out.println("Level: " + c.level);
 		System.out.println(c.proficiencyBonus);
 		
+		c.characterClass = "wizard";
+		
 		for(Coin coin : SourceRegistry.getItems(Coin.class)) {
 			System.out.println(coin.name + ": " + c.money.get(coin.id) + coin.id);
 		}

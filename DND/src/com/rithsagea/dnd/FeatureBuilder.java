@@ -29,7 +29,6 @@ public class FeatureBuilder {
 			feature.classId = model.classId;
 			feature.subclassId = model.subclassId;
 			feature.description = model.description;
-			feature.level = model.level;
 			
 			book.register(key, feature);
 		}

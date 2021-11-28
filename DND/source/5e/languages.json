@@ -1,68 +1,48 @@
 {
-  "draconic": {
-    "name": "Draconic",
-    "script": "Draconic",
-    "id": "draconic"
-  },
-  "deep-speech": {
-    "name": "Deep Speech",
-    "script": "None",
-    "id": "deep-speech"
-  },
-  "orc": {
-    "name": "Orc",
-    "script": "Dwarvish",
-    "id": "orc"
-  },
-  "sylvan": {
-    "name": "Sylvan",
-    "script": "Elvish",
-    "id": "sylvan"
-  },
-  "primordial": {
-    "name": "Primordial",
-    "script": "Dwarvish",
-    "id": "primordial"
-  },
-  "undercommon": {
-    "name": "Undercommon",
-    "script": "Elvish",
-    "id": "undercommon"
+  "abyssal": {
+    "name": "Abyssal",
+    "script": "Infernal",
+    "id": "abyssal"
   },
   "celestial": {
     "name": "Celestial",
     "script": "Celestial",
     "id": "celestial"
   },
-  "elvish": {
-    "name": "Elvish",
-    "script": "Elvish",
-    "id": "elvish"
+  "common": {
+    "name": "Common",
+    "script": "Common",
+    "id": "common"
   },
-  "infernal": {
-    "name": "Infernal",
-    "script": "Infernal",
-    "id": "infernal"
+  "deep-speech": {
+    "name": "Deep Speech",
+    "script": "None",
+    "id": "deep-speech"
+  },
+  "draconic": {
+    "name": "Draconic",
+    "script": "Draconic",
+    "id": "draconic"
   },
   "dwarvish": {
     "name": "Dwarvish",
     "script": "Dwarvish",
     "id": "dwarvish"
   },
-  "common": {
-    "name": "Common",
-    "script": "Common",
-    "id": "common"
-  },
-  "abyssal": {
-    "name": "Abyssal",
-    "script": "Infernal",
-    "id": "abyssal"
+  "elvish": {
+    "name": "Elvish",
+    "script": "Elvish",
+    "id": "elvish"
   },
   "giant": {
     "name": "Giant",
     "script": "Dwarvish",
     "id": "giant"
+  },
+  "gnomish": {
+    "name": "Gnomish",
+    "script": "Dwarvish",
+    "id": "gnomish"
   },
   "goblin": {
     "name": "Goblin",
@@ -74,9 +54,29 @@
     "script": "Common",
     "id": "halfling"
   },
-  "gnomish": {
-    "name": "Gnomish",
+  "infernal": {
+    "name": "Infernal",
+    "script": "Infernal",
+    "id": "infernal"
+  },
+  "orc": {
+    "name": "Orc",
     "script": "Dwarvish",
-    "id": "gnomish"
+    "id": "orc"
+  },
+  "primordial": {
+    "name": "Primordial",
+    "script": "Dwarvish",
+    "id": "primordial"
+  },
+  "sylvan": {
+    "name": "Sylvan",
+    "script": "Elvish",
+    "id": "sylvan"
+  },
+  "undercommon": {
+    "name": "Undercommon",
+    "script": "Elvish",
+    "id": "undercommon"
   }
 }

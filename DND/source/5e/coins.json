@@ -4,11 +4,6 @@
     "value": 1,
     "id": "cp"
   },
-  "sp": {
-    "name": "Silver",
-    "value": 10,
-    "id": "sp"
-  },
   "ep": {
     "name": "Electrum",
     "value": 50,
@@ -23,5 +18,10 @@
     "name": "Platinum",
     "value": 1000,
     "id": "pp"
+  },
+  "sp": {
+    "name": "Silver",
+    "value": 10,
+    "id": "sp"
   }
 }

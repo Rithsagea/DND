@@ -6,6 +6,4 @@ public class Feature extends IndexedItem {
 	
 	public String classId;
 	public String subclassId;
-	
-	public int level;
 }

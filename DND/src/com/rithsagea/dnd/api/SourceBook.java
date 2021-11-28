@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.TreeMap;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -19,6 +20,7 @@ import com.rithsagea.dnd.api.types.Coin;
 import com.rithsagea.dnd.api.types.DndClass;
 import com.rithsagea.dnd.api.types.DndSubclass;
 import com.rithsagea.dnd.api.types.Feature;
+import com.rithsagea.dnd.api.types.IndexedItem;
 import com.rithsagea.dnd.api.types.Language;
 import com.rithsagea.dnd.api.types.Skill;
 
@@ -67,18 +69,15 @@ public class SourceBook implements Comparable<SourceBook> {
 			String fileName = file.getName();
 			if(fileName.endsWith(".json")) {
 				Class<?> clazz = DATA_TYPES.get(fileName.substring(0, fileName.length() - 5));
-				Map<String, Object> map = new LinkedHashMap<>();
+				Map<String, Object> map = null;
 				try(Reader reader = new FileReader(file)) {
-					Map<String, ?> input = gson.fromJson(reader,
-							TypeToken.getParameterized(LinkedHashMap.class, String.class, clazz).getType());
-					for(Entry<String, ?> entry : input.entrySet()) {
-						map.put(entry.getKey(), entry.getValue());
-					}
+					map = gson.fromJson(reader,
+							TypeToken.getParameterized(TreeMap.class, String.class, clazz).getType());
 				} catch(Exception e) {
 					e.printStackTrace();
 				}
 				
-				data.put(clazz, map);
+				if(map != null) data.put(clazz, map);
 			}
 		}
 	}
@@ -102,6 +101,10 @@ public class SourceBook implements Comparable<SourceBook> {
 		data.get(clazz).put(key, obj);
 		
 		SourceRegistry.registerItem(key, obj);
+	}
+	
+	public void register(IndexedItem item) {
+		register(item.id, item);
 	}
 	
 	public File getDir() {

@@ -55,5 +55,63 @@
       null
     ],
     "id": "berserker"
+  },
+  "totem-warrior": {
+    "name": "Totem Warrior",
+    "flavor": "Primal Path",
+    "description": "The Path  of the Totem Warrior is a spiritual journey, as the barbarian accepts a spirit animal  as guide, protector, and inspiration. In battle, your totem spirit fills you with supernatural might, adding magical fuel to your barbarian rage. Most barbarian tribes consider a totem animal to be kin to a particular clan. In such cases, it is unusual for an individual to have more than one totem animal spirit, though exceptions exist.",
+    "parentClass": "barbarian",
+    "levels": [
+      null,
+      null,
+      {
+        "subclassId": "totem-warrior",
+        "level": 3,
+        "features": [
+          "spirit-seeker",
+          "totem-spirit"
+        ],
+        "id": "totem-warrior-3"
+      },
+      null,
+      null,
+      {
+        "subclassId": "totem-warrior",
+        "level": 6,
+        "features": [
+          "aspect-of-the-beast"
+        ],
+        "id": "totem-warrior-6"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "totem-warrior",
+        "level": 10,
+        "features": [
+          "spirit-walker"
+        ],
+        "id": "totem-warrior-10"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "totem-warrior",
+        "level": 14,
+        "features": [
+          "spirit-walker"
+        ],
+        "id": "totem-warrior-14"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "id": "totem-warrior"
   }
 }

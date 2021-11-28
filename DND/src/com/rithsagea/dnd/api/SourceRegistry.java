@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.TreeMap;
 
 public class SourceRegistry {
 	
@@ -51,7 +52,7 @@ public class SourceRegistry {
 		for(String key1 : SourceBook.DATA_TYPES.keySet()) {
 			Class<?> clazz = SourceBook.DATA_TYPES.get(key1);
 			
-			if(!registry.containsKey(clazz)) registry.put(clazz, new HashMap<>());
+			if(!registry.containsKey(clazz)) registry.put(clazz, new TreeMap<>());
 			Map<String, Object> values = book.data.get(clazz);
 			Map<String, Object> registryMap = registry.get(clazz);
 			

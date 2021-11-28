@@ -21,6 +21,10 @@ public class DndClassFeatureAdapter implements JsonDeserializer<DndClassFeature>
 		
 		feature.id = obj.get("index").getAsString();
 		feature.name = obj.get("name").getAsString();
+		feature.level = obj.get("level").getAsInt();
+		
+		feature.classId = JsonUtil.getString(elem, "class/index");
+		feature.subclassId = JsonUtil.getString(elem, "subclass/index");
 		
 		StringBuilder builder = new StringBuilder();
 		String prefix = "";

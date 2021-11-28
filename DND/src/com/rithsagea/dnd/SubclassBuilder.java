@@ -15,7 +15,7 @@ import com.rithsagea.dnd.api5e.Datapack;
 import com.rithsagea.dnd.api5e.data.classes.Dnd5eSubclass;
 import com.rithsagea.dnd.api5e.data.classes.Dnd5eSubclassLevel;
 
-public class SubclassBuilderRunner {
+public class SubclassBuilder {
 	
 	private static final File SOURCE_DIRECTORY = new File("source/");
 	

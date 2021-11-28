@@ -30,7 +30,7 @@ import com.rithsagea.dnd.api5e.data.extra.ProficiencyOptions;
 import com.rithsagea.dnd.base.MysticArcanumInfo;
 import com.rithsagea.dnd.base.SpellSlotCosts;
 
-public class ClassBuilderRunner {
+public class ClassBuilder {
 	
 	private static final File SOURCE_DIRECTORY = new File("source/");
 	

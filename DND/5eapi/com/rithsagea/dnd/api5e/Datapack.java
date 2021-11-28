@@ -26,7 +26,7 @@ import com.rithsagea.dnd.api5e.data.RuleSection;
 import com.rithsagea.dnd.api5e.data.Spell;
 import com.rithsagea.dnd.api5e.data.classes.Dnd5eClass;
 import com.rithsagea.dnd.api5e.data.classes.DndClassFeature;
-import com.rithsagea.dnd.api5e.data.classes.DndSubclass;
+import com.rithsagea.dnd.api5e.data.classes.Dnd5eSubclass;
 import com.rithsagea.dnd.api5e.data.equipment.Equipment;
 import com.rithsagea.dnd.api5e.data.equipment.EquipmentAdapter;
 import com.rithsagea.dnd.api5e.data.races.DndRace;
@@ -56,7 +56,7 @@ public class Datapack {
 	public Map<String, Dnd5eClass> DndClass = new HashMap<>();
 	
 	@SerializedName("subclasses")
-	public Map<String, DndSubclass> DndSubclass = new HashMap<>();
+	public Map<String, Dnd5eSubclass> DndSubclass = new HashMap<>();
 	
 	@SerializedName("class_features")
 	public Map<String, DndClassFeature> DndClassFeature = new HashMap<>();
@@ -126,7 +126,7 @@ public class Datapack {
 		registerItems(DndClass, items);
 	}
 	
-	public void registerSubclasses(Collection<DndSubclass> items) {
+	public void registerSubclasses(Collection<Dnd5eSubclass> items) {
 		registerItems(DndSubclass, items);
 	}
 	

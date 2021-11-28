@@ -5,12 +5,12 @@ import java.util.List;
 
 import com.rithsagea.dnd.api.types.IndexedItem;
 
-public class DndSubclass extends IndexedItem {
+public class Dnd5eSubclass extends IndexedItem {
 	public String parentClass;
 	public String name;
 	public String flavor;
 	public String description;
 	
 	public HashMap<String, Integer> spells;
-	public List<DndSubclassLevel> levels;
+	public List<Dnd5eSubclassLevel> levels;
 }

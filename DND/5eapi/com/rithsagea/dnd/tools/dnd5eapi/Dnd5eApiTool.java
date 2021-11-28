@@ -28,7 +28,7 @@ import com.rithsagea.dnd.api5e.data.RuleSection;
 import com.rithsagea.dnd.api5e.data.Spell;
 import com.rithsagea.dnd.api5e.data.classes.Dnd5eClass;
 import com.rithsagea.dnd.api5e.data.classes.DndClassFeature;
-import com.rithsagea.dnd.api5e.data.classes.DndSubclass;
+import com.rithsagea.dnd.api5e.data.classes.Dnd5eSubclass;
 import com.rithsagea.dnd.api5e.data.equipment.Equipment;
 import com.rithsagea.dnd.api5e.data.races.DndRace;
 import com.rithsagea.dnd.api5e.data.races.DndRaceTrait;
@@ -49,7 +49,7 @@ public class Dnd5eApiTool {
 		builder.registerTypeAdapter(Alignment.class, new AlignmentAdapter());
 		builder.registerTypeAdapter(Equipment.class, new EquipmentAdapter());
 		builder.registerTypeAdapter(Dnd5eClass.class, new DndClassAdapter());
-		builder.registerTypeAdapter(DndSubclass.class, new DndSubclassAdapter());
+		builder.registerTypeAdapter(Dnd5eSubclass.class, new DndSubclassAdapter());
 		builder.registerTypeAdapter(DndClassFeature.class, new DndClassFeatureAdapter());
 		builder.registerTypeAdapter(DndRace.class, new DndRaceAdapter());
 		builder.registerTypeAdapter(DndSubrace.class, new DndSubraceAdapter());
@@ -160,8 +160,8 @@ public class Dnd5eApiTool {
 		return getItems("/classes", Dnd5eClass.class);
 	}
 	
-	public static List<DndSubclass> getSubclasses() {
-		return getItems("/subclasses", DndSubclass.class);
+	public static List<Dnd5eSubclass> getSubclasses() {
+		return getItems("/subclasses", Dnd5eSubclass.class);
 	}
 	
 	public static List<DndClassFeature> getClassFeatures() {

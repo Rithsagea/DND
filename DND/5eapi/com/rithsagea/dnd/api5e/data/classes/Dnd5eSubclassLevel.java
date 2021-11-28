@@ -5,7 +5,7 @@ import java.util.Map;
 
 import com.rithsagea.dnd.api.types.IndexedItem;
 
-public class DndSubclassLevel extends IndexedItem {
+public class Dnd5eSubclassLevel extends IndexedItem {
 	
 	public int level;
 	public List<String> features;

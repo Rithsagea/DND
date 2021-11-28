@@ -136,7 +136,7 @@ public class ClassBuilderRunner {
 				DndClassLevel lvl = new DndClassLevel();
 				
 				lvl.id = mlvl.id;
-				lvl.className = res.id;
+				lvl.classId = res.id;
 				lvl.level = mlvl.level;
 				lvl.abilityScoreBonus = mlvl.abilityScoreBonus;
 				lvl.proficiencyBonus = mlvl.proficiencyBonus;

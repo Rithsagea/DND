@@ -96,7 +96,7 @@
     ],
     "levels": [
       {
-        "className": "barbarian",
+        "classId": "barbarian",
         "level": 1,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -112,7 +112,7 @@
         }
       },
       {
-        "className": "barbarian",
+        "classId": "barbarian",
         "level": 2,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -128,7 +128,7 @@
         }
       },
       {
-        "className": "barbarian",
+        "classId": "barbarian",
         "level": 3,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -143,7 +143,7 @@
         }
       },
       {
-        "className": "barbarian",
+        "classId": "barbarian",
         "level": 4,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 2,
@@ -158,7 +158,7 @@
         }
       },
       {
-        "className": "barbarian",
+        "classId": "barbarian",
         "level": 5,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -174,7 +174,7 @@
         }
       },
       {
-        "className": "barbarian",
+        "classId": "barbarian",
         "level": 6,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -187,7 +187,7 @@
         }
       },
       {
-        "className": "barbarian",
+        "classId": "barbarian",
         "level": 7,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -202,7 +202,7 @@
         }
       },
       {
-        "className": "barbarian",
+        "classId": "barbarian",
         "level": 8,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 3,
@@ -217,7 +217,7 @@
         }
       },
       {
-        "className": "barbarian",
+        "classId": "barbarian",
         "level": 9,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -232,7 +232,7 @@
         }
       },
       {
-        "className": "barbarian",
+        "classId": "barbarian",
         "level": 10,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -245,7 +245,7 @@
         }
       },
       {
-        "className": "barbarian",
+        "classId": "barbarian",
         "level": 11,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -260,7 +260,7 @@
         }
       },
       {
-        "className": "barbarian",
+        "classId": "barbarian",
         "level": 12,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 4,
@@ -275,7 +275,7 @@
         }
       },
       {
-        "className": "barbarian",
+        "classId": "barbarian",
         "level": 13,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -290,7 +290,7 @@
         }
       },
       {
-        "className": "barbarian",
+        "classId": "barbarian",
         "level": 14,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -303,7 +303,7 @@
         }
       },
       {
-        "className": "barbarian",
+        "classId": "barbarian",
         "level": 15,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -318,7 +318,7 @@
         }
       },
       {
-        "className": "barbarian",
+        "classId": "barbarian",
         "level": 16,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 5,
@@ -333,7 +333,7 @@
         }
       },
       {
-        "className": "barbarian",
+        "classId": "barbarian",
         "level": 17,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 6,
@@ -348,7 +348,7 @@
         }
       },
       {
-        "className": "barbarian",
+        "classId": "barbarian",
         "level": 18,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 6,
@@ -363,7 +363,7 @@
         }
       },
       {
-        "className": "barbarian",
+        "classId": "barbarian",
         "level": 19,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 6,
@@ -378,7 +378,7 @@
         }
       },
       {
-        "className": "barbarian",
+        "classId": "barbarian",
         "level": 20,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 6,
@@ -790,7 +790,7 @@
     ],
     "levels": [
       {
-        "className": "bard",
+        "classId": "bard",
         "level": 1,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -818,7 +818,7 @@
         }
       },
       {
-        "className": "bard",
+        "classId": "bard",
         "level": 2,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -846,7 +846,7 @@
         }
       },
       {
-        "className": "bard",
+        "classId": "bard",
         "level": 3,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -874,7 +874,7 @@
         }
       },
       {
-        "className": "bard",
+        "classId": "bard",
         "level": 4,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 2,
@@ -901,7 +901,7 @@
         }
       },
       {
-        "className": "bard",
+        "classId": "bard",
         "level": 5,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -929,7 +929,7 @@
         }
       },
       {
-        "className": "bard",
+        "classId": "bard",
         "level": 6,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -956,7 +956,7 @@
         }
       },
       {
-        "className": "bard",
+        "classId": "bard",
         "level": 7,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -981,7 +981,7 @@
         }
       },
       {
-        "className": "bard",
+        "classId": "bard",
         "level": 8,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 3,
@@ -1008,7 +1008,7 @@
         }
       },
       {
-        "className": "bard",
+        "classId": "bard",
         "level": 9,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -1035,7 +1035,7 @@
         }
       },
       {
-        "className": "bard",
+        "classId": "bard",
         "level": 10,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -1064,7 +1064,7 @@
         }
       },
       {
-        "className": "bard",
+        "classId": "bard",
         "level": 11,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -1089,7 +1089,7 @@
         }
       },
       {
-        "className": "bard",
+        "classId": "bard",
         "level": 12,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 4,
@@ -1116,7 +1116,7 @@
         }
       },
       {
-        "className": "bard",
+        "classId": "bard",
         "level": 13,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -1143,7 +1143,7 @@
         }
       },
       {
-        "className": "bard",
+        "classId": "bard",
         "level": 14,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -1170,7 +1170,7 @@
         }
       },
       {
-        "className": "bard",
+        "classId": "bard",
         "level": 15,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -1197,7 +1197,7 @@
         }
       },
       {
-        "className": "bard",
+        "classId": "bard",
         "level": 16,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 5,
@@ -1224,7 +1224,7 @@
         }
       },
       {
-        "className": "bard",
+        "classId": "bard",
         "level": 17,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 6,
@@ -1251,7 +1251,7 @@
         }
       },
       {
-        "className": "bard",
+        "classId": "bard",
         "level": 18,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 6,
@@ -1278,7 +1278,7 @@
         }
       },
       {
-        "className": "bard",
+        "classId": "bard",
         "level": 19,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 6,
@@ -1305,7 +1305,7 @@
         }
       },
       {
-        "className": "bard",
+        "classId": "bard",
         "level": 20,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 6,
@@ -1751,7 +1751,7 @@
     ],
     "levels": [
       {
-        "className": "cleric",
+        "classId": "cleric",
         "level": 1,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -1780,7 +1780,7 @@
         }
       },
       {
-        "className": "cleric",
+        "classId": "cleric",
         "level": 2,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -1808,7 +1808,7 @@
         }
       },
       {
-        "className": "cleric",
+        "classId": "cleric",
         "level": 3,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -1835,7 +1835,7 @@
         }
       },
       {
-        "className": "cleric",
+        "classId": "cleric",
         "level": 4,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 2,
@@ -1862,7 +1862,7 @@
         }
       },
       {
-        "className": "cleric",
+        "classId": "cleric",
         "level": 5,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -1890,7 +1890,7 @@
         }
       },
       {
-        "className": "cleric",
+        "classId": "cleric",
         "level": 6,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -1917,7 +1917,7 @@
         }
       },
       {
-        "className": "cleric",
+        "classId": "cleric",
         "level": 7,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -1944,7 +1944,7 @@
         }
       },
       {
-        "className": "cleric",
+        "classId": "cleric",
         "level": 8,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 3,
@@ -1972,7 +1972,7 @@
         }
       },
       {
-        "className": "cleric",
+        "classId": "cleric",
         "level": 9,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -1999,7 +1999,7 @@
         }
       },
       {
-        "className": "cleric",
+        "classId": "cleric",
         "level": 10,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -2026,7 +2026,7 @@
         }
       },
       {
-        "className": "cleric",
+        "classId": "cleric",
         "level": 11,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -2053,7 +2053,7 @@
         }
       },
       {
-        "className": "cleric",
+        "classId": "cleric",
         "level": 12,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 4,
@@ -2080,7 +2080,7 @@
         }
       },
       {
-        "className": "cleric",
+        "classId": "cleric",
         "level": 13,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -2105,7 +2105,7 @@
         }
       },
       {
-        "className": "cleric",
+        "classId": "cleric",
         "level": 14,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -2132,7 +2132,7 @@
         }
       },
       {
-        "className": "cleric",
+        "classId": "cleric",
         "level": 15,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -2157,7 +2157,7 @@
         }
       },
       {
-        "className": "cleric",
+        "classId": "cleric",
         "level": 16,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 5,
@@ -2184,7 +2184,7 @@
         }
       },
       {
-        "className": "cleric",
+        "classId": "cleric",
         "level": 17,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 6,
@@ -2211,7 +2211,7 @@
         }
       },
       {
-        "className": "cleric",
+        "classId": "cleric",
         "level": 18,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 6,
@@ -2238,7 +2238,7 @@
         }
       },
       {
-        "className": "cleric",
+        "classId": "cleric",
         "level": 19,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 6,
@@ -2265,7 +2265,7 @@
         }
       },
       {
-        "className": "cleric",
+        "classId": "cleric",
         "level": 20,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 6,
@@ -2586,7 +2586,7 @@
     ],
     "levels": [
       {
-        "className": "druid",
+        "classId": "druid",
         "level": 1,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -2615,7 +2615,7 @@
         }
       },
       {
-        "className": "druid",
+        "classId": "druid",
         "level": 2,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -2644,7 +2644,7 @@
         }
       },
       {
-        "className": "druid",
+        "classId": "druid",
         "level": 3,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -2670,7 +2670,7 @@
         }
       },
       {
-        "className": "druid",
+        "classId": "druid",
         "level": 4,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 2,
@@ -2699,7 +2699,7 @@
         }
       },
       {
-        "className": "druid",
+        "classId": "druid",
         "level": 5,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -2725,7 +2725,7 @@
         }
       },
       {
-        "className": "druid",
+        "classId": "druid",
         "level": 6,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -2751,7 +2751,7 @@
         }
       },
       {
-        "className": "druid",
+        "classId": "druid",
         "level": 7,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -2777,7 +2777,7 @@
         }
       },
       {
-        "className": "druid",
+        "classId": "druid",
         "level": 8,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 3,
@@ -2806,7 +2806,7 @@
         }
       },
       {
-        "className": "druid",
+        "classId": "druid",
         "level": 9,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -2832,7 +2832,7 @@
         }
       },
       {
-        "className": "druid",
+        "classId": "druid",
         "level": 10,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -2858,7 +2858,7 @@
         }
       },
       {
-        "className": "druid",
+        "classId": "druid",
         "level": 11,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -2884,7 +2884,7 @@
         }
       },
       {
-        "className": "druid",
+        "classId": "druid",
         "level": 12,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 4,
@@ -2912,7 +2912,7 @@
         }
       },
       {
-        "className": "druid",
+        "classId": "druid",
         "level": 13,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -2938,7 +2938,7 @@
         }
       },
       {
-        "className": "druid",
+        "classId": "druid",
         "level": 14,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -2964,7 +2964,7 @@
         }
       },
       {
-        "className": "druid",
+        "classId": "druid",
         "level": 15,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -2990,7 +2990,7 @@
         }
       },
       {
-        "className": "druid",
+        "classId": "druid",
         "level": 16,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 5,
@@ -3018,7 +3018,7 @@
         }
       },
       {
-        "className": "druid",
+        "classId": "druid",
         "level": 17,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 6,
@@ -3044,7 +3044,7 @@
         }
       },
       {
-        "className": "druid",
+        "classId": "druid",
         "level": 18,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 6,
@@ -3073,7 +3073,7 @@
         }
       },
       {
-        "className": "druid",
+        "classId": "druid",
         "level": 19,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 6,
@@ -3101,7 +3101,7 @@
         }
       },
       {
-        "className": "druid",
+        "classId": "druid",
         "level": 20,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 6,
@@ -3359,7 +3359,7 @@
     ],
     "levels": [
       {
-        "className": "fighter",
+        "classId": "fighter",
         "level": 1,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -3375,7 +3375,7 @@
         }
       },
       {
-        "className": "fighter",
+        "classId": "fighter",
         "level": 2,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -3390,7 +3390,7 @@
         }
       },
       {
-        "className": "fighter",
+        "classId": "fighter",
         "level": 3,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -3405,7 +3405,7 @@
         }
       },
       {
-        "className": "fighter",
+        "classId": "fighter",
         "level": 4,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 2,
@@ -3420,7 +3420,7 @@
         }
       },
       {
-        "className": "fighter",
+        "classId": "fighter",
         "level": 5,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -3435,7 +3435,7 @@
         }
       },
       {
-        "className": "fighter",
+        "classId": "fighter",
         "level": 6,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 3,
@@ -3450,7 +3450,7 @@
         }
       },
       {
-        "className": "fighter",
+        "classId": "fighter",
         "level": 7,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 3,
@@ -3463,7 +3463,7 @@
         }
       },
       {
-        "className": "fighter",
+        "classId": "fighter",
         "level": 8,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 3,
@@ -3478,7 +3478,7 @@
         }
       },
       {
-        "className": "fighter",
+        "classId": "fighter",
         "level": 9,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 4,
@@ -3493,7 +3493,7 @@
         }
       },
       {
-        "className": "fighter",
+        "classId": "fighter",
         "level": 10,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 4,
@@ -3506,7 +3506,7 @@
         }
       },
       {
-        "className": "fighter",
+        "classId": "fighter",
         "level": 11,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 4,
@@ -3521,7 +3521,7 @@
         }
       },
       {
-        "className": "fighter",
+        "classId": "fighter",
         "level": 12,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 4,
@@ -3536,7 +3536,7 @@
         }
       },
       {
-        "className": "fighter",
+        "classId": "fighter",
         "level": 13,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 5,
@@ -3551,7 +3551,7 @@
         }
       },
       {
-        "className": "fighter",
+        "classId": "fighter",
         "level": 14,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 5,
@@ -3566,7 +3566,7 @@
         }
       },
       {
-        "className": "fighter",
+        "classId": "fighter",
         "level": 15,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 5,
@@ -3579,7 +3579,7 @@
         }
       },
       {
-        "className": "fighter",
+        "classId": "fighter",
         "level": 16,
         "abilityScoreBonus": 6,
         "proficiencyBonus": 5,
@@ -3594,7 +3594,7 @@
         }
       },
       {
-        "className": "fighter",
+        "classId": "fighter",
         "level": 17,
         "abilityScoreBonus": 6,
         "proficiencyBonus": 6,
@@ -3610,7 +3610,7 @@
         }
       },
       {
-        "className": "fighter",
+        "classId": "fighter",
         "level": 18,
         "abilityScoreBonus": 6,
         "proficiencyBonus": 6,
@@ -3623,7 +3623,7 @@
         }
       },
       {
-        "className": "fighter",
+        "classId": "fighter",
         "level": 19,
         "abilityScoreBonus": 7,
         "proficiencyBonus": 6,
@@ -3638,7 +3638,7 @@
         }
       },
       {
-        "className": "fighter",
+        "classId": "fighter",
         "level": 20,
         "abilityScoreBonus": 7,
         "proficiencyBonus": 6,
@@ -3941,7 +3941,7 @@
     ],
     "levels": [
       {
-        "className": "monk",
+        "classId": "monk",
         "level": 1,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -3957,7 +3957,7 @@
         }
       },
       {
-        "className": "monk",
+        "classId": "monk",
         "level": 2,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -3976,7 +3976,7 @@
         }
       },
       {
-        "className": "monk",
+        "classId": "monk",
         "level": 3,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -3992,7 +3992,7 @@
         }
       },
       {
-        "className": "monk",
+        "classId": "monk",
         "level": 4,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 2,
@@ -4008,7 +4008,7 @@
         }
       },
       {
-        "className": "monk",
+        "classId": "monk",
         "level": 5,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -4024,7 +4024,7 @@
         }
       },
       {
-        "className": "monk",
+        "classId": "monk",
         "level": 6,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -4039,7 +4039,7 @@
         }
       },
       {
-        "className": "monk",
+        "classId": "monk",
         "level": 7,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -4055,7 +4055,7 @@
         }
       },
       {
-        "className": "monk",
+        "classId": "monk",
         "level": 8,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 3,
@@ -4070,7 +4070,7 @@
         }
       },
       {
-        "className": "monk",
+        "classId": "monk",
         "level": 9,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -4085,7 +4085,7 @@
         }
       },
       {
-        "className": "monk",
+        "classId": "monk",
         "level": 10,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -4100,7 +4100,7 @@
         }
       },
       {
-        "className": "monk",
+        "classId": "monk",
         "level": 11,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -4113,7 +4113,7 @@
         }
       },
       {
-        "className": "monk",
+        "classId": "monk",
         "level": 12,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 4,
@@ -4128,7 +4128,7 @@
         }
       },
       {
-        "className": "monk",
+        "classId": "monk",
         "level": 13,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -4143,7 +4143,7 @@
         }
       },
       {
-        "className": "monk",
+        "classId": "monk",
         "level": 14,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -4158,7 +4158,7 @@
         }
       },
       {
-        "className": "monk",
+        "classId": "monk",
         "level": 15,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -4173,7 +4173,7 @@
         }
       },
       {
-        "className": "monk",
+        "classId": "monk",
         "level": 16,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 5,
@@ -4188,7 +4188,7 @@
         }
       },
       {
-        "className": "monk",
+        "classId": "monk",
         "level": 17,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 6,
@@ -4201,7 +4201,7 @@
         }
       },
       {
-        "className": "monk",
+        "classId": "monk",
         "level": 18,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 6,
@@ -4216,7 +4216,7 @@
         }
       },
       {
-        "className": "monk",
+        "classId": "monk",
         "level": 19,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 6,
@@ -4231,7 +4231,7 @@
         }
       },
       {
-        "className": "monk",
+        "classId": "monk",
         "level": 20,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 6,
@@ -4609,7 +4609,7 @@
     ],
     "levels": [
       {
-        "className": "paladin",
+        "classId": "paladin",
         "level": 1,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -4636,7 +4636,7 @@
         }
       },
       {
-        "className": "paladin",
+        "classId": "paladin",
         "level": 2,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -4664,7 +4664,7 @@
         }
       },
       {
-        "className": "paladin",
+        "classId": "paladin",
         "level": 3,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -4693,7 +4693,7 @@
         }
       },
       {
-        "className": "paladin",
+        "classId": "paladin",
         "level": 4,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 2,
@@ -4719,7 +4719,7 @@
         }
       },
       {
-        "className": "paladin",
+        "classId": "paladin",
         "level": 5,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -4745,7 +4745,7 @@
         }
       },
       {
-        "className": "paladin",
+        "classId": "paladin",
         "level": 6,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -4771,7 +4771,7 @@
         }
       },
       {
-        "className": "paladin",
+        "classId": "paladin",
         "level": 7,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -4795,7 +4795,7 @@
         }
       },
       {
-        "className": "paladin",
+        "classId": "paladin",
         "level": 8,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 3,
@@ -4821,7 +4821,7 @@
         }
       },
       {
-        "className": "paladin",
+        "classId": "paladin",
         "level": 9,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -4845,7 +4845,7 @@
         }
       },
       {
-        "className": "paladin",
+        "classId": "paladin",
         "level": 10,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -4871,7 +4871,7 @@
         }
       },
       {
-        "className": "paladin",
+        "classId": "paladin",
         "level": 11,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -4897,7 +4897,7 @@
         }
       },
       {
-        "className": "paladin",
+        "classId": "paladin",
         "level": 12,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 4,
@@ -4923,7 +4923,7 @@
         }
       },
       {
-        "className": "paladin",
+        "classId": "paladin",
         "level": 13,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -4947,7 +4947,7 @@
         }
       },
       {
-        "className": "paladin",
+        "classId": "paladin",
         "level": 14,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -4973,7 +4973,7 @@
         }
       },
       {
-        "className": "paladin",
+        "classId": "paladin",
         "level": 15,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -4997,7 +4997,7 @@
         }
       },
       {
-        "className": "paladin",
+        "classId": "paladin",
         "level": 16,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 5,
@@ -5023,7 +5023,7 @@
         }
       },
       {
-        "className": "paladin",
+        "classId": "paladin",
         "level": 17,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 6,
@@ -5047,7 +5047,7 @@
         }
       },
       {
-        "className": "paladin",
+        "classId": "paladin",
         "level": 18,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 6,
@@ -5073,7 +5073,7 @@
         }
       },
       {
-        "className": "paladin",
+        "classId": "paladin",
         "level": 19,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 6,
@@ -5099,7 +5099,7 @@
         }
       },
       {
-        "className": "paladin",
+        "classId": "paladin",
         "level": 20,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 6,
@@ -5359,7 +5359,7 @@
     ],
     "levels": [
       {
-        "className": "ranger",
+        "classId": "ranger",
         "level": 1,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -5387,7 +5387,7 @@
         }
       },
       {
-        "className": "ranger",
+        "classId": "ranger",
         "level": 2,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -5415,7 +5415,7 @@
         }
       },
       {
-        "className": "ranger",
+        "classId": "ranger",
         "level": 3,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -5443,7 +5443,7 @@
         }
       },
       {
-        "className": "ranger",
+        "classId": "ranger",
         "level": 4,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 2,
@@ -5470,7 +5470,7 @@
         }
       },
       {
-        "className": "ranger",
+        "classId": "ranger",
         "level": 5,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -5497,7 +5497,7 @@
         }
       },
       {
-        "className": "ranger",
+        "classId": "ranger",
         "level": 6,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -5525,7 +5525,7 @@
         }
       },
       {
-        "className": "ranger",
+        "classId": "ranger",
         "level": 7,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -5550,7 +5550,7 @@
         }
       },
       {
-        "className": "ranger",
+        "classId": "ranger",
         "level": 8,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 3,
@@ -5578,7 +5578,7 @@
         }
       },
       {
-        "className": "ranger",
+        "classId": "ranger",
         "level": 9,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -5603,7 +5603,7 @@
         }
       },
       {
-        "className": "ranger",
+        "classId": "ranger",
         "level": 10,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -5631,7 +5631,7 @@
         }
       },
       {
-        "className": "ranger",
+        "classId": "ranger",
         "level": 11,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -5656,7 +5656,7 @@
         }
       },
       {
-        "className": "ranger",
+        "classId": "ranger",
         "level": 12,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 4,
@@ -5683,7 +5683,7 @@
         }
       },
       {
-        "className": "ranger",
+        "classId": "ranger",
         "level": 13,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -5708,7 +5708,7 @@
         }
       },
       {
-        "className": "ranger",
+        "classId": "ranger",
         "level": 14,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -5736,7 +5736,7 @@
         }
       },
       {
-        "className": "ranger",
+        "classId": "ranger",
         "level": 15,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -5761,7 +5761,7 @@
         }
       },
       {
-        "className": "ranger",
+        "classId": "ranger",
         "level": 16,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 5,
@@ -5788,7 +5788,7 @@
         }
       },
       {
-        "className": "ranger",
+        "classId": "ranger",
         "level": 17,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 6,
@@ -5813,7 +5813,7 @@
         }
       },
       {
-        "className": "ranger",
+        "classId": "ranger",
         "level": 18,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 6,
@@ -5840,7 +5840,7 @@
         }
       },
       {
-        "className": "ranger",
+        "classId": "ranger",
         "level": 19,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 6,
@@ -5867,7 +5867,7 @@
         }
       },
       {
-        "className": "ranger",
+        "classId": "ranger",
         "level": 20,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 6,
@@ -6124,7 +6124,7 @@
     ],
     "levels": [
       {
-        "className": "rogue",
+        "classId": "rogue",
         "level": 1,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -6139,7 +6139,7 @@
         }
       },
       {
-        "className": "rogue",
+        "classId": "rogue",
         "level": 2,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -6152,7 +6152,7 @@
         }
       },
       {
-        "className": "rogue",
+        "classId": "rogue",
         "level": 3,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -6165,7 +6165,7 @@
         }
       },
       {
-        "className": "rogue",
+        "classId": "rogue",
         "level": 4,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 2,
@@ -6178,7 +6178,7 @@
         }
       },
       {
-        "className": "rogue",
+        "classId": "rogue",
         "level": 5,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -6191,7 +6191,7 @@
         }
       },
       {
-        "className": "rogue",
+        "classId": "rogue",
         "level": 6,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -6204,7 +6204,7 @@
         }
       },
       {
-        "className": "rogue",
+        "classId": "rogue",
         "level": 7,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -6217,7 +6217,7 @@
         }
       },
       {
-        "className": "rogue",
+        "classId": "rogue",
         "level": 8,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 3,
@@ -6230,7 +6230,7 @@
         }
       },
       {
-        "className": "rogue",
+        "classId": "rogue",
         "level": 9,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -6241,7 +6241,7 @@
         }
       },
       {
-        "className": "rogue",
+        "classId": "rogue",
         "level": 10,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 4,
@@ -6254,7 +6254,7 @@
         }
       },
       {
-        "className": "rogue",
+        "classId": "rogue",
         "level": 11,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -6267,7 +6267,7 @@
         }
       },
       {
-        "className": "rogue",
+        "classId": "rogue",
         "level": 12,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 4,
@@ -6280,7 +6280,7 @@
         }
       },
       {
-        "className": "rogue",
+        "classId": "rogue",
         "level": 13,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -6291,7 +6291,7 @@
         }
       },
       {
-        "className": "rogue",
+        "classId": "rogue",
         "level": 14,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -6304,7 +6304,7 @@
         }
       },
       {
-        "className": "rogue",
+        "classId": "rogue",
         "level": 15,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -6317,7 +6317,7 @@
         }
       },
       {
-        "className": "rogue",
+        "classId": "rogue",
         "level": 16,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 5,
@@ -6330,7 +6330,7 @@
         }
       },
       {
-        "className": "rogue",
+        "classId": "rogue",
         "level": 17,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 6,
@@ -6341,7 +6341,7 @@
         }
       },
       {
-        "className": "rogue",
+        "classId": "rogue",
         "level": 18,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 6,
@@ -6354,7 +6354,7 @@
         }
       },
       {
-        "className": "rogue",
+        "classId": "rogue",
         "level": 19,
         "abilityScoreBonus": 6,
         "proficiencyBonus": 6,
@@ -6367,7 +6367,7 @@
         }
       },
       {
-        "className": "rogue",
+        "classId": "rogue",
         "level": 20,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 6,
@@ -6707,7 +6707,7 @@
     ],
     "levels": [
       {
-        "className": "sorcerer",
+        "classId": "sorcerer",
         "level": 1,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -6743,7 +6743,7 @@
         }
       },
       {
-        "className": "sorcerer",
+        "classId": "sorcerer",
         "level": 2,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -6780,7 +6780,7 @@
         }
       },
       {
-        "className": "sorcerer",
+        "classId": "sorcerer",
         "level": 3,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -6815,7 +6815,7 @@
         }
       },
       {
-        "className": "sorcerer",
+        "classId": "sorcerer",
         "level": 4,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 2,
@@ -6850,7 +6850,7 @@
         }
       },
       {
-        "className": "sorcerer",
+        "classId": "sorcerer",
         "level": 5,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -6883,7 +6883,7 @@
         }
       },
       {
-        "className": "sorcerer",
+        "classId": "sorcerer",
         "level": 6,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -6916,7 +6916,7 @@
         }
       },
       {
-        "className": "sorcerer",
+        "classId": "sorcerer",
         "level": 7,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -6949,7 +6949,7 @@
         }
       },
       {
-        "className": "sorcerer",
+        "classId": "sorcerer",
         "level": 8,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 3,
@@ -6984,7 +6984,7 @@
         }
       },
       {
-        "className": "sorcerer",
+        "classId": "sorcerer",
         "level": 9,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -7017,7 +7017,7 @@
         }
       },
       {
-        "className": "sorcerer",
+        "classId": "sorcerer",
         "level": 10,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -7052,7 +7052,7 @@
         }
       },
       {
-        "className": "sorcerer",
+        "classId": "sorcerer",
         "level": 11,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -7085,7 +7085,7 @@
         }
       },
       {
-        "className": "sorcerer",
+        "classId": "sorcerer",
         "level": 12,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 4,
@@ -7120,7 +7120,7 @@
         }
       },
       {
-        "className": "sorcerer",
+        "classId": "sorcerer",
         "level": 13,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -7153,7 +7153,7 @@
         }
       },
       {
-        "className": "sorcerer",
+        "classId": "sorcerer",
         "level": 14,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -7186,7 +7186,7 @@
         }
       },
       {
-        "className": "sorcerer",
+        "classId": "sorcerer",
         "level": 15,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -7219,7 +7219,7 @@
         }
       },
       {
-        "className": "sorcerer",
+        "classId": "sorcerer",
         "level": 16,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 5,
@@ -7254,7 +7254,7 @@
         }
       },
       {
-        "className": "sorcerer",
+        "classId": "sorcerer",
         "level": 17,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 6,
@@ -7289,7 +7289,7 @@
         }
       },
       {
-        "className": "sorcerer",
+        "classId": "sorcerer",
         "level": 18,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 6,
@@ -7322,7 +7322,7 @@
         }
       },
       {
-        "className": "sorcerer",
+        "classId": "sorcerer",
         "level": 19,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 6,
@@ -7357,7 +7357,7 @@
         }
       },
       {
-        "className": "sorcerer",
+        "classId": "sorcerer",
         "level": 20,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 6,
@@ -7658,7 +7658,7 @@
     ],
     "levels": [
       {
-        "className": "warlock",
+        "classId": "warlock",
         "level": 1,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -7692,7 +7692,7 @@
         }
       },
       {
-        "className": "warlock",
+        "classId": "warlock",
         "level": 2,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -7725,7 +7725,7 @@
         }
       },
       {
-        "className": "warlock",
+        "classId": "warlock",
         "level": 3,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -7758,7 +7758,7 @@
         }
       },
       {
-        "className": "warlock",
+        "classId": "warlock",
         "level": 4,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 2,
@@ -7791,7 +7791,7 @@
         }
       },
       {
-        "className": "warlock",
+        "classId": "warlock",
         "level": 5,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -7824,7 +7824,7 @@
         }
       },
       {
-        "className": "warlock",
+        "classId": "warlock",
         "level": 6,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -7855,7 +7855,7 @@
         }
       },
       {
-        "className": "warlock",
+        "classId": "warlock",
         "level": 7,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -7888,7 +7888,7 @@
         }
       },
       {
-        "className": "warlock",
+        "classId": "warlock",
         "level": 8,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 3,
@@ -7921,7 +7921,7 @@
         }
       },
       {
-        "className": "warlock",
+        "classId": "warlock",
         "level": 9,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -7954,7 +7954,7 @@
         }
       },
       {
-        "className": "warlock",
+        "classId": "warlock",
         "level": 10,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -7985,7 +7985,7 @@
         }
       },
       {
-        "className": "warlock",
+        "classId": "warlock",
         "level": 11,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -8018,7 +8018,7 @@
         }
       },
       {
-        "className": "warlock",
+        "classId": "warlock",
         "level": 12,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 4,
@@ -8052,7 +8052,7 @@
         }
       },
       {
-        "className": "warlock",
+        "classId": "warlock",
         "level": 13,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -8085,7 +8085,7 @@
         }
       },
       {
-        "className": "warlock",
+        "classId": "warlock",
         "level": 14,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -8116,7 +8116,7 @@
         }
       },
       {
-        "className": "warlock",
+        "classId": "warlock",
         "level": 15,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -8150,7 +8150,7 @@
         }
       },
       {
-        "className": "warlock",
+        "classId": "warlock",
         "level": 16,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 5,
@@ -8183,7 +8183,7 @@
         }
       },
       {
-        "className": "warlock",
+        "classId": "warlock",
         "level": 17,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 6,
@@ -8216,7 +8216,7 @@
         }
       },
       {
-        "className": "warlock",
+        "classId": "warlock",
         "level": 18,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 6,
@@ -8249,7 +8249,7 @@
         }
       },
       {
-        "className": "warlock",
+        "classId": "warlock",
         "level": 19,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 6,
@@ -8282,7 +8282,7 @@
         }
       },
       {
-        "className": "warlock",
+        "classId": "warlock",
         "level": 20,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 6,
@@ -8703,7 +8703,7 @@
     ],
     "levels": [
       {
-        "className": "wizard",
+        "classId": "wizard",
         "level": 1,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -8730,7 +8730,7 @@
         }
       },
       {
-        "className": "wizard",
+        "classId": "wizard",
         "level": 2,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -8756,7 +8756,7 @@
         }
       },
       {
-        "className": "wizard",
+        "classId": "wizard",
         "level": 3,
         "abilityScoreBonus": 0,
         "proficiencyBonus": 2,
@@ -8780,7 +8780,7 @@
         }
       },
       {
-        "className": "wizard",
+        "classId": "wizard",
         "level": 4,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 2,
@@ -8806,7 +8806,7 @@
         }
       },
       {
-        "className": "wizard",
+        "classId": "wizard",
         "level": 5,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -8830,7 +8830,7 @@
         }
       },
       {
-        "className": "wizard",
+        "classId": "wizard",
         "level": 6,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -8854,7 +8854,7 @@
         }
       },
       {
-        "className": "wizard",
+        "classId": "wizard",
         "level": 7,
         "abilityScoreBonus": 1,
         "proficiencyBonus": 3,
@@ -8878,7 +8878,7 @@
         }
       },
       {
-        "className": "wizard",
+        "classId": "wizard",
         "level": 8,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 3,
@@ -8904,7 +8904,7 @@
         }
       },
       {
-        "className": "wizard",
+        "classId": "wizard",
         "level": 9,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -8928,7 +8928,7 @@
         }
       },
       {
-        "className": "wizard",
+        "classId": "wizard",
         "level": 10,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -8952,7 +8952,7 @@
         }
       },
       {
-        "className": "wizard",
+        "classId": "wizard",
         "level": 11,
         "abilityScoreBonus": 2,
         "proficiencyBonus": 4,
@@ -8976,7 +8976,7 @@
         }
       },
       {
-        "className": "wizard",
+        "classId": "wizard",
         "level": 12,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 4,
@@ -9002,7 +9002,7 @@
         }
       },
       {
-        "className": "wizard",
+        "classId": "wizard",
         "level": 13,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -9026,7 +9026,7 @@
         }
       },
       {
-        "className": "wizard",
+        "classId": "wizard",
         "level": 14,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -9050,7 +9050,7 @@
         }
       },
       {
-        "className": "wizard",
+        "classId": "wizard",
         "level": 15,
         "abilityScoreBonus": 3,
         "proficiencyBonus": 5,
@@ -9074,7 +9074,7 @@
         }
       },
       {
-        "className": "wizard",
+        "classId": "wizard",
         "level": 16,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 5,
@@ -9100,7 +9100,7 @@
         }
       },
       {
-        "className": "wizard",
+        "classId": "wizard",
         "level": 17,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 6,
@@ -9124,7 +9124,7 @@
         }
       },
       {
-        "className": "wizard",
+        "classId": "wizard",
         "level": 18,
         "abilityScoreBonus": 4,
         "proficiencyBonus": 6,
@@ -9150,7 +9150,7 @@
         }
       },
       {
-        "className": "wizard",
+        "classId": "wizard",
         "level": 19,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 6,
@@ -9176,7 +9176,7 @@
         }
       },
       {
-        "className": "wizard",
+        "classId": "wizard",
         "level": 20,
         "abilityScoreBonus": 5,
         "proficiencyBonus": 6,

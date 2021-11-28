@@ -12,18 +12,18 @@ import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
-import com.rithsagea.dnd.api5e.data.classes.DndSubclass;
-import com.rithsagea.dnd.api5e.data.classes.DndSubclassLevel;
+import com.rithsagea.dnd.api5e.data.classes.Dnd5eSubclass;
+import com.rithsagea.dnd.api5e.data.classes.Dnd5eSubclassLevel;
 
-public class DndSubclassAdapter implements JsonDeserializer<DndSubclass> {
+public class DndSubclassAdapter implements JsonDeserializer<Dnd5eSubclass> {
 
 	private Gson gson = new Gson();
 	
 	@Override
-	public DndSubclass deserialize(JsonElement elem, Type type, JsonDeserializationContext context)
+	public Dnd5eSubclass deserialize(JsonElement elem, Type type, JsonDeserializationContext context)
 			throws JsonParseException {
 		
-		DndSubclass subclass = new DndSubclass();
+		Dnd5eSubclass subclass = new Dnd5eSubclass();
 		JsonObject obj = elem.getAsJsonObject();
 		
 		subclass.id = obj.get("index").getAsString();
@@ -42,7 +42,7 @@ public class DndSubclassAdapter implements JsonDeserializer<DndSubclass> {
 		
 		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
 		for(JsonElement e1 : gson.fromJson(Dnd5eApiTool.get("/subclasses/" + subclass.id + "/levels"), JsonArray.class)) {
-			DndSubclassLevel lvl = new DndSubclassLevel();
+			Dnd5eSubclassLevel lvl = new Dnd5eSubclassLevel();
 			JsonObject level = e1.getAsJsonObject();
 			
 			lvl.id = level.get("index").getAsString();

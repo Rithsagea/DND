@@ -2,7 +2,6 @@ package com.rithsagea.dnd.api.types;
 
 import java.util.List;
 
-import com.google.gson.annotations.SerializedName;
 import com.rithsagea.dnd.api.types.extras.SpellcastingSlots;
 
 public class DndClassLevel extends IndexedItem {

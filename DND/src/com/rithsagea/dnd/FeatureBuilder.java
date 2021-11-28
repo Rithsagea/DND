@@ -21,7 +21,7 @@ public class FeatureBuilder {
 		data5e = Datapack.loadDatapack(new File("5e.json"));
 		SourceBook book = SourceRegistry.getBooks().get("5e");
 		
-		for(String key : data5e.DndSubclass.keySet()) {
+		for(String key : data5e.DndClassFeature.keySet()) {
 			Feature feature = new Feature();
 			DndClassFeature model = data5e.DndClassFeature.get(key);
 			

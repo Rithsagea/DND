@@ -18,6 +18,7 @@ import com.rithsagea.dnd.api.types.Alignment;
 import com.rithsagea.dnd.api.types.Coin;
 import com.rithsagea.dnd.api.types.DndClass;
 import com.rithsagea.dnd.api.types.DndSubclass;
+import com.rithsagea.dnd.api.types.Feature;
 import com.rithsagea.dnd.api.types.Language;
 import com.rithsagea.dnd.api.types.Skill;
 
@@ -33,6 +34,7 @@ public class SourceBook implements Comparable<SourceBook> {
 		DATA_TYPES.put("languages", Language.class);
 		DATA_TYPES.put("classes", DndClass.class);
 		DATA_TYPES.put("subclasses", DndSubclass.class);
+		DATA_TYPES.put("features", Feature.class);
 		
 		for(Entry<String, Class<?>> entry : DATA_TYPES.entrySet()) {
 			TYPE_LABELS.put(entry.getValue(), entry.getKey());

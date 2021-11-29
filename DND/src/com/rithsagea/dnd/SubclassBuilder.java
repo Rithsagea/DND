@@ -610,6 +610,195 @@ public class SubclassBuilder {
 		return subclass;
 	}
 	
+	private static DndSubclass createChampion() {
+		Dnd5eSubclass model = data5e.DndSubclass.get("champion");
+		DndSubclass subclass = createSubclass(model);
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		for(int x = 0; x < 20; x++) {
+			if(model.levels.get(x) != null)
+				subclass.levels.set(x, createLevel(model.levels.get(x)));
+		}
+		
+		return subclass;
+	}
+	
+	private static DndSubclass createBattleMaster() {
+		DndSubclass subclass = new DndSubclass();
+		subclass.id = "battle-master";
+		subclass.name = "Battle Master";
+		subclass.flavor = "Martial Archetype";
+		subclass.classId = "fighter";
+		subclass.description = StringUtil.convertDesc(
+				"Those who emulate the archetypal Battle Master employ martial techniques passed down through generations. To a Battle Master, combat is an academic field, sometimes including subjects beyond battle such as weaponsmithing and calligraphy. Not every fighter absorbs the lessons of history, theory, and artistry that are reflected in the Battle Master archetype, but those who do are well-rounded fighters of great skill and knowledge.");
+		
+		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		createLevel(subclass, 3, "combat-superiority", "student-of-war"); //TODO detail maneuvers somewhere else
+		registerFeature("combat-superiority", "Combat Superiority",
+				"When you choose this archetype at 3rd level, you learn maneuvers that are fueled by special dice called superiority dice.\r\n"
+				+ "\r\n"
+				+ "Maneuvers. You learn three maneuvers of your choice. Many maneuvers enhance an attack in some way. You can use only one maneuver per attack. You learn two additional maneuvers of your choice at 7th, 10th, and 15th level. Each time you learn new maneuvers, you can also replace one maneuver you know with a different one.\r\n"
+				+ "\r\n"
+				+ "Superiority Dice. You have four superiority dice, which are d8s. A superiority die is expended when you use it. You regain all of your expended superiority dice when you finish a short or long rest. You gain another superiority die at 7th level and one more at 15th level.\r\n"
+				+ "\r\n"
+				+ "Saving Throws. Some of your maneuvers require your target to make a saving throw to resist the maneuver's effects. The saving throw DC is calculated as follows:\r\n"
+				+ "\r\n"
+				+ "Maneuver save DC = 8 + your proficiency bonus + your Strength or Dexterity modifier (your choice)");
+		registerFeature("student-of-war", "Student of War",
+				"At 3rd level, you gain proficiency with one type of artisan's tools of your choice.");
+		
+		createLevel(subclass, 7, "know-your-enemy");
+		registerFeature("know-your-enemy", "Know Your Enemy",
+				"Starting at 7th level, if you spend at least 1 minute observing or interacting with another creature outside combat, you can learn certain information about its capabilities compared to your own. The DM tells you if the creature is your equal, superior, or inferior in regard to two of the following characteristics of your choice:\r\n"
+				+ "\r\n"
+				+ "    Strength score\r\n"
+				+ "\r\n"
+				+ "    Dexterity score\r\n"
+				+ "\r\n"
+				+ "    Constitution score\r\n"
+				+ "\r\n"
+				+ "    Armor Class\r\n"
+				+ "\r\n"
+				+ "    Current hit points\r\n"
+				+ "\r\n"
+				+ "    Total class levels, if any\r\n"
+				+ "\r\n"
+				+ "    Fighter class levels, if any\r\n"
+				+ "");
+		
+		createLevel(subclass, 10, "improved-combat-superiority");
+		registerFeature("improved-combat-superiority", "Improved Combat Superiority",
+				"At 10th level, your superiority dice turn into d10s. At 18th level, they turn into d12s.");
+		
+		createLevel(subclass, 15, "relentless");
+		registerFeature("relentless", "Relentless",
+				"Starting at 15th level, when you roll initiative and have no superiority dice remaining, you regain 1 superiority die.");
+		return subclass;
+	}
+	
+	private static DndSubclass createEldritchKnight() {
+		DndSubclass subclass = new DndSubclass();
+		subclass.id = "eldritch-knight";
+		subclass.name = "Eldritch Knight";
+		subclass.flavor = "Martial Archetype";
+		subclass.classId = "fighter";
+		subclass.description = StringUtil.convertDesc(
+				"The archetypal Eldritch Knight combines the martial mastery common to all fighters with a careful study of magic. Eldritch Knights use magical techniques similar to those practiced by wizards. They focus their study on two of the eight schools of magic: abjuration and evocation. Abjuration spells grant an Eldritch Knight additional protection in battle, and evocation spells deal damage to many foes at once, extending the fighter's reach in combat. These knights learn a comparatively small number of spells, committing them to memory instead of keeping them in a spellbook.");
+		//TODO add magic somehow eventually
+		
+		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
+		
+		createLevel(subclass, 3, "weapon-bond");
+		registerFeature("weapon-bond", "Weapon Bond",
+				"At 3rd level, you learn a ritual that creates a magical bond between yourself and one weapon. You perform the ritual over the course of 1 hour, which can be done during a short rest. The weapon must be within your reach throughout the ritual, at the conclusion of which you touch the weapon and forge the bond.\r\n"
+				+ "\r\n"
+				+ "Once you have bonded a weapon to yourself, you can't be disarmed of that weapon unless you are incapacitated. If it is on the same plane of existence, you can summon that weapon as a bonus action on your turn, causing it to teleport instantly to your hand.\r\n"
+				+ "\r\n"
+				+ "You can have up to two bonded weapons, but can summon only one at a time with your bonus action. If you attempt to bond with a third weapon, you must break the bond with one of the other two.");
+		
+		createLevel(subclass, 7, "war-magic");
+		registerFeature("war-magic", "War Magic",
+				"Beginning at 7th level, when you use your action to cast a cantrip, you can make one weapon attack as a bonus action.");
+		
+		createLevel(subclass, 10, "eldritch-strike");
+		registerFeature("eldritch-strike", "Eldritch Strike",
+				"At 10th level, you learn how to make your weapon strikes undercut a creature's resistance to your spells. When you hit a creature with a weapon attack, that creature has disadvantage on the next saving throw it makes against a spell you cast before the end of your next turn.");
+		
+		createLevel(subclass, 15, "arcane-charge");
+		registerFeature("arcane-charge", "Arcane Charge",
+				"At 15th level, you gain the ability to teleport up to 30 feet to an unoccupied space you can see when you use your Action Surge. You can teleport before or after the additional action.");
+		
+		createLevel(subclass, 18, "improved-war-magic");
+		registerFeature("improved-war-magic", "Improved War Magic",
+				"Starting at 18th level, when you use your action to cast a spell, you can make one weapon attack as a bonus action.");
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		return subclass;
+	}
+	
+	private static DndSubclass createOpenHand() {
+		Dnd5eSubclass model = data5e.DndSubclass.get("open-hand");
+		DndSubclass subclass = createSubclass(model);
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		for(int x = 0; x < 20; x++) {
+			if(model.levels.get(x) != null)
+				subclass.levels.set(x, createLevel(model.levels.get(x)));
+		}
+		
+		return subclass;
+	}
+	
+	private static DndSubclass createShadow() {
+		DndSubclass subclass = new DndSubclass();
+		subclass.id = "shadow";
+		subclass.name = "Shadow";
+		subclass.flavor = "Monastic Tradition";
+		subclass.classId = "monk";
+		subclass.description = StringUtil.convertDesc(
+				"Monks of the Way of Shadow follow a tradition that values stealth and subterfuge. These monks might be called ninjas or shadowdancers, and they serve as spies and assassins. Sometimes the members of a ninja monastery are family members, forming a clan sworn to secrecy about their arts and missions. Other monasteries are more like thieves' guilds, hiring out their services to nobles, rich merchants, or anyone else who can pay their fees. Regardless of their methods, the heads of these monasteries expect the unquestioning obedience of their students.");
+		
+		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		createLevel(subclass, 3, "shadow-arts");
+		registerFeature("shadow-arts", "Shadow Arts",
+				"Starting when you choose this tradition at 3rd level, you can use your ki to duplicate the effects of certain spells. As an action, you can spend 2 ki points to cast Darkness, Darkvision, Pass without Trace, or Silence, without providing material components. Additionally, you gain the Minor Illusion cantrip if you don't already know it.");
+		
+		createLevel(subclass, 6, "shadow-step");
+		registerFeature("shadow-step", "Shadow Step",
+				"At 6th level, you gain the ability to step from one shadow into another. When you are in dim light or darkness, as a bonus action you can teleport up to 60 feet to an unoccupied space you can see that is also in dim light or darkness. You then have advantage on the first melee attack you make before the end of the turn.");
+		
+		createLevel(subclass, 11, "cloak-of-shadows");
+		registerFeature("cloak-of-shadows", "Cloak of Shadows",
+				"By 11th level, you have learned to become one with the shadows. When you are in an area of dim light or darkness, you can use your action to become invisible. You remain invisible until you make an attack, cast a spell, or are in an area of bright light.");
+		
+		createLevel(subclass, 17, "opportunist");
+		registerFeature("opportunist", "Opportunist",
+				"At 17th level, you can exploit a creature's momentary distraction when it is hit by an attack. Whenever a creature within 5 feet of you is hit by an attack made by a creature other than you, you can use your reaction to make a melee attack against that creature.");
+		
+		return subclass;
+	}
+	
+	private static DndSubclass createFourElements() {
+		DndSubclass subclass = new DndSubclass();
+		subclass.id = "four-elements";
+		subclass.name = "Four Elements";
+		subclass.flavor = " Monastic Tradition";
+		subclass.classId = "monk";
+		subclass.description = StringUtil.convertDesc(
+				"You follow a monastic tradition that teaches you to harness the elements. When you focus your ki, you can align yourself with the forces of creation and bend the four elements to your will, using them as an extension of your body. Some members of this tradition dedicate themselves to a single element, but others weave the elements together.\r\n"
+				+ "\r\n"
+				+ "Many monks of this tradition tattoo their bodies with representations of their ki powers, commonly imagined as coiling dragons, but also as phoenixes, fish, plants, mountains, and cresting waves.");
+		
+		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		createLevel(subclass, 3, "disciple-of-the-elements");
+		registerFeature("disciple-of-the-elements", "Disciple of the Elements",
+				"When you choose this tradition at 3rd level, you learn magical disciplines that harness the power of the four elements. A discipline requires you to spend ki points each time you use it.\r\n"
+				+ "\r\n"
+				+ "You know the Elemental Attunement discipline and one other elemental discipline of your choice. You learn one additional elemental discipline of your choice at 6th, 11th, and 17th level.\r\n"
+				+ "\r\n"
+				+ "Whenever you learn a new elemental discipline, you can also replace one elemental discipline that you already know with a different discipline.");
+		//TODO: there are disciplines. add them later and suffer
+		return subclass;
+	}
+	
 	/*
 	template
 	
@@ -654,6 +843,14 @@ public class SubclassBuilder {
 		
 		book.register(createLand());
 		book.register(createMoon());
+		
+		book.register(createChampion());
+		book.register(createBattleMaster());
+		book.register(createEldritchKnight());
+		
+		book.register(createOpenHand());
+		book.register(createShadow());
+		book.register(createFourElements());
 		SourceRegistry.saveBooks();
 	}
 }

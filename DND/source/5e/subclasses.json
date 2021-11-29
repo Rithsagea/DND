@@ -1,4 +1,62 @@
 {
+  "battle-master": {
+    "name": "Battle Master",
+    "flavor": "Martial Archetype",
+    "description": "Those who emulate the archetypal Battle Master employ martial techniques passed down through generations. To a Battle Master, combat is an academic field, sometimes including subjects beyond battle such as weaponsmithing and calligraphy. Not every fighter absorbs the lessons of history, theory, and artistry that are reflected in the Battle Master archetype, but those who do are well-rounded fighters of great skill and knowledge.",
+    "classId": "fighter",
+    "levels": [
+      null,
+      null,
+      {
+        "subclassId": "battle-master",
+        "level": 3,
+        "features": [
+          "combat-superiority",
+          "student-of-war"
+        ],
+        "id": "battle-master-3"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "battle-master",
+        "level": 7,
+        "features": [
+          "know-your-enemy"
+        ],
+        "id": "battle-master-7"
+      },
+      null,
+      null,
+      {
+        "subclassId": "battle-master",
+        "level": 10,
+        "features": [
+          "improved-combat-superiority"
+        ],
+        "id": "battle-master-10"
+      },
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "battle-master",
+        "level": 15,
+        "features": [
+          "relentless"
+        ],
+        "id": "battle-master-15"
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "id": "battle-master"
+  },
   "berserker": {
     "name": "Berserker",
     "flavor": "Primal Path",
@@ -55,6 +113,170 @@
       null
     ],
     "id": "berserker"
+  },
+  "champion": {
+    "name": "Champion",
+    "flavor": "Martial Archetype",
+    "description": "The archetypal Champion focuses on the development of raw physical power honed to deadly perfection. Those who model themselves on this archetype combine rigorous training with physical excellence to deal devastating blows.",
+    "classId": "fighter",
+    "levels": [
+      null,
+      null,
+      {
+        "subclassId": "champion",
+        "level": 3,
+        "features": [
+          "improved-critical"
+        ],
+        "id": "champion-3"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "champion",
+        "level": 7,
+        "features": [
+          "remarkable-athlete"
+        ],
+        "id": "champion-7"
+      },
+      null,
+      null,
+      {
+        "subclassId": "champion",
+        "level": 10,
+        "features": [
+          "additional-fighting-style"
+        ],
+        "id": "champion-10"
+      },
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "champion",
+        "level": 15,
+        "features": [
+          "superior-critical"
+        ],
+        "id": "champion-15"
+      },
+      null,
+      null,
+      {
+        "subclassId": "champion",
+        "level": 18,
+        "features": [
+          "survivor"
+        ],
+        "id": "champion-18"
+      },
+      null,
+      null
+    ],
+    "id": "champion"
+  },
+  "eldritch-knight": {
+    "name": "Eldritch Knight",
+    "flavor": "Martial Archetype",
+    "description": "The archetypal Eldritch Knight combines the martial mastery common to all fighters with a careful study of magic. Eldritch Knights use magical techniques similar to those practiced by wizards. They focus their study on two of the eight schools of magic: abjuration and evocation. Abjuration spells grant an Eldritch Knight additional protection in battle, and evocation spells deal damage to many foes at once, extending the fighter\u0027s reach in combat. These knights learn a comparatively small number of spells, committing them to memory instead of keeping them in a spellbook.",
+    "classId": "fighter",
+    "levels": [
+      null,
+      null,
+      {
+        "subclassId": "battle-master",
+        "level": 3,
+        "features": [
+          "weapon-bond"
+        ],
+        "id": "battle-master-3"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "battle-master",
+        "level": 7,
+        "features": [
+          "war-magic"
+        ],
+        "id": "battle-master-7"
+      },
+      null,
+      null,
+      {
+        "subclassId": "battle-master",
+        "level": 10,
+        "features": [
+          "eldritch-strike"
+        ],
+        "id": "battle-master-10"
+      },
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "battle-master",
+        "level": 15,
+        "features": [
+          "arcane-charge"
+        ],
+        "id": "battle-master-15"
+      },
+      null,
+      null,
+      {
+        "subclassId": "battle-master",
+        "level": 18,
+        "features": [
+          "improved-war-magic"
+        ],
+        "id": "battle-master-18"
+      },
+      null,
+      null
+    ],
+    "id": "eldritch-knight"
+  },
+  "four-elements": {
+    "name": "Four Elements",
+    "flavor": " Monastic Tradition",
+    "description": "You follow a monastic tradition that teaches you to harness the elements. When you focus your ki, you can align yourself with the forces of creation and bend the four elements to your will, using them as an extension of your body. Some members of this tradition dedicate themselves to a single element, but others weave the elements together.\nMany monks of this tradition tattoo their bodies with representations of their ki powers, commonly imagined as coiling dragons, but also as phoenixes, fish, plants, mountains, and cresting waves.",
+    "classId": "monk",
+    "levels": [
+      null,
+      null,
+      {
+        "subclassId": "four-elements",
+        "level": 3,
+        "features": [
+          "disciple-of-the-elements"
+        ],
+        "id": "four-elements-3"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "id": "four-elements"
   },
   "knowledge": {
     "name": "Knowledge",
@@ -481,6 +703,120 @@
       null
     ],
     "id": "nature"
+  },
+  "open-hand": {
+    "name": "Open Hand",
+    "flavor": "Monastic Tradition",
+    "description": "Monks of the Way of the Open Hand are the ultimate masters of martial arts combat, whether armed or unarmed. They learn techniques to push and trip their opponents, manipulate ki to heal damage to their bodies, and practice advanced meditation that can protect them from harm.",
+    "classId": "monk",
+    "levels": [
+      null,
+      null,
+      {
+        "subclassId": "open-hand",
+        "level": 3,
+        "features": [
+          "open-hand-technique"
+        ],
+        "id": "open-hand-3"
+      },
+      null,
+      null,
+      {
+        "subclassId": "open-hand",
+        "level": 6,
+        "features": [
+          "wholeness-of-body"
+        ],
+        "id": "open-hand-6"
+      },
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "open-hand",
+        "level": 11,
+        "features": [
+          "tranquility"
+        ],
+        "id": "open-hand-11"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "open-hand",
+        "level": 17,
+        "features": [
+          "quivering-palm"
+        ],
+        "id": "open-hand-17"
+      },
+      null,
+      null,
+      null
+    ],
+    "id": "open-hand"
+  },
+  "shadow": {
+    "name": "Shadow",
+    "flavor": "Monastic Tradition",
+    "description": "Monks of the Way of Shadow follow a tradition that values stealth and subterfuge. These monks might be called ninjas or shadowdancers, and they serve as spies and assassins. Sometimes the members of a ninja monastery are family members, forming a clan sworn to secrecy about their arts and missions. Other monasteries are more like thieves\u0027 guilds, hiring out their services to nobles, rich merchants, or anyone else who can pay their fees. Regardless of their methods, the heads of these monasteries expect the unquestioning obedience of their students.",
+    "classId": "monk",
+    "levels": [
+      null,
+      null,
+      {
+        "subclassId": "shadow",
+        "level": 3,
+        "features": [
+          "shadow-arts"
+        ],
+        "id": "shadow-3"
+      },
+      null,
+      null,
+      {
+        "subclassId": "shadow",
+        "level": 6,
+        "features": [
+          "shadow-step"
+        ],
+        "id": "shadow-6"
+      },
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "shadow",
+        "level": 11,
+        "features": [
+          "cloak-of-shadows"
+        ],
+        "id": "shadow-11"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "shadow",
+        "level": 17,
+        "features": [
+          "opportunist"
+        ],
+        "id": "shadow-17"
+      },
+      null,
+      null,
+      null
+    ],
+    "id": "shadow"
   },
   "tempest": {
     "name": "Tempest",

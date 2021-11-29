@@ -64,6 +64,20 @@
     "subclassId": "totem-warrior",
     "id": "aspect-of-the-beast"
   },
+  "assassin-bonus-proficiencies": {
+    "name": "Bonus Proficiencies",
+    "description": "When you choose this archetype at 3rd level, you gain proficiency with the disguise kit and the poisoner\u0027s kit.",
+    "classId": "rogue",
+    "subclassId": "assassin",
+    "id": "assassin-bonus-proficiencies"
+  },
+  "assassinate": {
+    "name": "Assassinate",
+    "description": "Starting at 3rd level, you are at your deadliest when you get the drop on your enemies. You have advantage on attack rolls against any creature that hasn\u0027t taken a turn in the combat yet. In addition, any hit you score against a creature that is surprised is a critical hit.",
+    "classId": "rogue",
+    "subclassId": "assassin",
+    "id": "assassinate"
+  },
   "aura-improvements": {
     "name": "Aura improvements",
     "description": "At 18th level, the range of your auras increase to 30 feet.",
@@ -236,6 +250,13 @@
     "description": "Beginning at 18th level, you can cast many of your druid spells in any shape you assume using Wild Shape. You can perform the somatic and verbal components of a druid spell while in a beast shape, but you aren\u0027t able to provide material components.",
     "classId": "druid",
     "id": "beast-spells"
+  },
+  "bestial-fury": {
+    "name": "Bestial Fury",
+    "description": "Starting at 11th level, when you command your beast companion to take the Attack action, the beast can make two attacks, or it can take the Multiattack action if it has that action.",
+    "classId": "ranger",
+    "subclassId": "beast-master",
+    "id": "bestial-fury"
   },
   "blessed-healer": {
     "name": "Blessed Healer",
@@ -610,6 +631,13 @@
     "classId": "warlock",
     "subclassId": "fiend",
     "id": "dark-ones-own-luck"
+  },
+  "death-strike": {
+    "name": "Death Strike",
+    "description": "Starting at 17th level, you become a master of instant death. When you attack and hit a creature that is surprised, it must make a Constitution saving throw (DC 8 + your Dexterity modifier + your proficiency bonus). On a failed save, double the damage of your attack against the creature.",
+    "classId": "rogue",
+    "subclassId": "assassin",
+    "id": "death-strike"
   },
   "defensive-tactics": {
     "name": "Defensive Tactics",
@@ -1214,6 +1242,13 @@
     "subclassId": "evocation",
     "id": "evocation-savant"
   },
+  "exceptional-training": {
+    "name": "Exceptional Training",
+    "description": "Beginning at 7th level, on any of your turns when your beast companion doesn’t attack, you can use a bonus action to command the beast to take the Dash, Disengage, or Help action on its turn. In addition, the beast’s attacks now count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.",
+    "classId": "ranger",
+    "subclassId": "beast-master",
+    "id": "exceptional-training"
+  },
   "extra-attack-1": {
     "name": "Extra Attack",
     "description": "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn. The number of attacks increases to three when you reach 11th level in this class and to four when you reach 20th level in this class.",
@@ -1481,6 +1516,13 @@
     "subclassId": "fiend",
     "id": "hurl-through-hell"
   },
+  "imposter": {
+    "name": "Imposter",
+    "description": "At 13th level, you gain the ability to unerringly mimic another person\u0027s speech, writing, and behavior. You must spend at least three hours studying these three components of the person\u0027s behavior, listening to speech, examining handwriting, and observing mannerisms.\nYour ruse is indiscernible to the casual observer. If a wary creature suspects something is amiss, you have advantage on any Charisma (Deception) check you make to avoid detection.",
+    "classId": "rogue",
+    "subclassId": "assassin",
+    "id": "imposter"
+  },
   "improved-combat-superiority": {
     "name": "Improved Combat Superiority",
     "description": "At 10th level, your superiority dice turn into d10s. At 18th level, they turn into d12s.",
@@ -1545,6 +1587,13 @@
     "description": "Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total.",
     "classId": "barbarian",
     "id": "indomitable-might"
+  },
+  "infiltration-expertise": {
+    "name": "Infiltration Expertise",
+    "description": "Starting at 9th level, you can unfailingly create false identities for yourself. You must spend seven days and 25 gp to establish the history, profession, and affiliations for an identity. You can\u0027t establish an identity that belongs to someone else. For example, you might acquire appropriate clothing, letters of introduction, and official- looking certification to establish yourself as a member of a trading house from a remote city so you can insinuate yourself into the company of other wealthy merchants.\nThereafter, if you adopt the new identity as a disguise, other creatures believe you to be that person until given an obvious reason not to.",
+    "classId": "rogue",
+    "subclassId": "assassin",
+    "id": "infiltration-expertise"
   },
   "intimidating-presence": {
     "name": "Intimidating Presence",
@@ -1618,6 +1667,20 @@
     "classId": "bard",
     "subclassId": "lore",
     "id": "lore-bonus-proficiencies"
+  },
+  "mage-hand-legerdemain": {
+    "name": "Mage Hand Legerdemain",
+    "description": "Starting at 3rd level, when you cast Mage Hand, you can make the spectral hand invisible, and you can perform the following additional tasks with it:\n    You can stow one object the hand is holding in a container worn or carried by another creature.\n    You can retrieve an object in a container worn or carried by another creature.\n    You can use thieves\u0027 tools to pick locks and disarm traps at range.\nYou can perform one of these tasks without being noticed by a creature if you succeed on a Dexterity (Sleight of Hand) check contested by the creature\u0027s Wisdom (Perception) check.\nIn addition, you can use the bonus action granted by your Cunning Action to control the hand.",
+    "classId": "rogue",
+    "subclassId": "arcane-trickster",
+    "id": "mage-hand-legerdemain"
+  },
+  "magical-ambush": {
+    "name": "Magical Ambush",
+    "description": "Starting at 9th level, if you are hidden from a creature when you cast a spell on it, the creature has disadvantage on any saving throw it makes against the spell this turn.",
+    "classId": "rogue",
+    "subclassId": "arcane-trickster",
+    "id": "magical-ambush"
   },
   "magical-secrets-1": {
     "name": "Magical Secrets",
@@ -2160,6 +2223,13 @@
     "classId": "ranger",
     "id": "ranger-lands-stride"
   },
+  "rangers-companion": {
+    "name": "Ranger\u0027s Companion",
+    "description": "At 3rd level, you gain a beast companion that accompanies you on your adventures and is trained to fight alongside you. Choose a beast that is no larger than Medium and that has a challenge rating of 1/4 or lower (appendix D presents statistics for the hawk, mastiff, and panther as examples). Add your proficiency bonus to the beast’s AC, attack rolls, and damage rolls, as well as to any saving throws and skills it is proficient in. Its hit point maximum equals its normal maximum or four times your ranger level, whichever is higher. Like any creature, the beast can spend Hit Dice during a short rest.\nThe beast obeys your commands as best as it can. It takes its turn on your initiative. On your turn, you can verbally command the beast where to move (no action required by you). You can use your action to verbally command it to take the Attack, Dash, Disengage, or Help action. If you don’t issue a command, the beast takes the Dodge action. Once you have the Extra Attack feature, you can make one weapon attack yourself when you command the beast to take the Attack action. While traveling through your favored terrain with only the beast, you can move stealthily at a normal pace.\nIf you are incapacitated or absent, the beast acts on its own, focusing on protecting you and itself. The beast never requires your command to use its reaction, such as when making an opportunity attack.\nIf the beast dies, you can obtain another one by spending 8 hours magically bonding with another beast that isn’t hostile to you, either the same type of beast as before or a different one.",
+    "classId": "ranger",
+    "subclassId": "beast-master",
+    "id": "rangers-companion"
+  },
   "reckless-attack": {
     "name": "Reckless Attack",
     "description": "Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn.",
@@ -2306,6 +2376,13 @@
     "subclassId": "shadow",
     "id": "shadow-step"
   },
+  "share-spells": {
+    "name": "Share Spells",
+    "description": "Beginning at 15th level, when you cast a spell targeting yourself, you can also affect your beast companion with the spell if the beast is within 30 feet of you.",
+    "classId": "ranger",
+    "subclassId": "beast-master",
+    "id": "share-spells"
+  },
   "signature-spell": {
     "name": "Signature Spell",
     "description": "When you reach 20th level, you gain mastery over two powerful spells and can cast them with little effort. Choose two 3rd-level wizard spells in your spellbook as your signature spells. You always have these spells prepared, they don\u0027t count against the number of spells you have prepared, and you can cast each of them once at 3rd level without expending a spell slot. When you do so, you can\u0027t do so again until you finish a short or long rest.\nIf you want to cast either spell at a higher level, you must expend a spell slot as normal.",
@@ -2408,6 +2485,13 @@
     "description": "At 18th level, you have achieved such mastery over certain spells that you can cast them at will. Choose a 1st-level wizard spell and a 2nd-level wizard spell that are in your spellbook. You can cast those spells at their lowest level without expending a spell slot when you have them prepared. If you want to cast either spell at a higher level, you must expend a spell slot as normal.\nBy spending 8 hours in study, you can exchange one or both of the spells you chose for different spells of the same levels.",
     "classId": "wizard",
     "id": "spell-mastery"
+  },
+  "spell-thief": {
+    "name": "Spell Thief",
+    "description": "At 17th level, you gain the ability to magically steal the knowledge of how to cast a spell from another spellcaster.\nImmediately after a creature casts a spell that targets you or includes you in its area of effect, you can use your reaction to force the creature to make a saving throw with its spellcasting ability modifier. The DC equals your spell save DC. On a failed save, you negate the spell\u0027s effect against you, and you steal the knowledge of the spell if it is at least 1st level and of a level you can cast (it doesn\u0027t need to be a wizard spell). For the next 8 hours, you know the spell and can cast it using your spell slots. The creature can\u0027t cast that spell until the 8 hours have passed.\nOnce you use this feature, you can\u0027t use it again until you finish a long rest.",
+    "classId": "rogue",
+    "subclassId": "arcane-trickster",
+    "id": "spell-thief"
   },
   "spellcasting-bard": {
     "name": "Spellcasting: Bard",
@@ -2690,6 +2774,13 @@
     "description": "Starting at 14th level, you can use the Hide action as a bonus action on your turn. Also, you can\u0027t be tracked by nonmagical means, unless you choose to leave a trail.",
     "classId": "ranger",
     "id": "vanish"
+  },
+  "versatile-trickster": {
+    "name": "Versatile Trickster",
+    "description": "At 13th level, you gain the ability to distract targets with your Mage Hand. As a bonus action on your turn, you can designate a creature within 5 feet of the spectral hand created by the spell. Doing so gives you advantage on attack rolls against that creature until the end of the turn.",
+    "classId": "rogue",
+    "subclassId": "arcane-trickster",
+    "id": "versatile-trickster"
   },
   "visions-of-the-past": {
     "name": "Visions of the Past",

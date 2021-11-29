@@ -899,6 +899,309 @@ public class SubclassBuilder {
 		return subclass;
 	}
 	
+	private static DndSubclass createHunter() {
+		Dnd5eSubclass model = data5e.DndSubclass.get("hunter");
+		DndSubclass subclass = createSubclass(model);
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		for(int x = 0; x < 20; x++) {
+			if(model.levels.get(x) != null)
+				subclass.levels.set(x, createLevel(model.levels.get(x)));
+		}
+		
+		return subclass;
+	}
+	
+	private static DndSubclass createBeastMaster() {
+		DndSubclass subclass = new DndSubclass();
+		subclass.id = "beast-master";
+		subclass.name = "Beast Master";
+		subclass.flavor = "Ranger Archetype";
+		subclass.classId = "ranger";
+		subclass.description = StringUtil.convertDesc(
+				"The Beast Master archetype embodies a friendship between the civilized races and the beasts of the world. United in focus, beast and ranger work as one to fight the monstrous foes that threaten civilization and the wilderness alike. Emulating the Beast Master archetype means committing yourself to this ideal, working in partnership with an animal as its companion and friend.");
+		
+		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		createLevel(subclass, 3, "rangers-companion");
+		registerFeature("rangers-companion", "Ranger's Companion",
+				"At 3rd level, you gain a beast companion that accompanies you on your adventures and is trained to fight alongside you. Choose a beast that is no larger than Medium and that has a challenge rating of 1/4 or lower (appendix D presents statistics for the hawk, mastiff, and panther as examples). Add your proficiency bonus to the beast’s AC, attack rolls, and damage rolls, as well as to any saving throws and skills it is proficient in. Its hit point maximum equals its normal maximum or four times your ranger level, whichever is higher. Like any creature, the beast can spend Hit Dice during a short rest.\n"
+				+ "\n"
+				+ "The beast obeys your commands as best as it can. It takes its turn on your initiative. On your turn, you can verbally command the beast where to move (no action required by you). You can use your action to verbally command it to take the Attack, Dash, Disengage, or Help action. If you don’t issue a command, the beast takes the Dodge action. Once you have the Extra Attack feature, you can make one weapon attack yourself when you command the beast to take the Attack action. While traveling through your favored terrain with only the beast, you can move stealthily at a normal pace.\n"
+				+ "\n"
+				+ "If you are incapacitated or absent, the beast acts on its own, focusing on protecting you and itself. The beast never requires your command to use its reaction, such as when making an opportunity attack.\n"
+				+ "\n"
+				+ "If the beast dies, you can obtain another one by spending 8 hours magically bonding with another beast that isn’t hostile to you, either the same type of beast as before or a different one.");
+		
+		createLevel(subclass, 7, "exceptional-training");
+		registerFeature("exceptional-training", "Exceptional Training",
+				"Beginning at 7th level, on any of your turns when your beast companion doesn’t attack, you can use a bonus action to command the beast to take the Dash, Disengage, or Help action on its turn. In addition, the beast’s attacks now count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.");
+		
+		createLevel(subclass, 11, "bestial-fury");
+		registerFeature("bestial-fury", "Bestial Fury",
+				"Starting at 11th level, when you command your beast companion to take the Attack action, the beast can make two attacks, or it can take the Multiattack action if it has that action.");
+		
+		createLevel(subclass, 15, "share-spells");
+		registerFeature("share-spells", "Share Spells",
+				"Beginning at 15th level, when you cast a spell targeting yourself, you can also affect your beast companion with the spell if the beast is within 30 feet of you.");
+		
+		return subclass;
+	}
+	
+	private static DndSubclass createThief() {
+		Dnd5eSubclass model = data5e.DndSubclass.get("thief");
+		DndSubclass subclass = createSubclass(model);
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		for(int x = 0; x < 20; x++) {
+			if(model.levels.get(x) != null)
+				subclass.levels.set(x, createLevel(model.levels.get(x)));
+		}
+		
+		return subclass;
+	}
+	
+	private static DndSubclass createAssassin() {
+		DndSubclass subclass = new DndSubclass();
+		subclass.id = "assassin";
+		subclass.name = "Assassin";
+		subclass.flavor = "Roguish Archetype";
+		subclass.classId = "rogue";
+		subclass.description = StringUtil.convertDesc(
+				"You focus your training on the grim art of death. Those who adhere to this archetype are diverse: hired killers, spies, bounty hunters, and even specially anointed priests trained to exterminate the enemies of their deity. Stealth, poison, and disguise help you eliminate your foes with deadly efficiency.");
+		
+		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		createLevel(subclass, 3, "assassin-bonus-proficiencies", "assassinate");
+		registerFeature("assassin-bonus-proficiencies", "Bonus Proficiencies",
+				"When you choose this archetype at 3rd level, you gain proficiency with the disguise kit and the poisoner's kit.");
+		registerFeature("assassinate", "Assassinate",
+				"Starting at 3rd level, you are at your deadliest when you get the drop on your enemies. You have advantage on attack rolls against any creature that hasn't taken a turn in the combat yet. In addition, any hit you score against a creature that is surprised is a critical hit.");
+		
+		createLevel(subclass, 9, "infiltration-expertise");
+		registerFeature("infiltration-expertise", "Infiltration Expertise",
+				"Starting at 9th level, you can unfailingly create false identities for yourself. You must spend seven days and 25 gp to establish the history, profession, and affiliations for an identity. You can't establish an identity that belongs to someone else. For example, you might acquire appropriate clothing, letters of introduction, and official- looking certification to establish yourself as a member of a trading house from a remote city so you can insinuate yourself into the company of other wealthy merchants.\n"
+				+ "\n"
+				+ "Thereafter, if you adopt the new identity as a disguise, other creatures believe you to be that person until given an obvious reason not to.");
+		
+		createLevel(subclass, 13, "imposter");
+		registerFeature("imposter", "Imposter",
+				"At 13th level, you gain the ability to unerringly mimic another person's speech, writing, and behavior. You must spend at least three hours studying these three components of the person's behavior, listening to speech, examining handwriting, and observing mannerisms.\n"
+				+ "\n"
+				+ "Your ruse is indiscernible to the casual observer. If a wary creature suspects something is amiss, you have advantage on any Charisma (Deception) check you make to avoid detection.");
+		
+		createLevel(subclass, 17, "death-strike");
+		registerFeature("death-strike", "Death Strike",
+				"Starting at 17th level, you become a master of instant death. When you attack and hit a creature that is surprised, it must make a Constitution saving throw (DC 8 + your Dexterity modifier + your proficiency bonus). On a failed save, double the damage of your attack against the creature.");
+		
+		return subclass;
+	}
+	
+	private static DndSubclass createArcaneTrickster() {
+		DndSubclass subclass = new DndSubclass();
+		subclass.id = "arcane-trickster";
+		subclass.name = "Arcane Trickster";
+		subclass.flavor = "Roguish Archetype";
+		subclass.classId = "rogue";
+		subclass.description = StringUtil.convertDesc(
+				"Some rogues enhance their fine-honed skills of stealth and agility with magic, learning tricks of enchantment and illusion. These rogues include pickpockets and burglars, but also pranksters, mischief-makers, and a significant number of adventurers.");
+		
+		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
+		//TODO insert magic here
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		createLevel(subclass, 3, "mage-hand-legerdemain");
+		registerFeature("mage-hand-legerdemain", "Mage Hand Legerdemain",
+				"Starting at 3rd level, when you cast Mage Hand, you can make the spectral hand invisible, and you can perform the following additional tasks with it:\n"
+				+ "\n"
+				+ "    You can stow one object the hand is holding in a container worn or carried by another creature.\n"
+				+ "\n"
+				+ "    You can retrieve an object in a container worn or carried by another creature.\n"
+				+ "\n"
+				+ "    You can use thieves' tools to pick locks and disarm traps at range.\n"
+				+ "\n"
+				+ "You can perform one of these tasks without being noticed by a creature if you succeed on a Dexterity (Sleight of Hand) check contested by the creature's Wisdom (Perception) check.\n"
+				+ "\n"
+				+ "In addition, you can use the bonus action granted by your Cunning Action to control the hand.");
+		
+		createLevel(subclass, 9 , "magical-ambush");
+		registerFeature("magical-ambush", "Magical Ambush",
+				"Starting at 9th level, if you are hidden from a creature when you cast a spell on it, the creature has disadvantage on any saving throw it makes against the spell this turn.");
+		
+		createLevel(subclass, 13, "versatile-trickster");
+		registerFeature("versatile-trickster", "Versatile Trickster",
+				"At 13th level, you gain the ability to distract targets with your Mage Hand. As a bonus action on your turn, you can designate a creature within 5 feet of the spectral hand created by the spell. Doing so gives you advantage on attack rolls against that creature until the end of the turn.");
+		
+		createLevel(subclass, 17, "spell-thief");
+		registerFeature("spell-thief", "Spell Thief",
+				"At 17th level, you gain the ability to magically steal the knowledge of how to cast a spell from another spellcaster.\n"
+				+ "\n"
+				+ "Immediately after a creature casts a spell that targets you or includes you in its area of effect, you can use your reaction to force the creature to make a saving throw with its spellcasting ability modifier. The DC equals your spell save DC. On a failed save, you negate the spell's effect against you, and you steal the knowledge of the spell if it is at least 1st level and of a level you can cast (it doesn't need to be a wizard spell). For the next 8 hours, you know the spell and can cast it using your spell slots. The creature can't cast that spell until the 8 hours have passed.\n"
+				+ "\n"
+				+ "Once you use this feature, you can't use it again until you finish a long rest.");
+		
+		return subclass;
+	}
+	
+	private static DndSubclass createDraconic() {
+		Dnd5eSubclass model = data5e.DndSubclass.get("draconic");
+		DndSubclass subclass = createSubclass(model);
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		for(int x = 0; x < 20; x++) {
+			if(model.levels.get(x) != null)
+				subclass.levels.set(x, createLevel(model.levels.get(x)));
+		}
+		
+		return subclass;
+	}
+	
+	private static DndSubclass createWildMagic() {
+		DndSubclass subclass = new DndSubclass();
+		subclass.id = "wild-magic";
+		subclass.name = "Wild Magic";
+		subclass.flavor = "Sorcerous Origins";
+		subclass.classId = "sorcerer";
+		subclass.description = StringUtil.convertDesc(
+				"Your innate magic comes from the wild forces of chaos that underlie the order of creation. You might have endured exposure to some form of raw magic, perhaps through a planar portal leading to Limbo, the Elemental Planes, or the mysterious Far Realm. Perhaps you were blessed by a powerful fey creature or marked by a demon. Or your magic could be a fluke of your birth, with no apparent cause or reason. However it came to be, this chaotic magic churns within you, waiting for any outlet.");
+		
+		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		createLevel(subclass, 1, "wild-magic", "tides-of-chaos");
+		registerFeature("wild-magic", "Wild Magic", 
+				"Starting when you choose this origin at 1st level, your spellcasting can unleash surges of untamed magic. Immediately after you cast a sorcerer spell of 1st level or higher, the DM can have you roll a d20. If you roll a 1, roll on the Wild Magic Surge table to create a random magical effect.");
+		registerFeature("tides-of-chaos", "Tides of Chaos",
+				"Starting at 1st level, you can manipulate the forces of chance and chaos to gain advantage on one attack roll, ability check, or saving throw. Once you do so, you must finish a long rest before you can use this feature again.\n"
+				+ "\n"
+				+ "Any time before you regain the use of this feature, the DM can have you roll on the Wild Magic Surge table immediately after you cast a sorcerer spell of 1st level or higher. You then regain the use of this feature.");
+		
+		createLevel(subclass, 6, "bend-luck");
+		registerFeature("bend-luck", "Bend Luck",
+				"Starting at 6th level, you have the ability to twist fate using your wild magic. When another creature you can see makes an attack roll, an ability check, or a saving throw, you can use your reaction and spend 2 sorcery points to roll 1d4 and apply the number rolled as a bonus or penalty (your choice) to the creature's roll. You can do so after the creature rolls but before any effects of the roll occur.");
+		
+		createLevel(subclass, 14, "controlled-chaos");
+		registerFeature("controlled-chaos", "Controlled Chaos",
+				"At 14th level, you gain a modicum of control over the surges of your wild magic. Whenever you roll on the Wild Magic Surge table, you can roll twice and use either number.");
+		
+		createLevel(subclass, 18, "spell-bombardment");
+		registerFeature("spell-bombardment", "Spell Bombardment",
+				"Beginning at 18th level, the harmful energy of your spells intensifies. When you roll damage for a spell and roll the highest number possible on any of the dice, choose one of those dice, roll it again and add that roll to the damage. You can use the feature only once per turn.");
+		
+		return subclass;
+	}
+	
+	private static DndSubclass createArchfey() {
+		DndSubclass subclass = new DndSubclass();
+		subclass.id = "archfey";
+		subclass.name = "Archfey";
+		subclass.flavor = "Otherworldly Patron";
+		subclass.classId = "warlock";
+		subclass.description = StringUtil.convertDesc(
+				"Your patron is a lord or lady of the fey, a creature of legend who holds secrets that were forgotten before the mortal races were born. This being's motivations are often inscrutable, and sometimes whimsical, and might involve a striving for greater magical power or the settling of age-old grudges. Beings of this sort include the Prince of Frost; the Queen of Air and Darkness, ruler of the Gloaming Court; Titania of the Summer Court; her consort Oberon, the Green Lord; Hyrsam, the Prince of Fools; and ancient hags.");
+		
+		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		createLevel(subclass, 1, "fey-presence");
+		registerFeature("fey-presence", "Fey Presence",
+				"Starting at 1st level, your patron bestows upon you the ability to project the beguiling and fearsome presence of the fey. As an action, you can cause each creature in a 10-foot cube originating from you to make a Wisdom saving throw against your warlock spell save DC. The creatures that fail their saving throws are all charmed or frightened by you (your choice) until the end of your next turn.\n"
+				+ "\n"
+				+ "Once you use this feature, you can't use it again until you finish a short or long rest.");
+		
+		createLevel(subclass, 6, "misty-escape");
+		registerFeature("misty-escape", "Misty Escape",
+				"Starting at 6th level, you can vanish in a puff of mist in response to harm. When you take damage, you can use your reaction to turn invisible and teleport up to 60 feet to an unoccupied space you can see. You remain invisible until the start of your next turn or until you attack or cast a spell.\n"
+				+ "\n"
+				+ "Once you use this feature, you can't use it again until you finish a short or long rest.");
+		
+		createLevel(subclass, 10, "beguiling-defenses");
+		registerFeature("beguiling-defenses", "Beguiling Defenses",
+				"Beginning at 10th level, your patron teaches you how to turn the mind-affecting magic of your enemies against them. You are immune to being charmed, and when another creature attempts to charm you, you can use your reaction to attempt to turn the charm back on that creature. The creature must succeed on a Wisdom saving throw against your warlock spell save DC or be charmed by you for 1 minute or until the creature takes any damage.");
+		
+		createLevel(subclass, 14, "dark-delirium");
+		registerFeature("dark-delirium", "Dark Delirium",
+				"Starting at 14th level, you can plunge a creature into an illusory realm. As an action, choose a creature that you can see within 60 feet of you. It must make a Wisdom saving throw against your warlock spell save DC. On a failed save, it is charmed or frightened by you (your choice) for 1 minute or until your concentration is broken (as if you are concentrating on a spell). This effect ends early if the creature takes any damage.\n"
+				+ "\n"
+				+ "Until this illusion ends, the creature thinks it is lost in a misty realm, the appearance of which you choose. The creature can see and hear only itself, you, and the illusion.\n"
+				+ "\n"
+				+ "You must finish a short or long rest before you can use this feature again.");
+		
+		return subclass;
+	}
+	
+	private static DndSubclass createFiend() {
+		Dnd5eSubclass model = data5e.DndSubclass.get("fiend");
+		DndSubclass subclass = createSubclass(model);
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		for(int x = 0; x < 20; x++) {
+			if(model.levels.get(x) != null)
+				subclass.levels.set(x, createLevel(model.levels.get(x)));
+		}
+		
+		return subclass;
+	}
+	
+	private static DndSubclass createGreatOldOne() {
+		DndSubclass subclass = new DndSubclass();
+		subclass.id = "great-old-one";
+		subclass.name = "Great Old One";
+		subclass.flavor = "Otherworldly Patron";
+		subclass.classId = "warlock";
+		subclass.description = StringUtil.convertDesc(
+				"Your patron is a mysterious entity whose nature is utterly foreign to the fabric of reality. It might come from the Far Realm, the space beyond reality, or it could be one of the elder gods known only in legends. Its motives are incomprehensible to mortals, and its knowledge so immense and ancient that even the greatest libraries pale in comparison to the vast secrets it holds. The Great Old One might be unaware of your existence or entirely indifferent to you, but the secrets you have learned allow you to draw your magic from it.\n"
+				+ "\n"
+				+ "Entities of this type include Ghaunadar, called That Which Lurks; Tharizdun, the Chained God; Dendar, the Night Serpent; Zargon, the Returner; Great Cthulhu; and other unfathomable beings.\n");
+		
+		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
+		
+		createLevel(subclass, 1, "awakened-mind");
+		registerFeature("awakened-mind", "Awakened Mind",
+				"Starting at 1st level, your alien knowledge gives you the ability to touch the minds of other creatures. You can telepathically speak to any creature you can see within 30 feet of you. You don't need to share a language with the creature for it to understand your telepathic utterances, but the creature must be able to understand at least one language.");
+		
+		createLevel(subclass, 6, "entropic-ward");
+		registerFeature("entropic-ward", "Entropic Ward",
+				"At 6th level, you learn to magically ward yourself against attack and to turn an enemy's failed strike into good luck for yourself. When a creature makes an attack roll against you, you can use your reaction to impose disadvantage on that roll. If the attack misses you, your next attack roll against the creature has advantage if you make it before the end of your next turn.\n"
+				+ "\n"
+				+ "Once you use this feature, you can't use it again until you finish a short or long rest.\n");
+		
+		createLevel(subclass, 10, "thought-shield");
+		registerFeature("thought-shield", "Thought Shield",
+				"Starting at 10th level, your thoughts can't be read by telepathy or other means unless you allow it. You also have resistance to psychic damage, and whenever a creature deals psychic damage to you, that creature takes the same amount of damage that you do.");
+		
+		createLevel(subclass, 14, "create-thrall");
+		registerFeature("create-thrall", "Create Thrall",
+				"At 14th level, you gain the ability to infect a humanoid's mind with the alien magic of your patron. You can use your action to touch an incapacitated humanoid. That creature is then charmed by you until a Remove Curse spell is cast on it, the charmed condition is removed from it, or you use this feature again.\n"
+				+ "\n"
+				+ "You can communicate telepathically with the charmed creature as long as the two of you are on the same plane of existence.");
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		return subclass;
+	}
+	
 	/*
 	template
 	
@@ -955,6 +1258,20 @@ public class SubclassBuilder {
 		book.register(createDevotion());
 		book.register(createAncients());
 		book.register(createVengeance());
+		
+		book.register(createHunter());
+		book.register(createBeastMaster());
+		
+		book.register(createThief());
+		book.register(createAssassin());
+		book.register(createArcaneTrickster());
+		
+		book.register(createDraconic());
+		book.register(createWildMagic());
+		
+		book.register(createArchfey());
+		book.register(createFiend());
+		book.register(createGreatOldOne());
 		SourceRegistry.saveBooks();
 	}
 }

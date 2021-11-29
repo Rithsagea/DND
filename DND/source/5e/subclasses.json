@@ -56,6 +56,121 @@
     ],
     "id": "ancients-"
   },
+  "arcane-trickster": {
+    "name": "Arcane Trickster",
+    "flavor": "Roguish Archetype",
+    "description": "Some rogues enhance their fine-honed skills of stealth and agility with magic, learning tricks of enchantment and illusion. These rogues include pickpockets and burglars, but also pranksters, mischief-makers, and a significant number of adventurers.",
+    "classId": "rogue",
+    "levels": [
+      null,
+      null,
+      {
+        "subclassId": "arcane-trickster",
+        "level": 3,
+        "features": [
+          "mage-hand-legerdemain"
+        ],
+        "id": "arcane-trickster-3"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "arcane-trickster",
+        "level": 9,
+        "features": [
+          "magical-ambush"
+        ],
+        "id": "arcane-trickster-9"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "arcane-trickster",
+        "level": 13,
+        "features": [
+          "versatile-trickster"
+        ],
+        "id": "arcane-trickster-13"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "arcane-trickster",
+        "level": 17,
+        "features": [
+          "spell-thief"
+        ],
+        "id": "arcane-trickster-17"
+      },
+      null,
+      null,
+      null
+    ],
+    "id": "arcane-trickster"
+  },
+  "assassin": {
+    "name": "Assassin",
+    "flavor": "Roguish Archetype",
+    "description": "You focus your training on the grim art of death. Those who adhere to this archetype are diverse: hired killers, spies, bounty hunters, and even specially anointed priests trained to exterminate the enemies of their deity. Stealth, poison, and disguise help you eliminate your foes with deadly efficiency.",
+    "classId": "rogue",
+    "levels": [
+      null,
+      null,
+      {
+        "subclassId": "assassin",
+        "level": 3,
+        "features": [
+          "assassin-bonus-proficiencies",
+          "assassinate"
+        ],
+        "id": "assassin-3"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "assassin",
+        "level": 9,
+        "features": [
+          "infiltration-expertise"
+        ],
+        "id": "assassin-9"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "assassin",
+        "level": 13,
+        "features": [
+          "imposter"
+        ],
+        "id": "assassin-13"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "assassin",
+        "level": 17,
+        "features": [
+          "death-strike"
+        ],
+        "id": "assassin-17"
+      },
+      null,
+      null,
+      null
+    ],
+    "id": "assassin"
+  },
   "battle-master": {
     "name": "Battle Master",
     "flavor": "Martial Archetype",
@@ -113,6 +228,63 @@
       null
     ],
     "id": "battle-master"
+  },
+  "beast-master": {
+    "name": "Beast Master",
+    "flavor": "Ranger Archetype",
+    "description": "The Beast Master archetype embodies a friendship between the civilized races and the beasts of the world. United in focus, beast and ranger work as one to fight the monstrous foes that threaten civilization and the wilderness alike. Emulating the Beast Master archetype means committing yourself to this ideal, working in partnership with an animal as its companion and friend.",
+    "classId": "ranger",
+    "levels": [
+      null,
+      null,
+      {
+        "subclassId": "beast-master",
+        "level": 3,
+        "features": [
+          "rangers-companion"
+        ],
+        "id": "beast-master-3"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "beast-master",
+        "level": 7,
+        "features": [
+          "exceptional-training"
+        ],
+        "id": "beast-master-7"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "beast-master",
+        "level": 11,
+        "features": [
+          "bestial-fury"
+        ],
+        "id": "beast-master-11"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "beast-master",
+        "level": 15,
+        "features": [
+          "share-spells"
+        ],
+        "id": "beast-master-15"
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "id": "beast-master"
   },
   "berserker": {
     "name": "Berserker",
@@ -297,6 +469,64 @@
     ],
     "id": "devotion"
   },
+  "draconic": {
+    "name": "Draconic",
+    "flavor": "Sorcerous Origins",
+    "description": "Your innate magic comes from draconic magic that was mingled with your blood or that of your ancestors. Most often, sorcerers with this origin trace their descent back to a mighty sorcerer of ancient times who made a bargain with a dragon or who might even have claimed a dragon parent. Some of these bloodlines are well established in the world, but most are obscure. Any given sorcerer could be the first of a new bloodline, as a result of a pact or some other exceptional circumstance.",
+    "classId": "sorcerer",
+    "levels": [
+      {
+        "subclassId": "draconic",
+        "level": 1,
+        "features": [
+          "dragon-ancestor",
+          "draconic-resilience"
+        ],
+        "id": "draconic-1"
+      },
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "draconic",
+        "level": 6,
+        "features": [
+          "elemental-affinity"
+        ],
+        "id": "draconic-6"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "draconic",
+        "level": 14,
+        "features": [
+          "dragon-wings"
+        ],
+        "id": "draconic-14"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "draconic",
+        "level": 18,
+        "features": [
+          "draconic-presence"
+        ],
+        "id": "draconic-18"
+      },
+      null,
+      null
+    ],
+    "id": "draconic"
+  },
   "eldritch-knight": {
     "name": "Eldritch Knight",
     "flavor": "Martial Archetype",
@@ -396,6 +626,63 @@
       null
     ],
     "id": "four-elements"
+  },
+  "hunter": {
+    "name": "Hunter",
+    "flavor": "Ranger Archetype",
+    "description": "Emulating the Hunter archetype means accepting your place as a bulwark between civilization and the terrors of the wilderness. As you walk the Hunter\u0027s path, you learn specialized techniques for fighting the threats you face, from rampaging ogres and hordes of orcs to towering giants and terrifying dragons.",
+    "classId": "ranger",
+    "levels": [
+      null,
+      null,
+      {
+        "subclassId": "hunter",
+        "level": 3,
+        "features": [
+          "hunters-prey"
+        ],
+        "id": "hunter-3"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "hunter",
+        "level": 7,
+        "features": [
+          "defensive-tactics"
+        ],
+        "id": "hunter-7"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "hunter",
+        "level": 11,
+        "features": [
+          "multiattack"
+        ],
+        "id": "hunter-11"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "hunter",
+        "level": 15,
+        "features": [
+          "superior-hunters-defense"
+        ],
+        "id": "hunter-15"
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "id": "hunter"
   },
   "knowledge": {
     "name": "Knowledge",
@@ -1001,6 +1288,64 @@
       null
     ],
     "id": "tempest"
+  },
+  "thief": {
+    "name": "Thief",
+    "flavor": "Roguish Archetype",
+    "description": "You hone your skills in the larcenous arts. Burglars, bandits, cutpurses, and other criminals typically follow this archetype, but so do rogues who prefer to think of themselves as professional treasure seekers, explorers, delvers, and investigators. In addition to improving your agility and stealth, you learn skills useful for delving into ancient ruins, reading unfamiliar languages, and using magic items you normally couldn\u0027t employ.",
+    "classId": "rogue",
+    "levels": [
+      null,
+      null,
+      {
+        "subclassId": "thief",
+        "level": 3,
+        "features": [
+          "fast-hands",
+          "second-story-work"
+        ],
+        "id": "thief-3"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "thief",
+        "level": 9,
+        "features": [
+          "supreme-sneak"
+        ],
+        "id": "thief-9"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "thief",
+        "level": 13,
+        "features": [
+          "use-magic-device"
+        ],
+        "id": "thief-13"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "thief",
+        "level": 17,
+        "features": [
+          "thiefs-reflexes"
+        ],
+        "id": "thief-17"
+      },
+      null,
+      null,
+      null
+    ],
+    "id": "thief"
   },
   "totem-warrior": {
     "name": "Totem Warrior",

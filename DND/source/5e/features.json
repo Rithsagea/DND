@@ -186,6 +186,13 @@
     "subclassId": "",
     "id": "bardic-inspiration-d8"
   },
+  "battle-magic": {
+    "name": "Battle Magic",
+    "description": "At 14th level, you have mastered the art of weaving spellcasting and weapon use into a single harmonious act. When you use your action to cast a bard spell, you can make one weapon attack as a bonus action.",
+    "classId": "bard",
+    "subclassId": "valor",
+    "id": "battle-magic"
+  },
   "beast-spells": {
     "description": "Beginning at 18th level, you can cast many of your druid spells in any shape you assume using Wild Shape. You can perform the somatic and verbal components of a druid spell while in a beast shape, but you aren\u0027t able to provide material components.",
     "classId": "druid",
@@ -209,12 +216,6 @@
     "classId": "druid",
     "subclassId": "land",
     "id": "bonus-cantrip"
-  },
-  "bonus-proficiencies": {
-    "description": "When you join the College of Lore at 3rd level, you gain proficiency with three skills of your choice.",
-    "classId": "bard",
-    "subclassId": "lore",
-    "id": "bonus-proficiencies"
   },
   "bonus-proficiency": {
     "description": "When you choose this domain at 1st level, you gain proficiency with heavy armor.",
@@ -395,6 +396,13 @@
     "classId": "cleric",
     "subclassId": "",
     "id": "cleric-ability-score-improvement-5"
+  },
+  "combat-inspiration": {
+    "name": "Combat Inspiration",
+    "description": "Also at 3rd level, you learn to inspire others in battle. A creature that has a Bardic Inspiration die from you can roll that die and add the number rolled to a weapon damage roll it just made. Alternatively, when an attack roll is made against the creature, it can use its reaction to roll the Bardic Inspiration die and add the number rolled to its AC against that attack, after seeing the roll but before knowing whether it hits or misses.",
+    "classId": "bard",
+    "subclassId": "valor",
+    "id": "combat-inspiration"
   },
   "countercharm": {
     "description": "At 6th level, you gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performance that lasts until the end of your next turn. During that time, you and any friendly creatures within 30 feet of you have advantage on saving throws against being frightened or charmed. A creature must be able to hear you to gain this benefit. The performance ends early if you are incapacitated or silenced or if you voluntarily end it (no action required).",
@@ -1314,6 +1322,12 @@
     "subclassId": "",
     "id": "lay-on-hands"
   },
+  "lore-bonus-proficiencies": {
+    "description": "When you join the College of Lore at 3rd level, you gain proficiency with three skills of your choice.",
+    "classId": "bard",
+    "subclassId": "lore",
+    "id": "lore-bonus-proficiencies"
+  },
   "magical-secrets-1": {
     "description": "By 10th level, you have plundered magical knowledge from a wide spectrum of disciplines. Choose two spells from any class, including this one. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip. \nThe chosen spells count as bard spells for you and are included in the number in the Spells Known column of the Bard table. \nYou learn two additional spells from any class at 14th level and again at 18th level.",
     "classId": "bard",
@@ -2061,7 +2075,7 @@
   },
   "spirit-walker": {
     "name": "Spirit Walker",
-    "description": "At 10th level, you can cast the commune with nature spell, but only as a ritual. When you do so, a spiritual version of one of the animals you chose for Totem Spirit or Aspect of the Beast appears to you to convey the information you seek.\r\n",
+    "description": "At 10th level, you can cast the commune with nature spell, but only as a ritual. When you do so, a spiritual version of one of the animals you chose for Totem Spirit or Aspect of the Beast appears to you to convey the information you seek.",
     "classId": "barbarian",
     "subclassId": "totem-warrior",
     "id": "spirit-walker"
@@ -2169,6 +2183,13 @@
     "subclassId": "totem-warrior",
     "id": "totem-spirit"
   },
+  "totemic-attunement": {
+    "name": "Totemic Attunement",
+    "description": "At 14th level, you gain a magical benefit based on a totem animal of your choice. You can choose the same animal you selected previously or a different one.\nBear. While you’re raging, any creature within 5 feet of you that’s hostile to you has disadvantage on attack rolls against targets other than you or another character with this feature. An enemy is immune to this effect if it can’t see or hear you or if it can’t be frightened.\nEagle. While raging, you have a flying speed equal to your current walking speed. This benefit works only in short bursts; you fall if you end your turn in the air and nothing else is holding you aloft.\nWolf. While you’re raging, you can use a bonus action on your turn to knock a Large or smaller creature prone when you hit it with melee weapon attack.",
+    "classId": "barbarian",
+    "subclassId": "totem-warrior",
+    "id": "totemic-attunement"
+  },
   "tranquility": {
     "description": "Beginning at 11th level, you can enter a special meditation that surrounds you with an aura of peace. At the end of a long rest, you gain the effect of a sanctuary spell that lasts until the start of your next long rest (the spell can end early as normal). The saving throw DC for the spell equals 8 + your Wisdom modifier + your proficiency bonus.",
     "classId": "monk",
@@ -2198,6 +2219,20 @@
     "classId": "rogue",
     "subclassId": "thief",
     "id": "use-magic-device"
+  },
+  "valor-bonus-proficiencies": {
+    "name": "Bonus Proficiencies",
+    "description": "When you join the College of Valor at 3rd level, you gain proficiency with medium armor, shields, and martial weapons.",
+    "classId": "bard",
+    "subclassId": "valor",
+    "id": "valor-bonus-proficiencies"
+  },
+  "valor-extra-attack": {
+    "name": "Extra Attack",
+    "description": "Starting at 6th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
+    "classId": "bard",
+    "subclassId": "valor",
+    "id": "valor-extra-attack"
   },
   "vanish": {
     "description": "Starting at 14th level, you can use the Hide action as a bonus action on your turn. Also, you can\u0027t be tracked by nonmagical means, unless you choose to leave a trail.",

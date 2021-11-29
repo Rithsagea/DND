@@ -30,7 +30,7 @@ public class SubclassBuilder {
 		subclass.name = model.name;
 		subclass.flavor = model.flavor;
 		subclass.description = model.description;
-		subclass.parentClass = model.parentClass;
+		subclass.classId = model.parentClass;
 		
 		subclass.levels = new ArrayList<>();
 		subclass.levels.addAll(Collections.nCopies(20, null));
@@ -43,6 +43,7 @@ public class SubclassBuilder {
 		level.id = model.id;
 		level.features = model.features;
 		level.level = model.level;
+		level.subclassId = _subclassId;
 		return level;
 	}
 	
@@ -77,10 +78,11 @@ public class SubclassBuilder {
 		Dnd5eSubclass model = data5e.DndSubclass.get("berserker");
 		DndSubclass subclass = createSubclass(model);
 		
+		_subclassId = subclass.id;
+		
 		for(int x = 0; x < 20; x++) {
 			if(model.levels.get(x) != null) {
 				subclass.levels.set(x, createLevel(model.levels.get(x)));
-				subclass.levels.get(x).subclassId = subclass.id;
 			}
 		}
 		
@@ -88,13 +90,12 @@ public class SubclassBuilder {
 	}
 	
 	private static DndSubclass createTotemWarrior() {
-		//TODO add features here
 		DndSubclass subclass = new DndSubclass();
 		subclass.id = "totem-warrior";
 		subclass.name = "Totem Warrior";
 		subclass.flavor = "Primal Path";
 		subclass.description = "The Path  of the Totem Warrior is a spiritual journey, as the barbarian accepts a spirit animal  as guide, protector, and inspiration. In battle, your totem spirit fills you with supernatural might, adding magical fuel to your barbarian rage. Most barbarian tribes consider a totem animal to be kin to a particular clan. In such cases, it is unusual for an individual to have more than one totem animal spirit, though exceptions exist.";
-		subclass.parentClass = "barbarian";
+		subclass.classId = "barbarian";
 		
 		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
 		DndSubclassLevel level;
@@ -141,6 +142,85 @@ public class SubclassBuilder {
 		return subclass;
 	}
 	
+	private static DndSubclass createLore() {
+		Dnd5eSubclass model = data5e.DndSubclass.get("lore");
+		DndSubclass subclass = createSubclass(model);
+		
+		_subclassId = subclass.id;
+		
+		for(int x = 0; x < 20; x++) {
+			if(model.levels.get(x) != null) {
+				subclass.levels.set(x, createLevel(model.levels.get(x)));
+			}
+		}
+		
+		Feature feature = SourceRegistry.getItem("bonus-proficiencies", Feature.class);
+		if(feature != null) {
+			feature.id = "lore-bonus-proficiencies";
+			book.unregister("bonus-proficiencies", Feature.class);
+			book.register(feature);
+		}
+		return subclass;
+	}
+	
+	private static DndSubclass createValor() {
+		DndSubclass subclass = new DndSubclass();
+		subclass.id = "valor";
+		subclass.name = "Valor";
+		subclass.flavor = "Bard College";
+		subclass.classId = "bard";
+		subclass.description = StringUtil.convertDesc(
+				"Bards o f the College of Valor are daring skalds whose\r\n"
+				+ "tales keep alive the memory of the great heroes of the\r\n"
+				+ "past, and thereby inspire a new generation of heroes.\r\n"
+				+ "These bards gather in mead halls or around great\r\n"
+				+ "bonfires to sing the deeds of the mighty, both past\r\n"
+				+ "and present. They travel the land to witness great\r\n"
+				+ "events firsthand and to ensure that the memory of\r\n"
+				+ "those events doesn’t pass from the world. With their\r\n"
+				+ "songs, they inspire others to reach the same heights of\r\n"
+				+ "accomplishment as the heroes of old.");
+		
+		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
+		DndSubclassLevel level;
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		level = createLevel(3, Arrays.asList("valor-bonus-proficiencies", "combat-inspiration"));
+		subclass.levels.set(2, level);
+		book.register(createFeature("valor-bonus-proficiencies", "Bonus Proficiencies", StringUtil.convertDesc(
+				"When you join the College of Valor at 3rd level, you\r\n"
+				+ "gain proficiency with medium armor, shields, and\r\n"
+				+ "martial weapons.")));
+		
+		book.register(createFeature("combat-inspiration", "Combat Inspiration", StringUtil.convertDesc(
+				"Also at 3rd level, you learn to inspire others in battle.\r\n"
+				+ "A creature that has a Bardic Inspiration die from you\r\n"
+				+ "can roll that die and add the number rolled to a weapon\r\n"
+				+ "damage roll it just made. Alternatively, when an attack\r\n"
+				+ "roll is made against the creature, it can use its reaction\r\n"
+				+ "to roll the Bardic Inspiration die and add the number\r\n"
+				+ "rolled to its AC against that attack, after seeing the roll\r\n"
+				+ "but before knowing whether it hits or misses.")));
+		
+		level = createLevel(6, Arrays.asList("valor-extra-attack"));
+		subclass.levels.set(5, level);
+		book.register(createFeature("valor-extra-attack", "Extra Attack", StringUtil.convertDesc(
+				"Starting at 6th level, you can attack twice, instead of\r\n"
+				+ "once, whenever you take the Attack action on your turn.")));
+		
+		level = createLevel(14, Arrays.asList("battle-magic"));
+		subclass.levels.set(13, level);
+		book.register(createFeature("battle-magic", "Battle Magic", StringUtil.convertDesc(
+				"At 14th level, you have mastered the art of weaving\r\n"
+				+ "spellcasting and weapon use into a single harmonious\r\n"
+				+ "act. When you use your action to cast a bard spell, you\r\n"
+				+ "can make one weapon attack as a bonus action.")));
+		
+		return subclass;
+	}
+	
 	public static void main(String[] args) {
 		SourceRegistry.init(SOURCE_DIRECTORY);
 		SourceRegistry.load();
@@ -149,8 +229,10 @@ public class SubclassBuilder {
 		book = SourceRegistry.getBooks().get("5e");
 		System.out.println(data5e.DndSubclass.keySet().stream().sorted().collect(Collectors.toList()));
 		
-		book.register("berserker", createBerserker());
-		book.register("totem-warrior", createTotemWarrior());
+		book.register(createBerserker());
+		book.register(createTotemWarrior());
+		book.register(createLore());
+		book.register(createValor());
 		SourceRegistry.saveBooks();
 	}
 }

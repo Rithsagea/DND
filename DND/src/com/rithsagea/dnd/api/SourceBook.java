@@ -107,6 +107,16 @@ public class SourceBook implements Comparable<SourceBook> {
 		register(item.id, item);
 	}
 	
+	public boolean unregister(String key, Class<?> clazz) {
+		if(data.containsKey(clazz)) {
+			data.get(clazz).remove(key);
+			
+			return true;
+		}
+		
+		return false;
+	}
+	
 	public File getDir() {
 		return dir;
 	}

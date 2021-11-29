@@ -56,6 +56,200 @@
     ],
     "id": "berserker"
   },
+  "knowledge": {
+    "name": "Knowledge",
+    "flavor": "Divine Domain",
+    "description": "The gods of knowledge—including Oghma, Boccob, Gilean, Aureon, and Thoth—value learning and understanding above all. Some teach that knowledge is to be gathered and shared in libraries and universities, or promote the practical knowledge of craft and invention. Some deities hoard knowledge and keep its secrets to themselves. And some promise their followers that they will gain tremendous power if they unlock the secrets of the multiverse. Followers of these gods study esoteric lore, collect old tomes, delve into the secret places of the earth, and learn all they can. Some gods of knowledge promote the practical knowledge of craft and invention, including smith deities like Gond, Reorx, Onatar, Moradin, Hephaestus, and Goibhniu.",
+    "classId": "cleric",
+    "levels": [
+      {
+        "subclassId": "knowledge",
+        "level": 1,
+        "features": [
+          "blessings-of-knowledge"
+        ],
+        "id": "knowledge-1"
+      },
+      {
+        "subclassId": "knowledge",
+        "level": 2,
+        "features": [
+          "channel-divinity-knowledge-of-the-ages"
+        ],
+        "id": "knowledge-2"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "knowledge",
+        "level": 6,
+        "features": [
+          "channel-divinity-read-thoughts"
+        ],
+        "id": "knowledge-6"
+      },
+      null,
+      {
+        "subclassId": "knowledge",
+        "level": 8,
+        "features": [
+          "potent-spellcasting"
+        ],
+        "id": "knowledge-8"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "knowledge",
+        "level": 17,
+        "features": [
+          "visions-of-the-past"
+        ],
+        "id": "knowledge-17"
+      },
+      null,
+      null,
+      null
+    ],
+    "id": "knowledge"
+  },
+  "life": {
+    "name": "Life",
+    "flavor": "Divine Domain",
+    "description": "The Life domain focuses on the vibrant positive energy--one of the fundamental forces of the universe--that sustains all life. The gods of life promote vitality and health through healing the sick and wounded, caring for those in need, and driving away the forces of death and undeath. Almost any non-evil deity can claim influence over this domain, particularly agricultural deities, sun gods, gods of healing or endurance, and gods of home and community.",
+    "classId": "cleric",
+    "levels": [
+      {
+        "subclassId": "life",
+        "level": 1,
+        "features": [
+          "bonus-proficiency",
+          "disciple-of-life"
+        ],
+        "id": "life-1"
+      },
+      {
+        "subclassId": "life",
+        "level": 2,
+        "features": [
+          "channel-divinity-preserve-life"
+        ],
+        "id": "life-2"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "life",
+        "level": 6,
+        "features": [
+          "blessed-healer"
+        ],
+        "id": "life-6"
+      },
+      null,
+      {
+        "subclassId": "life",
+        "level": 8,
+        "features": [
+          "divine-strike"
+        ],
+        "id": "life-8"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "life",
+        "level": 17,
+        "features": [
+          "supreme-healing"
+        ],
+        "id": "life-17"
+      },
+      null,
+      null,
+      null
+    ],
+    "id": "life"
+  },
+  "light": {
+    "name": "Light",
+    "flavor": "Divine Domain",
+    "description": "Gods of light – including Helm, Lathander, Pholtus, Branchala, the Silver Flame, Belenus, Apollo, and Re-Horakhty – promote the ideals of rebirth and renewal, truth, vigilance, and beauty, often using the symbol of the sun. Some of these gods are portrayed as the sun itself or as a charioteer who guides the sun across the sky. Others are tireless sentinels whose eyes pierce every shadow and see through every deception. Some are deities of beauty and artistry, who teach that art is a vehicle for the soul\u0027s improvement. Clerics of a god of light are enlightened souls infused with radiance and the power of their gods\u0027 discerning vision, charged with chasing away lies and burning away darkness.",
+    "classId": "cleric",
+    "levels": [
+      {
+        "subclassId": "light",
+        "level": 1,
+        "features": [
+          "light-bonus-cantrip",
+          "warding-flare"
+        ],
+        "id": "light-1"
+      },
+      {
+        "subclassId": "light",
+        "level": 2,
+        "features": [
+          "channel-divinity-radiance-of-the-dawn"
+        ],
+        "id": "light-2"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "light",
+        "level": 6,
+        "features": [
+          "improved-flare"
+        ],
+        "id": "light-6"
+      },
+      null,
+      {
+        "subclassId": "light",
+        "level": 8,
+        "features": [
+          "potent-spellcasting"
+        ],
+        "id": "light-8"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "light",
+        "level": 17,
+        "features": [
+          "corona-of-light"
+        ],
+        "id": "light-17"
+      },
+      null,
+      null,
+      null
+    ],
+    "id": "light"
+  },
   "lore": {
     "name": "Lore",
     "flavor": "Bard College",
@@ -106,6 +300,136 @@
       null
     ],
     "id": "lore"
+  },
+  "nature": {
+    "name": "Nature",
+    "flavor": "Divine Domain",
+    "description": "Gods of nature are as varied as the natural world itself; from inscrutable gods of the deep forests (such as Silvanus, Obad-Hai, Chislev, Balinor, and Pan) to friendly deities associated with particular springs and groves (such as Eldath). Druids revere nature as a whole and might serve one of these deities, practicing mysterious rites and reciting all-but-forgotten prayers in their own secret tongue. But many of these gods have clerics as well, champions who take a more active role in advancing the interests of a particular nature god. These clerics might hunt the evil monstrosities that despoil the woodlands, bless the harvest of the faithful, or wither the crops of those who anger their gods.",
+    "classId": "cleric",
+    "levels": [
+      {
+        "subclassId": "nature",
+        "level": 1,
+        "features": [
+          "acolyte-of-nature",
+          "bonus-proficiency-nature"
+        ],
+        "id": "nature-1"
+      },
+      {
+        "subclassId": "nature",
+        "level": 2,
+        "features": [
+          "channel-divinity-charm-animals-and-plants"
+        ],
+        "id": "nature-2"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "nature",
+        "level": 6,
+        "features": [
+          "dampen-elements"
+        ],
+        "id": "nature-6"
+      },
+      null,
+      {
+        "subclassId": "nature",
+        "level": 8,
+        "features": [
+          "nature-divine-strike"
+        ],
+        "id": "nature-8"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "nature",
+        "level": 17,
+        "features": [
+          "master-of-nature"
+        ],
+        "id": "nature-17"
+      },
+      null,
+      null,
+      null
+    ],
+    "id": "nature"
+  },
+  "tempest": {
+    "name": "Tempest",
+    "flavor": "Divine Domain",
+    "description": "Gods whose portfolios include the Tempest domain – including Talos, Umberlee, Kord, Zeboim, the Devourer, Zeus, and Thor – govern storms, sea, and, sky. They include gods of lightning and thunder, gods of earthquakes, some fire gods, and certain gods of violence, physical strength, and courage. In some pantheons, a god of this domain rules over other deities and is known for swift justice delivered by thunderbolts. In the pantheons of seafaring people, gods of this domain are ocean deities and the patrons of sailors. Tempest gods send their clerics to inspire fear in the common folk, either to keep those folk on the path of righteousness or to encourage them to offer sacrifices of propitiation to ward off divine wrath.",
+    "classId": "cleric",
+    "levels": [
+      {
+        "subclassId": "tempest",
+        "level": 1,
+        "features": [
+          "tempest-bonus-proficiencies",
+          "wrath-of-the-storm"
+        ],
+        "id": "tempest-1"
+      },
+      {
+        "subclassId": "tempest",
+        "level": 2,
+        "features": [
+          "channel-divinity-destructive-wrath"
+        ],
+        "id": "tempest-2"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "tempest",
+        "level": 6,
+        "features": [
+          "thunderous-strike"
+        ],
+        "id": "tempest-6"
+      },
+      null,
+      {
+        "subclassId": "tempest",
+        "level": 8,
+        "features": [
+          "tempest-divine-strike"
+        ],
+        "id": "tempest-8"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "tempest",
+        "level": 17,
+        "features": [
+          "stormborn"
+        ],
+        "id": "tempest-17"
+      },
+      null,
+      null,
+      null
+    ],
+    "id": "tempest"
   },
   "totem-warrior": {
     "name": "Totem Warrior",
@@ -165,10 +489,74 @@
     ],
     "id": "totem-warrior"
   },
+  "trickery": {
+    "name": "Trickery",
+    "flavor": "Divine Domain",
+    "description": "Gods of trickery – such as Tymora, Beshaba, Olidammara, the Traveler, Garl Glittergold, and Loki – are mischief-makers and instigators who stand as a constant challenge to the accepted order among both gods and mortals. They\u0027re patrons of thieves, scoundrels, gamblers, rebels, and liberators. Their clerics are a disruptive force in the world, puncturing pride, mocking tyrants, stealing from the rich, freeing captives, and flouting hollow traditions. They prefer subterfuge, pranks, deception, and theft rather than direct confrontation.",
+    "classId": "cleric",
+    "levels": [
+      {
+        "subclassId": "trickery",
+        "level": 1,
+        "features": [
+          "blessing-of-the-trickster"
+        ],
+        "id": "trickery-1"
+      },
+      {
+        "subclassId": "trickery",
+        "level": 2,
+        "features": [
+          "channel-divinity-invoke-duplicity"
+        ],
+        "id": "trickery-2"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "trickery",
+        "level": 6,
+        "features": [
+          "channel-divinity-cloak-of-shadows"
+        ],
+        "id": "trickery-6"
+      },
+      null,
+      {
+        "subclassId": "trickery",
+        "level": 8,
+        "features": [
+          "trickery-divine-strike"
+        ],
+        "id": "trickery-8"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "trickery",
+        "level": 17,
+        "features": [
+          "improved-duplicity"
+        ],
+        "id": "trickery-17"
+      },
+      null,
+      null,
+      null
+    ],
+    "id": "trickery"
+  },
   "valor": {
     "name": "Valor",
     "flavor": "Bard College",
-    "description": "Bards o f the College of Valor are daring skalds whose tales keep alive the memory of the great heroes of the past, and thereby inspire a new generation of heroes. These bards gather in mead halls or around great bonfires to sing the deeds of the mighty, both past and present. They travel the land to witness great events firsthand and to ensure that the memory of those events doesn’t pass from the world. With their songs, they inspire others to reach the same heights of accomplishment as the heroes of old.",
+    "description": "Bards of the College of Valor are daring skalds whose tales keep alive the memory of the great heroes of the past, and thereby inspire a new generation of heroes. These bards gather in mead halls or around great bonfires to sing the deeds of the mighty, both past and present. They travel the land to witness great events firsthand and to ensure that the memory of those events doesn’t pass from the world. With their songs, they inspire others to reach the same heights of accomplishment as the heroes of old.",
     "classId": "bard",
     "levels": [
       null,
@@ -215,5 +603,70 @@
       null
     ],
     "id": "valor"
+  },
+  "war": {
+    "name": "War",
+    "flavor": "Divine Domain",
+    "description": "War has many manifestations. It can make heroes of ordinary people. It can be desperate and horrific, with acts of cruelty and cowardice eclipsing instances of excellence and courage. In either case, the gods of war watch over warriors and reward them for their great deeds. The clerics of such gods excel in battle, inspiring others to fight the good fight or offering acts of violence as prayers. Gods of war include champions of honor and chivalry (such as Torm, Heironeous, and Kiri-Jolith) as well as gods of destruction and pillage (such as Erythnul, the Fury, Gruumsh, and Ares) and gods of conquest and domination (such as Bane, Hextor, and Maglubiyet). Other war gods (such as Tempus, Nike, and Nuada) take a more neutral stance, promoting war in all its manifestations and supporting warriors in any circumstance.",
+    "classId": "cleric",
+    "levels": [
+      {
+        "subclassId": "war",
+        "level": 1,
+        "features": [
+          "war-bonus-proficiency",
+          "war-priest"
+        ],
+        "id": "war-1"
+      },
+      {
+        "subclassId": "war",
+        "level": 2,
+        "features": [
+          "channel-divinity-guided-strike"
+        ],
+        "id": "war-2"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "war",
+        "level": 6,
+        "features": [
+          "channel-divinity-war-gods-blessing"
+        ],
+        "id": "war-6"
+      },
+      null,
+      {
+        "subclassId": "war",
+        "level": 8,
+        "features": [
+          "war-divine-strike"
+        ],
+        "id": "war-8"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "war",
+        "level": 17,
+        "features": [
+          "avatar-of-battle"
+        ],
+        "id": "war-17"
+      },
+      null,
+      null,
+      null
+    ],
+    "id": "war"
   }
 }

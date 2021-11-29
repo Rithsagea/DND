@@ -243,6 +243,13 @@
     "classId": "rogue",
     "id": "blindsense"
   },
+  "bonus-proficiency-nature": {
+    "name": "Bonus Proficiency",
+    "description": "At 1st level, you gain proficiency with heavy armor.",
+    "classId": "cleric",
+    "subclassId": "nature",
+    "id": "bonus-proficiency-nature"
+  },
   "brutal-critical-1-die": {
     "name": "Brutal Critical (1 die)",
     "description": "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack. This increases to two additional dice at 13th level and three additional dice at 17th level.",
@@ -375,6 +382,13 @@
     "subclassId": "war",
     "id": "channel-divinity-war-gods-blessing"
   },
+  "circle-forms": {
+    "name": "Circle Forms",
+    "description": "The rites of your circle grant you the ability to transform into more dangerous animal forms. Starting at 2nd level, you can use your Wild Shape to transform into a beast with a challenge rating as high as 1. You ignore the Max. CR column of the Beast Shapes table, but must abide by the other limitations there.\nStarting at 6th level, you can transform into a beast with a challenge rating as high as your druid level divided by 3, rounded down.",
+    "classId": "druid",
+    "subclassId": "moon",
+    "id": "circle-forms"
+  },
   "circle-of-the-land": {
     "name": "Circle of the Land",
     "description": "The Circle of the Land is made up of mystics and sages who safeguard ancient knowledge and rites through a vast oral tradition. These druids meet within sacred circles of trees or standing stones to whisper primal secrets in Druidic. The circle\u0027s wisest members preside as the chief priests of communities that hold to the Old Faith and serve as advisors to the rulers of those folk. As a member of this circle, your magic is influenced by the land where you were initiated into the circle\u0027s mysterious rites.",
@@ -501,6 +515,13 @@
     "classId": "bard",
     "subclassId": "valor",
     "id": "combat-inspiration"
+  },
+  "combat-wild-shape": {
+    "name": "Combat Wild Shape",
+    "description": "When you choose this circle at 2nd level, you gain the ability to use Wild Shape on your turn as a bonus action, rather than as an action.\nAdditionally, while you are transformed by Wild Shape, you can use a bonus action to expend one spell slot to regain 1d8 hit points per level of the spell slot expended.",
+    "classId": "druid",
+    "subclassId": "moon",
+    "id": "combat-wild-shape"
   },
   "corona-of-light": {
     "name": "Corona of Light",
@@ -1103,6 +1124,13 @@
     "classId": "sorcerer",
     "subclassId": "draconic",
     "id": "elemental-affinity"
+  },
+  "elemental-wild-shape": {
+    "name": "Elemental Wild Shape",
+    "description": "At 10th level, you can expend two uses of Wild Shape at the same time to transform into an air elemental, an earth elemental, a fire elemental, or a water elemental.",
+    "classId": "druid",
+    "subclassId": "moon",
+    "id": "elemental-wild-shape"
   },
   "elusive": {
     "name": "Elusive",
@@ -1931,6 +1959,13 @@
     "classId": "barbarian",
     "id": "primal-path"
   },
+  "primal-strike": {
+    "name": "Primal Strike",
+    "description": "Starting at 6th level, your attacks in beast form count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.",
+    "classId": "druid",
+    "subclassId": "moon",
+    "id": "primal-strike"
+  },
   "primeval-awareness": {
     "name": "Primeval Awareness",
     "description": "Beginning at 3rd level, you can use your action and expend one ranger spell slot to focus your awareness on the region around you. For 1 minute per level of the spell slot you expend, you can sense whether the following types of creatures are present within 1 mile of you (or within up to 6 miles if you are in your favored terrain): aberrations, celestials, dragons, elementals, fey, fiends, and undead. This feature doesn\u0027t reveal the creatures\u0027 location or number.",
@@ -2429,6 +2464,13 @@
     "description": "During your rogue training you learned thieves\u0027 cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal conversation. Only another creature that knows thieves\u0027 cant understands such messages. It takes four times longer to convey such a message than it does to speak the same idea plainly.\nIn addition, you understand a set of secret signs and symbols used to convey short, simple messages, such as whether an area is dangerous or the territory of a thieves\u0027 guild, whether loot is nearby, or whether the people in an area are easy marks or will provide a safe house for thieves on the run.",
     "classId": "rogue",
     "id": "thieves-cant"
+  },
+  "thousand-forms": {
+    "name": "Thousand Forms",
+    "description": "By 14th level, you have learned to use magic to alter your physical form in more subtle ways. You can cast the Alter Self spell at will.",
+    "classId": "druid",
+    "subclassId": "moon",
+    "id": "thousand-forms"
   },
   "thunderous-strike": {
     "name": "Thunderous Strike",

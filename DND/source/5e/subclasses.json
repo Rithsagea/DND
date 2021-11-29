@@ -359,6 +359,64 @@
     ],
     "id": "lore"
   },
+  "moon": {
+    "name": "Moon",
+    "flavor": "Druid Circle",
+    "description": "Druids of the Circle of the Moon are fierce guardians of the wilds. Their order gathers under the full moon to share news and trade warnings. They haunt the deepest parts of the wilderness, where they might go for weeks on end before crossing paths with another humanoid creature, let alone another druid.\nChangeable as the moon, a druid of this circle might prowl as a great cat one night, soar over the treetops as an eagle the next day, and crash through the undergrowth in bear form to drive off a trespassing monster. The wild is in the druid\u0027s blood.",
+    "classId": "druid",
+    "levels": [
+      null,
+      {
+        "subclassId": "moon",
+        "level": 2,
+        "features": [
+          "combat-wild-shape",
+          "circle-forms"
+        ],
+        "id": "moon-2"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "moon",
+        "level": 6,
+        "features": [
+          "primal-strike"
+        ],
+        "id": "moon-6"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "moon",
+        "level": 10,
+        "features": [
+          "elemental-wild-shape"
+        ],
+        "id": "moon-10"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "moon",
+        "level": 14,
+        "features": [
+          "thousand-forms"
+        ],
+        "id": "moon-14"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "id": "moon"
+  },
   "nature": {
     "name": "Nature",
     "flavor": "Divine Domain",
@@ -370,7 +428,7 @@
         "level": 1,
         "features": [
           "acolyte-of-nature",
-          "bonus-proficiency-nature"
+          "nature-bonus-proficiency"
         ],
         "id": "nature-1"
       },

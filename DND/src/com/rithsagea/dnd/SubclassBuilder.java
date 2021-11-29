@@ -153,6 +153,8 @@ public class SubclassBuilder {
 			}
 		}
 		
+		subclass.levels.get(2).features.set(0, "lore-bonus-proficiencies");
+		
 		Feature feature = SourceRegistry.getItem("bonus-proficiencies", Feature.class);
 		if(feature != null) {
 			feature.id = "lore-bonus-proficiencies";
@@ -229,13 +231,16 @@ public class SubclassBuilder {
 			}
 		}
 		
+		subclass.levels.get(2).features.set(0, "life-bonus-proficiency");
+		
 		Feature feature = SourceRegistry.getItem("bonus-proficiency", Feature.class);
 		if(feature != null) {
-			feature.id = "life-bonus-proficiencies";
+			feature.id = "life-bonus-proficiency";
 			book.unregister("bonus-proficiency", Feature.class);
 			book.register(feature);
 		}
 		
+		subclass.levels.get(7).features.set(0, "life-divine-strike");
 		feature = SourceRegistry.getItem("divine-strike", Feature.class);
 		if(feature != null) {
 			feature.id = "life-divine-strike";
@@ -537,6 +542,18 @@ public class SubclassBuilder {
 		return subclass;
 	}
 	
+	private static DndSubclass createLand() {
+		Dnd5eSubclass model = data5e.DndSubclass.get("land");
+		DndSubclass subclass = createSubclass(model);
+		
+		for(int x = 0; x < 20; x++) {
+			if(model.levels.get(x) != null)
+				subclass.levels.set(x, createLevel(model.levels.get(x)));
+		}
+		
+		return subclass;
+	}
+	
 	/*
 	template
 	
@@ -567,8 +584,10 @@ public class SubclassBuilder {
 		
 		book.register(createBerserker());
 		book.register(createTotemWarrior());
+		
 		book.register(createLore());
 		book.register(createValor());
+		
 		book.register(createLife());
 		book.register(createKnowledge());
 		book.register(createLight());
@@ -576,6 +595,8 @@ public class SubclassBuilder {
 		book.register(createTempest());
 		book.register(createTrickery());
 		book.register(createWar());
+		
+		book.register(createLand());
 		SourceRegistry.saveBooks();
 	}
 }

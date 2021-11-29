@@ -118,7 +118,7 @@ public class SubclassBuilder {
 				"At 3rd level, when you adopt this path, you choose a totem spirit and gain its feature. You must make or acquire a physical totem object-an amulet or similar adornment-that incorporates fur or feathers, claws, teeth, or bones of the totem animal. At your option, you also gain minor physical attributes that are reminiscent of your totem spirit. For example, if you have a bear totem spirit, you might be unusually hairy and thickskinned, or if your totem is the eagle, your eyes turn bright yellow.\n"
 				+ "Your totem animal might be an animal related to those listed here but more appropriate to your homeland. For example, you could choose a hawk or vulture in place of an eagle.\n"
 				+ "Bear. While raging, you have resistance to all damage except psychic damage. The spirit of the bear makes you tough enough to stand up to any punishment.\n"
-				+ "Eagle. While you're raging and aren’t wearing heavy armor, other creatures have disadvantage on opportunity attack rolls against you, and you can use the Dash action as a bonus action on your turn. The spirit of the eagle makes you into a predator who can weave through the fray with ease.\n"
+				+ "Eagle. While you're raging and arenï¿½t wearing heavy armor, other creatures have disadvantage on opportunity attack rolls against you, and you can use the Dash action as a bonus action on your turn. The spirit of the eagle makes you into a predator who can weave through the fray with ease.\n"
 				+ "Wolf, While you're raging, your friends have advantage on melee attack rolls against any creature within 5 feet of you that is hostile to you. The spirit of the wolf makes you a leader of hunters."));
 		
 		createLevel(subclass, 6, Arrays.asList("aspect-of-the-beast"));
@@ -135,9 +135,9 @@ public class SubclassBuilder {
 		createLevel(subclass, 14, Arrays.asList("totemic-attunement"));
 		book.register(createFeature("totemic-attunement", "Totemic Attunement",
 				"At 14th level, you gain a magical benefit based on a totem animal of your choice. You can choose the same animal you selected previously or a different one.\n"
-				+ "Bear. While you’re raging, any creature within 5 feet of you that’s hostile to you has disadvantage on attack rolls against targets other than you or another character with this feature. An enemy is immune to this effect if it can’t see or hear you or if it can’t be frightened.\n"
+				+ "Bear. While youï¿½re raging, any creature within 5 feet of you thatï¿½s hostile to you has disadvantage on attack rolls against targets other than you or another character with this feature. An enemy is immune to this effect if it canï¿½t see or hear you or if it canï¿½t be frightened.\n"
 				+ "Eagle. While raging, you have a flying speed equal to your current walking speed. This benefit works only in short bursts; you fall if you end your turn in the air and nothing else is holding you aloft.\n"
-				+ "Wolf. While you’re raging, you can use a bonus action on your turn to knock a Large or smaller creature prone when you hit it with melee weapon attack."));
+				+ "Wolf. While youï¿½re raging, you can use a bonus action on your turn to knock a Large or smaller creature prone when you hit it with melee weapon attack."));
 		
 		return subclass;
 	}
@@ -180,7 +180,7 @@ public class SubclassBuilder {
 				+ "bonfires to sing the deeds of the mighty, both past\r\n"
 				+ "and present. They travel the land to witness great\r\n"
 				+ "events firsthand and to ensure that the memory of\r\n"
-				+ "those events doesn’t pass from the world. With their\r\n"
+				+ "those events doesnï¿½t pass from the world. With their\r\n"
 				+ "songs, they inspire others to reach the same heights of\r\n"
 				+ "accomplishment as the heroes of old.");
 		
@@ -261,8 +261,8 @@ public class SubclassBuilder {
 		subclass.flavor = "Divine Domain";
 		subclass.classId = "cleric";
 		subclass.description = StringUtil.convertDesc(
-				"The gods of knowledge—including Oghma, Boccob,\r\n"
-				+ "Gilean, Aureon, and Thoth—value learning and\r\n"
+				"The gods of knowledgeï¿½including Oghma, Boccob,\r\n"
+				+ "Gilean, Aureon, and Thothï¿½value learning and\r\n"
 				+ "understanding above all. Some teach that knowledge is\r\n"
 				+ "to be gathered and shared in libraries and universities,\r\n"
 				+ "or promote the practical knowledge of craft and\r\n"
@@ -300,13 +300,13 @@ public class SubclassBuilder {
 		createLevel(subclass, 6, Arrays.asList("channel-divinity-read-thoughts"));
 		book.register(createFeature("channel-divinity-read-thoughts", "Channel Divinity: Read Thoughts", StringUtil.convertDesc(
 				"At 6th level, you can use your Channel Divinity to read a\r\n"
-				+ "creature’s thoughts. You can then use your access to the\r\n"
-				+ "creature’s mind to command it.\r\n"
+				+ "creatureï¿½s thoughts. You can then use your access to the\r\n"
+				+ "creatureï¿½s mind to command it.\r\n"
 				+ "\n"
 				+ "As an action, choose one creature that you can see\r\n"
 				+ "within 60 feet of you. That creature must make a\r\n"
 				+ "Wisdom saving throw. If the creature succeeds on the\r\n"
-				+ "saving throw, you can’t use this feature on it again until\r\n"
+				+ "saving throw, you canï¿½t use this feature on it again until\r\n"
 				+ "you finish a long rest.\r\n"
 				+ "\n"
 				+ "If the creature fails its save, you can read its surface\r\n"
@@ -345,7 +345,7 @@ public class SubclassBuilder {
 		subclass.flavor = "Divine Domain";
 		subclass.classId = "cleric";
 		subclass.description = StringUtil.convertDesc(
-				"Gods of light – including Helm, Lathander, Pholtus, Branchala, the Silver Flame, Belenus, Apollo, and Re-Horakhty – promote the ideals of rebirth and renewal, truth, vigilance, and beauty, often using the symbol of the sun. Some of these gods are portrayed as the sun itself or as a charioteer who guides the sun across the sky. Others are tireless sentinels whose eyes pierce every shadow and see through every deception. Some are deities of beauty and artistry, who teach that art is a vehicle for the soul's improvement. Clerics of a god of light are enlightened souls infused with radiance and the power of their gods' discerning vision, charged with chasing away lies and burning away darkness.");
+				"Gods of light ï¿½ including Helm, Lathander, Pholtus, Branchala, the Silver Flame, Belenus, Apollo, and Re-Horakhty ï¿½ promote the ideals of rebirth and renewal, truth, vigilance, and beauty, often using the symbol of the sun. Some of these gods are portrayed as the sun itself or as a charioteer who guides the sun across the sky. Others are tireless sentinels whose eyes pierce every shadow and see through every deception. Some are deities of beauty and artistry, who teach that art is a vehicle for the soul's improvement. Clerics of a god of light are enlightened souls infused with radiance and the power of their gods' discerning vision, charged with chasing away lies and burning away darkness.");
 		
 		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
 		
@@ -427,7 +427,7 @@ public class SubclassBuilder {
 		subclass.name = "Tempest";
 		subclass.flavor = "Divine Domain";
 		subclass.classId = "cleric";
-		subclass.description = StringUtil.convertDesc("Gods whose portfolios include the Tempest domain – including Talos, Umberlee, Kord, Zeboim, the Devourer, Zeus, and Thor – govern storms, sea, and, sky. They include gods of lightning and thunder, gods of earthquakes, some fire gods, and certain gods of violence, physical strength, and courage. In some pantheons, a god of this domain rules over other deities and is known for swift justice delivered by thunderbolts. In the pantheons of seafaring people, gods of this domain are ocean deities and the patrons of sailors. Tempest gods send their clerics to inspire fear in the common folk, either to keep those folk on the path of righteousness or to encourage them to offer sacrifices of propitiation to ward off divine wrath.");
+		subclass.description = StringUtil.convertDesc("Gods whose portfolios include the Tempest domain ï¿½ including Talos, Umberlee, Kord, Zeboim, the Devourer, Zeus, and Thor ï¿½ govern storms, sea, and, sky. They include gods of lightning and thunder, gods of earthquakes, some fire gods, and certain gods of violence, physical strength, and courage. In some pantheons, a god of this domain rules over other deities and is known for swift justice delivered by thunderbolts. In the pantheons of seafaring people, gods of this domain are ocean deities and the patrons of sailors. Tempest gods send their clerics to inspire fear in the common folk, either to keep those folk on the path of righteousness or to encourage them to offer sacrifices of propitiation to ward off divine wrath.");
 		
 		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
 		
@@ -469,7 +469,7 @@ public class SubclassBuilder {
 		subclass.name = "Trickery";
 		subclass.flavor = "Divine Domain";
 		subclass.classId = "cleric";
-		subclass.description = StringUtil.convertDesc("Gods of trickery – such as Tymora, Beshaba, Olidammara, the Traveler, Garl Glittergold, and Loki – are mischief-makers and instigators who stand as a constant challenge to the accepted order among both gods and mortals. They're patrons of thieves, scoundrels, gamblers, rebels, and liberators. Their clerics are a disruptive force in the world, puncturing pride, mocking tyrants, stealing from the rich, freeing captives, and flouting hollow traditions. They prefer subterfuge, pranks, deception, and theft rather than direct confrontation.");
+		subclass.description = StringUtil.convertDesc("Gods of trickery ï¿½ such as Tymora, Beshaba, Olidammara, the Traveler, Garl Glittergold, and Loki ï¿½ are mischief-makers and instigators who stand as a constant challenge to the accepted order among both gods and mortals. They're patrons of thieves, scoundrels, gamblers, rebels, and liberators. Their clerics are a disruptive force in the world, puncturing pride, mocking tyrants, stealing from the rich, freeing captives, and flouting hollow traditions. They prefer subterfuge, pranks, deception, and theft rather than direct confrontation.");
 		
 		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
 		
@@ -496,7 +496,7 @@ public class SubclassBuilder {
 		
 		createLevel(subclass, 8, "trickery-divine-strike");
 		registerFeature("trickery-divine-strike", "Divine Strike",
-				"At 8th level, you gain the ability to infuse your weapon strikes with poison – a gift from your deity. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 poison damage to the target. When you reach 14th level, the extra damage increases to 2d8.");
+				"At 8th level, you gain the ability to infuse your weapon strikes with poison ï¿½ a gift from your deity. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 poison damage to the target. When you reach 14th level, the extra damage increases to 2d8.");
 		
 		createLevel(subclass, 17, "improved-duplicity");
 		registerFeature("improved-duplicity", "Improved Duplicity",
@@ -799,6 +799,106 @@ public class SubclassBuilder {
 		return subclass;
 	}
 	
+	//TODO paladins have tenets
+	//probably include in desc or smth idk
+	//also include divinity somehow
+	private static DndSubclass createDevotion() {
+		Dnd5eSubclass model = data5e.DndSubclass.get("devotion");
+		DndSubclass subclass = createSubclass(model);
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		for(int x = 0; x < 20; x++) {
+			if(model.levels.get(x) != null)
+				subclass.levels.set(x, createLevel(model.levels.get(x)));
+		}
+		
+		return subclass;
+	}
+	
+	private static DndSubclass createAncients() {
+		DndSubclass subclass = new DndSubclass();
+		subclass.id = "ancients-";
+		subclass.name = "Ancients";
+		subclass.flavor = "Sacred Oath";
+		subclass.classId = "paladin";
+		subclass.description = StringUtil.convertDesc(
+				"The Oath of the Ancients is as old as the race of elves and the rituals of the druids. Sometimes called fey knights, green knights, or horned knights, paladins who swear this oath cast their lot with the side of the light in the cosmic struggle against darkness because they love the beautiful and life-giving things of the world, not necessarily because they believe in principles of honor, courage, and justice. They adorn their armor and clothing with images of growing things-leaves, antlers, or flowers-to reflect their commitment to preserving life and light in the world.");
+		
+		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		createLevel(subclass, 3, "channel-divinity");
+		
+		createLevel(subclass, 7, "aura-of-warding");
+		registerFeature("aura-of-warding", "Aura of Warding",
+				"Beginning at 7th level, ancient magic lies so heavily upon you that it forms an eldritch ward. You and friendly creatures within 10 feet of you have resistance to damage from spells.\n"
+				+ "\n"
+				+ "At 18th level, the range of this aura increases to 30 feet.");
+		
+		createLevel(subclass, 15, "undying-sentinel");
+		registerFeature("undying-sentinel", "Undying Sentinel",
+				"Starting at 15th level, when you are reduced to 0 hit points and are not killed outright, you can choose to drop to 1 hit point instead. Once you use this ability, you can't use it again until you finish a long rest.\n"
+				+ "\n"
+				+ "Additionally, you suffer none of the drawbacks of old age, and you can't be aged magically.");
+		
+		createLevel(subclass, 20, "elder-champion");
+		registerFeature("elder-champion", "Elder Champion",
+				"At 20th level, you can assume the form of an ancient force of nature, taking on an appearance you choose. For example, your skin might turn green or take on a bark-like texture, your hair might become leafy or moss-like, or you might sprout antlers or a lion-like mane.\n"
+				+ "\n"
+				+ "Using your action, you undergo a transformation. For 1 minute, you gain the following benefits:\n"
+				+ "\n"
+				+ "    At the start of each of your turns, you regain 10 hit points.\n"
+				+ "\n"
+				+ "    Whenever you cast a paladin spell that has a casting time of 1 action, you can cast it using a bonus action instead.\n"
+				+ "\n"
+				+ "    Enemy creatures within 10 feet of you have disadvantage on saving throws against your paladin spells and Channel Divinity options.\n"
+				+ "\n"
+				+ "Once you use this feature, you can't use it again until you finish a long rest.");
+		
+		return subclass;
+	}
+	
+	private static DndSubclass createVengeance() {
+		DndSubclass subclass = new DndSubclass();
+		subclass.id = "vengeance";
+		subclass.name = "Vengeance";
+		subclass.flavor = "Sacred Oath";
+		subclass.classId = "paladin";
+		subclass.description = StringUtil.convertDesc(
+				"The Oath of Vengeance is a solemn commitment to punish those who have committed a grievous sin. When evil forces slaughter helpless villagers, when an entire people turns against the will of the gods, when a thieves' guild grows too violent and powerful, when a dragon rampages through the countryside â€“ at times like these, paladins arise and swear an Oath of Vengeance to set right that which has gone wrong. To these paladins â€“ sometimes called avengers or dark knights â€“ their own purity is not as important as delivering justice.");
+		
+		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		createLevel(subclass, 3, "channel-divinity"); // TODO custom stuffs here
+		
+		createLevel(subclass, 7, "relentless-avenger");
+		registerFeature("relentless-avenger", "Relentless Avenger",
+				"By 7th level, your supernatural focus helps you close off a foe's retreat. When you hit a creature with an opportunity attack, you can move up to half your speed immediately after the attack and as part of the same reaction. This movement doesn't provoke opportunity attacks.");
+		
+		createLevel(subclass, 15, "soul-of-vengeance");
+		registerFeature("soul-of-vengeance", "Soul of Vengeance",
+				"Starting at 15th level, the authority with which you speak your Vow of Enmity gives you greater power over your foe. When a creature under the effect of your Vow of Enmity makes an attack, you can use your reaction to make a melee weapon attack against that creature if it is within range.");
+		
+		createLevel(subclass, 20, "avenging-angel");
+		registerFeature("avenging-angel", "Avenging Angel",
+				"At 20th level, you can assume the form of an angelic avenger. Using your action, you undergo a transformation. For 1 hour, you gain the following benefits:\n"
+				+ "\n"
+				+ "    Wings sprout from your back and grant you a flying speed of 60 feet.\n"
+				+ "\n"
+				+ "    You emanate an aura of menace in a 30-foot radius. The first time any enemy creature enters the aura or starts its turn there during a battle, the creature must succeed on a Wisdom saving throw or become frightened of you for 1 minute or until it takes any damage. Attack rolls against the frightened creature have advantage.\n"
+				+ "\n"
+				+ "Once you use this feature, you can't use it again until you finish a long rest.");
+		
+		return subclass;
+	}
+	
 	/*
 	template
 	
@@ -851,6 +951,9 @@ public class SubclassBuilder {
 		book.register(createOpenHand());
 		book.register(createShadow());
 		book.register(createFourElements());
+		
+		book.register(createDevotion());
+		book.register(createAncients());
 		SourceRegistry.saveBooks();
 	}
 }

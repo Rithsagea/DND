@@ -1,4 +1,61 @@
 {
+  "ancients-": {
+    "name": "Ancients",
+    "flavor": "Sacred Oath",
+    "description": "The Oath of the Ancients is as old as the race of elves and the rituals of the druids. Sometimes called fey knights, green knights, or horned knights, paladins who swear this oath cast their lot with the side of the light in the cosmic struggle against darkness because they love the beautiful and life-giving things of the world, not necessarily because they believe in principles of honor, courage, and justice. They adorn their armor and clothing with images of growing things-leaves, antlers, or flowers-to reflect their commitment to preserving life and light in the world.",
+    "classId": "paladin",
+    "levels": [
+      null,
+      null,
+      {
+        "subclassId": "ancients-",
+        "level": 3,
+        "features": [
+          "channel-divinity"
+        ],
+        "id": "ancients--3"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "ancients-",
+        "level": 7,
+        "features": [
+          "aura-of-warding"
+        ],
+        "id": "ancients--7"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "ancients-",
+        "level": 15,
+        "features": [
+          "undying-sentinel"
+        ],
+        "id": "ancients--15"
+      },
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "ancients-",
+        "level": 20,
+        "features": [
+          "elder-champion"
+        ],
+        "id": "ancients--20"
+      }
+    ],
+    "id": "ancients-"
+  },
   "battle-master": {
     "name": "Battle Master",
     "flavor": "Martial Archetype",
@@ -178,6 +235,68 @@
     ],
     "id": "champion"
   },
+  "devotion": {
+    "name": "Devotion",
+    "flavor": "Sacred Oath",
+    "description": "The Oath of Devotion binds a paladin to the loftiest ideals of justice, virtue, and order. Sometimes called cavaliers, white knights, or holy warriors, these paladins meet the ideal of the knight in shining armor, acting with honor in pursuit of justice and the greater good. They hold themselves to the highest standards of conduct, and some, for better or worse, hold the rest of the world to the same standards. Many who swear this oath are devoted to gods of law and good and use their gods\u0027 tenets as the measure of their devotion. They hold angels--the perfect servants of good--as their ideals, and incorporate images of angelic wings into their helmets or coats of arms.",
+    "classId": "paladin",
+    "levels": [
+      null,
+      null,
+      {
+        "subclassId": "devotion",
+        "level": 3,
+        "features": [
+          "channel-divinity"
+        ],
+        "id": "devotion-3"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "devotion",
+        "level": 7,
+        "features": [
+          "aura-of-devotion"
+        ],
+        "id": "devotion-7"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "devotion",
+        "level": 15,
+        "features": [
+          "purity-of-spirit"
+        ],
+        "id": "devotion-15"
+      },
+      null,
+      null,
+      {
+        "subclassId": "devotion",
+        "level": 18,
+        "features": [],
+        "id": "devotion-18"
+      },
+      null,
+      {
+        "subclassId": "devotion",
+        "level": 20,
+        "features": [
+          "holy-nimbus"
+        ],
+        "id": "devotion-20"
+      }
+    ],
+    "id": "devotion"
+  },
   "eldritch-knight": {
     "name": "Eldritch Knight",
     "flavor": "Martial Archetype",
@@ -281,7 +400,7 @@
   "knowledge": {
     "name": "Knowledge",
     "flavor": "Divine Domain",
-    "description": "The gods of knowledge—including Oghma, Boccob, Gilean, Aureon, and Thoth—value learning and understanding above all. Some teach that knowledge is to be gathered and shared in libraries and universities, or promote the practical knowledge of craft and invention. Some deities hoard knowledge and keep its secrets to themselves. And some promise their followers that they will gain tremendous power if they unlock the secrets of the multiverse. Followers of these gods study esoteric lore, collect old tomes, delve into the secret places of the earth, and learn all they can. Some gods of knowledge promote the practical knowledge of craft and invention, including smith deities like Gond, Reorx, Onatar, Moradin, Hephaestus, and Goibhniu.",
+    "description": "The gods of knowledgeï¿½including Oghma, Boccob, Gilean, Aureon, and Thothï¿½value learning and understanding above all. Some teach that knowledge is to be gathered and shared in libraries and universities, or promote the practical knowledge of craft and invention. Some deities hoard knowledge and keep its secrets to themselves. And some promise their followers that they will gain tremendous power if they unlock the secrets of the multiverse. Followers of these gods study esoteric lore, collect old tomes, delve into the secret places of the earth, and learn all they can. Some gods of knowledge promote the practical knowledge of craft and invention, including smith deities like Gond, Reorx, Onatar, Moradin, Hephaestus, and Goibhniu.",
     "classId": "cleric",
     "levels": [
       {
@@ -468,7 +587,7 @@
   "light": {
     "name": "Light",
     "flavor": "Divine Domain",
-    "description": "Gods of light – including Helm, Lathander, Pholtus, Branchala, the Silver Flame, Belenus, Apollo, and Re-Horakhty – promote the ideals of rebirth and renewal, truth, vigilance, and beauty, often using the symbol of the sun. Some of these gods are portrayed as the sun itself or as a charioteer who guides the sun across the sky. Others are tireless sentinels whose eyes pierce every shadow and see through every deception. Some are deities of beauty and artistry, who teach that art is a vehicle for the soul\u0027s improvement. Clerics of a god of light are enlightened souls infused with radiance and the power of their gods\u0027 discerning vision, charged with chasing away lies and burning away darkness.",
+    "description": "Gods of light ï¿½ including Helm, Lathander, Pholtus, Branchala, the Silver Flame, Belenus, Apollo, and Re-Horakhty ï¿½ promote the ideals of rebirth and renewal, truth, vigilance, and beauty, often using the symbol of the sun. Some of these gods are portrayed as the sun itself or as a charioteer who guides the sun across the sky. Others are tireless sentinels whose eyes pierce every shadow and see through every deception. Some are deities of beauty and artistry, who teach that art is a vehicle for the soul\u0027s improvement. Clerics of a god of light are enlightened souls infused with radiance and the power of their gods\u0027 discerning vision, charged with chasing away lies and burning away darkness.",
     "classId": "cleric",
     "levels": [
       {
@@ -821,7 +940,7 @@
   "tempest": {
     "name": "Tempest",
     "flavor": "Divine Domain",
-    "description": "Gods whose portfolios include the Tempest domain – including Talos, Umberlee, Kord, Zeboim, the Devourer, Zeus, and Thor – govern storms, sea, and, sky. They include gods of lightning and thunder, gods of earthquakes, some fire gods, and certain gods of violence, physical strength, and courage. In some pantheons, a god of this domain rules over other deities and is known for swift justice delivered by thunderbolts. In the pantheons of seafaring people, gods of this domain are ocean deities and the patrons of sailors. Tempest gods send their clerics to inspire fear in the common folk, either to keep those folk on the path of righteousness or to encourage them to offer sacrifices of propitiation to ward off divine wrath.",
+    "description": "Gods whose portfolios include the Tempest domain ï¿½ including Talos, Umberlee, Kord, Zeboim, the Devourer, Zeus, and Thor ï¿½ govern storms, sea, and, sky. They include gods of lightning and thunder, gods of earthquakes, some fire gods, and certain gods of violence, physical strength, and courage. In some pantheons, a god of this domain rules over other deities and is known for swift justice delivered by thunderbolts. In the pantheons of seafaring people, gods of this domain are ocean deities and the patrons of sailors. Tempest gods send their clerics to inspire fear in the common folk, either to keep those folk on the path of righteousness or to encourage them to offer sacrifices of propitiation to ward off divine wrath.",
     "classId": "cleric",
     "levels": [
       {
@@ -944,7 +1063,7 @@
   "trickery": {
     "name": "Trickery",
     "flavor": "Divine Domain",
-    "description": "Gods of trickery – such as Tymora, Beshaba, Olidammara, the Traveler, Garl Glittergold, and Loki – are mischief-makers and instigators who stand as a constant challenge to the accepted order among both gods and mortals. They\u0027re patrons of thieves, scoundrels, gamblers, rebels, and liberators. Their clerics are a disruptive force in the world, puncturing pride, mocking tyrants, stealing from the rich, freeing captives, and flouting hollow traditions. They prefer subterfuge, pranks, deception, and theft rather than direct confrontation.",
+    "description": "Gods of trickery ï¿½ such as Tymora, Beshaba, Olidammara, the Traveler, Garl Glittergold, and Loki ï¿½ are mischief-makers and instigators who stand as a constant challenge to the accepted order among both gods and mortals. They\u0027re patrons of thieves, scoundrels, gamblers, rebels, and liberators. Their clerics are a disruptive force in the world, puncturing pride, mocking tyrants, stealing from the rich, freeing captives, and flouting hollow traditions. They prefer subterfuge, pranks, deception, and theft rather than direct confrontation.",
     "classId": "cleric",
     "levels": [
       {
@@ -1008,7 +1127,7 @@
   "valor": {
     "name": "Valor",
     "flavor": "Bard College",
-    "description": "Bards of the College of Valor are daring skalds whose tales keep alive the memory of the great heroes of the past, and thereby inspire a new generation of heroes. These bards gather in mead halls or around great bonfires to sing the deeds of the mighty, both past and present. They travel the land to witness great events firsthand and to ensure that the memory of those events doesn’t pass from the world. With their songs, they inspire others to reach the same heights of accomplishment as the heroes of old.",
+    "description": "Bards of the College of Valor are daring skalds whose tales keep alive the memory of the great heroes of the past, and thereby inspire a new generation of heroes. These bards gather in mead halls or around great bonfires to sing the deeds of the mighty, both past and present. They travel the land to witness great events firsthand and to ensure that the memory of those events doesnï¿½t pass from the world. With their songs, they inspire others to reach the same heights of accomplishment as the heroes of old.",
     "classId": "bard",
     "levels": [
       null,

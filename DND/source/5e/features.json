@@ -89,6 +89,13 @@
     "classId": "paladin",
     "id": "aura-of-protection"
   },
+  "aura-of-warding": {
+    "name": "Aura of Warding",
+    "description": "Beginning at 7th level, ancient magic lies so heavily upon you that it forms an eldritch ward. You and friendly creatures within 10 feet of you have resistance to damage from spells.\nAt 18th level, the range of this aura increases to 30 feet.",
+    "classId": "paladin",
+    "subclassId": "ancients-",
+    "id": "aura-of-warding"
+  },
   "avatar-of-battle": {
     "name": "Avatar of Battle",
     "description": "At 17th level, you gain resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons.",
@@ -357,7 +364,7 @@
   },
   "channel-divinity-read-thoughts": {
     "name": "Channel Divinity: Read Thoughts",
-    "description": "At 6th level, you can use your Channel Divinity to read a creature’s thoughts. You can then use your access to the creature’s mind to command it.\nAs an action, choose one creature that you can see within 60 feet of you. That creature must make a Wisdom saving throw. If the creature succeeds on the saving throw, you can’t use this feature on it again until you finish a long rest.\nIf the creature fails its save, you can read its surface thoughts (those foremost in its mind, reflecting its current emotions and what it is actively thinking about) when it is within 60 feet of you. This effect lasts for 1 minute.\nDuring that time, you can use your action to end this effect and cast the suggestion spell on the creature without expending a spell slot. The target automatically fails its saving throw against the spell.",
+    "description": "At 6th level, you can use your Channel Divinity to read a creatureï¿½s thoughts. You can then use your access to the creatureï¿½s mind to command it.\nAs an action, choose one creature that you can see within 60 feet of you. That creature must make a Wisdom saving throw. If the creature succeeds on the saving throw, you canï¿½t use this feature on it again until you finish a long rest.\nIf the creature fails its save, you can read its surface thoughts (those foremost in its mind, reflecting its current emotions and what it is actively thinking about) when it is within 60 feet of you. This effect lasts for 1 minute.\nDuring that time, you can use your action to end this effect and cast the suggestion spell on the creature without expending a spell slot. The target automatically fails its saving throw against the spell.",
     "classId": "cleric",
     "subclassId": "knowledge",
     "id": "channel-divinity-read-thoughts"
@@ -899,6 +906,13 @@
     "description": "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message\u0027s presence with a successful DC 15 Wisdom (Perception) check but can\u0027t decipher it without magic.",
     "classId": "druid",
     "id": "druidic"
+  },
+  "elder-champion": {
+    "name": "Elder Champion",
+    "description": "At 20th level, you can assume the form of an ancient force of nature, taking on an appearance you choose. For example, your skin might turn green or take on a bark-like texture, your hair might become leafy or moss-like, or you might sprout antlers or a lion-like mane.\nUsing your action, you undergo a transformation. For 1 minute, you gain the following benefits:\n    At the start of each of your turns, you regain 10 hit points.\n    Whenever you cast a paladin spell that has a casting time of 1 action, you can cast it using a bonus action instead.\n    Enemy creatures within 10 feet of you have disadvantage on saving throws against your paladin spells and Channel Divinity options.\nOnce you use this feature, you can\u0027t use it again until you finish a long rest.",
+    "classId": "paladin",
+    "subclassId": "ancients-",
+    "id": "elder-champion"
   },
   "eldritch-invocation-agonizing-blast": {
     "name": "Eldritch Invocation: Agonizing Blast",
@@ -2578,14 +2592,14 @@
   },
   "totem-spirit": {
     "name": "Totem Spirit",
-    "description": "At 3rd level, when you adopt this path, you choose a totem spirit and gain its feature. You must make or acquire a physical totem object-an amulet or similar adornment-that incorporates fur or feathers, claws, teeth, or bones of the totem animal. At your option, you also gain minor physical attributes that are reminiscent of your totem spirit. For example, if you have a bear totem spirit, you might be unusually hairy and thickskinned, or if your totem is the eagle, your eyes turn bright yellow.\nYour totem animal might be an animal related to those listed here but more appropriate to your homeland. For example, you could choose a hawk or vulture in place of an eagle.\nBear. While raging, you have resistance to all damage except psychic damage. The spirit of the bear makes you tough enough to stand up to any punishment.\nEagle. While you\u0027re raging and aren’t wearing heavy armor, other creatures have disadvantage on opportunity attack rolls against you, and you can use the Dash action as a bonus action on your turn. The spirit of the eagle makes you into a predator who can weave through the fray with ease.\nWolf, While you\u0027re raging, your friends have advantage on melee attack rolls against any creature within 5 feet of you that is hostile to you. The spirit of the wolf makes you a leader of hunters.",
+    "description": "At 3rd level, when you adopt this path, you choose a totem spirit and gain its feature. You must make or acquire a physical totem object-an amulet or similar adornment-that incorporates fur or feathers, claws, teeth, or bones of the totem animal. At your option, you also gain minor physical attributes that are reminiscent of your totem spirit. For example, if you have a bear totem spirit, you might be unusually hairy and thickskinned, or if your totem is the eagle, your eyes turn bright yellow.\nYour totem animal might be an animal related to those listed here but more appropriate to your homeland. For example, you could choose a hawk or vulture in place of an eagle.\nBear. While raging, you have resistance to all damage except psychic damage. The spirit of the bear makes you tough enough to stand up to any punishment.\nEagle. While you\u0027re raging and arenï¿½t wearing heavy armor, other creatures have disadvantage on opportunity attack rolls against you, and you can use the Dash action as a bonus action on your turn. The spirit of the eagle makes you into a predator who can weave through the fray with ease.\nWolf, While you\u0027re raging, your friends have advantage on melee attack rolls against any creature within 5 feet of you that is hostile to you. The spirit of the wolf makes you a leader of hunters.",
     "classId": "barbarian",
     "subclassId": "totem-warrior",
     "id": "totem-spirit"
   },
   "totemic-attunement": {
     "name": "Totemic Attunement",
-    "description": "At 14th level, you gain a magical benefit based on a totem animal of your choice. You can choose the same animal you selected previously or a different one.\nBear. While you’re raging, any creature within 5 feet of you that’s hostile to you has disadvantage on attack rolls against targets other than you or another character with this feature. An enemy is immune to this effect if it can’t see or hear you or if it can’t be frightened.\nEagle. While raging, you have a flying speed equal to your current walking speed. This benefit works only in short bursts; you fall if you end your turn in the air and nothing else is holding you aloft.\nWolf. While you’re raging, you can use a bonus action on your turn to knock a Large or smaller creature prone when you hit it with melee weapon attack.",
+    "description": "At 14th level, you gain a magical benefit based on a totem animal of your choice. You can choose the same animal you selected previously or a different one.\nBear. While youï¿½re raging, any creature within 5 feet of you thatï¿½s hostile to you has disadvantage on attack rolls against targets other than you or another character with this feature. An enemy is immune to this effect if it canï¿½t see or hear you or if it canï¿½t be frightened.\nEagle. While raging, you have a flying speed equal to your current walking speed. This benefit works only in short bursts; you fall if you end your turn in the air and nothing else is holding you aloft.\nWolf. While youï¿½re raging, you can use a bonus action on your turn to knock a Large or smaller creature prone when you hit it with melee weapon attack.",
     "classId": "barbarian",
     "subclassId": "totem-warrior",
     "id": "totemic-attunement"
@@ -2599,7 +2613,7 @@
   },
   "trickery-divine-strike": {
     "name": "Divine Strike",
-    "description": "At 8th level, you gain the ability to infuse your weapon strikes with poison – a gift from your deity. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 poison damage to the target. When you reach 14th level, the extra damage increases to 2d8.",
+    "description": "At 8th level, you gain the ability to infuse your weapon strikes with poison ï¿½ a gift from your deity. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 poison damage to the target. When you reach 14th level, the extra damage increases to 2d8.",
     "classId": "cleric",
     "subclassId": "trickery",
     "id": "trickery-divine-strike"
@@ -2621,6 +2635,13 @@
     "description": "Starting at 5th level, when an attacker that you can see hits you with an attack, you can use your reaction to halve the attack\u0027s damage against you.",
     "classId": "rogue",
     "id": "uncanny-dodge"
+  },
+  "undying-sentinel": {
+    "name": "Undying Sentinel",
+    "description": "Starting at 15th level, when you are reduced to 0 hit points and are not killed outright, you can choose to drop to 1 hit point instead. Once you use this ability, you can\u0027t use it again until you finish a long rest.\nAdditionally, you suffer none of the drawbacks of old age, and you can\u0027t be aged magically.",
+    "classId": "paladin",
+    "subclassId": "ancients-",
+    "id": "undying-sentinel"
   },
   "use-magic-device": {
     "name": "Use Magic Device",

@@ -9,14 +9,14 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
 import com.rithsagea.dnd.api5e.data.extra.AbilityBonus;
 import com.rithsagea.dnd.api5e.data.extra.ProficiencyOptions;
-import com.rithsagea.dnd.api5e.data.races.DndRace;
+import com.rithsagea.dnd.api5e.data.races.Dnd5eRace;
 import com.rithsagea.dnd.util.JsonUtil;
 
-public class DndRaceAdapter implements JsonDeserializer<DndRace> {
+public class DndRaceAdapter implements JsonDeserializer<Dnd5eRace> {
 
 	@Override
-	public DndRace deserialize(JsonElement elem, Type type, JsonDeserializationContext context) throws JsonParseException {
-		DndRace race = new DndRace();
+	public Dnd5eRace deserialize(JsonElement elem, Type type, JsonDeserializationContext context) throws JsonParseException {
+		Dnd5eRace race = new Dnd5eRace();
 		
 		race.id = JsonUtil.getString(elem, "index");
 		race.name = JsonUtil.getString(elem, "name");

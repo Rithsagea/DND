@@ -6,7 +6,7 @@ import com.rithsagea.dnd.api.types.IndexedItem;
 import com.rithsagea.dnd.api5e.data.extra.AbilityBonus;
 import com.rithsagea.dnd.api5e.data.extra.ProficiencyOptions;
 
-public class DndRace extends IndexedItem {
+public class Dnd5eRace extends IndexedItem {
 	public String name;
 	public int speed;
 	public List<AbilityBonus> bonuses;

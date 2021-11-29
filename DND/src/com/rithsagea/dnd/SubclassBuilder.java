@@ -87,6 +87,7 @@ public class SubclassBuilder {
 		DndSubclass subclass = createSubclass(model);
 		
 		_subclassId = subclass.id;
+		_classId = subclass.classId;
 		
 		for(int x = 0; x < 20; x++) {
 			if(model.levels.get(x) != null) {
@@ -146,6 +147,7 @@ public class SubclassBuilder {
 		DndSubclass subclass = createSubclass(model);
 		
 		_subclassId = subclass.id;
+		_classId = subclass.classId;
 		
 		for(int x = 0; x < 20; x++) {
 			if(model.levels.get(x) != null) {
@@ -224,6 +226,7 @@ public class SubclassBuilder {
 		DndSubclass subclass = createSubclass(model);
 		
 		_subclassId = subclass.id;
+		_classId = subclass.classId;
 		
 		for(int x = 0; x < 20; x++) {
 			if(model.levels.get(x) != null) {
@@ -231,7 +234,7 @@ public class SubclassBuilder {
 			}
 		}
 		
-		subclass.levels.get(2).features.set(0, "life-bonus-proficiency");
+		subclass.levels.get(0).features.set(0, "life-bonus-proficiency");
 		
 		Feature feature = SourceRegistry.getItem("bonus-proficiency", Feature.class);
 		if(feature != null) {
@@ -350,7 +353,7 @@ public class SubclassBuilder {
 		_subclassId = subclass.id;
 		
 		createLevel(subclass, 1, Arrays.asList("light-bonus-cantrip", "warding-flare"));
-		book.register(createFeature("bonus-cantrip-light", "Bonus Cantrip", StringUtil.convertDesc(
+		book.register(createFeature("light-bonus-cantrip", "Bonus Cantrip", StringUtil.convertDesc(
 				"When you choose this domain at 1st level, you gain the Light cantrip if you don't already know it.")));
 		book.register(createFeature("warding-flare", "Warding Flare", StringUtil.convertDesc(
 				"Also at 1st level, you can interpose divine light between yourself and an attacking enemy. When you are attacked by a creature within 30 feet of you that you can see, you can use your reaction to impose disadvantage on the attack roll, causing light to flare before the attacker before it hits or misses. An attacker that can't be blinded is immune to this feature.\r\n"
@@ -391,7 +394,7 @@ public class SubclassBuilder {
 		_classId = subclass.classId;
 		_subclassId = subclass.id;
 		
-		createLevel(subclass, 1, "acolyte-of-nature", "bonus-proficiency-nature");
+		createLevel(subclass, 1, "acolyte-of-nature", "nature-bonus-proficiency");
 		registerFeature("acolyte-of-nature", "Acolyte of Nature",
 				"At 1st level, you learn one cantrip of your choice from the druid spell list. You also gain proficiency in one of the following skills of your choice: Animal Handling, Nature, or Survival.");
 		registerFeature("bonus-proficiency-nature", "Bonus Proficiency",
@@ -546,9 +549,20 @@ public class SubclassBuilder {
 		Dnd5eSubclass model = data5e.DndSubclass.get("land");
 		DndSubclass subclass = createSubclass(model);
 		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
 		for(int x = 0; x < 20; x++) {
 			if(model.levels.get(x) != null)
 				subclass.levels.set(x, createLevel(model.levels.get(x)));
+		}
+		
+		subclass.levels.get(1).features.set(0, "land-bonus-cantrip");
+		Feature feature = SourceRegistry.getItem("bonus-cantrip", Feature.class);
+		if(feature != null) {
+			feature.id = "land-bonus-cantrip";
+			book.unregister("bonus-cantrip", Feature.class);
+			book.register(feature);
 		}
 		
 		return subclass;

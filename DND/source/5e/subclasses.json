@@ -128,10 +128,10 @@
     "levels": [
       null,
       {
-        "subclassId": "war",
+        "subclassId": "land",
         "level": 2,
         "features": [
-          "bonus-cantrip",
+          "land-bonus-cantrip",
           "natural-recovery"
         ],
         "id": "land-2"
@@ -140,7 +140,7 @@
       null,
       null,
       {
-        "subclassId": "war",
+        "subclassId": "land",
         "level": 6,
         "features": [
           "druid-lands-stride"
@@ -151,7 +151,7 @@
       null,
       null,
       {
-        "subclassId": "war",
+        "subclassId": "land",
         "level": 10,
         "features": [
           "natures-ward"
@@ -162,7 +162,7 @@
       null,
       null,
       {
-        "subclassId": "war",
+        "subclassId": "land",
         "level": 14,
         "features": [
           "natures-sanctuary"
@@ -217,7 +217,7 @@
         "subclassId": "life",
         "level": 8,
         "features": [
-          "divine-strike"
+          "life-divine-strike"
         ],
         "id": "life-8"
       },
@@ -320,7 +320,7 @@
         "subclassId": "lore",
         "level": 3,
         "features": [
-          "bonus-proficiencies",
+          "lore-bonus-proficiencies",
           "cutting-words"
         ],
         "id": "lore-3"

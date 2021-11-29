@@ -1202,6 +1202,337 @@ public class SubclassBuilder {
 		return subclass;
 	}
 	
+	private static DndSubclass createAbjuration() {
+		DndSubclass subclass = new DndSubclass();
+		subclass.id = "abjuration";
+		subclass.name = "Abjuration";
+		subclass.flavor = "Arcane Tradition";
+		subclass.classId = "wizard";
+		subclass.description = StringUtil.convertDesc(
+				"The School of Abjuration emphasizes magic that blocks, banishes, or protects. Detractors of this school say that its tradition is about denial, negation rather than positive assertion. You understand, however, that ending harmful effects, protecting the weak, and banishing evil influences is anything but a philosophical void. It is a proud and respected vocation.\n"
+				+ "\n"
+				+ "Called abjurers, members of this school are sought when baleful spirits require exorcism, when important locations must be guarded against magical spying, and when portals to other planes of existence must be closed.\n");
+		
+		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		createLevel(subclass, 2, "abjuration-savant", "arcane-ward");
+		registerFeature("abjuration-savant", "Abjuration Savant",
+				"Beginning when you select this school at 2nd level, the gold and time you must spend to copy a abjuration spell into your spellbook is halved.");
+		registerFeature("arcane-ward", "Arcane Ward",
+				"Starting at 2nd level, you can weave magic around yourself for protection. When you cast an abjuration spell of 1st level or higher, you can simultaneously use a strand of the spell's magic to create a magical ward on yourself that lasts until you finish a long rest. The ward has hit points equal to twice your wizard level + your Intelligence modifier. Whenever you take damage, the ward takes the damage instead. If this damage reduces the ward to 0 hit points, you take any remaining damage.\n"
+				+ "\n"
+				+ "While the ward has 0 hit points, it can't absorb damage, but its magic remains. Whenever you cast an abjuration spell of 1st level or higher, the ward regains a number of hit points equal to twice the level of the spell.\n"
+				+ "\n"
+				+ "Once you create the ward, you can't create it again until you finish a long rest.");
+		
+		createLevel(subclass, 6, "projected-ward");
+		registerFeature("projected-ward", "Projected Ward",
+				"Starting at 6th level, when a creature that you can see within 30 feet of you takes damage, you can use your reaction to cause your Arcane Ward to absorb that damage. If this damage reduces the ward to 0 hit points, the warded creature takes any remaining damage.");
+		
+		createLevel(subclass, 10, "improved-abjuration");
+		registerFeature("improved-abjuration", "Improved Abjuration",
+				"Beginning at 10th level, when you cast an abjuration spell that requires you to make an ability check as a part of casting that spell (as in Counterspell and Dispel Magic), you add your proficiency bonus to that ability check.");
+		
+		createLevel(subclass, 14, "spell-resistance");
+		registerFeature("spell-resistance", "Spell Resistance",
+				"Starting at 14th level, you have advantage on saving throws against spells.\n"
+				+ "\n"
+				+ "Furthermore, you have resistance against the damage of spells.");
+		
+		return subclass;
+	}
+	
+	private static DndSubclass createConjuration() {
+		DndSubclass subclass = new DndSubclass();
+		subclass.id = "conjuration";
+		subclass.name = "Conjuration";
+		subclass.flavor = "Arcane Tradition";
+		subclass.classId = "wizard";
+		subclass.description = StringUtil.convertDesc(
+				"As a conjurer, you favor spells that produce objects and creatures out of thin air. You can conjure billowing clouds of killing fog or summon creatures from elsewhere to fight on your behalf. As your mastery grows, you learn spells of transportation and can teleport yourself across vast distances, even to other planes of existence, in an instant.");
+		
+		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		createLevel(subclass, 2, "conjuration-savant", "minor-conjuration");
+		registerFeature("conjuration-savant", "Conjuration Savant",
+				"Beginning when you select this school at 2nd level, the gold and time you must spend to copy a Conjuration spell into your spellbook is halved.");
+		
+		registerFeature("minor-conjuration", "Minor Conjuration",
+				"Starting at 2nd level when you select this school, you can use your action to conjure up an inanimate object in your hand or on the ground in an unoccupied space that you can see within 10 feet of you. This object can be no larger than 3 feet on a side and weigh no more than 10 pounds, and its form must be that of a nonmagical object that you have seen. The object is visibly magical, radiating dim light out to 5 feet.\n"
+				+ "\n"
+				+ "The object disappears after 1 hour, when you use this feature again, or if it takes any damage.");
+		
+		createLevel(subclass, 6, "benign-transportation");
+		registerFeature("benign-transportation", "Benign Transportation",
+				"Starting at 6th level, you can use your action to teleport up to 30 feet to an unoccupied space that you can see. Alternatively, you can choose a space within range that is occupied by a Small or Medium creature. If that creature is willing, you both teleport, swapping places.\n"
+				+ "\n"
+				+ "Once you use this feature, you can't use it again until you finish a long rest or you cast a conjuration spell of 1st level or higher.");
+		
+		createLevel(subclass, 10, "focused-conjuration");
+		registerFeature("focused-conjuration", "Focused Conjuration",
+				"Beginning at 10th level, while you are concentrating on a conjuration spell, your concentration can't be broken as a result of taking damage.");
+		
+		createLevel(subclass, 14, "durable-summons");
+		registerFeature("durable-summons", "Durable Summons",
+				"Starting at 14th level, any creature that you summon or create with a conjuration spell has 30 temporary hit points.");		
+		
+		return subclass;
+	}
+	
+	private static DndSubclass createDivination() {
+		DndSubclass subclass = new DndSubclass();
+		subclass.id = "divination";
+		subclass.name = "Divination";
+		subclass.flavor = "Arcane Tradition";
+		subclass.classId = "wizard";
+		subclass.description = StringUtil.convertDesc(
+				"The counsel of a diviner is sought by royalty and commoners alike, for all seek a clearer understanding of the past, present, and future. As a diviner, you strive to part the veils of space, time, and consciousness so that you can see clearly. You work to master spells of discernment, remote viewing, supernatural knowledge, and foresight.");
+		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		createLevel(subclass, 2, "divination-savant", "portent");
+		registerFeature("divination-savant", "Divination Savant",
+				"Beginning when you select this school at 2nd level, the gold and time you must spend to copy a Divination spell into your spellbook is halved.");
+		registerFeature("portent", "Portent",
+				"Starting at 2nd level when you choose this school, glimpses of the future begin to press in on your awareness. When you finish a long rest, roll two d20s and record the numbers rolled. You can replace any attack roll, saving throw, or ability check made by you or a creature that you can see with one of these foretelling rolls. You must choose to do so before the roll, and you can replace a roll in this way only once per turn.\n"
+				+ "\n"
+				+ "Each foretelling roll can be used only once. When you finish a long rest, you lose any unused foretelling rolls.");
+		
+		createLevel(subclass, 6, "expert-divination");
+		registerFeature("expert-divination", "Expert Divination",
+				"Beginning at 6th level, casting divination spells comes so easily to you that it expends only a fraction of your spellcasting efforts. When you cast a divination spell of 2nd level or higher using a spell slot, you regain one expended spell slot. The slot you regain must be of a level lower than the spell you cast and can't be higher than 5th level.");
+		
+		createLevel(subclass, 10, "the-third-eye");
+		registerFeature("the-third-eye", "The Third Eye",
+				"Starting at 10th level, you can use your action to increase your powers of perception. When you do so, choose one of the following benefits, which lasts until you are incapacitated or you take a short or long rest. You can't use the feature again until you finish a short or long rest.\n"
+				+ "\n"
+				+ "Darkvision. You gain darkvision out to a range of 60 feet.\n"
+				+ "\n"
+				+ "Ethereal Sight. You can see into the Ethereal Plane within 60 feet of you.\n"
+				+ "\n"
+				+ "Greater Comprehension. You can read any language.\n"
+				+ "\n"
+				+ "See Invisibility. You can see invisible creatures and objects within 10 feet of you that are within line of sight.");
+		
+		createLevel(subclass, 14, "greater-portent");
+		registerFeature("greater-portent", "Greater Portent",
+				"Starting at 14th level, the visions in your dreams intensify and paint a more accurate picture in your mind of what is to come. You roll three d20s for your Portent feature, rather than two.");
+		
+		return subclass;
+	}
+	
+	private static DndSubclass createEnchantment() {
+		DndSubclass subclass = new DndSubclass();
+		subclass.id = "enchantment";
+		subclass.name = "Enchantment";
+		subclass.flavor = "Arcane Tradition";
+		subclass.classId = "wizard";
+		subclass.description = StringUtil.convertDesc(
+				"As a member of the School of Enchantment, you have honed your ability to magically entrance and beguile other people and monsters. Some enchanters are peacemakers who bewitch the violent to lay down their arms and charm the cruel into showing mercy. Others are tyrants who magically bind the unwilling into their service. Most enchanters fall somewhere in between.");
+		
+		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		createLevel(subclass, 2, "enchantment-savant", "hypnotic-gaze");
+		registerFeature("enchantment-savant", "Enchantment Savant",
+				"As a member of the School of Enchantment, you have honed your ability to magically entrance and beguile other people and monsters. Some enchanters are peacemakers who bewitch the violent to lay down their arms and charm the cruel into showing mercy. Others are tyrants who magically bind the unwilling into their service. Most enchanters fall somewhere in between.");
+		registerFeature("hypnotic-gaze", "Hypnotic Gaze",
+				"Starting at 2nd level when you choose this school, your soft words and enchanting gaze can magically enthrall another creature. As an action, choose one creature that you can see within 5 feet of you. If the target can see or hear you, it must succeed on a Wisdom saving throw against your wizard spell save DC or be charmed by you until the end of your next turn. The charmed creature's speed drops to 0, and the creature is incapacitated and visibly dazed.\n"
+				+ "\n"
+				+ "On subsequent turns, you can use your action to maintain this effect, extending its duration until the end of your next turn. However, the effect ends if you move more than 5 feet away from the creature, if the creature can neither see nor hear you, or if the creature takes damage.\n"
+				+ "\n"
+				+ "Once the effect ends, or if the creature succeeds on its initial saving throw against this effect, you can't use this feature on that creature again until you finish a long rest.");
+		
+		createLevel(subclass, 6, "instinctive-charm");
+		registerFeature("instinctive-charm", "Instinctive Charm",
+				"Beginning at 6th level, when a creature you can see within 30 feet of you makes an attack roll against you, you can use your reaction to divert the attack, provided that another creature is within the attack's range. The attacker must make a Wisdom saving throw against your wizard spell save DC. On a failed save, the attacker must target the creature that is closest to it, not including you or itself. If multiple creatures are closest, the attacker chooses which one to target.\n"
+				+ "\n"
+				+ "On a successful save, you can't use this feature on the attacker again until you finish a long rest.\n"
+				+ "\n"
+				+ "You must choose to use this feature before knowing whether the attack hits or misses. Creatures that can't be charmed are immune to this effect.");
+		
+		createLevel(subclass, 10, "split-enchantment");
+		registerFeature("split-enchantment", "Split Enchantment",
+				"Starting at 10th level, when you cast an enchantment spell of 1st level or higher that targets only one creature, you can have it target a second creature.");
+		
+		createLevel(subclass, 14, "alter-memories");
+		registerFeature("alter-memories", "Alter Memories",
+				"At 14th level, you gain the ability to make a creature unaware of your magical influence on it. When you cast an enchantment spell to charm one or more creatures, you can alter one creature's understanding so that it remains unaware of being charmed.\n"
+				+ "\n"
+				+ "Additionally, once before the spell expires, you can use your action to try to make the chosen creature forget some of the time it spent charmed. The creature must succeed on an Intelligence saving throw against your wizard spell save DC or lose a number of hours of its memories equal to 1 + your Charisma modifier (minimum 1). You can make the creature forget less time, and the amount of time can't exceed the duration of your enchantment spell.");
+		
+		return subclass;
+	}
+	
+	private static DndSubclass createEvocation() {
+		Dnd5eSubclass model = data5e.DndSubclass.get("evocation");
+		DndSubclass subclass = createSubclass(model);
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		for(int x = 0; x < 20; x++) {
+			if(model.levels.get(x) != null)
+				subclass.levels.set(x, createLevel(model.levels.get(x)));
+		}
+		
+		return subclass;
+	}
+	
+	private static DndSubclass createIllusion() {
+		DndSubclass subclass = new DndSubclass();
+		subclass.id = "illusion";
+		subclass.name = "Illusion";
+		subclass.flavor = "Arcane Tradition";
+		subclass.classId = "wizard";
+		subclass.description = StringUtil.convertDesc(
+				"You focus your studies on magic that dazzles the senses, befuddles the mind, and tricks even the wisest folk. Your magic is subtle, but the illusions crafted by your keen mind make the impossible seem real. Some illusionists – including many gnome wizards – are benign tricksters who use their spells to entertain. Others are more sinister masters of deception, using their illusions to frighten and fool others for their personal gain.");
+		
+		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		createLevel(subclass, 2, "illusion-savant", "improvd-minor-illusion");
+		registerFeature("illusion-savant", "Illusion Savant",
+				"Beginning when you select this school at 2nd level, the gold and time you must spend to copy a Illusion spell into your spellbook is halved.");
+		registerFeature("improved-minor-illusion", "Improved Minor Illusion",
+				"When you choose this school at 2nd level, you learn the Minor Illusion cantrip. If you already know this cantrip, you learn a different wizard cantrip of your choice. The cantrip doesn't count against your number of cantrips known.\n"
+				+ "\n"
+				+ "When you cast Minor Illusion, you can create both a sound and an image with a single casting of the spell.");
+		
+		createLevel(subclass, 6, "malleable-illusions");
+		registerFeature("malleable-illusions", "Malleable Illusions",
+				"Starting at 6th level, when you cast an illusion spell that has a duration of 1 minute or longer, you can use your action to change the nature of that illusion (using the spell's normal parameters for the illusion), provided that you can see the illusion.");
+		
+		createLevel(subclass, 10, "illusory-self");
+		registerFeature("illusory-self", "Illusory Self",
+				"Beginning at 10th level, you can create an illusory duplicate of yourself as an instant, almost instinctual reaction to danger. When a creature makes an attack roll against you, you can use your reaction to interpose the illusory duplicate between the attacker and yourself. The attack automatically misses you, then the illusion dissipates.\n"
+				+ "\n"
+				+ "Once you use this feature, you can't use it again until you finish a short or long rest.");
+		
+		createLevel(subclass, 14, "illusory-reality");
+		registerFeature("illusory-reality", "Illusory Reality",
+				"By 14th level, you have learned the secret of weaving shadow magic into your illusions to give them a semi-reality. When you cast an illusion spell of 1st level or higher, you can choose one inanimate, nonmagical object that is part of the illusion and make that object real. You can do this on your turn as a bonus action while the spell is ongoing. The object remains real for 1 minute. For example, you can create an illusion of a bridge over a chasm and then make it real long enough for your allies to cross.\n"
+				+ "\n"
+				+ "The object can't deal damage or otherwise directly harm anyone.");
+		
+		return subclass;
+	}
+	
+	private static DndSubclass createNecromancy() {
+		DndSubclass subclass = new DndSubclass();
+		subclass.id = "necromancy";
+		subclass.name = "Necromancy";
+		subclass.flavor = "Arcane Tradition";
+		subclass.classId = "wizard";
+		subclass.description = StringUtil.convertDesc(
+				"The School of Necromancy explores the cosmic forces of life, death, and undeath. As you focus your studies in this tradition, you learn to manipulate the energy that animates all living things. As you progress, you learn to sap the life force from a creature as your magic destroys its body, transforming that vital energy into magical power you can manipulate.\n"
+				+ "\n"
+				+ "Most people see necromancers as menacing, or even villainous, due to the close association with death. Not all necromancers are evil, but the forces they manipulate are considered taboo by many societies.");
+		
+		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		createLevel(subclass, 2, "necromancy-savant", "grim-harvest");
+		registerFeature("necromancy-savant", "Necromancy Savant",
+				"Beginning when you select this school at 2nd level, the gold and time you must spend to copy a Necromancy spell into your spellbook is halved.");
+		registerFeature("grim-harvest", "Grim Harvest",
+				"At 2nd level, you gain the ability to reap life energy from creatures you kill with your spells. Once per turn when you kill one or more creatures with a spell of 1st level or higher, you regain hit points equal to twice the spell's level, or three times its level if the spell belongs to the School of Necromancy. You don't gain this benefit for killing constructs or undead.");
+	
+		createLevel(subclass, 6, "undead-thralls");
+		registerFeature("undead-thralls", "Undead Thralls",
+				"At 6th level, you add the Animate Dead spell to your spellbook if it is not there already. When you cast Animate Dead, you can target one additional corpse or pile of bones, creating another zombie or skeleton, as appropriate.\n"
+				+ "\n"
+				+ "Whenever you create an undead using a necromancy spell, it has additional benefits:\n"
+				+ "\n"
+				+ "    The creature's hit point maximum is increased by an amount equal to your wizard level.\n"
+				+ "\n"
+				+ "    The creature adds your proficiency bonus to its weapon damage rolls.");
+		
+		createLevel(subclass, 10, "inured-to-undeath");
+		registerFeature("inured-to-undeath", "Inured to Undeath",
+				"Beginning at 10th level, you have resistance to necrotic damage, and your hit point maximum can't be reduced. You have spent so much time dealing with undead and the forces that animate them that you have become inured to some of their worst effects.");
+		
+		createLevel(subclass, 14, "command-undead");
+		registerFeature("command-undead", "Command Undead",
+				"Starting at 14th level, you can use magic to bring undead under your control, even those created by other wizards. As an action, you can choose one undead that you can see within 60 feet of you. That creature must make a Charisma saving throw against your wizard spell save DC. If it succeeds, you can't use this feature on it again. If it fails, it becomes friendly to you and obeys your commands until you use this feature again.\n"
+				+ "\n"
+				+ "Intelligent undead are harder to control in this way. If the target has an Intelligence of 8 or higher, it has advantage on the saving throw. If it fails the saving throw and has an Intelligence of 12 or higher, it can repeat the saving throw at the end of every hour until it succeeds and breaks free.");
+		return subclass;
+	}
+	
+	private static DndSubclass createTransmutation() {
+		DndSubclass subclass = new DndSubclass();
+		subclass.id = "transmutation";
+		subclass.name = "Transmutation";
+		subclass.flavor = "Arcane Tradition";
+		subclass.classId = "wizard";
+		subclass.description = StringUtil.convertDesc(
+				"You are a student of spells that modify energy and matter. To you, the world is not a fixed thing, but eminently mutable, and you delight in being an agent of change. You wield the raw stuff of creation and learn to alter both physical forms and mental qualities. Your magic gives you the tools to become a smith on reality's forge.\n"
+				+ "\n"
+				+ "Some transmuters are tinkerers and pranksters, turning people into toads and transforming copper into silver for fun and occasional profit. Others pursue their magical studies with deadly seriousness, seeking the power of the gods to make and destroy worlds.");
+		
+		subclass.levels = new ArrayList<>(Collections.nCopies(20, null));
+		
+		_classId = subclass.classId;
+		_subclassId = subclass.id;
+		
+		createLevel(subclass, 2, "transmutation-savant", "minor-alchemy");
+		registerFeature("transmutation-savant", "Transmutation Savant",
+				"Beginning when you select this school at 2nd level, the gold and time you must spend to copy a Transmutation spell into your spellbook is halved.");
+		registerFeature("minor-alchemy", "Minor Alchemy",
+				"Starting at 2nd level when you select this school, you can temporarily alter the physical properties of one nonmagical object, changing it from one substance into another. You perform a special alchemical procedure on one object composed entirely of wood, stone (but not a gemstone), iron, copper, or silver, transforming it into a different one of those materials. For each 10 minutes you spend performing the procedure, you can transform up to 1 cubic foot of material. After 1 hour, or until you lose your concentration (as if you were concentrating on a spell), the material reverts to its original substance.");
+		
+		createLevel(subclass, 6, "transmuters-stone");
+		registerFeature("transmuters-stone", "Transmuter's Stone",
+				"Starting at 6th level, you can spend 8 hours creating a transmuter's stone that stores transmutation magic. You can benefit from the stone yourself or give it to another creature. A creature gains a benefit of your choice as long as the stone is in the creature's possession. When you create the stone, choose the benefit from the following options:\n"
+				+ "\n"
+				+ "    Darkvision out to a range of 60 feet\n"
+				+ "\n"
+				+ "    An increase to speed of 10 feet while the creature is unencumbered\n"
+				+ "\n"
+				+ "    Proficiency in Constitution saving throws\n"
+				+ "\n"
+				+ "    Resistance to acid, cold, fire, lightning, or thunder damage (your choice whenever you choose this benefit)\n"
+				+ "\n"
+				+ "Each time you cast a transmutation spell of 1st level or higher, you can change the effect of your stone if the stone is on your person.\n"
+				+ "\n"
+				+ "If you create a new transmuter's stone, the previous one ceases to function.");
+		
+		createLevel(subclass, 10, "shapechanger");
+		registerFeature("shapechanger", "Shapechanger",
+				"At 10th level, you add the Polymorph spell to your spellbook, if it is not there already. You can cast Polymorph without expending a spell slot. When you do so, you can target only yourself and transform into a beast whose challenge rating is 1 or lower.\n"
+				+ "\n"
+				+ "Once you cast Polymorph in this way, you can't do so again until you finish a short or long rest, though you can still cast it normally using an available spell slot.");
+		
+		createLevel(subclass, 14, "master-transmuter");
+		registerFeature("master-transmuter", "Master Transmuter",
+				"Starting at 14th level, you can use your action to consume the reserve of transmutation magic stored within your transmuter's stone in a single burst. When you do so, choose one of the following effects. Your transmuter's stone is destroyed and can't be remade until you finish a long rest.\n"
+				+ "\n"
+				+ "Major Transformation. You can transmute one nonmagical object – no larger than a 5-foot cube – into another nonmagical object of similar size and mass and of equal or lesser value. You must spend 10 minutes handling the object to transform it.\n"
+				+ "\n"
+				+ "Panacea. You remove all curses, diseases, and poisons affecting a creature that you touch with the transmuter's stone. The creature also regains all its hit points.\n"
+				+ "\n"
+				+ "Restore Life. You cast the Raise Dead spell on a creature you touch with the transmuter's stone, without expending a spell slot or needing to have the spell in your spellbook.\n"
+				+ "\n"
+				+ "Restore Youth. You touch the transmuter's stone to a willing creature, and that creature's apparent age is reduced by 3d10 years, to a minimum of 13 years. This effect doesn't extend the creature's lifespan.");
+		
+		return subclass;
+	}
+	
 	/*
 	template
 	
@@ -1272,6 +1603,15 @@ public class SubclassBuilder {
 		book.register(createArchfey());
 		book.register(createFiend());
 		book.register(createGreatOldOne());
+		
+		book.register(createAbjuration());
+		book.register(createConjuration());
+		book.register(createDivination());
+		book.register(createEnchantment());
+		book.register(createEvocation());
+		book.register(createIllusion());
+		book.register(createNecromancy());
+		book.register(createTransmutation());
 		SourceRegistry.saveBooks();
 	}
 }

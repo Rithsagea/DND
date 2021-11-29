@@ -1,4 +1,62 @@
 {
+  "abjuration": {
+    "name": "Abjuration",
+    "flavor": "Arcane Tradition",
+    "description": "The School of Abjuration emphasizes magic that blocks, banishes, or protects. Detractors of this school say that its tradition is about denial, negation rather than positive assertion. You understand, however, that ending harmful effects, protecting the weak, and banishing evil influences is anything but a philosophical void. It is a proud and respected vocation.\nCalled abjurers, members of this school are sought when baleful spirits require exorcism, when important locations must be guarded against magical spying, and when portals to other planes of existence must be closed.",
+    "classId": "wizard",
+    "levels": [
+      null,
+      {
+        "subclassId": "abjuration",
+        "level": 2,
+        "features": [
+          "abjuration-savant",
+          "arcane-ward"
+        ],
+        "id": "abjuration-2"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "abjuration",
+        "level": 6,
+        "features": [
+          "projected-ward"
+        ],
+        "id": "abjuration-6"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "abjuration",
+        "level": 10,
+        "features": [
+          "improved-abjuration"
+        ],
+        "id": "abjuration-10"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "abjuration",
+        "level": 14,
+        "features": [
+          "spell-resistance"
+        ],
+        "id": "abjuration-14"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "id": "abjuration"
+  },
   "ancients-": {
     "name": "Ancients",
     "flavor": "Sacred Oath",
@@ -112,6 +170,63 @@
       null
     ],
     "id": "arcane-trickster"
+  },
+  "archfey": {
+    "name": "Archfey",
+    "flavor": "Otherworldly Patron",
+    "description": "Your patron is a lord or lady of the fey, a creature of legend who holds secrets that were forgotten before the mortal races were born. This being\u0027s motivations are often inscrutable, and sometimes whimsical, and might involve a striving for greater magical power or the settling of age-old grudges. Beings of this sort include the Prince of Frost; the Queen of Air and Darkness, ruler of the Gloaming Court; Titania of the Summer Court; her consort Oberon, the Green Lord; Hyrsam, the Prince of Fools; and ancient hags.",
+    "classId": "warlock",
+    "levels": [
+      {
+        "subclassId": "archfey",
+        "level": 1,
+        "features": [
+          "fey-presence"
+        ],
+        "id": "archfey-1"
+      },
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "archfey",
+        "level": 6,
+        "features": [
+          "misty-escape"
+        ],
+        "id": "archfey-6"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "archfey",
+        "level": 10,
+        "features": [
+          "beguiling-defenses"
+        ],
+        "id": "archfey-10"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "archfey",
+        "level": 14,
+        "features": [
+          "dark-delirium"
+        ],
+        "id": "archfey-14"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "id": "archfey"
   },
   "assassin": {
     "name": "Assassin",
@@ -407,6 +522,64 @@
     ],
     "id": "champion"
   },
+  "conjuration": {
+    "name": "Conjuration",
+    "flavor": "Arcane Tradition",
+    "description": "As a conjurer, you favor spells that produce objects and creatures out of thin air. You can conjure billowing clouds of killing fog or summon creatures from elsewhere to fight on your behalf. As your mastery grows, you learn spells of transportation and can teleport yourself across vast distances, even to other planes of existence, in an instant.",
+    "classId": "wizard",
+    "levels": [
+      null,
+      {
+        "subclassId": "conjuration",
+        "level": 2,
+        "features": [
+          "conjuration-savant",
+          "minor-conjuration"
+        ],
+        "id": "conjuration-2"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "conjuration",
+        "level": 6,
+        "features": [
+          "benign-transportation"
+        ],
+        "id": "conjuration-6"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "conjuration",
+        "level": 10,
+        "features": [
+          "focused-conjuration"
+        ],
+        "id": "conjuration-10"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "conjuration",
+        "level": 14,
+        "features": [
+          "durable-summons"
+        ],
+        "id": "conjuration-14"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "id": "conjuration"
+  },
   "devotion": {
     "name": "Devotion",
     "flavor": "Sacred Oath",
@@ -468,6 +641,64 @@
       }
     ],
     "id": "devotion"
+  },
+  "divination": {
+    "name": "Divination",
+    "flavor": "Arcane Tradition",
+    "description": "The counsel of a diviner is sought by royalty and commoners alike, for all seek a clearer understanding of the past, present, and future. As a diviner, you strive to part the veils of space, time, and consciousness so that you can see clearly. You work to master spells of discernment, remote viewing, supernatural knowledge, and foresight.",
+    "classId": "wizard",
+    "levels": [
+      null,
+      {
+        "subclassId": "divination",
+        "level": 2,
+        "features": [
+          "divination-savant",
+          "portent"
+        ],
+        "id": "divination-2"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "divination",
+        "level": 6,
+        "features": [
+          "expert-divination"
+        ],
+        "id": "divination-6"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "divination",
+        "level": 10,
+        "features": [
+          "the-third-eye"
+        ],
+        "id": "divination-10"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "divination",
+        "level": 14,
+        "features": [
+          "greater-portent"
+        ],
+        "id": "divination-14"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "id": "divination"
   },
   "draconic": {
     "name": "Draconic",
@@ -591,6 +822,179 @@
     ],
     "id": "eldritch-knight"
   },
+  "enchantment": {
+    "name": "Enchantment",
+    "flavor": "Arcane Tradition",
+    "description": "As a member of the School of Enchantment, you have honed your ability to magically entrance and beguile other people and monsters. Some enchanters are peacemakers who bewitch the violent to lay down their arms and charm the cruel into showing mercy. Others are tyrants who magically bind the unwilling into their service. Most enchanters fall somewhere in between.",
+    "classId": "wizard",
+    "levels": [
+      null,
+      {
+        "subclassId": "enchantment",
+        "level": 2,
+        "features": [
+          "enchantment-savant",
+          "hypnotic-gaze"
+        ],
+        "id": "enchantment-2"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "enchantment",
+        "level": 6,
+        "features": [
+          "instinctive-charm"
+        ],
+        "id": "enchantment-6"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "enchantment",
+        "level": 10,
+        "features": [
+          "split-enchantment"
+        ],
+        "id": "enchantment-10"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "enchantment",
+        "level": 14,
+        "features": [
+          "alter-memories"
+        ],
+        "id": "enchantment-14"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "id": "enchantment"
+  },
+  "evocation": {
+    "name": "Evocation",
+    "flavor": "Arcane Tradition",
+    "description": "You focus your study on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some evokers find employment in military forces, serving as artillery to blast enemy armies from afar. Others use their spectacular power to protect the weak, while some seek their own gain as bandits, adventurers, or aspiring tyrants.",
+    "classId": "wizard",
+    "levels": [
+      null,
+      {
+        "subclassId": "evocation",
+        "level": 2,
+        "features": [
+          "evocation-savant",
+          "sculpt-spells"
+        ],
+        "id": "evocation-2"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "evocation",
+        "level": 6,
+        "features": [
+          "potent-cantrip"
+        ],
+        "id": "evocation-6"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "evocation",
+        "level": 10,
+        "features": [
+          "empowered-evocation"
+        ],
+        "id": "evocation-10"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "evocation",
+        "level": 14,
+        "features": [
+          "overchannel"
+        ],
+        "id": "evocation-14"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "id": "evocation"
+  },
+  "fiend": {
+    "name": "Fiend",
+    "flavor": "Otherworldly Patron",
+    "description": "You have made a pact with a fiend from the lower planes of existence, a being whose aims are evil, even if you strive against those aims. Such beings desire the corruption or destruction of all things, ultimately including you. Fiends powerful enough to forge a pact include demon lords such as Demogorgon, Orcus, Fraz\u0027Urb-luu, and Baphomet; archdevils such as Asmodeus, Dispater, Mephistopheles, and Belial; pit fiends and balors that are especially mighty; and ultroloths and other lords of the yugoloths.",
+    "classId": "warlock",
+    "levels": [
+      {
+        "subclassId": "fiend",
+        "level": 1,
+        "features": [
+          "dark-ones-blessing"
+        ],
+        "id": "fiend-1"
+      },
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "fiend",
+        "level": 6,
+        "features": [
+          "dark-ones-own-luck"
+        ],
+        "id": "fiend-6"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "fiend",
+        "level": 10,
+        "features": [
+          "fiendish-resilience"
+        ],
+        "id": "fiend-10"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "fiend",
+        "level": 14,
+        "features": [
+          "hurl-through-hell"
+        ],
+        "id": "fiend-14"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "id": "fiend"
+  },
   "four-elements": {
     "name": "Four Elements",
     "flavor": " Monastic Tradition",
@@ -626,6 +1030,63 @@
       null
     ],
     "id": "four-elements"
+  },
+  "great-old-one": {
+    "name": "Great Old One",
+    "flavor": "Otherworldly Patron",
+    "description": "Your patron is a mysterious entity whose nature is utterly foreign to the fabric of reality. It might come from the Far Realm, the space beyond reality, or it could be one of the elder gods known only in legends. Its motives are incomprehensible to mortals, and its knowledge so immense and ancient that even the greatest libraries pale in comparison to the vast secrets it holds. The Great Old One might be unaware of your existence or entirely indifferent to you, but the secrets you have learned allow you to draw your magic from it.\nEntities of this type include Ghaunadar, called That Which Lurks; Tharizdun, the Chained God; Dendar, the Night Serpent; Zargon, the Returner; Great Cthulhu; and other unfathomable beings.",
+    "classId": "warlock",
+    "levels": [
+      {
+        "subclassId": "fiend",
+        "level": 1,
+        "features": [
+          "awakened-mind"
+        ],
+        "id": "fiend-1"
+      },
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "fiend",
+        "level": 6,
+        "features": [
+          "entropic-ward"
+        ],
+        "id": "fiend-6"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "fiend",
+        "level": 10,
+        "features": [
+          "thought-shield"
+        ],
+        "id": "fiend-10"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "fiend",
+        "level": 14,
+        "features": [
+          "create-thrall"
+        ],
+        "id": "fiend-14"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "id": "great-old-one"
   },
   "hunter": {
     "name": "Hunter",
@@ -683,6 +1144,64 @@
       null
     ],
     "id": "hunter"
+  },
+  "illusion": {
+    "name": "Illusion",
+    "flavor": "Arcane Tradition",
+    "description": "You focus your studies on magic that dazzles the senses, befuddles the mind, and tricks even the wisest folk. Your magic is subtle, but the illusions crafted by your keen mind make the impossible seem real. Some illusionists – including many gnome wizards – are benign tricksters who use their spells to entertain. Others are more sinister masters of deception, using their illusions to frighten and fool others for their personal gain.",
+    "classId": "wizard",
+    "levels": [
+      null,
+      {
+        "subclassId": "illusion",
+        "level": 2,
+        "features": [
+          "illusion-savant",
+          "improvd-minor-illusion"
+        ],
+        "id": "illusion-2"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "illusion",
+        "level": 6,
+        "features": [
+          "malleable-illusions"
+        ],
+        "id": "illusion-6"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "illusion",
+        "level": 10,
+        "features": [
+          "illusory-self"
+        ],
+        "id": "illusion-10"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "illusion",
+        "level": 14,
+        "features": [
+          "illusory-reality"
+        ],
+        "id": "illusion-14"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "id": "illusion"
   },
   "knowledge": {
     "name": "Knowledge",
@@ -1110,6 +1629,64 @@
     ],
     "id": "nature"
   },
+  "necromancy": {
+    "name": "Necromancy",
+    "flavor": "Arcane Tradition",
+    "description": "The School of Necromancy explores the cosmic forces of life, death, and undeath. As you focus your studies in this tradition, you learn to manipulate the energy that animates all living things. As you progress, you learn to sap the life force from a creature as your magic destroys its body, transforming that vital energy into magical power you can manipulate.\nMost people see necromancers as menacing, or even villainous, due to the close association with death. Not all necromancers are evil, but the forces they manipulate are considered taboo by many societies.",
+    "classId": "wizard",
+    "levels": [
+      null,
+      {
+        "subclassId": "necromancy",
+        "level": 2,
+        "features": [
+          "necromancy-savant",
+          "grim-harvest"
+        ],
+        "id": "necromancy-2"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "necromancy",
+        "level": 6,
+        "features": [
+          "undead-thralls"
+        ],
+        "id": "necromancy-6"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "necromancy",
+        "level": 10,
+        "features": [
+          "inured-to-undeath"
+        ],
+        "id": "necromancy-10"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "necromancy",
+        "level": 14,
+        "features": [
+          "command-undead"
+        ],
+        "id": "necromancy-14"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "id": "necromancy"
+  },
   "open-hand": {
     "name": "Open Hand",
     "flavor": "Monastic Tradition",
@@ -1405,6 +1982,64 @@
     ],
     "id": "totem-warrior"
   },
+  "transmutation": {
+    "name": "Transmutation",
+    "flavor": "Arcane Tradition",
+    "description": "You are a student of spells that modify energy and matter. To you, the world is not a fixed thing, but eminently mutable, and you delight in being an agent of change. You wield the raw stuff of creation and learn to alter both physical forms and mental qualities. Your magic gives you the tools to become a smith on reality\u0027s forge.\nSome transmuters are tinkerers and pranksters, turning people into toads and transforming copper into silver for fun and occasional profit. Others pursue their magical studies with deadly seriousness, seeking the power of the gods to make and destroy worlds.",
+    "classId": "wizard",
+    "levels": [
+      null,
+      {
+        "subclassId": "transmutation",
+        "level": 2,
+        "features": [
+          "transmutation-savant",
+          "minor-alchemy"
+        ],
+        "id": "transmutation-2"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "transmutation",
+        "level": 6,
+        "features": [
+          "transmuters-stone"
+        ],
+        "id": "transmutation-6"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "transmutation",
+        "level": 10,
+        "features": [
+          "shapechanger"
+        ],
+        "id": "transmutation-10"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "transmutation",
+        "level": 14,
+        "features": [
+          "master-transmuter"
+        ],
+        "id": "transmutation-14"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "id": "transmutation"
+  },
   "trickery": {
     "name": "Trickery",
     "flavor": "Divine Domain",
@@ -1641,5 +2276,63 @@
       null
     ],
     "id": "war"
+  },
+  "wild-magic": {
+    "name": "Wild Magic",
+    "flavor": "Sorcerous Origins",
+    "description": "Your innate magic comes from the wild forces of chaos that underlie the order of creation. You might have endured exposure to some form of raw magic, perhaps through a planar portal leading to Limbo, the Elemental Planes, or the mysterious Far Realm. Perhaps you were blessed by a powerful fey creature or marked by a demon. Or your magic could be a fluke of your birth, with no apparent cause or reason. However it came to be, this chaotic magic churns within you, waiting for any outlet.",
+    "classId": "sorcerer",
+    "levels": [
+      {
+        "subclassId": "wild-magic",
+        "level": 1,
+        "features": [
+          "wild-magic",
+          "tides-of-chaos"
+        ],
+        "id": "wild-magic-1"
+      },
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "wild-magic",
+        "level": 6,
+        "features": [
+          "bend-luck"
+        ],
+        "id": "wild-magic-6"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "wild-magic",
+        "level": 14,
+        "features": [
+          "controlled-chaos"
+        ],
+        "id": "wild-magic-14"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "wild-magic",
+        "level": 18,
+        "features": [
+          "spell-bombardment"
+        ],
+        "id": "wild-magic-18"
+      },
+      null,
+      null
+    ],
+    "id": "wild-magic"
   }
 }

@@ -170,7 +170,7 @@ public class SubclassBuilder {
 		subclass.flavor = "Bard College";
 		subclass.classId = "bard";
 		subclass.description = StringUtil.convertDesc(
-				"Bards o f the College of Valor are daring skalds whose\r\n"
+				"Bards of the College of Valor are daring skalds whose\r\n"
 				+ "tales keep alive the memory of the great heroes of the\r\n"
 				+ "past, and thereby inspire a new generation of heroes.\r\n"
 				+ "These bards gather in mead halls or around great\r\n"

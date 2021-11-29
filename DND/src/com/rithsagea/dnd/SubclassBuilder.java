@@ -954,6 +954,7 @@ public class SubclassBuilder {
 		
 		book.register(createDevotion());
 		book.register(createAncients());
+		book.register(createVengeance());
 		SourceRegistry.saveBooks();
 	}
 }

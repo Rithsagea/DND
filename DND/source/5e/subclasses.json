@@ -1175,6 +1175,63 @@
     ],
     "id": "valor"
   },
+  "vengeance": {
+    "name": "Vengeance",
+    "flavor": "Sacred Oath",
+    "description": "The Oath of Vengeance is a solemn commitment to punish those who have committed a grievous sin. When evil forces slaughter helpless villagers, when an entire people turns against the will of the gods, when a thieves\u0027 guild grows too violent and powerful, when a dragon rampages through the countryside – at times like these, paladins arise and swear an Oath of Vengeance to set right that which has gone wrong. To these paladins – sometimes called avengers or dark knights – their own purity is not as important as delivering justice.",
+    "classId": "paladin",
+    "levels": [
+      null,
+      null,
+      {
+        "subclassId": "vengeance",
+        "level": 3,
+        "features": [
+          "channel-divinity"
+        ],
+        "id": "vengeance-3"
+      },
+      null,
+      null,
+      null,
+      {
+        "subclassId": "vengeance",
+        "level": 7,
+        "features": [
+          "relentless-avenger"
+        ],
+        "id": "vengeance-7"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "vengeance",
+        "level": 15,
+        "features": [
+          "soul-of-vengeance"
+        ],
+        "id": "vengeance-15"
+      },
+      null,
+      null,
+      null,
+      null,
+      {
+        "subclassId": "vengeance",
+        "level": 20,
+        "features": [
+          "avenging-angel"
+        ],
+        "id": "vengeance-20"
+      }
+    ],
+    "id": "vengeance"
+  },
   "war": {
     "name": "War",
     "flavor": "Divine Domain",

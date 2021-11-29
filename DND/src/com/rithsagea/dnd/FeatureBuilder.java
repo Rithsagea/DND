@@ -28,7 +28,7 @@ public class FeatureBuilder {
 			feature.id = model.id;
 			feature.name = model.name;
 			feature.classId = model.classId;
-			feature.subclassId = model.subclassId.isBlank() ? null : model.subclassId;
+			feature.subclassId = model.subclassId.isEmpty() ? null : model.subclassId;
 			feature.description = model.description;
 			
 			book.register(key, feature);

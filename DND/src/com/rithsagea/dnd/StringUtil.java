@@ -10,7 +10,7 @@ public class StringUtil {
 		for(String line : source.replaceAll("\r", "").split("\n")) {
 			builder.append(line);
 			
-			if(line.isBlank()) {
+			if(line.isEmpty()) {
 				builder.setLength(builder.length() - 1);
 				builder.append('\n');
 			} else {
@@ -30,7 +30,7 @@ public class StringUtil {
 		String line;
 		while((line = reader.readLine()) != null) {
 			builder.append(line);
-			if(line.isBlank()) {
+			if(line.isEmpty()) {
 				builder.setLength(builder.length() - 1);
 				builder.append('\n');
 			} else {

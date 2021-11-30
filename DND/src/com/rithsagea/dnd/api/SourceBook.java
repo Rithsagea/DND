@@ -23,6 +23,7 @@ import com.rithsagea.dnd.api.types.Feature;
 import com.rithsagea.dnd.api.types.IndexedItem;
 import com.rithsagea.dnd.api.types.Language;
 import com.rithsagea.dnd.api.types.Skill;
+import com.rithsagea.dnd.api.types.Trait;
 
 public class SourceBook implements Comparable<SourceBook> {
 
@@ -37,6 +38,7 @@ public class SourceBook implements Comparable<SourceBook> {
 		DATA_TYPES.put("classes", DndClass.class);
 		DATA_TYPES.put("subclasses", DndSubclass.class);
 		DATA_TYPES.put("features", Feature.class);
+		DATA_TYPES.put("trait", Trait.class);
 		
 		for(Entry<String, Class<?>> entry : DATA_TYPES.entrySet()) {
 			TYPE_LABELS.put(entry.getValue(), entry.getKey());

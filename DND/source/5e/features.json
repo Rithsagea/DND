@@ -1,4 +1,11 @@
 {
+  "abjuration-savant": {
+    "name": "Abjuration Savant",
+    "description": "Beginning when you select this school at 2nd level, the gold and time you must spend to copy a abjuration spell into your spellbook is halved.",
+    "classId": "wizard",
+    "subclassId": "abjuration",
+    "id": "abjuration-savant"
+  },
   "acolyte-of-nature": {
     "name": "Acolyte of Nature",
     "description": "At 1st level, you learn one cantrip of your choice from the druid spell list. You also gain proficiency in one of the following skills of your choice: Animal Handling, Nature, or Survival.",
@@ -32,6 +39,13 @@
     "subclassId": "lore",
     "id": "additional-magical-secrets"
   },
+  "alter-memories": {
+    "name": "Alter Memories",
+    "description": "At 14th level, you gain the ability to make a creature unaware of your magical influence on it. When you cast an enchantment spell to charm one or more creatures, you can alter one creature\u0027s understanding so that it remains unaware of being charmed.\nAdditionally, once before the spell expires, you can use your action to try to make the chosen creature forget some of the time it spent charmed. The creature must succeed on an Intelligence saving throw against your wizard spell save DC or lose a number of hours of its memories equal to 1 + your Charisma modifier (minimum 1). You can make the creature forget less time, and the amount of time can\u0027t exceed the duration of your enchantment spell.",
+    "classId": "wizard",
+    "subclassId": "enchantment",
+    "id": "alter-memories"
+  },
   "arcane-charge": {
     "name": "Arcane Charge",
     "description": "At 15th level, you gain the ability to teleport up to 30 feet to an unoccupied space you can see when you use your Action Surge. You can teleport before or after the additional action.",
@@ -51,6 +65,13 @@
     "classId": "wizard",
     "id": "arcane-tradition"
   },
+  "arcane-ward": {
+    "name": "Arcane Ward",
+    "description": "Starting at 2nd level, you can weave magic around yourself for protection. When you cast an abjuration spell of 1st level or higher, you can simultaneously use a strand of the spell\u0027s magic to create a magical ward on yourself that lasts until you finish a long rest. The ward has hit points equal to twice your wizard level + your Intelligence modifier. Whenever you take damage, the ward takes the damage instead. If this damage reduces the ward to 0 hit points, you take any remaining damage.\nWhile the ward has 0 hit points, it can\u0027t absorb damage, but its magic remains. Whenever you cast an abjuration spell of 1st level or higher, the ward regains a number of hit points equal to twice the level of the spell.\nOnce you create the ward, you can\u0027t create it again until you finish a long rest.",
+    "classId": "wizard",
+    "subclassId": "abjuration",
+    "id": "arcane-ward"
+  },
   "archdruid": {
     "name": "Archdruid",
     "description": "At 20th level, you can use your Wild Shape an unlimited number of times.\nAdditionally, you can ignore the verbal and somatic components of your druid spells, as well as any material components that lack a cost and aren\u0027t consumed by a spell. You gain this benefit in both your normal shape and your beast shape from Wild Shape.",
@@ -63,6 +84,20 @@
     "classId": "barbarian",
     "subclassId": "totem-warrior",
     "id": "aspect-of-the-beast"
+  },
+  "assassin-bonus-proficiencies": {
+    "name": "Bonus Proficiencies",
+    "description": "When you choose this archetype at 3rd level, you gain proficiency with the disguise kit and the poisoner\u0027s kit.",
+    "classId": "rogue",
+    "subclassId": "assassin",
+    "id": "assassin-bonus-proficiencies"
+  },
+  "assassinate": {
+    "name": "Assassinate",
+    "description": "Starting at 3rd level, you are at your deadliest when you get the drop on your enemies. You have advantage on attack rolls against any creature that hasn\u0027t taken a turn in the combat yet. In addition, any hit you score against a creature that is surprised is a critical hit.",
+    "classId": "rogue",
+    "subclassId": "assassin",
+    "id": "assassinate"
   },
   "aura-improvements": {
     "name": "Aura improvements",
@@ -89,12 +124,33 @@
     "classId": "paladin",
     "id": "aura-of-protection"
   },
+  "aura-of-warding": {
+    "name": "Aura of Warding",
+    "description": "Beginning at 7th level, ancient magic lies so heavily upon you that it forms an eldritch ward. You and friendly creatures within 10 feet of you have resistance to damage from spells.\nAt 18th level, the range of this aura increases to 30 feet.",
+    "classId": "paladin",
+    "subclassId": "ancients-",
+    "id": "aura-of-warding"
+  },
   "avatar-of-battle": {
     "name": "Avatar of Battle",
     "description": "At 17th level, you gain resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons.",
     "classId": "cleric",
     "subclassId": "war",
     "id": "avatar-of-battle"
+  },
+  "avenging-angel": {
+    "name": "Avenging Angel",
+    "description": "At 20th level, you can assume the form of an angelic avenger. Using your action, you undergo a transformation. For 1 hour, you gain the following benefits:\n    Wings sprout from your back and grant you a flying speed of 60 feet.\n    You emanate an aura of menace in a 30-foot radius. The first time any enemy creature enters the aura or starts its turn there during a battle, the creature must succeed on a Wisdom saving throw or become frightened of you for 1 minute or until it takes any damage. Attack rolls against the frightened creature have advantage.\nOnce you use this feature, you can\u0027t use it again until you finish a long rest.",
+    "classId": "paladin",
+    "subclassId": "vengeance",
+    "id": "avenging-angel"
+  },
+  "awakened-mind": {
+    "name": "Awakened Mind",
+    "description": "Starting at 1st level, your alien knowledge gives you the ability to touch the minds of other creatures. You can telepathically speak to any creature you can see within 30 feet of you. You don\u0027t need to share a language with the creature for it to understand your telepathic utterances, but the creature must be able to understand at least one language.",
+    "classId": "warlock",
+    "subclassId": "fiend",
+    "id": "awakened-mind"
   },
   "barbarian-ability-score-improvement-1": {
     "name": "Ability Score Improvement",
@@ -222,6 +278,34 @@
     "description": "Beginning at 18th level, you can cast many of your druid spells in any shape you assume using Wild Shape. You can perform the somatic and verbal components of a druid spell while in a beast shape, but you aren\u0027t able to provide material components.",
     "classId": "druid",
     "id": "beast-spells"
+  },
+  "beguiling-defenses": {
+    "name": "Beguiling Defenses",
+    "description": "Beginning at 10th level, your patron teaches you how to turn the mind-affecting magic of your enemies against them. You are immune to being charmed, and when another creature attempts to charm you, you can use your reaction to attempt to turn the charm back on that creature. The creature must succeed on a Wisdom saving throw against your warlock spell save DC or be charmed by you for 1 minute or until the creature takes any damage.",
+    "classId": "warlock",
+    "subclassId": "archfey",
+    "id": "beguiling-defenses"
+  },
+  "bend-luck": {
+    "name": "Bend Luck",
+    "description": "Starting at 6th level, you have the ability to twist fate using your wild magic. When another creature you can see makes an attack roll, an ability check, or a saving throw, you can use your reaction and spend 2 sorcery points to roll 1d4 and apply the number rolled as a bonus or penalty (your choice) to the creature\u0027s roll. You can do so after the creature rolls but before any effects of the roll occur.",
+    "classId": "sorcerer",
+    "subclassId": "wild-magic",
+    "id": "bend-luck"
+  },
+  "benign-transportation": {
+    "name": "Benign Transportation",
+    "description": "Starting at 6th level, you can use your action to teleport up to 30 feet to an unoccupied space that you can see. Alternatively, you can choose a space within range that is occupied by a Small or Medium creature. If that creature is willing, you both teleport, swapping places.\nOnce you use this feature, you can\u0027t use it again until you finish a long rest or you cast a conjuration spell of 1st level or higher.",
+    "classId": "wizard",
+    "subclassId": "conjuration",
+    "id": "benign-transportation"
+  },
+  "bestial-fury": {
+    "name": "Bestial Fury",
+    "description": "Starting at 11th level, when you command your beast companion to take the Attack action, the beast can make two attacks, or it can take the Multiattack action if it has that action.",
+    "classId": "ranger",
+    "subclassId": "beast-master",
+    "id": "bestial-fury"
   },
   "blessed-healer": {
     "name": "Blessed Healer",
@@ -357,7 +441,7 @@
   },
   "channel-divinity-read-thoughts": {
     "name": "Channel Divinity: Read Thoughts",
-    "description": "At 6th level, you can use your Channel Divinity to read a creature’s thoughts. You can then use your access to the creature’s mind to command it.\nAs an action, choose one creature that you can see within 60 feet of you. That creature must make a Wisdom saving throw. If the creature succeeds on the saving throw, you can’t use this feature on it again until you finish a long rest.\nIf the creature fails its save, you can read its surface thoughts (those foremost in its mind, reflecting its current emotions and what it is actively thinking about) when it is within 60 feet of you. This effect lasts for 1 minute.\nDuring that time, you can use your action to end this effect and cast the suggestion spell on the creature without expending a spell slot. The target automatically fails its saving throw against the spell.",
+    "description": "At 6th level, you can use your Channel Divinity to read a creatureï¿½s thoughts. You can then use your access to the creatureï¿½s mind to command it.\nAs an action, choose one creature that you can see within 60 feet of you. That creature must make a Wisdom saving throw. If the creature succeeds on the saving throw, you canï¿½t use this feature on it again until you finish a long rest.\nIf the creature fails its save, you can read its surface thoughts (those foremost in its mind, reflecting its current emotions and what it is actively thinking about) when it is within 60 feet of you. This effect lasts for 1 minute.\nDuring that time, you can use your action to end this effect and cast the suggestion spell on the creature without expending a spell slot. The target automatically fails its saving throw against the spell.",
     "classId": "cleric",
     "subclassId": "knowledge",
     "id": "channel-divinity-read-thoughts"
@@ -544,6 +628,27 @@
     "subclassId": "moon",
     "id": "combat-wild-shape"
   },
+  "command-undead": {
+    "name": "Command Undead",
+    "description": "Starting at 14th level, you can use magic to bring undead under your control, even those created by other wizards. As an action, you can choose one undead that you can see within 60 feet of you. That creature must make a Charisma saving throw against your wizard spell save DC. If it succeeds, you can\u0027t use this feature on it again. If it fails, it becomes friendly to you and obeys your commands until you use this feature again.\nIntelligent undead are harder to control in this way. If the target has an Intelligence of 8 or higher, it has advantage on the saving throw. If it fails the saving throw and has an Intelligence of 12 or higher, it can repeat the saving throw at the end of every hour until it succeeds and breaks free.",
+    "classId": "wizard",
+    "subclassId": "necromancy",
+    "id": "command-undead"
+  },
+  "conjuration-savant": {
+    "name": "Conjuration Savant",
+    "description": "Beginning when you select this school at 2nd level, the gold and time you must spend to copy a Conjuration spell into your spellbook is halved.",
+    "classId": "wizard",
+    "subclassId": "conjuration",
+    "id": "conjuration-savant"
+  },
+  "controlled-chaos": {
+    "name": "Controlled Chaos",
+    "description": "At 14th level, you gain a modicum of control over the surges of your wild magic. Whenever you roll on the Wild Magic Surge table, you can roll twice and use either number.",
+    "classId": "sorcerer",
+    "subclassId": "wild-magic",
+    "id": "controlled-chaos"
+  },
   "corona-of-light": {
     "name": "Corona of Light",
     "description": "Starting at 17th level, you can use your action to activate an aura of sunlight that lasts for 1 minute or until you dismiss it using another action. You emit bright light in a 60-foot radius and dim light 30 feet beyond that. Your enemies in the bright light have disadvantage on saving throws against any spell that deals fire or radiant damage.",
@@ -556,6 +661,13 @@
     "description": "At 6th level, you gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performance that lasts until the end of your next turn. During that time, you and any friendly creatures within 30 feet of you have advantage on saving throws against being frightened or charmed. A creature must be able to hear you to gain this benefit. The performance ends early if you are incapacitated or silenced or if you voluntarily end it (no action required).",
     "classId": "bard",
     "id": "countercharm"
+  },
+  "create-thrall": {
+    "name": "Create Thrall",
+    "description": "At 14th level, you gain the ability to infect a humanoid\u0027s mind with the alien magic of your patron. You can use your action to touch an incapacitated humanoid. That creature is then charmed by you until a Remove Curse spell is cast on it, the charmed condition is removed from it, or you use this feature again.\nYou can communicate telepathically with the charmed creature as long as the two of you are on the same plane of existence.",
+    "classId": "warlock",
+    "subclassId": "fiend",
+    "id": "create-thrall"
   },
   "cunning-action": {
     "name": "Cunning Action",
@@ -583,6 +695,13 @@
     "classId": "barbarian",
     "id": "danger-sense"
   },
+  "dark-delirium": {
+    "name": "Dark Delirium",
+    "description": "Starting at 14th level, you can plunge a creature into an illusory realm. As an action, choose a creature that you can see within 60 feet of you. It must make a Wisdom saving throw against your warlock spell save DC. On a failed save, it is charmed or frightened by you (your choice) for 1 minute or until your concentration is broken (as if you are concentrating on a spell). This effect ends early if the creature takes any damage.\nUntil this illusion ends, the creature thinks it is lost in a misty realm, the appearance of which you choose. The creature can see and hear only itself, you, and the illusion.\nYou must finish a short or long rest before you can use this feature again.",
+    "classId": "warlock",
+    "subclassId": "archfey",
+    "id": "dark-delirium"
+  },
   "dark-ones-blessing": {
     "name": "Dark One\u0027s Blessing",
     "description": "Starting at 1st level, when you reduce a hostile creature to 0 hit points, you gain temporary hit points equal to your Charisma modifier + your warlock level (minimum of 1).",
@@ -596,6 +715,13 @@
     "classId": "warlock",
     "subclassId": "fiend",
     "id": "dark-ones-own-luck"
+  },
+  "death-strike": {
+    "name": "Death Strike",
+    "description": "Starting at 17th level, you become a master of instant death. When you attack and hit a creature that is surprised, it must make a Constitution saving throw (DC 8 + your Dexterity modifier + your proficiency bonus). On a failed save, double the damage of your attack against the creature.",
+    "classId": "rogue",
+    "subclassId": "assassin",
+    "id": "death-strike"
   },
   "defensive-tactics": {
     "name": "Defensive Tactics",
@@ -680,6 +806,13 @@
     "classId": "monk",
     "subclassId": "four-elements",
     "id": "disciple-of-the-elements"
+  },
+  "divination-savant": {
+    "name": "Divination Savant",
+    "description": "Beginning when you select this school at 2nd level, the gold and time you must spend to copy a Divination spell into your spellbook is halved.",
+    "classId": "wizard",
+    "subclassId": "divination",
+    "id": "divination-savant"
   },
   "divine-domain": {
     "name": "Divine Domain",
@@ -899,6 +1032,20 @@
     "description": "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message\u0027s presence with a successful DC 15 Wisdom (Perception) check but can\u0027t decipher it without magic.",
     "classId": "druid",
     "id": "druidic"
+  },
+  "durable-summons": {
+    "name": "Durable Summons",
+    "description": "Starting at 14th level, any creature that you summon or create with a conjuration spell has 30 temporary hit points.",
+    "classId": "wizard",
+    "subclassId": "conjuration",
+    "id": "durable-summons"
+  },
+  "elder-champion": {
+    "name": "Elder Champion",
+    "description": "At 20th level, you can assume the form of an ancient force of nature, taking on an appearance you choose. For example, your skin might turn green or take on a bark-like texture, your hair might become leafy or moss-like, or you might sprout antlers or a lion-like mane.\nUsing your action, you undergo a transformation. For 1 minute, you gain the following benefits:\n    At the start of each of your turns, you regain 10 hit points.\n    Whenever you cast a paladin spell that has a casting time of 1 action, you can cast it using a bonus action instead.\n    Enemy creatures within 10 feet of you have disadvantage on saving throws against your paladin spells and Channel Divinity options.\nOnce you use this feature, you can\u0027t use it again until you finish a long rest.",
+    "classId": "paladin",
+    "subclassId": "ancients-",
+    "id": "elder-champion"
   },
   "eldritch-invocation-agonizing-blast": {
     "name": "Eldritch Invocation: Agonizing Blast",
@@ -1186,12 +1333,40 @@
     "classId": "monk",
     "id": "empty-body"
   },
+  "enchantment-savant": {
+    "name": "Enchantment Savant",
+    "description": "As a member of the School of Enchantment, you have honed your ability to magically entrance and beguile other people and monsters. Some enchanters are peacemakers who bewitch the violent to lay down their arms and charm the cruel into showing mercy. Others are tyrants who magically bind the unwilling into their service. Most enchanters fall somewhere in between.",
+    "classId": "wizard",
+    "subclassId": "enchantment",
+    "id": "enchantment-savant"
+  },
+  "entropic-ward": {
+    "name": "Entropic Ward",
+    "description": "At 6th level, you learn to magically ward yourself against attack and to turn an enemy\u0027s failed strike into good luck for yourself. When a creature makes an attack roll against you, you can use your reaction to impose disadvantage on that roll. If the attack misses you, your next attack roll against the creature has advantage if you make it before the end of your next turn.\nOnce you use this feature, you can\u0027t use it again until you finish a short or long rest.",
+    "classId": "warlock",
+    "subclassId": "fiend",
+    "id": "entropic-ward"
+  },
   "evocation-savant": {
     "name": "Evocation Savant",
     "description": "Beginning when you select this school at 2nd level, the gold and time you must spend to copy an evocation spell into your spellbook is halved.",
     "classId": "wizard",
     "subclassId": "evocation",
     "id": "evocation-savant"
+  },
+  "exceptional-training": {
+    "name": "Exceptional Training",
+    "description": "Beginning at 7th level, on any of your turns when your beast companion doesnâ€™t attack, you can use a bonus action to command the beast to take the Dash, Disengage, or Help action on its turn. In addition, the beastâ€™s attacks now count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.",
+    "classId": "ranger",
+    "subclassId": "beast-master",
+    "id": "exceptional-training"
+  },
+  "expert-divination": {
+    "name": "Expert Divination",
+    "description": "Beginning at 6th level, casting divination spells comes so easily to you that it expends only a fraction of your spellcasting efforts. When you cast a divination spell of 2nd level or higher using a spell slot, you regain one expended spell slot. The slot you regain must be of a level lower than the spell you cast and can\u0027t be higher than 5th level.",
+    "classId": "wizard",
+    "subclassId": "divination",
+    "id": "expert-divination"
   },
   "extra-attack-1": {
     "name": "Extra Attack",
@@ -1253,6 +1428,13 @@
     "description": "At 18th level, you gain preternatural senses that help you fight creatures you can\u0027t see. When you attack a creature you can\u0027t see, your inability to see it doesn\u0027t impose disadvantage on your attack rolls against it.\nYou are also aware of the location of any invisible creature within 30 feet of you, provided that the creature isn\u0027t hidden from you and you aren\u0027t blinded or deafened.",
     "classId": "ranger",
     "id": "feral-senses"
+  },
+  "fey-presence": {
+    "name": "Fey Presence",
+    "description": "Starting at 1st level, your patron bestows upon you the ability to project the beguiling and fearsome presence of the fey. As an action, you can cause each creature in a 10-foot cube originating from you to make a Wisdom saving throw against your warlock spell save DC. The creatures that fail their saving throws are all charmed or frightened by you (your choice) until the end of your next turn.\nOnce you use this feature, you can\u0027t use it again until you finish a short or long rest.",
+    "classId": "warlock",
+    "subclassId": "archfey",
+    "id": "fey-presence"
   },
   "fiendish-resilience": {
     "name": "Fiendish Resilience",
@@ -1387,6 +1569,13 @@
     "classId": "monk",
     "id": "flurry-of-blows"
   },
+  "focused-conjuration": {
+    "name": "Focused Conjuration",
+    "description": "Beginning at 10th level, while you are concentrating on a conjuration spell, your concentration can\u0027t be broken as a result of taking damage.",
+    "classId": "wizard",
+    "subclassId": "conjuration",
+    "id": "focused-conjuration"
+  },
   "foe-slayer": {
     "name": "Foe Slayer",
     "description": "At 20th level, you become an unparalleled hunter of your enemies. Once on each of your turns, you can add your Wisdom modifier to the attack roll or the damage roll of an attack you make against one of your favored enemies. You can choose to use this feature before or after the roll, but before any effects of the roll are applied.",
@@ -1411,6 +1600,20 @@
     "classId": "barbarian",
     "subclassId": "berserker",
     "id": "frenzy"
+  },
+  "greater-portent": {
+    "name": "Greater Portent",
+    "description": "Starting at 14th level, the visions in your dreams intensify and paint a more accurate picture in your mind of what is to come. You roll three d20s for your Portent feature, rather than two.",
+    "classId": "wizard",
+    "subclassId": "divination",
+    "id": "greater-portent"
+  },
+  "grim-harvest": {
+    "name": "Grim Harvest",
+    "description": "At 2nd level, you gain the ability to reap life energy from creatures you kill with your spells. Once per turn when you kill one or more creatures with a spell of 1st level or higher, you regain hit points equal to twice the spell\u0027s level, or three times its level if the spell belongs to the School of Necromancy. You don\u0027t gain this benefit for killing constructs or undead.",
+    "classId": "wizard",
+    "subclassId": "necromancy",
+    "id": "grim-harvest"
   },
   "hide-in-plain-sight": {
     "name": "Hide in Plain Sight",
@@ -1460,6 +1663,48 @@
     "subclassId": "fiend",
     "id": "hurl-through-hell"
   },
+  "hypnotic-gaze": {
+    "name": "Hypnotic Gaze",
+    "description": "Starting at 2nd level when you choose this school, your soft words and enchanting gaze can magically enthrall another creature. As an action, choose one creature that you can see within 5 feet of you. If the target can see or hear you, it must succeed on a Wisdom saving throw against your wizard spell save DC or be charmed by you until the end of your next turn. The charmed creature\u0027s speed drops to 0, and the creature is incapacitated and visibly dazed.\nOn subsequent turns, you can use your action to maintain this effect, extending its duration until the end of your next turn. However, the effect ends if you move more than 5 feet away from the creature, if the creature can neither see nor hear you, or if the creature takes damage.\nOnce the effect ends, or if the creature succeeds on its initial saving throw against this effect, you can\u0027t use this feature on that creature again until you finish a long rest.",
+    "classId": "wizard",
+    "subclassId": "enchantment",
+    "id": "hypnotic-gaze"
+  },
+  "illusion-savant": {
+    "name": "Illusion Savant",
+    "description": "Beginning when you select this school at 2nd level, the gold and time you must spend to copy a Illusion spell into your spellbook is halved.",
+    "classId": "wizard",
+    "subclassId": "illusion",
+    "id": "illusion-savant"
+  },
+  "illusory-reality": {
+    "name": "Illusory Reality",
+    "description": "By 14th level, you have learned the secret of weaving shadow magic into your illusions to give them a semi-reality. When you cast an illusion spell of 1st level or higher, you can choose one inanimate, nonmagical object that is part of the illusion and make that object real. You can do this on your turn as a bonus action while the spell is ongoing. The object remains real for 1 minute. For example, you can create an illusion of a bridge over a chasm and then make it real long enough for your allies to cross.\nThe object can\u0027t deal damage or otherwise directly harm anyone.",
+    "classId": "wizard",
+    "subclassId": "illusion",
+    "id": "illusory-reality"
+  },
+  "illusory-self": {
+    "name": "Illusory Self",
+    "description": "Beginning at 10th level, you can create an illusory duplicate of yourself as an instant, almost instinctual reaction to danger. When a creature makes an attack roll against you, you can use your reaction to interpose the illusory duplicate between the attacker and yourself. The attack automatically misses you, then the illusion dissipates.\nOnce you use this feature, you can\u0027t use it again until you finish a short or long rest.",
+    "classId": "wizard",
+    "subclassId": "illusion",
+    "id": "illusory-self"
+  },
+  "imposter": {
+    "name": "Imposter",
+    "description": "At 13th level, you gain the ability to unerringly mimic another person\u0027s speech, writing, and behavior. You must spend at least three hours studying these three components of the person\u0027s behavior, listening to speech, examining handwriting, and observing mannerisms.\nYour ruse is indiscernible to the casual observer. If a wary creature suspects something is amiss, you have advantage on any Charisma (Deception) check you make to avoid detection.",
+    "classId": "rogue",
+    "subclassId": "assassin",
+    "id": "imposter"
+  },
+  "improved-abjuration": {
+    "name": "Improved Abjuration",
+    "description": "Beginning at 10th level, when you cast an abjuration spell that requires you to make an ability check as a part of casting that spell (as in Counterspell and Dispel Magic), you add your proficiency bonus to that ability check.",
+    "classId": "wizard",
+    "subclassId": "abjuration",
+    "id": "improved-abjuration"
+  },
   "improved-combat-superiority": {
     "name": "Improved Combat Superiority",
     "description": "At 10th level, your superiority dice turn into d10s. At 18th level, they turn into d12s.",
@@ -1494,6 +1739,13 @@
     "subclassId": "light",
     "id": "improved-flare"
   },
+  "improved-minor-illusion": {
+    "name": "Improved Minor Illusion",
+    "description": "When you choose this school at 2nd level, you learn the Minor Illusion cantrip. If you already know this cantrip, you learn a different wizard cantrip of your choice. The cantrip doesn\u0027t count against your number of cantrips known.\nWhen you cast Minor Illusion, you can create both a sound and an image with a single casting of the spell.",
+    "classId": "wizard",
+    "subclassId": "illusion",
+    "id": "improved-minor-illusion"
+  },
   "improved-war-magic": {
     "name": "Improved War Magic",
     "description": "Starting at 18th level, when you use your action to cast a spell, you can make one weapon attack as a bonus action.",
@@ -1525,12 +1777,33 @@
     "classId": "barbarian",
     "id": "indomitable-might"
   },
+  "infiltration-expertise": {
+    "name": "Infiltration Expertise",
+    "description": "Starting at 9th level, you can unfailingly create false identities for yourself. You must spend seven days and 25 gp to establish the history, profession, and affiliations for an identity. You can\u0027t establish an identity that belongs to someone else. For example, you might acquire appropriate clothing, letters of introduction, and official- looking certification to establish yourself as a member of a trading house from a remote city so you can insinuate yourself into the company of other wealthy merchants.\nThereafter, if you adopt the new identity as a disguise, other creatures believe you to be that person until given an obvious reason not to.",
+    "classId": "rogue",
+    "subclassId": "assassin",
+    "id": "infiltration-expertise"
+  },
+  "instinctive-charm": {
+    "name": "Instinctive Charm",
+    "description": "Beginning at 6th level, when a creature you can see within 30 feet of you makes an attack roll against you, you can use your reaction to divert the attack, provided that another creature is within the attack\u0027s range. The attacker must make a Wisdom saving throw against your wizard spell save DC. On a failed save, the attacker must target the creature that is closest to it, not including you or itself. If multiple creatures are closest, the attacker chooses which one to target.\nOn a successful save, you can\u0027t use this feature on the attacker again until you finish a long rest.\nYou must choose to use this feature before knowing whether the attack hits or misses. Creatures that can\u0027t be charmed are immune to this effect.",
+    "classId": "wizard",
+    "subclassId": "enchantment",
+    "id": "instinctive-charm"
+  },
   "intimidating-presence": {
     "name": "Intimidating Presence",
     "description": "Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn. On subsequent turns, you can use your action to extend the duration of this effect on the frightened creature until the end of your next turn. This effect ends if the creature ends its turn out of line of sight or more than 60 feet away from you.\n If the creature succeeds on its saving throw, you can\u0027t use this feature on that creature again for 24 hours.",
     "classId": "barbarian",
     "subclassId": "berserker",
     "id": "intimidating-presence"
+  },
+  "inured-to-undeath": {
+    "name": "Inured to Undeath",
+    "description": "Beginning at 10th level, you have resistance to necrotic damage, and your hit point maximum can\u0027t be reduced. You have spent so much time dealing with undead and the forces that animate them that you have become inured to some of their worst effects.",
+    "classId": "wizard",
+    "subclassId": "necromancy",
+    "id": "inured-to-undeath"
   },
   "jack-of-all-trades": {
     "name": "Jack of All Trades",
@@ -1598,6 +1871,20 @@
     "subclassId": "lore",
     "id": "lore-bonus-proficiencies"
   },
+  "mage-hand-legerdemain": {
+    "name": "Mage Hand Legerdemain",
+    "description": "Starting at 3rd level, when you cast Mage Hand, you can make the spectral hand invisible, and you can perform the following additional tasks with it:\n    You can stow one object the hand is holding in a container worn or carried by another creature.\n    You can retrieve an object in a container worn or carried by another creature.\n    You can use thieves\u0027 tools to pick locks and disarm traps at range.\nYou can perform one of these tasks without being noticed by a creature if you succeed on a Dexterity (Sleight of Hand) check contested by the creature\u0027s Wisdom (Perception) check.\nIn addition, you can use the bonus action granted by your Cunning Action to control the hand.",
+    "classId": "rogue",
+    "subclassId": "arcane-trickster",
+    "id": "mage-hand-legerdemain"
+  },
+  "magical-ambush": {
+    "name": "Magical Ambush",
+    "description": "Starting at 9th level, if you are hidden from a creature when you cast a spell on it, the creature has disadvantage on any saving throw it makes against the spell this turn.",
+    "classId": "rogue",
+    "subclassId": "arcane-trickster",
+    "id": "magical-ambush"
+  },
   "magical-secrets-1": {
     "name": "Magical Secrets",
     "description": "By 10th level, you have plundered magical knowledge from a wide spectrum of disciplines. Choose two spells from any class, including this one. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip. \nThe chosen spells count as bard spells for you and are included in the number in the Spells Known column of the Bard table. \nYou learn two additional spells from any class at 14th level and again at 18th level.",
@@ -1615,6 +1902,13 @@
     "description": "By 10th level, you have plundered magical knowledge from a wide spectrum of disciplines. Choose two spells from any class, including this one. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip. \nThe chosen spells count as bard spells for you and are included in the number in the Spells Known column of the Bard table. \nYou learn two additional spells from any class at 14th level and again at 18th level.",
     "classId": "bard",
     "id": "magical-secrets-3"
+  },
+  "malleable-illusions": {
+    "name": "Malleable Illusions",
+    "description": "Starting at 6th level, when you cast an illusion spell that has a duration of 1 minute or longer, you can use your action to change the nature of that illusion (using the spell\u0027s normal parameters for the illusion), provided that you can see the illusion.",
+    "classId": "wizard",
+    "subclassId": "illusion",
+    "id": "malleable-illusions"
   },
   "martial-archetype": {
     "name": "Martial Archetype",
@@ -1634,6 +1928,13 @@
     "classId": "cleric",
     "subclassId": "nature",
     "id": "master-of-nature"
+  },
+  "master-transmuter": {
+    "name": "Master Transmuter",
+    "description": "Starting at 14th level, you can use your action to consume the reserve of transmutation magic stored within your transmuter\u0027s stone in a single burst. When you do so, choose one of the following effects. Your transmuter\u0027s stone is destroyed and can\u0027t be remade until you finish a long rest.\nMajor Transformation. You can transmute one nonmagical object â€“ no larger than a 5-foot cube â€“ into another nonmagical object of similar size and mass and of equal or lesser value. You must spend 10 minutes handling the object to transform it.\nPanacea. You remove all curses, diseases, and poisons affecting a creature that you touch with the transmuter\u0027s stone. The creature also regains all its hit points.\nRestore Life. You cast the Raise Dead spell on a creature you touch with the transmuter\u0027s stone, without expending a spell slot or needing to have the spell in your spellbook.\nRestore Youth. You touch the transmuter\u0027s stone to a willing creature, and that creature\u0027s apparent age is reduced by 3d10 years, to a minimum of 13 years. This effect doesn\u0027t extend the creature\u0027s lifespan.",
+    "classId": "wizard",
+    "subclassId": "transmutation",
+    "id": "master-transmuter"
   },
   "metamagic-1": {
     "name": "Metamagic",
@@ -1707,6 +2008,27 @@
     "classId": "barbarian",
     "subclassId": "berserker",
     "id": "mindless-rage"
+  },
+  "minor-alchemy": {
+    "name": "Minor Alchemy",
+    "description": "Starting at 2nd level when you select this school, you can temporarily alter the physical properties of one nonmagical object, changing it from one substance into another. You perform a special alchemical procedure on one object composed entirely of wood, stone (but not a gemstone), iron, copper, or silver, transforming it into a different one of those materials. For each 10 minutes you spend performing the procedure, you can transform up to 1 cubic foot of material. After 1 hour, or until you lose your concentration (as if you were concentrating on a spell), the material reverts to its original substance.",
+    "classId": "wizard",
+    "subclassId": "transmutation",
+    "id": "minor-alchemy"
+  },
+  "minor-conjuration": {
+    "name": "Minor Conjuration",
+    "description": "Starting at 2nd level when you select this school, you can use your action to conjure up an inanimate object in your hand or on the ground in an unoccupied space that you can see within 10 feet of you. This object can be no larger than 3 feet on a side and weigh no more than 10 pounds, and its form must be that of a nonmagical object that you have seen. The object is visibly magical, radiating dim light out to 5 feet.\nThe object disappears after 1 hour, when you use this feature again, or if it takes any damage.",
+    "classId": "wizard",
+    "subclassId": "conjuration",
+    "id": "minor-conjuration"
+  },
+  "misty-escape": {
+    "name": "Misty Escape",
+    "description": "Starting at 6th level, you can vanish in a puff of mist in response to harm. When you take damage, you can use your reaction to turn invisible and teleport up to 60 feet to an unoccupied space you can see. You remain invisible until the start of your next turn or until you attack or cast a spell.\nOnce you use this feature, you can\u0027t use it again until you finish a short or long rest.",
+    "classId": "warlock",
+    "subclassId": "archfey",
+    "id": "misty-escape"
   },
   "monastic-tradition": {
     "name": "Monastic Tradition",
@@ -1866,6 +2188,13 @@
     "subclassId": "land",
     "id": "natures-ward"
   },
+  "necromancy-savant": {
+    "name": "Necromancy Savant",
+    "description": "Beginning when you select this school at 2nd level, the gold and time you must spend to copy a Necromancy spell into your spellbook is halved.",
+    "classId": "wizard",
+    "subclassId": "necromancy",
+    "id": "necromancy-savant"
+  },
   "oath-spells": {
     "name": "Oath Spells",
     "description": "Each oath has a list of associated spells. You gain access to these spells at the levels specified in the oath description. Once you gain access to an oath spell, you always have it prepared. Oath spells don\u0027t count against the number of spells you can prepare each day.\nIf you gain an oath spell that doesn\u0027t appear on the paladin spell list, the spell is nonetheless a paladin spell for you.",
@@ -1996,6 +2325,13 @@
     "classId": "barbarian",
     "id": "persistent-rage"
   },
+  "portent": {
+    "name": "Portent",
+    "description": "Starting at 2nd level when you choose this school, glimpses of the future begin to press in on your awareness. When you finish a long rest, roll two d20s and record the numbers rolled. You can replace any attack roll, saving throw, or ability check made by you or a creature that you can see with one of these foretelling rolls. You must choose to do so before the roll, and you can replace a roll in this way only once per turn.\nEach foretelling roll can be used only once. When you finish a long rest, you lose any unused foretelling rolls.",
+    "classId": "wizard",
+    "subclassId": "divination",
+    "id": "portent"
+  },
   "potent-cantrip": {
     "name": "Potent Cantrip",
     "description": "Starting at 6th level, your damaging cantrips affect even creatures that avoid the brunt of the effect. When a creature succeeds on a saving throw against your cantrip, the creature takes half the cantrip\u0027s damage (if any) but suffers no additional effect from the cantrip.",
@@ -2034,6 +2370,13 @@
     "description": "Beginning at 3rd level, you can use your action and expend one ranger spell slot to focus your awareness on the region around you. For 1 minute per level of the spell slot you expend, you can sense whether the following types of creatures are present within 1 mile of you (or within up to 6 miles if you are in your favored terrain): aberrations, celestials, dragons, elementals, fey, fiends, and undead. This feature doesn\u0027t reveal the creatures\u0027 location or number.",
     "classId": "ranger",
     "id": "primeval-awareness"
+  },
+  "projected-ward": {
+    "name": "Projected Ward",
+    "description": "Starting at 6th level, when a creature that you can see within 30 feet of you takes damage, you can use your reaction to cause your Arcane Ward to absorb that damage. If this damage reduces the ward to 0 hit points, the warded creature takes any remaining damage.",
+    "classId": "wizard",
+    "subclassId": "abjuration",
+    "id": "projected-ward"
   },
   "purity-of-body": {
     "name": "Purity of Body",
@@ -2139,6 +2482,13 @@
     "classId": "ranger",
     "id": "ranger-lands-stride"
   },
+  "rangers-companion": {
+    "name": "Ranger\u0027s Companion",
+    "description": "At 3rd level, you gain a beast companion that accompanies you on your adventures and is trained to fight alongside you. Choose a beast that is no larger than Medium and that has a challenge rating of 1/4 or lower (appendix D presents statistics for the hawk, mastiff, and panther as examples). Add your proficiency bonus to the beastâ€™s AC, attack rolls, and damage rolls, as well as to any saving throws and skills it is proficient in. Its hit point maximum equals its normal maximum or four times your ranger level, whichever is higher. Like any creature, the beast can spend Hit Dice during a short rest.\nThe beast obeys your commands as best as it can. It takes its turn on your initiative. On your turn, you can verbally command the beast where to move (no action required by you). You can use your action to verbally command it to take the Attack, Dash, Disengage, or Help action. If you donâ€™t issue a command, the beast takes the Dodge action. Once you have the Extra Attack feature, you can make one weapon attack yourself when you command the beast to take the Attack action. While traveling through your favored terrain with only the beast, you can move stealthily at a normal pace.\nIf you are incapacitated or absent, the beast acts on its own, focusing on protecting you and itself. The beast never requires your command to use its reaction, such as when making an opportunity attack.\nIf the beast dies, you can obtain another one by spending 8 hours magically bonding with another beast that isnâ€™t hostile to you, either the same type of beast as before or a different one.",
+    "classId": "ranger",
+    "subclassId": "beast-master",
+    "id": "rangers-companion"
+  },
   "reckless-attack": {
     "name": "Reckless Attack",
     "description": "Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn.",
@@ -2151,6 +2501,13 @@
     "classId": "fighter",
     "subclassId": "battle-master",
     "id": "relentless"
+  },
+  "relentless-avenger": {
+    "name": "Relentless Avenger",
+    "description": "By 7th level, your supernatural focus helps you close off a foe\u0027s retreat. When you hit a creature with an opportunity attack, you can move up to half your speed immediately after the attack and as part of the same reaction. This movement doesn\u0027t provoke opportunity attacks.",
+    "classId": "paladin",
+    "subclassId": "vengeance",
+    "id": "relentless-avenger"
   },
   "relentless-rage": {
     "name": "Relentless Rage",
@@ -2278,6 +2635,20 @@
     "subclassId": "shadow",
     "id": "shadow-step"
   },
+  "shapechanger": {
+    "name": "Shapechanger",
+    "description": "At 10th level, you add the Polymorph spell to your spellbook, if it is not there already. You can cast Polymorph without expending a spell slot. When you do so, you can target only yourself and transform into a beast whose challenge rating is 1 or lower.\nOnce you cast Polymorph in this way, you can\u0027t do so again until you finish a short or long rest, though you can still cast it normally using an available spell slot.",
+    "classId": "wizard",
+    "subclassId": "transmutation",
+    "id": "shapechanger"
+  },
+  "share-spells": {
+    "name": "Share Spells",
+    "description": "Beginning at 15th level, when you cast a spell targeting yourself, you can also affect your beast companion with the spell if the beast is within 30 feet of you.",
+    "classId": "ranger",
+    "subclassId": "beast-master",
+    "id": "share-spells"
+  },
   "signature-spell": {
     "name": "Signature Spell",
     "description": "When you reach 20th level, you gain mastery over two powerful spells and can cast them with little effort. Choose two 3rd-level wizard spells in your spellbook as your signature spells. You always have these spells prepared, they don\u0027t count against the number of spells you have prepared, and you can cast each of them once at 3rd level without expending a spell slot. When you do so, you can\u0027t do so again until you finish a short or long rest.\nIf you want to cast either spell at a higher level, you must expend a spell slot as normal.",
@@ -2368,11 +2739,39 @@
     "classId": "sorcerer",
     "id": "sorcerous-restoration"
   },
+  "soul-of-vengeance": {
+    "name": "Soul of Vengeance",
+    "description": "Starting at 15th level, the authority with which you speak your Vow of Enmity gives you greater power over your foe. When a creature under the effect of your Vow of Enmity makes an attack, you can use your reaction to make a melee weapon attack against that creature if it is within range.",
+    "classId": "paladin",
+    "subclassId": "vengeance",
+    "id": "soul-of-vengeance"
+  },
+  "spell-bombardment": {
+    "name": "Spell Bombardment",
+    "description": "Beginning at 18th level, the harmful energy of your spells intensifies. When you roll damage for a spell and roll the highest number possible on any of the dice, choose one of those dice, roll it again and add that roll to the damage. You can use the feature only once per turn.",
+    "classId": "sorcerer",
+    "subclassId": "wild-magic",
+    "id": "spell-bombardment"
+  },
   "spell-mastery": {
     "name": "Spell Mastery",
     "description": "At 18th level, you have achieved such mastery over certain spells that you can cast them at will. Choose a 1st-level wizard spell and a 2nd-level wizard spell that are in your spellbook. You can cast those spells at their lowest level without expending a spell slot when you have them prepared. If you want to cast either spell at a higher level, you must expend a spell slot as normal.\nBy spending 8 hours in study, you can exchange one or both of the spells you chose for different spells of the same levels.",
     "classId": "wizard",
     "id": "spell-mastery"
+  },
+  "spell-resistance": {
+    "name": "Spell Resistance",
+    "description": "Starting at 14th level, you have advantage on saving throws against spells.\nFurthermore, you have resistance against the damage of spells.",
+    "classId": "wizard",
+    "subclassId": "abjuration",
+    "id": "spell-resistance"
+  },
+  "spell-thief": {
+    "name": "Spell Thief",
+    "description": "At 17th level, you gain the ability to magically steal the knowledge of how to cast a spell from another spellcaster.\nImmediately after a creature casts a spell that targets you or includes you in its area of effect, you can use your reaction to force the creature to make a saving throw with its spellcasting ability modifier. The DC equals your spell save DC. On a failed save, you negate the spell\u0027s effect against you, and you steal the knowledge of the spell if it is at least 1st level and of a level you can cast (it doesn\u0027t need to be a wizard spell). For the next 8 hours, you know the spell and can cast it using your spell slots. The creature can\u0027t cast that spell until the 8 hours have passed.\nOnce you use this feature, you can\u0027t use it again until you finish a long rest.",
+    "classId": "rogue",
+    "subclassId": "arcane-trickster",
+    "id": "spell-thief"
   },
   "spellcasting-bard": {
     "name": "Spellcasting: Bard",
@@ -2429,6 +2828,13 @@
     "classId": "barbarian",
     "subclassId": "totem-warrior",
     "id": "spirit-walker"
+  },
+  "split-enchantment": {
+    "name": "Split Enchantment",
+    "description": "Starting at 10th level, when you cast an enchantment spell of 1st level or higher that targets only one creature, you can have it target a second creature.",
+    "classId": "wizard",
+    "subclassId": "enchantment",
+    "id": "split-enchantment"
   },
   "step-of-the-wind": {
     "name": "Step of the Wind",
@@ -2543,6 +2949,13 @@
     "subclassId": "tempest",
     "id": "tempest-divine-strike"
   },
+  "the-third-eye": {
+    "name": "The Third Eye",
+    "description": "Starting at 10th level, you can use your action to increase your powers of perception. When you do so, choose one of the following benefits, which lasts until you are incapacitated or you take a short or long rest. You can\u0027t use the feature again until you finish a short or long rest.\nDarkvision. You gain darkvision out to a range of 60 feet.\nEthereal Sight. You can see into the Ethereal Plane within 60 feet of you.\nGreater Comprehension. You can read any language.\nSee Invisibility. You can see invisible creatures and objects within 10 feet of you that are within line of sight.",
+    "classId": "wizard",
+    "subclassId": "divination",
+    "id": "the-third-eye"
+  },
   "thiefs-reflexes": {
     "name": "Thief\u0027s Reflexes",
     "description": "When you reach 17th level, you have become adept at laying ambushes and quickly escaping danger. You can take two turns during the first round of any combat. You take your first turn at your normal initiative and your second turn at your initiative minus 10. You can\u0027t use this feature when you are surprised.",
@@ -2555,6 +2968,13 @@
     "description": "During your rogue training you learned thieves\u0027 cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal conversation. Only another creature that knows thieves\u0027 cant understands such messages. It takes four times longer to convey such a message than it does to speak the same idea plainly.\nIn addition, you understand a set of secret signs and symbols used to convey short, simple messages, such as whether an area is dangerous or the territory of a thieves\u0027 guild, whether loot is nearby, or whether the people in an area are easy marks or will provide a safe house for thieves on the run.",
     "classId": "rogue",
     "id": "thieves-cant"
+  },
+  "thought-shield": {
+    "name": "Thought Shield",
+    "description": "Starting at 10th level, your thoughts can\u0027t be read by telepathy or other means unless you allow it. You also have resistance to psychic damage, and whenever a creature deals psychic damage to you, that creature takes the same amount of damage that you do.",
+    "classId": "warlock",
+    "subclassId": "fiend",
+    "id": "thought-shield"
   },
   "thousand-forms": {
     "name": "Thousand Forms",
@@ -2570,6 +2990,13 @@
     "subclassId": "tempest",
     "id": "thunderous-strike"
   },
+  "tides-of-chaos": {
+    "name": "Tides of Chaos",
+    "description": "Starting at 1st level, you can manipulate the forces of chance and chaos to gain advantage on one attack roll, ability check, or saving throw. Once you do so, you must finish a long rest before you can use this feature again.\nAny time before you regain the use of this feature, the DM can have you roll on the Wild Magic Surge table immediately after you cast a sorcerer spell of 1st level or higher. You then regain the use of this feature.",
+    "classId": "sorcerer",
+    "subclassId": "wild-magic",
+    "id": "tides-of-chaos"
+  },
   "tongue-of-the-sun-and-moon": {
     "name": "Tongue of the Sun and Moon",
     "description": "Starting at 13th level, you learn to touch the ki of other minds so that you understand all spoken languages. Moreover, any creature that can understand a language can understand what you say.",
@@ -2578,14 +3005,14 @@
   },
   "totem-spirit": {
     "name": "Totem Spirit",
-    "description": "At 3rd level, when you adopt this path, you choose a totem spirit and gain its feature. You must make or acquire a physical totem object-an amulet or similar adornment-that incorporates fur or feathers, claws, teeth, or bones of the totem animal. At your option, you also gain minor physical attributes that are reminiscent of your totem spirit. For example, if you have a bear totem spirit, you might be unusually hairy and thickskinned, or if your totem is the eagle, your eyes turn bright yellow.\nYour totem animal might be an animal related to those listed here but more appropriate to your homeland. For example, you could choose a hawk or vulture in place of an eagle.\nBear. While raging, you have resistance to all damage except psychic damage. The spirit of the bear makes you tough enough to stand up to any punishment.\nEagle. While you\u0027re raging and aren’t wearing heavy armor, other creatures have disadvantage on opportunity attack rolls against you, and you can use the Dash action as a bonus action on your turn. The spirit of the eagle makes you into a predator who can weave through the fray with ease.\nWolf, While you\u0027re raging, your friends have advantage on melee attack rolls against any creature within 5 feet of you that is hostile to you. The spirit of the wolf makes you a leader of hunters.",
+    "description": "At 3rd level, when you adopt this path, you choose a totem spirit and gain its feature. You must make or acquire a physical totem object-an amulet or similar adornment-that incorporates fur or feathers, claws, teeth, or bones of the totem animal. At your option, you also gain minor physical attributes that are reminiscent of your totem spirit. For example, if you have a bear totem spirit, you might be unusually hairy and thickskinned, or if your totem is the eagle, your eyes turn bright yellow.\nYour totem animal might be an animal related to those listed here but more appropriate to your homeland. For example, you could choose a hawk or vulture in place of an eagle.\nBear. While raging, you have resistance to all damage except psychic damage. The spirit of the bear makes you tough enough to stand up to any punishment.\nEagle. While you\u0027re raging and arenï¿½t wearing heavy armor, other creatures have disadvantage on opportunity attack rolls against you, and you can use the Dash action as a bonus action on your turn. The spirit of the eagle makes you into a predator who can weave through the fray with ease.\nWolf, While you\u0027re raging, your friends have advantage on melee attack rolls against any creature within 5 feet of you that is hostile to you. The spirit of the wolf makes you a leader of hunters.",
     "classId": "barbarian",
     "subclassId": "totem-warrior",
     "id": "totem-spirit"
   },
   "totemic-attunement": {
     "name": "Totemic Attunement",
-    "description": "At 14th level, you gain a magical benefit based on a totem animal of your choice. You can choose the same animal you selected previously or a different one.\nBear. While you’re raging, any creature within 5 feet of you that’s hostile to you has disadvantage on attack rolls against targets other than you or another character with this feature. An enemy is immune to this effect if it can’t see or hear you or if it can’t be frightened.\nEagle. While raging, you have a flying speed equal to your current walking speed. This benefit works only in short bursts; you fall if you end your turn in the air and nothing else is holding you aloft.\nWolf. While you’re raging, you can use a bonus action on your turn to knock a Large or smaller creature prone when you hit it with melee weapon attack.",
+    "description": "At 14th level, you gain a magical benefit based on a totem animal of your choice. You can choose the same animal you selected previously or a different one.\nBear. While youï¿½re raging, any creature within 5 feet of you thatï¿½s hostile to you has disadvantage on attack rolls against targets other than you or another character with this feature. An enemy is immune to this effect if it canï¿½t see or hear you or if it canï¿½t be frightened.\nEagle. While raging, you have a flying speed equal to your current walking speed. This benefit works only in short bursts; you fall if you end your turn in the air and nothing else is holding you aloft.\nWolf. While youï¿½re raging, you can use a bonus action on your turn to knock a Large or smaller creature prone when you hit it with melee weapon attack.",
     "classId": "barbarian",
     "subclassId": "totem-warrior",
     "id": "totemic-attunement"
@@ -2597,9 +3024,23 @@
     "subclassId": "open-hand",
     "id": "tranquility"
   },
+  "transmutation-savant": {
+    "name": "Transmutation Savant",
+    "description": "Beginning when you select this school at 2nd level, the gold and time you must spend to copy a Transmutation spell into your spellbook is halved.",
+    "classId": "wizard",
+    "subclassId": "transmutation",
+    "id": "transmutation-savant"
+  },
+  "transmuters-stone": {
+    "name": "Transmuter\u0027s Stone",
+    "description": "Starting at 6th level, you can spend 8 hours creating a transmuter\u0027s stone that stores transmutation magic. You can benefit from the stone yourself or give it to another creature. A creature gains a benefit of your choice as long as the stone is in the creature\u0027s possession. When you create the stone, choose the benefit from the following options:\n    Darkvision out to a range of 60 feet\n    An increase to speed of 10 feet while the creature is unencumbered\n    Proficiency in Constitution saving throws\n    Resistance to acid, cold, fire, lightning, or thunder damage (your choice whenever you choose this benefit)\nEach time you cast a transmutation spell of 1st level or higher, you can change the effect of your stone if the stone is on your person.\nIf you create a new transmuter\u0027s stone, the previous one ceases to function.",
+    "classId": "wizard",
+    "subclassId": "transmutation",
+    "id": "transmuters-stone"
+  },
   "trickery-divine-strike": {
     "name": "Divine Strike",
-    "description": "At 8th level, you gain the ability to infuse your weapon strikes with poison – a gift from your deity. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 poison damage to the target. When you reach 14th level, the extra damage increases to 2d8.",
+    "description": "At 8th level, you gain the ability to infuse your weapon strikes with poison ï¿½ a gift from your deity. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 poison damage to the target. When you reach 14th level, the extra damage increases to 2d8.",
     "classId": "cleric",
     "subclassId": "trickery",
     "id": "trickery-divine-strike"
@@ -2621,6 +3062,20 @@
     "description": "Starting at 5th level, when an attacker that you can see hits you with an attack, you can use your reaction to halve the attack\u0027s damage against you.",
     "classId": "rogue",
     "id": "uncanny-dodge"
+  },
+  "undead-thralls": {
+    "name": "Undead Thralls",
+    "description": "At 6th level, you add the Animate Dead spell to your spellbook if it is not there already. When you cast Animate Dead, you can target one additional corpse or pile of bones, creating another zombie or skeleton, as appropriate.\nWhenever you create an undead using a necromancy spell, it has additional benefits:\n    The creature\u0027s hit point maximum is increased by an amount equal to your wizard level.\n    The creature adds your proficiency bonus to its weapon damage rolls.",
+    "classId": "wizard",
+    "subclassId": "necromancy",
+    "id": "undead-thralls"
+  },
+  "undying-sentinel": {
+    "name": "Undying Sentinel",
+    "description": "Starting at 15th level, when you are reduced to 0 hit points and are not killed outright, you can choose to drop to 1 hit point instead. Once you use this ability, you can\u0027t use it again until you finish a long rest.\nAdditionally, you suffer none of the drawbacks of old age, and you can\u0027t be aged magically.",
+    "classId": "paladin",
+    "subclassId": "ancients-",
+    "id": "undying-sentinel"
   },
   "use-magic-device": {
     "name": "Use Magic Device",
@@ -2648,6 +3103,13 @@
     "description": "Starting at 14th level, you can use the Hide action as a bonus action on your turn. Also, you can\u0027t be tracked by nonmagical means, unless you choose to leave a trail.",
     "classId": "ranger",
     "id": "vanish"
+  },
+  "versatile-trickster": {
+    "name": "Versatile Trickster",
+    "description": "At 13th level, you gain the ability to distract targets with your Mage Hand. As a bonus action on your turn, you can designate a creature within 5 feet of the spectral hand created by the spell. Doing so gives you advantage on attack rolls against that creature until the end of the turn.",
+    "classId": "rogue",
+    "subclassId": "arcane-trickster",
+    "id": "versatile-trickster"
   },
   "visions-of-the-past": {
     "name": "Visions of the Past",
@@ -2734,6 +3196,13 @@
     "classId": "monk",
     "subclassId": "open-hand",
     "id": "wholeness-of-body"
+  },
+  "wild-magic": {
+    "name": "Wild Magic",
+    "description": "Starting when you choose this origin at 1st level, your spellcasting can unleash surges of untamed magic. Immediately after you cast a sorcerer spell of 1st level or higher, the DM can have you roll a d20. If you roll a 1, roll on the Wild Magic Surge table to create a random magical effect.",
+    "classId": "sorcerer",
+    "subclassId": "wild-magic",
+    "id": "wild-magic"
   },
   "wild-shape-cr-1-2-or-below-no-flying-speed": {
     "name": "Wild Shape (CR 1/2 or below, no flying speed)",

@@ -31,7 +31,7 @@ import com.rithsagea.dnd.api5e.data.equipment.Equipment;
 import com.rithsagea.dnd.api5e.data.equipment.EquipmentAdapter;
 import com.rithsagea.dnd.api5e.data.races.Dnd5eRace;
 import com.rithsagea.dnd.api5e.data.races.DndRaceTrait;
-import com.rithsagea.dnd.api5e.data.races.DndSubrace;
+import com.rithsagea.dnd.api5e.data.races.Dnd5eSubrace;
 
 public class Datapack {
 	@SerializedName("ability_scores")
@@ -65,7 +65,7 @@ public class Datapack {
 	public Map<String, Dnd5eRace> DndRace = new HashMap<>();
 	
 	@SerializedName("subraces")
-	public Map<String, DndSubrace> DndSubrace = new HashMap<>();
+	public Map<String, Dnd5eSubrace> DndSubrace = new HashMap<>();
 	
 	@SerializedName("traits")
 	public Map<String, DndRaceTrait> DndRaceTrait = new HashMap<>();
@@ -138,7 +138,7 @@ public class Datapack {
 		registerItems(DndRace, items);
 	}
 	
-	public void registerSubraces(Collection<DndSubrace> items) {
+	public void registerSubraces(Collection<Dnd5eSubrace> items) {
 		registerItems(DndSubrace, items);
 	}
 	

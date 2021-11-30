@@ -9,15 +9,15 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
 import com.rithsagea.dnd.api5e.data.extra.AbilityBonus;
 import com.rithsagea.dnd.api5e.data.extra.Choice;
-import com.rithsagea.dnd.api5e.data.races.DndSubrace;
+import com.rithsagea.dnd.api5e.data.races.Dnd5eSubrace;
 import com.rithsagea.dnd.util.JsonUtil;
 
-public class DndSubraceAdapter implements JsonDeserializer<DndSubrace> {
+public class DndSubraceAdapter implements JsonDeserializer<Dnd5eSubrace> {
 
 	@Override
-	public DndSubrace deserialize(JsonElement elem, Type type, JsonDeserializationContext context)
+	public Dnd5eSubrace deserialize(JsonElement elem, Type type, JsonDeserializationContext context)
 			throws JsonParseException {
-		DndSubrace subrace = new DndSubrace();
+		Dnd5eSubrace subrace = new Dnd5eSubrace();
 		
 		subrace.id = JsonUtil.getString(elem, "index");
 		subrace.name = JsonUtil.getString(elem, "name");

@@ -6,7 +6,7 @@ import com.rithsagea.dnd.api.types.IndexedItem;
 import com.rithsagea.dnd.api5e.data.extra.AbilityBonus;
 import com.rithsagea.dnd.api5e.data.extra.Choice;
 
-public class DndSubrace extends IndexedItem {
+public class Dnd5eSubrace extends IndexedItem {
 	public String name;
 	public String race;
 	public String description;

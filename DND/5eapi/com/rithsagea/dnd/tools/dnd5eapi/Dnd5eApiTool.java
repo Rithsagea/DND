@@ -32,7 +32,7 @@ import com.rithsagea.dnd.api5e.data.classes.Dnd5eSubclass;
 import com.rithsagea.dnd.api5e.data.equipment.Equipment;
 import com.rithsagea.dnd.api5e.data.races.Dnd5eRace;
 import com.rithsagea.dnd.api5e.data.races.DndRaceTrait;
-import com.rithsagea.dnd.api5e.data.races.DndSubrace;
+import com.rithsagea.dnd.api5e.data.races.Dnd5eSubrace;
 
 public class Dnd5eApiTool {
 	
@@ -52,7 +52,7 @@ public class Dnd5eApiTool {
 		builder.registerTypeAdapter(Dnd5eSubclass.class, new DndSubclassAdapter());
 		builder.registerTypeAdapter(DndClassFeature.class, new DndClassFeatureAdapter());
 		builder.registerTypeAdapter(Dnd5eRace.class, new DndRaceAdapter());
-		builder.registerTypeAdapter(DndSubrace.class, new DndSubraceAdapter());
+		builder.registerTypeAdapter(Dnd5eSubrace.class, new DndSubraceAdapter());
 		builder.registerTypeAdapter(DndRaceTrait.class, new DndTraitAdapter());
 		builder.registerTypeAdapter(Spell.class, new SpellAdapter());
 		builder.registerTypeAdapter(Monster.class, new MonsterAdapter());
@@ -172,8 +172,8 @@ public class Dnd5eApiTool {
 		return getItems("/races", Dnd5eRace.class);
 	}
 	
-	public static List<DndSubrace> getSubraces() {
-		return getItems("/subraces", DndSubrace.class);
+	public static List<Dnd5eSubrace> getSubraces() {
+		return getItems("/subraces", Dnd5eSubrace.class);
 	}
 	
 	public static List<DndRaceTrait> getTraits() {

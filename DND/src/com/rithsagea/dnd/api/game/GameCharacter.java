@@ -1,11 +1,11 @@
-package com.rithsagea.dnd.api;
+package com.rithsagea.dnd.api.game;
 
 import java.util.List;
 import java.util.Map;
 
 import com.rithsagea.dnd.api.types.extras.Sense;
 
-public interface Character {
+public interface GameCharacter {
 	public String getName();
 	
 	public int getArmorClass();

@@ -1,4 +1,4 @@
-package com.rithsagea.dnd.api.scene;
+package com.rithsagea.dnd.api.game;
 
 import java.util.Collection;
 

@@ -10,7 +10,7 @@ import com.rithsagea.dnd.api.types.DndClass;
 import com.rithsagea.dnd.api.types.DndClassLevel;
 import com.rithsagea.dnd.api.types.Skill;
 
-public class CharacterSheet {
+public class CharacterSheetTemplate {
 	
 	public String name;
 	public String playerName;

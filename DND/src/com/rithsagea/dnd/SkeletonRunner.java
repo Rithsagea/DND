@@ -2,7 +2,7 @@ package com.rithsagea.dnd;
 
 import java.io.File;
 
-import com.rithsagea.dnd.api.CharacterSheet;
+import com.rithsagea.dnd.api.CharacterSheetTemplate;
 import com.rithsagea.dnd.api.SourceRegistry;
 import com.rithsagea.dnd.api.types.Coin;
 
@@ -14,7 +14,7 @@ public class SkeletonRunner {
 	public static void main(String[] args) {
 		registry.init(SOURCE_DIRECTORY);
 		registry.load();
-		CharacterSheet c = new CharacterSheet();
+		CharacterSheetTemplate c = new CharacterSheetTemplate();
 		
 		c.name = "Varikane";
 		c.playerName = "Rithsagea Aquadom";

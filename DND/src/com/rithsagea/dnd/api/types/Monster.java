@@ -1,9 +1,8 @@
-package com.rithsagea.dnd.api5e.data;
+package com.rithsagea.dnd.api.types;
 
 import java.util.List;
 
 import com.google.gson.JsonElement;
-import com.rithsagea.dnd.api.types.IndexedItem;
 
 public class Monster extends IndexedItem {
 	public String name;

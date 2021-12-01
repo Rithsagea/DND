@@ -15,15 +15,15 @@ import com.rithsagea.dnd.api.types.AbilityScore;
 import com.rithsagea.dnd.api.types.Alignment;
 import com.rithsagea.dnd.api.types.IndexedItem;
 import com.rithsagea.dnd.api.types.Language;
+import com.rithsagea.dnd.api.types.Monster;
 import com.rithsagea.dnd.api.types.Proficiency;
 import com.rithsagea.dnd.api.types.Skill;
 import com.rithsagea.dnd.api5e.data.Condition;
 import com.rithsagea.dnd.api5e.data.DamageType;
 import com.rithsagea.dnd.api5e.data.MagicSchool;
-import com.rithsagea.dnd.api5e.data.Monster;
 import com.rithsagea.dnd.api5e.data.Rule;
 import com.rithsagea.dnd.api5e.data.RuleSection;
-import com.rithsagea.dnd.api5e.data.Spell;
+import com.rithsagea.dnd.api5e.data.Dnd5eSpell;
 import com.rithsagea.dnd.api5e.data.classes.Dnd5eClass;
 import com.rithsagea.dnd.api5e.data.classes.DndClassFeature;
 import com.rithsagea.dnd.api5e.data.classes.Dnd5eSubclass;
@@ -71,7 +71,7 @@ public class Datapack {
 	public Map<String, DndRaceTrait> DndRaceTrait = new HashMap<>();
 	
 	@SerializedName("spells")
-	public Map<String, Spell> Spell = new HashMap<>();
+	public Map<String, Dnd5eSpell> Spell = new HashMap<>();
 	
 	@SerializedName("monsters")
 	public Map<String, Monster> Monster = new HashMap<>();
@@ -146,7 +146,7 @@ public class Datapack {
 		registerItems(DndRaceTrait, items);
 	}
 	
-	public void registerSpells(Collection<Spell> items) {
+	public void registerSpells(Collection<Dnd5eSpell> items) {
 		registerItems(Spell, items);
 	}
 	

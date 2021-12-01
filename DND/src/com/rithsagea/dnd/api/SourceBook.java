@@ -22,11 +22,14 @@ import com.rithsagea.dnd.api.types.DndRace;
 import com.rithsagea.dnd.api.types.DndSubclass;
 import com.rithsagea.dnd.api.types.DndSubrace;
 import com.rithsagea.dnd.api.types.Equipment;
+import com.rithsagea.dnd.api.types.Feat;
 import com.rithsagea.dnd.api.types.Feature;
 import com.rithsagea.dnd.api.types.IndexedItem;
 import com.rithsagea.dnd.api.types.Language;
+import com.rithsagea.dnd.api.types.Monster;
 import com.rithsagea.dnd.api.types.Proficiency;
 import com.rithsagea.dnd.api.types.Skill;
+import com.rithsagea.dnd.api.types.Spell;
 import com.rithsagea.dnd.api.types.Trait;
 
 public class SourceBook implements Comparable<SourceBook> {
@@ -47,6 +50,9 @@ public class SourceBook implements Comparable<SourceBook> {
 		DATA_TYPES.put("trait", Trait.class);
 		DATA_TYPES.put("equipment", Equipment.class);
 		DATA_TYPES.put("proficiencies", Proficiency.class);
+		DATA_TYPES.put("feats", Feat.class);
+		DATA_TYPES.put("spells", Spell.class);
+		DATA_TYPES.put("monsters", Monster.class);
 		
 		for(Entry<String, Class<?>> entry : DATA_TYPES.entrySet()) {
 			TYPE_LABELS.put(entry.getValue(), entry.getKey());

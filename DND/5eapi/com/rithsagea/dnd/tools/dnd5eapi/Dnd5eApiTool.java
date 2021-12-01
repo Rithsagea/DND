@@ -17,15 +17,15 @@ import com.google.gson.JsonObject;
 import com.rithsagea.dnd.api.types.AbilityScore;
 import com.rithsagea.dnd.api.types.Alignment;
 import com.rithsagea.dnd.api.types.Language;
+import com.rithsagea.dnd.api.types.Monster;
 import com.rithsagea.dnd.api.types.Proficiency;
 import com.rithsagea.dnd.api.types.Skill;
 import com.rithsagea.dnd.api5e.data.Condition;
 import com.rithsagea.dnd.api5e.data.DamageType;
 import com.rithsagea.dnd.api5e.data.MagicSchool;
-import com.rithsagea.dnd.api5e.data.Monster;
 import com.rithsagea.dnd.api5e.data.Rule;
 import com.rithsagea.dnd.api5e.data.RuleSection;
-import com.rithsagea.dnd.api5e.data.Spell;
+import com.rithsagea.dnd.api5e.data.Dnd5eSpell;
 import com.rithsagea.dnd.api5e.data.classes.Dnd5eClass;
 import com.rithsagea.dnd.api5e.data.classes.DndClassFeature;
 import com.rithsagea.dnd.api5e.data.classes.Dnd5eSubclass;
@@ -54,7 +54,7 @@ public class Dnd5eApiTool {
 		builder.registerTypeAdapter(Dnd5eRace.class, new DndRaceAdapter());
 		builder.registerTypeAdapter(Dnd5eSubrace.class, new DndSubraceAdapter());
 		builder.registerTypeAdapter(DndRaceTrait.class, new DndTraitAdapter());
-		builder.registerTypeAdapter(Spell.class, new SpellAdapter());
+		builder.registerTypeAdapter(Dnd5eSpell.class, new SpellAdapter());
 		builder.registerTypeAdapter(Monster.class, new MonsterAdapter());
 		builder.registerTypeAdapter(Condition.class, new ConditionAdapter());
 		builder.registerTypeAdapter(DamageType.class, new DamageTypeAdapter());
@@ -180,8 +180,8 @@ public class Dnd5eApiTool {
 		return getItems("/traits", DndRaceTrait.class);
 	}
 	
-	public static List<Spell> getSpells() {
-		return getItems("/spells", Spell.class);
+	public static List<Dnd5eSpell> getSpells() {
+		return getItems("/spells", Dnd5eSpell.class);
 	}
 	
 	public static List<Monster> getMonsters() {

@@ -1,6 +1,6 @@
 package com.rithsagea.dnd.api5e.data.equipment;
 
-public class EquipmentArmor extends Equipment {
+public class EquipmentArmor extends Dnd5eEquipment {
 	public String armorCategory;
 	
 	public int armorClass;

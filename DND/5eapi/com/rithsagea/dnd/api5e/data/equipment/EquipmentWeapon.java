@@ -2,7 +2,7 @@ package com.rithsagea.dnd.api5e.data.equipment;
 
 import java.util.List;
 
-public class EquipmentWeapon extends Equipment {
+public class EquipmentWeapon extends Dnd5eEquipment {
 	public String weaponCategory;
 	public String weaponRange;
 	public String categoryRange;

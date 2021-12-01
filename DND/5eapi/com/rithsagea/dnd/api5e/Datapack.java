@@ -27,7 +27,7 @@ import com.rithsagea.dnd.api5e.data.Spell;
 import com.rithsagea.dnd.api5e.data.classes.Dnd5eClass;
 import com.rithsagea.dnd.api5e.data.classes.DndClassFeature;
 import com.rithsagea.dnd.api5e.data.classes.Dnd5eSubclass;
-import com.rithsagea.dnd.api5e.data.equipment.Equipment;
+import com.rithsagea.dnd.api5e.data.equipment.Dnd5eEquipment;
 import com.rithsagea.dnd.api5e.data.equipment.EquipmentAdapter;
 import com.rithsagea.dnd.api5e.data.races.Dnd5eRace;
 import com.rithsagea.dnd.api5e.data.races.DndRaceTrait;
@@ -50,7 +50,7 @@ public class Datapack {
 	public Map<String, Alignment> Alignment = new HashMap<>();
 	
 	@SerializedName("equipment")
-	public Map<String, Equipment> Equipment = new HashMap<>();
+	public Map<String, Dnd5eEquipment> Equipment = new HashMap<>();
 	
 	@SerializedName("classes")
 	public Map<String, Dnd5eClass> DndClass = new HashMap<>();
@@ -118,7 +118,7 @@ public class Datapack {
 		registerItems(Alignment, items);
 	}
 	
-	public void registerEquipment(Collection<Equipment> items) {
+	public void registerEquipment(Collection<Dnd5eEquipment> items) {
 		registerItems(Equipment, items);
 	}
 	
@@ -196,7 +196,7 @@ public class Datapack {
 	}
 	
 	private static final Gson gson = new GsonBuilder()
-			.registerTypeAdapter(Equipment.class, new EquipmentAdapter())
+			.registerTypeAdapter(Dnd5eEquipment.class, new EquipmentAdapter())
 			.create();
 	
 	public static Datapack loadDatapack(File file) {

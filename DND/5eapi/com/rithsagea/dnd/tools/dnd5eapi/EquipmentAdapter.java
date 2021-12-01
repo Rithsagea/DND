@@ -10,7 +10,7 @@ import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
-import com.rithsagea.dnd.api5e.data.equipment.Equipment;
+import com.rithsagea.dnd.api5e.data.equipment.Dnd5eEquipment;
 import com.rithsagea.dnd.api5e.data.equipment.EquipmentAmmunition;
 import com.rithsagea.dnd.api5e.data.equipment.EquipmentArmor;
 import com.rithsagea.dnd.api5e.data.equipment.EquipmentGear;
@@ -22,7 +22,7 @@ import com.rithsagea.dnd.api5e.data.extra.CoinQuantity;
 import com.rithsagea.dnd.api5e.data.extra.EquipmentStack;
 import com.rithsagea.dnd.util.JsonUtil;
 
-public class EquipmentAdapter implements JsonDeserializer<Equipment> {
+public class EquipmentAdapter implements JsonDeserializer<Dnd5eEquipment> {
 
 	private class GearAdapter implements JsonDeserializer<EquipmentGear> {
 
@@ -178,10 +178,10 @@ public class EquipmentAdapter implements JsonDeserializer<Equipment> {
 	}
 	
 	@Override
-	public Equipment deserialize(JsonElement elem, Type type, JsonDeserializationContext context)
+	public Dnd5eEquipment deserialize(JsonElement elem, Type type, JsonDeserializationContext context)
 			throws JsonParseException {
 		JsonObject obj = elem.getAsJsonObject();
-		Equipment equipment = null;
+		Dnd5eEquipment equipment = null;
 		
 		String category = obj.get("equipment_category").getAsJsonObject().get("index").getAsString();
 		
@@ -208,7 +208,7 @@ public class EquipmentAdapter implements JsonDeserializer<Equipment> {
 		
 		}
 		
-		equipment = t == null ? new Equipment() : gson.fromJson(elem, t);
+		equipment = t == null ? new Dnd5eEquipment() : gson.fromJson(elem, t);
 		
 		equipment.id = obj.get("index").getAsString();
 		equipment.name = obj.get("name").getAsString();

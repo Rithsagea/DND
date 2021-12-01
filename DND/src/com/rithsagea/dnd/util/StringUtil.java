@@ -1,4 +1,4 @@
-package com.rithsagea.dnd;
+package com.rithsagea.dnd.util;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

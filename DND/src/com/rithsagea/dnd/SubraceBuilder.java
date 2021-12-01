@@ -11,6 +11,7 @@ import com.rithsagea.dnd.api.SourceRegistry;
 import com.rithsagea.dnd.api.types.DndSubrace;
 import com.rithsagea.dnd.api.types.Trait;
 import com.rithsagea.dnd.api5e.Datapack;
+import com.rithsagea.dnd.util.StringUtil;
 
 public class SubraceBuilder {
 	

@@ -15,6 +15,7 @@ import com.rithsagea.dnd.api.types.Feature;
 import com.rithsagea.dnd.api5e.Datapack;
 import com.rithsagea.dnd.api5e.data.classes.Dnd5eSubclass;
 import com.rithsagea.dnd.api5e.data.classes.Dnd5eSubclassLevel;
+import com.rithsagea.dnd.util.StringUtil;
 
 public class SubclassBuilder {
 	

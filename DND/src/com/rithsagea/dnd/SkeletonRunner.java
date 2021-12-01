@@ -9,10 +9,11 @@ import com.rithsagea.dnd.api.types.Coin;
 public class SkeletonRunner {
 	
 	private static final File SOURCE_DIRECTORY = new File("source/");
+	private static SourceRegistry registry = SourceRegistry.getInstance();
 	
 	public static void main(String[] args) {
-		SourceRegistry.init(SOURCE_DIRECTORY);
-		SourceRegistry.load();
+		registry.init(SOURCE_DIRECTORY);
+		registry.load();
 		CharacterSheet c = new CharacterSheet();
 		
 		c.name = "Varikane";
@@ -44,9 +45,8 @@ public class SkeletonRunner {
 		System.out.println(c.proficiencyBonus);
 		System.out.println(c.spellcastingAbility);
 		
-		for(Coin coin : SourceRegistry.getItems(Coin.class)) {
+		for(Coin coin : registry.getItems(Coin.class)) {
 			System.out.println(coin.name + ": " + c.money.get(coin.id) + coin.id);
 		}
-//		System.out.println(SourceRegistry.getKeys(Skill.class));
 	}
 }

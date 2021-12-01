@@ -83,17 +83,16 @@ public class CharacterSheet {
 	public String spellcastingAbility;
 	public int spellAttackBonus;
 	
-	//UNFINISHED VVV
-	
 	public String characterSubclass;
 	public String characterRace;
 	public String characterSubrace;
 	
-	//the feature and traits section of the character sheet
 	public List<String> traits;
-
+	public List<String> proficiencies;
+	
 	public String backstory;
-	public String treasure; // this is technically inventory, reimplement later
+	
+	public Map<String, Integer> inventory;
 	
 	public String skin;
 	public String hair;
@@ -104,7 +103,7 @@ public class CharacterSheet {
 	
 	public int hitPoints;
 	public int maxHitPoints;
-	public String hitDie; //TODO: maybe represent this as an object
+	public String hitDie;
 	
 	public int armorClass;
 	public int speed;
@@ -112,11 +111,12 @@ public class CharacterSheet {
 	public int failedDeathSaves;
 	public int succeededDeathSaves;
 	
-	public List<String> proficiencies; // TODO: change to new class, should include languages
-	public Map<String, Integer> equipment; // TODO: box this, quantitize maybe ahhhh
+	public List<String> equipment; // things 
+	
+	private static SourceRegistry registry = SourceRegistry.getInstance();
 	
 	public void calc() {
-		for(String key : SourceRegistry.getKeys(AbilityScore.class)) {
+		for(String key : registry.getKeys(AbilityScore.class)) {
 			abilityModifiers.put(key, (abilityScores.get(key) - 10) / 2);
 			savingThrows.put(key, abilityModifiers.get(key));
 		}
@@ -124,14 +124,14 @@ public class CharacterSheet {
 		passiveWisdom = 10 + abilityModifiers.get("wis"); // TODO: replace with enum or smth
 		initiative = abilityModifiers.get("dex");
 		
-		for(String key : SourceRegistry.getKeys(Skill.class)) {
-			Skill skill = SourceRegistry.getItem(key, Skill.class);
+		for(String key : registry.getKeys(Skill.class)) {
+			Skill skill = registry.getItem(key, Skill.class);
 			skills.put(key, abilityModifiers.get(skill.abilityScore));
 		}
 		
 		while(level < 20 && experiencePoints >= EXPERIENCE_TABLE[level]) level++;
 		
-		DndClass charClass = SourceRegistry.getItem(characterClass, DndClass.class);
+		DndClass charClass = registry.getItem(characterClass, DndClass.class);
 		if(features == null) features = new ArrayList<>();
 		for(int x = 0; x < level; x++) {
 			features.addAll(charClass.levels.get(x).features);

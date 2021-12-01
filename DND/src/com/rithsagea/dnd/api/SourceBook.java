@@ -116,7 +116,7 @@ public class SourceBook implements Comparable<SourceBook> {
 		if(!data.containsKey(clazz)) data.put(clazz, new LinkedHashMap<>());
 		data.get(clazz).put(key, obj);
 		
-		SourceRegistry.registerItem(key, obj);
+		SourceRegistry.getInstance().registerItem(key, obj);
 	}
 	
 	public void register(IndexedItem item) {

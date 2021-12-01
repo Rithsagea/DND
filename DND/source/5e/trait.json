@@ -79,6 +79,21 @@
     "description": "You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table.",
     "id": "draconic-ancestry-white"
   },
+  "drow-magic": {
+    "name": "Drow Magic",
+    "description": "You know the Dancing Lights cantrip. When you reach 3rd level, you can cast the Faerie Fire spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the Darkness spell onceand regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.",
+    "id": "drow-magic"
+  },
+  "drow-weapon-training": {
+    "name": "Drow Weapon Training",
+    "description": "You have proficiency with rapiers, shortswords, and hand crossbows.",
+    "id": "drow-weapon-training"
+  },
+  "dwarven-armor-training": {
+    "name": "Dwarven Armor Training",
+    "description": "You have proficiency with light and medium armor.",
+    "id": "dwarven-armor-training"
+  },
   "dwarven-combat-training": {
     "name": "Dwarven Combat Training",
     "description": "You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.",
@@ -108,6 +123,11 @@
     "name": "Fey Ancestry",
     "description": "You have advantage on saving throws against being charmed, and magic cannot put you to sleep.",
     "id": "fey-ancestry"
+  },
+  "fleet-of-foot": {
+    "name": "Fleet of Foot",
+    "description": "Your base walking speed increases to 35 feet.",
+    "id": "fleet-of-foot"
   },
   "gnome-cunning": {
     "name": "Gnome Cunning",
@@ -144,10 +164,20 @@
     "description": "When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.",
     "id": "lucky"
   },
+  "mask-of-wild": {
+    "name": "Mask of Wild",
+    "description": "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.",
+    "id": "mask-of-wild"
+  },
   "menacing": {
     "name": "Menacing",
     "description": "You gain proficiency in the Intimidation skill.",
     "id": "menacing"
+  },
+  "natural-illusionist": {
+    "name": "Natural Illusionist",
+    "description": "You know the Minor Illusion cantrip. Intelligence is your spellcasting modifier for it.",
+    "id": "natural-illusionist"
   },
   "naturally-stealthy": {
     "name": "Naturally Stealthy",
@@ -169,10 +199,25 @@
     "description": "You gain proficiency in two skills of your choice.",
     "id": "skill-versatility"
   },
+  "speak-with-small-beasts": {
+    "name": "Speak with Small Beasts",
+    "description": "Through sound and gestures, you may communicate simple ideas with Small or smaller beasts.",
+    "id": "speak-with-small-beasts"
+  },
   "stonecunning": {
     "name": "Stonecunning",
     "description": "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.",
     "id": "stonecunning"
+  },
+  "sunlight-sensitivity": {
+    "name": "Sunlight Sensitivity",
+    "description": "You have disadvantage on attack rolls and Wisdom (Perception) checks that rely on sight when you, the target of the attack, or whatever you are trying to perceive is in direct sunlight.",
+    "id": "sunlight-sensitivity"
+  },
+  "superior-darkvision": {
+    "name": "Superior Darkvisoin",
+    "description": "Your darkvision has a radius of 120 feet.",
+    "id": "superior-darkvision"
   },
   "tinker": {
     "name": "Tinker",

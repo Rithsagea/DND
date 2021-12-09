@@ -2,8 +2,8 @@ package api.rithsagea.dnd.types.enums;
 
 import api.rithsagea.dnd.types.IndexedItem;
 import api.rithsagea.dnd.types.KeyConstants;
+import api.rithsagea.dnd.util.LanguageManager;
 import api.rithsagea.dnd.util.WordUtil;
-import api.rithsagea.dnd.util.TextManager;
 
 public enum Ability implements IndexedItem {
 	STRENGTH,
@@ -14,11 +14,7 @@ public enum Ability implements IndexedItem {
 	CHARISMA;
 	
 	public String getShortName() {
-		return TextManager.getInstance().getMessage(this, KeyConstants.SHORT_NAME);
-	}
-	
-	public String getName() {
-		return TextManager.getInstance().getMessage(this, KeyConstants.NAME);
+		return LanguageManager.getInstance().get(this, KeyConstants.SHORT_NAME);
 	}
 	
 	public String toString() {

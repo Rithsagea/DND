@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-import api.rithsagea.dnd.util.TextManager;
+import api.rithsagea.dnd.types.traits.Trait;
 
 public class DndRace implements IndexedItem {
 	
@@ -19,10 +19,6 @@ public class DndRace implements IndexedItem {
 	
 	public Set<Trait> getTraits() {
 		return Collections.unmodifiableSet(traits);
-	}
-
-	public String getName() {
-		return TextManager.getInstance().getMessage(this, KeyConstants.NAME);
 	}
 	
 	@Override

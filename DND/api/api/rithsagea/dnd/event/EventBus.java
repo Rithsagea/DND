@@ -85,5 +85,7 @@ public class EventBus {
 				}
 			}
 		}
+		
+		event.finish();
 	}
 }

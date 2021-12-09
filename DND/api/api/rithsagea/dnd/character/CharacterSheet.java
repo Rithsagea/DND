@@ -28,7 +28,7 @@ public class CharacterSheet {
 	private int initiative;
 	private boolean inspiration;
 	
-	private Dice hitDice;
+//	private Dice hitDice;
 	private int hitPoints;
 	private int maxHitPoints;
 	
@@ -39,8 +39,6 @@ public class CharacterSheet {
 		skillModifiers = new TreeMap<>();
 		
 		skillProfs = new TreeSet<>();
-		
-		hitDice = new Dice();
 	}
 	
 	private void calcAbilityValues() {
@@ -55,10 +53,6 @@ public class CharacterSheet {
 		
 		passiveWisdom = 10 + skillModifiers.get(Skill.PERCEPTION) + abilityModifiers.get(Ability.WISDOM);
 		initiative = abilityModifiers.get(Ability.DEXTERITY);
-	}
-	
-	private void calcHitValues() {
-		maxHitPoints = hitDice.maxValue();
 	}
 	
 	/// ACCESSORS
@@ -93,10 +87,6 @@ public class CharacterSheet {
 	
 	public Set<Skill> getSkillProficiencies() {
 		return Collections.unmodifiableSet(skillProfs);
-	}
-	
-	public Dice getHitDice() {
-		return hitDice;
 	}
 
 	public int getHitPoints() {
@@ -144,12 +134,6 @@ public class CharacterSheet {
 	
 	public int getInitiative() {
 		return initiative;
-	}
-	
-	public void addHitDie(Die hitDie) {
-		hitDice.addDie(hitDie);
-		
-		calcHitValues();
 	}
 
 	public void setHitPoints(int hitPoints) {

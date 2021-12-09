@@ -31,6 +31,11 @@ public class EventTest {
 		public String getMessage() {
 			return message;
 		}
+		
+		@Override
+		public void finish() {
+			System.out.println("Message: " + message);
+		}
 	}
 	
 	public static void main(String[] args) {

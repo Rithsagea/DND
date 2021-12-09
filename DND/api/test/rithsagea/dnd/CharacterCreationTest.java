@@ -5,16 +5,15 @@ import java.util.Set;
 
 import api.rithsagea.dnd.character.CharacterSheet;
 import api.rithsagea.dnd.types.DndRace;
+import api.rithsagea.dnd.types.Trait;
 import api.rithsagea.dnd.types.enums.Ability;
 import api.rithsagea.dnd.types.enums.Alignment;
 import api.rithsagea.dnd.types.enums.Size;
 import api.rithsagea.dnd.types.traits.AbilityScoreTrait;
 import api.rithsagea.dnd.types.traits.DescriptionTrait;
-import api.rithsagea.dnd.types.traits.Trait;
 import api.rithsagea.dnd.util.Dice.Die;
 import api.rithsagea.dnd.util.ReflectUtil;
 import api.rithsagea.dnd.util.TextManager;
-import api.rithsagea.dnd.util.WordUtil;
 
 public class CharacterCreationTest {
 	public static CharacterSheet createVarikane() {

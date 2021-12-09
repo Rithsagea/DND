@@ -4,7 +4,6 @@ import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-import api.rithsagea.dnd.types.traits.Trait;
 import api.rithsagea.dnd.util.TextManager;
 
 public class DndRace implements IndexedItem {

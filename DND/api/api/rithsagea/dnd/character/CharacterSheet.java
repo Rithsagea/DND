@@ -9,8 +9,6 @@ import java.util.TreeSet;
 import api.rithsagea.dnd.types.enums.Ability;
 import api.rithsagea.dnd.types.enums.Alignment;
 import api.rithsagea.dnd.types.enums.Skill;
-import api.rithsagea.dnd.util.Dice;
-import api.rithsagea.dnd.util.Dice.Die;
 
 public class CharacterSheet {
 	private String name;

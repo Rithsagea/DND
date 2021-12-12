@@ -3,17 +3,17 @@ package test.rithsagea.dnd;
 import api.rithsagea.dnd.event.Event;
 import api.rithsagea.dnd.event.EventBus;
 import api.rithsagea.dnd.event.EventHandler;
-import api.rithsagea.dnd.event.EventListener;
+import api.rithsagea.dnd.event.Listener;
 
 public class EventTest {
-	private static class TestListener1 implements EventListener {
+	private static class TestListener1 implements Listener {
 		@EventHandler
 		public void onTestEvent(TestEvent e) {
 			System.out.println("1: " + e.getMessage());
 		}
 	}
 	
-	private static class TestListener2 implements EventListener {
+	private static class TestListener2 implements Listener {
 		@EventHandler(priority = 3)
 		public void onTestEvent(TestEvent e) {
 			System.out.println("2: " + e.getMessage());

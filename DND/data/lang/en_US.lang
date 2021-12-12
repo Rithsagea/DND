@@ -1,0 +1,78 @@
+###########
+# Ability #
+###########
+
+Ability.Strength.ShortName=STR
+Ability.Dexterity.ShortName=DEX
+Ability.Constitution.ShortName=CON
+Ability.Intelligence.ShortName=INT
+Ability.Wisdom.ShortName=WIS
+Ability.Charisma.ShortName=CHA
+
+Ability.Strength.Name=Strength
+Ability.Dexterity.Name=Dexterity
+Ability.Constitution.Name=Constitution
+Ability.Intelligence.Name=Intelligence
+Ability.Wisdom.Name=Wisdom
+Ability.Charisma.Name=Charisma
+
+#############
+# Alignment #
+#############
+
+Alignment.LawfulGood.ShortName=LG
+Alignment.NeutralGood.ShortName=NG
+Alignment.ChaoticGood.ShortName=CG
+Alignment.LawfulNeutral.ShortName=LN
+Alignment.TrueNeutral.ShortName=TN
+Alignment.ChaoticNeutral.ShortName=CN
+Alignment.LawfulEvil.ShortName=LE
+Alignment.NeutralEvil.ShortName=NE
+Alignment.ChaoticEvil.ShortName=CE
+
+Alignment.LawfulGood.Name=Lawful Good
+Alignment.NeutralGood.Name=Neutral Good
+Alignment.ChaoticGood.Name=Chaotic Good
+Alignment.LawfulNeutral.Name=Lawful Neutral
+Alignment.TrueNeutral.Name=True Neutral
+Alignment.ChaoticNeutral.Name=Chaotic Neutral
+Alignment.LawfulEvil.Name=Lawful Evil
+Alignment.NeutralEvil.Name=Neutral Evil
+Alignment.ChaoticEvil.Name=Chaotic Evil
+
+########
+# Size #
+########
+
+Size.Fine.Name=Fine
+Size.Diminuitive.Name=Diminuitive
+Size.Tiny.Name=Tiny
+Size.Small.Name=Small
+Size.Medium.Name=Medium
+Size.Large.Name=Large
+Size.Huge.Name=Huge
+Size.Gargantuan.Name=Gargantuan
+Size.Colossal.Name=Colossal
+
+#########
+# Skill #
+#########
+
+Skill.Acrobatics.Name=Acrobatics
+Skill.AnimalHandling.Name=Animal Handling
+Skill.Arcana.Name=Arcana
+Skill.Athletics.Name=Athletics
+Skill.Deception.Name=Deception
+Skill.History.Name=History
+Skill.Insight.Name=Insight
+Skill.Intimidation.Name=Intimidation
+Skill.Investigation.Name=Investigation
+Skill.Medicine.Name=Medicine
+Skill.Nature.Name=Nature
+Skill.Perception.Name=Perception
+Skill.Performance.Name=Performance
+Skill.Persuasion.Name=Persuasion
+Skill.Religion.Name=Religion
+Skill.SleightOfHand.Name=Sleight of Hand
+Skill.Stealth.Name=Stealth
+Skill.Survival.Name=Survival

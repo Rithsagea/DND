@@ -1,21 +1,69 @@
 package api.rithsagea.dnd.character;
 
-import java.util.Collections;
 import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
-import java.util.TreeSet;
+import java.util.Map.Entry;
 
+import api.rithsagea.dnd.event.EventBus;
+import api.rithsagea.dnd.event.Listener;
 import api.rithsagea.dnd.types.enums.Ability;
 import api.rithsagea.dnd.types.enums.Alignment;
 import api.rithsagea.dnd.types.enums.Skill;
+import api.rithsagea.dnd.util.DataUtil;
 
-public class CharacterSheet {
+public class CharacterSheet implements Listener {
+	
+	private EventBus eventBus;
+	
+	public CharacterSheet() {
+		baseAbilityScores = DataUtil.generateDefaultMap(Ability.class, 0);
+		
+		abilityScores = DataUtil.generateDefaultMap(Ability.class, 0);
+		abilityModifiers = DataUtil.generateDefaultMap(Ability.class, 0);
+		savingThrows = DataUtil.generateDefaultMap(Ability.class, 0);
+		skillModifiers = DataUtil.generateDefaultMap(Skill.class, 0);
+		
+		eventBus = new EventBus();
+		eventBus.registerListener(this);
+	}
+	
+	public void refreshSheet() {
+		calculateAbilities();
+	}
+	
+	// -=-=- Lore -=-=-
+	
 	private String name;
-	
 	private Alignment alignment;
+	private boolean inspiration;
 	
-	private Set<Skill> skillProfs;
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public Alignment getAlignment() {
+		return alignment;
+	}
+	
+	public void setAlignment(Alignment alignment) {
+		this.alignment = alignment;
+	}
+	
+	public boolean getInspiration() {
+		return inspiration;
+	}
+	
+	public void setInspiration(boolean inspiration) {
+		this.inspiration = inspiration;
+	}
+	
+	// -=-=- Ability Scores -=-=-
+	
+	//TODO Traits should include proficiencies
+	private Map<Ability, Integer> baseAbilityScores;
 	
 	private Map<Ability, Integer> abilityScores;
 	private Map<Ability, Integer> abilityModifiers;
@@ -24,106 +72,67 @@ public class CharacterSheet {
 	
 	private int passiveWisdom;
 	private int initiative;
-	private boolean inspiration;
 	
-//	private Dice hitDice;
-	private int hitPoints;
-	private int maxHitPoints;
-	
-	public CharacterSheet() {
-		abilityScores = new TreeMap<>();
-		abilityModifiers = new TreeMap<>();
-		savingThrows = new TreeMap<>();
-		skillModifiers = new TreeMap<>();
+	private void calculateAbilities() {
+		for(Entry<Ability, Integer> entry : baseAbilityScores.entrySet()) {
+			eventBus.submitEvent(new UpdateAbilityScoreEvent(this, entry.getKey(), entry.getValue()));
+		}
 		
-		skillProfs = new TreeSet<>();
-	}
-	
-	private void calcAbilityValues() {
 		for(Ability ability : Ability.values()) {
-			abilityModifiers.put(ability, (abilityScores.get(ability) - 10) / 2);
-			savingThrows.put(ability, abilityModifiers.get(ability));
+			eventBus.submitEvent(new UpdateAbilityModifierEvent(this, ability, (abilityScores.get(ability) - 10) / 2));
+		}
+		
+		for(Ability ability : Ability.values()) {
+			eventBus.submitEvent(new UpdateSavingThrowEvent(this, ability, abilityModifiers.get(ability)));
 		}
 		
 		for(Skill skill : Skill.values()) {
-			skillModifiers.put(skill, abilityModifiers.get(skill.getAbility()));
+			eventBus.submitEvent(new UpdateSkillModifierEvent(this, skill, abilityModifiers.get(skill.getAbility())));
 		}
 		
-		passiveWisdom = 10 + skillModifiers.get(Skill.PERCEPTION) + abilityModifiers.get(Ability.WISDOM);
-		initiative = abilityModifiers.get(Ability.DEXTERITY);
+		eventBus.submitEvent(new UpdatePassiveWisdomEvent(this, 10 + skillModifiers.get(Skill.PERCEPTION)));
+		eventBus.submitEvent(new UpdateInitiativeEvent(this, abilityModifiers.get(Ability.DEXTERITY)));
 	}
 	
-	/// ACCESSORS
-	
-	public String getName() {
-		return name;
-	}
-
-	public Alignment getAlignment() {
-		return alignment;
-	}
-	
-	public boolean hasInspiration() {
-		return inspiration;
-	}
-	
-	public int getAbilityScore(Ability ability) {
-		return abilityScores.get(ability);
-	}
-	
-	public int getAbilityModifier(Ability ability) {
-		return abilityModifiers.get(ability);
-	}
-	
-	public int getSavingThrow(Ability ability) {
-		return savingThrows.get(ability);
-	}
-	
-	public int getSkillModifier(Skill skill) {
-		return skillModifiers.get(skill);
-	}
-	
-	public Set<Skill> getSkillProficiencies() {
-		return Collections.unmodifiableSet(skillProfs);
-	}
-
-	public int getHitPoints() {
-		return hitPoints;
-	}
-
-	public int getMaxHitPoints() {
-		return maxHitPoints;
-	}
-	
-	/// MUTATORS
-	
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public void setAlignment(Alignment alignment) {
-		this.alignment = alignment;
-	}
-	
-	public void setInspiration(boolean inspiration) {
-		this.inspiration = inspiration;
-	}
-	
-	public void setAbilityScore(Ability ability, int value) {
+	protected void setAbilityScore(Ability ability, int value) {
 		abilityScores.put(ability, value);
-		
-		calcAbilityValues();
 	}
-
-	public void setAbilityScores(int strVal, int dexVal, int conVal, int intVal, int wisVal, int chaVal) {
-		abilityScores.put(Ability.STRENGTH, strVal);
-		abilityScores.put(Ability.DEXTERITY, dexVal);
-		abilityScores.put(Ability.CONSTITUTION, conVal);
-		abilityScores.put(Ability.INTELLIGENCE, intVal);
-		abilityScores.put(Ability.WISDOM, wisVal);
-		abilityScores.put(Ability.CHARISMA, chaVal);
-		
-		calcAbilityValues();
+	
+	protected void setAbilityModifier(Ability ability, int value) {
+		abilityModifiers.put(ability, value);
+	}
+	
+	protected void setSavingThrow(Ability ability, int value) {
+		savingThrows.put(ability, value);
+	}
+	
+	protected void setSkillModifier(Skill skill, int value) {
+		skillModifiers.put(skill, value);
+	}
+	
+	protected void setPassiveWisdom(int value) {
+		passiveWisdom = value;
+	}
+	
+	protected void setInitiative(int value) {
+		initiative = value;
+	}
+	
+	public int getBaseAbilityScore(Ability ability) {
+		return baseAbilityScores.get(ability);
+	}
+	
+	public void setBaseAbilityScore(Ability ability, int value) {
+		baseAbilityScores.put(ability, value);
+	}
+	
+	public void setBaseAbilityScores(int strVal, int dexVal, int conVal, int intVal, int wisVal, int chaVal) {
+		baseAbilityScores.put(Ability.STRENGTH, strVal);
+		baseAbilityScores.put(Ability.DEXTERITY, dexVal);
+		baseAbilityScores.put(Ability.CONSTITUTION, conVal);
+		baseAbilityScores.put(Ability.INTELLIGENCE, intVal);
+		baseAbilityScores.put(Ability.WISDOM, wisVal);
+		baseAbilityScores.put(Ability.CHARISMA, chaVal);
 	}
 	
 	public int getPassiveWisdom() {
@@ -132,17 +141,5 @@ public class CharacterSheet {
 	
 	public int getInitiative() {
 		return initiative;
-	}
-
-	public void setHitPoints(int hitPoints) {
-		this.hitPoints = Math.min(maxHitPoints, hitPoints);
-	}
-	
-	public void addSkillProficiency(Skill skill) {
-		skillProfs.add(skill);
-	}
-	
-	public void removeSkillProficiency(Skill skill) {
-		skillProfs.remove(skill);
 	}
 }

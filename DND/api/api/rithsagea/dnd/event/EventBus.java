@@ -12,9 +12,9 @@ public class EventBus {
 	private static class Handler implements Comparable<Handler> {
 		public int priority;
 		public Method method;
-		public EventListener listener;
+		public Listener listener;
 		
-		public Handler(int priority, Method method, EventListener listener) {
+		public Handler(int priority, Method method, Listener listener) {
 			this.priority = priority;
 			this.method = method;
 			this.listener = listener;
@@ -39,7 +39,7 @@ public class EventBus {
 		listenerMap = new HashMap<>();
 	}
 	
-	public void registerListener(EventListener listener) {
+	public void registerListener(Listener listener) {
 		for(Method method : listener.getClass().getMethods()) {
 			if(method.getParameterCount() == 1) {
 				Parameter p = method.getParameters()[0];
@@ -60,7 +60,7 @@ public class EventBus {
 		}
 	}
 	
-	public void unregisterListener(EventListener listener) {
+	public void unregisterListener(Listener listener) {
 		for(Method method : listener.getClass().getMethods()) {
 			Parameter p = method.getParameters()[0];
 			Class<?> type = p.getType();

@@ -1,8 +1,6 @@
 package api.rithsagea.dnd.types.traits;
 
 import api.rithsagea.dnd.types.DndRace;
-import api.rithsagea.dnd.types.KeyConstants;
-import api.rithsagea.dnd.util.LanguageManager;
 
 public class DescriptionTrait extends Trait {
 

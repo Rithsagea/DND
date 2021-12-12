@@ -87,6 +87,17 @@ Race.Enma.Name=Enma
 Trait.Enma.Age.Description=Yama are near immortal; they do not age, though they can still die in combat.
 Trait.Enma.Alignment.Description=Yama are always either lawful neutral or true neutral; they are almost never good, evil, or chaotic alignments. Lawful alignments are much more common among them.
 Trait.Enma.Size.Description=Yama vary drastically in stature, with the shortest standing only just over 5 feet tall and the tallest brushing just short of 8 feet in height. Regardless of where you stand in this range, your size is Medium.
+Trait.Enma.Speed.Description=Your base walking speed is 30 feet.
 
 Trait.SupremeJudge.Name=Supreme Judge
 Trait.SupremeJudge.Description=You are proficient in the Insight and Intimidation skills.
+Trait.DivineBeing.Name=Divine Being
+Trait.DivineBeing.Description=Your creature type is both humanoid and celestial. Additionally, you do not require food, drink, or sleep, you do not incur exhaustion if you do not rest, you are immune to diseases, have resistance to poison damage and have advantage on saving throws against being poisoned, though you must still rest for 8 hours to receive the benefits of a long rest, and you may still receive levels of exhaustion from effects that directly inflict it. You may also still ingest food or drink if you wish.
+
+
+##########
+# Traits #
+##########
+
+Trait.SuperiorDarkvision.Name=Superior Darkvision
+Trait.SuperiorDarkvision.Description=You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.

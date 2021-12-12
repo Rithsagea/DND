@@ -37,8 +37,8 @@ public class CharacterSheet implements Listener {
 	public void refreshSheet() {
 		eventBus.clearListeners();
 		
-		calculateLevel();
 		calculateRace();
+		calculateLevel();
 		
 		calculateAbilities();
 	}
@@ -87,8 +87,6 @@ public class CharacterSheet implements Listener {
 	
 	private void calculateLevel() {
 		for(level = 1; level < 20 && experience > EXPERIENCE_TABLE[level]; level++);
-		
-		proficiencyBonus = (int) (Math.ceil(level / 4d + 1));
 	}
 	
 	public void setExperience(int experience) {
@@ -118,10 +116,13 @@ public class CharacterSheet implements Listener {
 	private int proficiencyBonus;
 	private int passiveWisdom;
 	private int initiative;
+	private int speed;
 	
 	private void calculateAbilities() {		
 		skillProficiencies.clear();
 		savingProficiencies.clear();
+		
+		proficiencyBonus = (int) (Math.ceil(level / 4d + 1));
 		
 		for(Entry<Ability, Integer> entry : baseAbilityScores.entrySet()) {
 			eventBus.submitEvent(new UpdateAbilityScoreEvent(this, entry.getKey(), entry.getValue()));
@@ -141,6 +142,7 @@ public class CharacterSheet implements Listener {
 		
 		eventBus.submitEvent(new UpdatePassiveWisdomEvent(this, 10 + skillModifiers.get(Skill.PERCEPTION)));
 		eventBus.submitEvent(new UpdateInitiativeEvent(this, abilityModifiers.get(Ability.DEXTERITY)));
+		eventBus.submitEvent(new UpdateSpeedEvent(this, 30));
 	}
 	
 	protected void setAbilityScore(Ability ability, int value) {
@@ -165,6 +167,10 @@ public class CharacterSheet implements Listener {
 	
 	protected void setInitiative(int value) {
 		initiative = value;
+	}
+	
+	protected void setSpeed(int value) {
+		speed = value;
 	}
 	
 	public int getBaseAbilityScore(Ability ability) {
@@ -212,6 +218,10 @@ public class CharacterSheet implements Listener {
 		return initiative;
 	}
 
+	public int getSpeed() {
+		return speed;
+	}
+	
 	// -=-=- Races -=-=-
 	
 	private DndRace race;

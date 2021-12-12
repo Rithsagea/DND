@@ -2,6 +2,8 @@ package test.rithsagea.dnd;
 
 import java.util.Set;
 
+import com.rithsagea.dnd.types.traits.SuperiorDarkvisionTrait;
+import com.rithsagea.dnd.types.traits.enma.DivineBeingTrait;
 import com.rithsagea.dnd.types.traits.enma.SupremeJudgeTrait;
 
 import api.rithsagea.dnd.character.CharacterSheet;
@@ -9,6 +11,7 @@ import api.rithsagea.dnd.types.DndRace;
 import api.rithsagea.dnd.types.enums.Alignment;
 import api.rithsagea.dnd.types.traits.DescriptionTrait;
 import api.rithsagea.dnd.types.traits.DescriptionTrait.DescriptionType;
+import api.rithsagea.dnd.types.traits.SpeedTrait;
 import api.rithsagea.dnd.types.traits.Trait;
 import api.rithsagea.dnd.util.LanguageManager;
 
@@ -22,6 +25,9 @@ public class CharacterCreationTest {
 		traits.add(new DescriptionTrait(race, DescriptionType.AGE));
 		traits.add(new DescriptionTrait(race, DescriptionType.ALIGNMENT));
 		traits.add(new DescriptionTrait(race, DescriptionType.SIZE));
+		traits.add(new SpeedTrait(race, 30));
+		traits.add(new SuperiorDarkvisionTrait());
+		traits.add(new DivineBeingTrait());
 		traits.add(new SupremeJudgeTrait());
 		
 		CharacterSheet sheet = new CharacterSheet();

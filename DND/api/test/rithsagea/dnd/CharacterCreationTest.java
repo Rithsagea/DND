@@ -1,7 +1,8 @@
 package test.rithsagea.dnd;
 
-import java.util.HashSet;
 import java.util.Set;
+
+import com.rithsagea.dnd.types.traits.enma.SupremeJudgeTrait;
 
 import api.rithsagea.dnd.character.CharacterSheet;
 import api.rithsagea.dnd.types.DndRace;
@@ -21,6 +22,7 @@ public class CharacterCreationTest {
 		traits.add(new DescriptionTrait(race, DescriptionType.AGE));
 		traits.add(new DescriptionTrait(race, DescriptionType.ALIGNMENT));
 		traits.add(new DescriptionTrait(race, DescriptionType.SIZE));
+		traits.add(new SupremeJudgeTrait());
 		
 		CharacterSheet sheet = new CharacterSheet();
 		
@@ -28,11 +30,13 @@ public class CharacterCreationTest {
 		sheet.setAlignment(Alignment.TRUE_NEUTRAL);
 		sheet.setInspiration(true);
 		sheet.setBaseAbilityScores(15, 14, 13, 12, 10, 8);
+		sheet.setExperience(Integer.MAX_VALUE);
+		sheet.setRace(race);
 		
 		sheet.refreshSheet();
 		
-//		System.out.println(TestUtil.toString(sheet));
-		System.out.println(TestUtil.toString(race));
+		System.out.println(TestUtil.toString(sheet));
+//		System.out.println(TestUtil.toString(race));
 		
 		System.out.println("-=-=- Missing -=-=-");
 		lang.missing().forEach(System.out::println);

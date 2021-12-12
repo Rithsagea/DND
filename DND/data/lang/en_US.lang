@@ -83,6 +83,10 @@ Skill.Survival.Name=Survival
 
 ### Yama ###
 
-DescriptionTrait.Enma.Age.Description=Yama are near immortal; they do not age, though they can still die in combat.
-DescriptionTrait.Enma.Alignment.Description=Yama are always either lawful neutral or true neutral; they are almost never good, evil, or chaotic alignments. Lawful alignments are much more common among them.
-DescriptionTrait.Enma.Size.Description=Yama vary drastically in stature, with the shortest standing only just over 5 feet tall and the tallest brushing just short of 8 feet in height. Regardless of where you stand in this range, your size is Medium.
+Race.Enma.Name=Enma
+Trait.Enma.Age.Description=Yama are near immortal; they do not age, though they can still die in combat.
+Trait.Enma.Alignment.Description=Yama are always either lawful neutral or true neutral; they are almost never good, evil, or chaotic alignments. Lawful alignments are much more common among them.
+Trait.Enma.Size.Description=Yama vary drastically in stature, with the shortest standing only just over 5 feet tall and the tallest brushing just short of 8 feet in height. Regardless of where you stand in this range, your size is Medium.
+
+Trait.SupremeJudge.Name=Supreme Judge
+Trait.SupremeJudge.Description=You are proficient in the Insight and Intimidation skills.

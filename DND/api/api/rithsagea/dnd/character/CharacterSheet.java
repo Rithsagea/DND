@@ -1,13 +1,18 @@
 package api.rithsagea.dnd.character;
 
+import java.util.Collections;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
+import java.util.TreeSet;
 
 import api.rithsagea.dnd.event.EventBus;
 import api.rithsagea.dnd.event.Listener;
+import api.rithsagea.dnd.types.DndRace;
 import api.rithsagea.dnd.types.enums.Ability;
 import api.rithsagea.dnd.types.enums.Alignment;
 import api.rithsagea.dnd.types.enums.Skill;
+import api.rithsagea.dnd.types.traits.Trait;
 import api.rithsagea.dnd.util.DataUtil;
 
 public class CharacterSheet implements Listener {
@@ -22,11 +27,19 @@ public class CharacterSheet implements Listener {
 		savingThrows = DataUtil.generateDefaultMap(Ability.class, 0);
 		skillModifiers = DataUtil.generateDefaultMap(Skill.class, 0);
 		
+		skillProficiencies = new TreeSet<>();
+		savingProficiencies = new TreeSet<>();
+		
 		eventBus = new EventBus();
 		eventBus.registerListener(this);
 	}
 	
 	public void refreshSheet() {
+		eventBus.clearListeners();
+		
+		calculateLevel();
+		calculateRace();
+		
 		calculateAbilities();
 	}
 	
@@ -60,9 +73,38 @@ public class CharacterSheet implements Listener {
 		this.inspiration = inspiration;
 	}
 	
+	// -=-=- Misc -=-=-
+	
+	private static final int[] EXPERIENCE_TABLE = new int[] {
+			-1, 0, 300, 900, 2700, 6500,
+			14000, 23000, 34000, 48000, 64000,
+			85000, 100000, 120000, 140000, 165000,
+			195000, 225000, 265000, 305000, 355000
+	};
+	
+	private int experience;
+	private int level;
+	
+	private void calculateLevel() {
+		for(level = 1; level < 20 && experience > EXPERIENCE_TABLE[level]; level++);
+		
+		proficiencyBonus = (int) (Math.ceil(level / 4d + 1));
+	}
+	
+	public void setExperience(int experience) {
+		this.experience = experience;
+	}
+	
+	public int getExperience() {
+		return experience;
+	}
+	
+	public int getLevel() {
+		return level;
+	}
+	
 	// -=-=- Ability Scores -=-=-
 	
-	//TODO Traits should include proficiencies
 	private Map<Ability, Integer> baseAbilityScores;
 	
 	private Map<Ability, Integer> abilityScores;
@@ -70,10 +112,17 @@ public class CharacterSheet implements Listener {
 	private Map<Ability, Integer> savingThrows;
 	private Map<Skill, Integer> skillModifiers;
 	
+	private Set<Skill> skillProficiencies;
+	private Set<Ability> savingProficiencies;
+	
+	private int proficiencyBonus;
 	private int passiveWisdom;
 	private int initiative;
 	
-	private void calculateAbilities() {
+	private void calculateAbilities() {		
+		skillProficiencies.clear();
+		savingProficiencies.clear();
+		
 		for(Entry<Ability, Integer> entry : baseAbilityScores.entrySet()) {
 			eventBus.submitEvent(new UpdateAbilityScoreEvent(this, entry.getKey(), entry.getValue()));
 		}
@@ -135,11 +184,60 @@ public class CharacterSheet implements Listener {
 		baseAbilityScores.put(Ability.CHARISMA, chaVal);
 	}
 	
+	public boolean hasProficiency(Skill skill) {
+		return skillProficiencies.contains(skill);
+	}
+	
+	public boolean hasProficiency(Ability ability) {
+		return savingProficiencies.contains(ability);
+	}
+	
+	public void addProficiency(Skill skill) {
+		skillProficiencies.add(skill);
+	}
+	
+	public void addProficiency(Ability ability) {
+		savingProficiencies.add(ability);
+	}
+	
+	public int getProficiencyBonus() {
+		return proficiencyBonus;
+	}
+	
 	public int getPassiveWisdom() {
 		return passiveWisdom;
 	}
 	
 	public int getInitiative() {
 		return initiative;
+	}
+
+	// -=-=- Races -=-=-
+	
+	private DndRace race;
+	
+	private void calculateRace() {
+		race.getTraits().forEach(this::addTrait);
+	}
+	
+	public void setRace(DndRace race) {
+		this.race = race;
+	}
+	
+	public DndRace getRace() {
+		return race;
+	}
+	
+	// -=-=- Traits -=-=-
+	
+	private Set<Trait> traits = new TreeSet<Trait>();
+	
+	private void addTrait(Trait trait) {
+		traits.add(trait);
+		eventBus.registerListener(trait);
+	}
+	
+	public Set<Trait> getTraits() {
+		return Collections.unmodifiableSet(traits);
 	}
 }

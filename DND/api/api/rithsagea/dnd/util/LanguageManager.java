@@ -9,7 +9,9 @@ import java.util.Locale;
 import java.util.Properties;
 import java.util.Set;
 
+import api.rithsagea.dnd.types.DndRace;
 import api.rithsagea.dnd.types.IndexedItem;
+import api.rithsagea.dnd.types.traits.Trait;
 
 public class LanguageManager {
 	private static LanguageManager INSTANCE = new LanguageManager();
@@ -44,7 +46,11 @@ public class LanguageManager {
 	}
 	
 	public String get(IndexedItem item, String key) {
-		return get(String.format("%s.%s.%s", item.getClass().getSimpleName(), item.getId(), key));
+		String className = item.getClass().getSimpleName();
+		if(item instanceof Trait) className = "Trait";
+		if(item instanceof DndRace) className = "Race";
+		
+		return get(String.format("%s.%s.%s", className, item.getId(), key));
 	}
 	
 	public Set<String> missing() {

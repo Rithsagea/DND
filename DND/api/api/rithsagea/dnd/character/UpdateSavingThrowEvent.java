@@ -9,6 +9,7 @@ public class UpdateSavingThrowEvent extends UpdateAbilityValueEvent {
 	
 	@Override
 	public void finish() {
-		getSheet().setSavingThrow(getAbility(), getValue());
+		getSheet().setSavingThrow(getAbility(), getValue() +
+				(getSheet().hasProficiency(getAbility()) ? getSheet().getProficiencyBonus() : 0));
 	}
 }

@@ -25,4 +25,8 @@ public class DndRace implements IndexedItem {
 	public String getId() {
 		return id;
 	}
+	
+	public String toString() {
+		return getName();
+	}
 }

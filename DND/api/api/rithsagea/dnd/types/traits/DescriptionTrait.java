@@ -51,10 +51,4 @@ public class DescriptionTrait extends Trait {
 	public String getName() {
 		return type.getKey();
 	}
-
-	@Override
-	public String getDesc() {
-		return LanguageManager.getInstance().get(this, KeyConstants.DESCRIPTION);
-	}
-	
 }

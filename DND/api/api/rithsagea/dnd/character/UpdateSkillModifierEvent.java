@@ -17,6 +17,7 @@ public class UpdateSkillModifierEvent extends UpdateValueEvent {
 	
 	@Override
 	public void finish() {
-		getSheet().setSkillModifier(skill, getValue());
+		getSheet().setSkillModifier(skill, getValue() +
+				(getSheet().hasProficiency(getSkill()) ? getSheet().getProficiencyBonus() : 0));
 	}
 }

@@ -74,6 +74,10 @@ public class EventBus {
 			}
 		}
 	}
+	
+	public void clearListeners() {
+		listenerMap.clear();
+	}
 
 	public void submitEvent(Event event) {
 		if(listenerMap.containsKey(event.getClass())) {

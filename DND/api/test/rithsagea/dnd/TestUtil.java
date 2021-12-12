@@ -1,6 +1,7 @@
 package test.rithsagea.dnd;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -13,6 +14,7 @@ public class TestUtil {
 		List<String> res = new ArrayList<>();
 		
 		for(Field field : obj.getClass().getDeclaredFields()) {
+			if(Modifier.isStatic(field.getModifiers())) continue; //Skip Static Fields
 			field.setAccessible(true);
 			try {
 				Object val = field.get(obj);

@@ -73,4 +73,17 @@ public class TestUtil {
 		
 		return builder.toString();
 	}
+	
+	public static Object getField(Object obj, String name) {
+		Field field;
+		try {
+			field = obj.getClass().getDeclaredField(name);
+			field.setAccessible(true);
+			return field.get(obj);
+		} catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
 }

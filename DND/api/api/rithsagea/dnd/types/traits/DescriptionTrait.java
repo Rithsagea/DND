@@ -1,9 +1,10 @@
 package api.rithsagea.dnd.types.traits;
 
+import api.rithsagea.dnd.types.DndRace;
 import api.rithsagea.dnd.types.KeyConstants;
 import api.rithsagea.dnd.util.LanguageManager;
 
-public class DescriptionTrait implements Trait {
+public class DescriptionTrait extends Trait {
 
 	public static enum DescriptionType {
 		AGE("Age"),
@@ -25,16 +26,16 @@ public class DescriptionTrait implements Trait {
 		}
 	}
 	
-	private String raceId;
+	private DndRace race;
 	private DescriptionType type;
 	
-	public DescriptionTrait(String raceId, DescriptionType type) {
-		this.raceId = raceId;
+	public DescriptionTrait(DndRace race, DescriptionType type) {
+		this.race = race;
 		this.type = type;
 	}
 	
-	public String getRaceId() {
-		return raceId;
+	public DndRace getRace() {
+		return race;
 	}
 	
 	public DescriptionType getType() {
@@ -43,7 +44,7 @@ public class DescriptionTrait implements Trait {
 	
 	@Override
 	public String getId() {
-		return raceId + "." + type.getKey();
+		return race.getId() + "." + type.getKey();
 	}
 	
 	@Override

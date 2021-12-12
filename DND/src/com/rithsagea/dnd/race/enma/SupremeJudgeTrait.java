@@ -1,4 +1,4 @@
-package com.rithsagea.dnd.types.traits.enma;
+package com.rithsagea.dnd.race.enma;
 
 import api.rithsagea.dnd.character.UpdateSkillModifierEvent;
 import api.rithsagea.dnd.event.EventHandler;

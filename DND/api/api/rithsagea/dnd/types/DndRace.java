@@ -1,10 +1,13 @@
 package api.rithsagea.dnd.types;
 
+import java.util.Arrays;
 import java.util.Collections;
-import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
+import api.rithsagea.dnd.types.traits.DescriptionTrait;
 import api.rithsagea.dnd.types.traits.Trait;
+import api.rithsagea.dnd.types.traits.DescriptionTrait.DescriptionType;
 
 public class DndRace implements IndexedItem {
 	
@@ -13,8 +16,20 @@ public class DndRace implements IndexedItem {
 	
 	public DndRace(String id) {
 		this.id = id;
+		traits = new TreeSet<>();
 		
-		traits = new LinkedHashSet<>();
+		addTraits(
+				new DescriptionTrait(this, DescriptionType.AGE),
+				new DescriptionTrait(this, DescriptionType.ALIGNMENT),
+				new DescriptionTrait(this, DescriptionType.SIZE));
+	}
+	
+	protected void addTrait(Trait trait) {
+		traits.add(trait);
+	}
+	
+	protected void addTraits(Trait...traits) {
+		this.traits.addAll(Arrays.asList(traits));
 	}
 	
 	public Set<Trait> getTraits() {

@@ -15,7 +15,7 @@ public class EventTest {
 	
 	private static class TestListener2 implements Listener {
 		@EventHandler(priority = 3)
-		public void onTestEvent(TestEvent e) {
+		public void onTesstEvent(TestEvent e) {
 			System.out.println("2: " + e.getMessage());
 		}
 	}
@@ -30,11 +30,6 @@ public class EventTest {
 		
 		public String getMessage() {
 			return message;
-		}
-		
-		@Override
-		public void finish() {
-			System.out.println("Message: " + message);
 		}
 	}
 	

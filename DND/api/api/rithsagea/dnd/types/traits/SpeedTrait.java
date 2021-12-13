@@ -1,6 +1,6 @@
 package api.rithsagea.dnd.types.traits;
 
-import api.rithsagea.dnd.character.UpdateSpeedEvent;
+import api.rithsagea.dnd.character.UpdateFieldEvent.UpdateSpeedEvent;
 import api.rithsagea.dnd.event.EventHandler;
 import api.rithsagea.dnd.types.DndRace;
 

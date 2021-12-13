@@ -6,7 +6,15 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeSet;
 
+import api.rithsagea.dnd.character.UpdateAbilityEvent.UpdateAbilityModifierEvent;
+import api.rithsagea.dnd.character.UpdateAbilityEvent.UpdateAbilityScoreEvent;
+import api.rithsagea.dnd.character.UpdateAbilityEvent.UpdateSavingThrowEvent;
+import api.rithsagea.dnd.character.UpdateAbilityEvent.UpdateSkillModifierEvent;
+import api.rithsagea.dnd.character.UpdateFieldEvent.UpdateInitiativeEvent;
+import api.rithsagea.dnd.character.UpdateFieldEvent.UpdatePassiveWisdomEvent;
+import api.rithsagea.dnd.character.UpdateFieldEvent.UpdateSpeedEvent;
 import api.rithsagea.dnd.event.EventBus;
+import api.rithsagea.dnd.event.EventHandler;
 import api.rithsagea.dnd.event.Listener;
 import api.rithsagea.dnd.types.DndRace;
 import api.rithsagea.dnd.types.enums.Ability;
@@ -17,6 +25,7 @@ import api.rithsagea.dnd.util.DataUtil;
 
 public class CharacterSheet implements Listener {
 	
+	private static final int SHEET_LISTENER_PRIORITY = -10;
 	private EventBus eventBus;
 	
 	public CharacterSheet() {
@@ -35,8 +44,6 @@ public class CharacterSheet implements Listener {
 	}
 	
 	public void refreshSheet() {
-		eventBus.clearListeners();
-		
 		calculateRace();
 		calculateLevel();
 		
@@ -118,6 +125,40 @@ public class CharacterSheet implements Listener {
 	private int initiative;
 	private int speed;
 	
+	@EventHandler(priority=SHEET_LISTENER_PRIORITY )
+	private void onUpdateAbility(UpdateAbilityEvent e) {
+		if(e instanceof UpdateAbilityScoreEvent) {
+			abilityScores.put(e.getAbility(), e.getValue());
+		}
+		
+		if(e instanceof UpdateAbilityModifierEvent) {
+			abilityModifiers.put(e.getAbility(), e.getValue());
+		}
+		
+		if(e instanceof UpdateSavingThrowEvent) {
+			savingThrows.put(e.getAbility(), e.getValue());
+		}
+		
+		if(e instanceof UpdateSkillModifierEvent) {
+			skillModifiers.put(((UpdateSkillModifierEvent) e).getSkill(), e.getValue());
+		}
+	}
+	
+	@EventHandler(priority=SHEET_LISTENER_PRIORITY )
+	private void onUpdateField(UpdateFieldEvent e) {
+		if(e instanceof UpdatePassiveWisdomEvent) {
+			passiveWisdom = e.getValue();
+		}
+		
+		if(e instanceof UpdateInitiativeEvent) {
+			initiative = e.getValue();
+		}
+		
+		if(e instanceof UpdateSpeedEvent) {
+			speed = e.getValue();
+		}
+	}
+	
 	private void calculateAbilities() {		
 		skillProficiencies.clear();
 		savingProficiencies.clear();
@@ -143,34 +184,6 @@ public class CharacterSheet implements Listener {
 		eventBus.submitEvent(new UpdatePassiveWisdomEvent(this, 10 + skillModifiers.get(Skill.PERCEPTION)));
 		eventBus.submitEvent(new UpdateInitiativeEvent(this, abilityModifiers.get(Ability.DEXTERITY)));
 		eventBus.submitEvent(new UpdateSpeedEvent(this, 30));
-	}
-	
-	protected void setAbilityScore(Ability ability, int value) {
-		abilityScores.put(ability, value);
-	}
-	
-	protected void setAbilityModifier(Ability ability, int value) {
-		abilityModifiers.put(ability, value);
-	}
-	
-	protected void setSavingThrow(Ability ability, int value) {
-		savingThrows.put(ability, value);
-	}
-	
-	protected void setSkillModifier(Skill skill, int value) {
-		skillModifiers.put(skill, value);
-	}
-	
-	protected void setPassiveWisdom(int value) {
-		passiveWisdom = value;
-	}
-	
-	protected void setInitiative(int value) {
-		initiative = value;
-	}
-	
-	protected void setSpeed(int value) {
-		speed = value;
 	}
 	
 	public int getBaseAbilityScore(Ability ability) {

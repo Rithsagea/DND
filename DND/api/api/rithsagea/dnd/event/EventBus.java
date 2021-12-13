@@ -40,21 +40,18 @@ public class EventBus {
 	}
 	
 	public void registerListener(Listener listener) {
-		for(Method method : listener.getClass().getMethods()) {
+		for(Method method : listener.getClass().getDeclaredMethods()) {
 			if(method.getParameterCount() == 1) {
 				Parameter p = method.getParameters()[0];
 				EventHandler ann = method.getAnnotation(EventHandler.class);
 				Class<?> type = p.getType();
-				if(Event.class.isAssignableFrom(type) && ann != null) {
+				if(ann != null) {
+					if(!Event.class.isAssignableFrom(type)) continue;
 					method.setAccessible(true);
 					Handler handler = new Handler(ann.priority(), method, listener);
 					
-					while(Event.class.isAssignableFrom(type)) {
-						if(!listenerMap.containsKey(type)) listenerMap.put(type, new TreeSet<>());
-						listenerMap.get(type).add(handler);
-						
-						type = type.getSuperclass();
-					}
+					if(!listenerMap.containsKey(type)) listenerMap.put(type, new TreeSet<>());
+					listenerMap.get(type).add(handler);
 				}
 			}
 		}
@@ -62,13 +59,12 @@ public class EventBus {
 	
 	public void unregisterListener(Listener listener) {
 		for(Method method : listener.getClass().getMethods()) {
-			Parameter p = method.getParameters()[0];
-			Class<?> type = p.getType();
-			if(Event.class.isAssignableFrom(type) && method.isAnnotationPresent(EventHandler.class)) {
-				while(Event.class.isAssignableFrom(type)) {
+			if(method.getParameterCount() == 1) {
+				Parameter p = method.getParameters()[0];
+				Class<?> type = p.getType();
+				if(Event.class.isAssignableFrom(type) && method.isAnnotationPresent(EventHandler.class)) {
 					if(listenerMap.containsKey(type)) {
 						listenerMap.get(type).removeIf((h) -> h.listener == listener);
-						type = type.getSuperclass();
 					}
 				}
 			}
@@ -80,16 +76,19 @@ public class EventBus {
 	}
 
 	public void submitEvent(Event event) {
-		if(listenerMap.containsKey(event.getClass())) {
-			for(Handler handler : listenerMap.get(event.getClass())) {
-				try {
-					handler.method.invoke(handler.listener, event);
-				} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-					e.printStackTrace();
+		Class<?> type = event.getClass();
+		while(Event.class.isAssignableFrom(type)) {
+			if(listenerMap.containsKey(type)) {
+				for(Handler handler : listenerMap.get(type)) {
+					try {
+						handler.method.invoke(handler.listener, event);
+					} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+						e.printStackTrace();
+					}
 				}
 			}
+			
+			type = type.getSuperclass();
 		}
-		
-		event.finish();
 	}
 }

@@ -40,6 +40,47 @@ Alignment.LawfulEvil.Name=Lawful Evil
 Alignment.NeutralEvil.Name=Neutral Evil
 Alignment.ChaoticEvil.Name=Chaotic Evil
 
+#############
+# Condition #
+#############
+
+Condition.Blinded.Name=Blinded
+Condition.Charmed.Name=Charmed
+Condition.Deafened.Name=Deafened
+Condition.Exhaustion.Name=Exhaustion
+Condition.Frightened.Name=Frightened
+Condition.Grappled.Name=Grappled
+Condition.Incapacitated.Name=Incapacitated
+Condition.Invisible.Name=Invisible
+Condition.Paralzyed.Name=Paralyzed
+Condition.Petrified.Name=Petrified
+Condition.Poisoned.Name=Poisoned
+Condition.Prone.Name=Prone
+Condition.Restrained.Name=Restrained
+Condition.Stunned.Name=Stunned
+Condition.Unconscious.Name=Unconscious
+
+############
+# Language #
+############
+
+Language.Common.Name=Common
+Language.Dwarvish.Name=Dwarvish
+Language.Elvish.Name=Elvish
+Language.Giant.Name=Giant
+Language.Gnomish.Name=Gnomish
+Language.Goblin.Name=Goblin
+Language.Halfling.Name=Halfling
+Language.Orc.Name=Orc
+Language.Abyssal.Name=Abyssal
+Language.Celestial.Name=Celestial
+Language.Draconic.Name=Draconic
+Language.DeepSpeech.Name=Deep Speech
+Language.Infernal.Name=Infernal
+Language.Primordial.Name=Primordial
+Language.Sylvan.Name=Sylvan
+Language.Undercommon.Name=Undercommon
+
 ########
 # Size #
 ########

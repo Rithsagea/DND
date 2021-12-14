@@ -1,19 +1,12 @@
 package api.rithsagea.dnd.character;
 
-import api.rithsagea.dnd.event.Event;
-
-public class UpdateFieldEvent implements Event {
+public class UpdateFieldEvent extends UpdateSheetEvent {
 	
-	private CharacterSheet sheet;
 	private int value;
 	
 	protected UpdateFieldEvent(CharacterSheet sheet, int value) {
-		this.sheet = sheet;
+		super(sheet);
 		this.value = value;
-	}
-	
-	public CharacterSheet getSheet() {
-		return sheet;
 	}
 	
 	public int getValue() {

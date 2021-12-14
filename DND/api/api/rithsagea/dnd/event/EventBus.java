@@ -40,7 +40,7 @@ public class EventBus {
 	}
 	
 	public void registerListener(Listener listener) {
-		for(Method method : listener.getClass().getDeclaredMethods()) {
+		for(Method method : listener.getClass().getMethods()) {
 			if(method.getParameterCount() == 1) {
 				Parameter p = method.getParameters()[0];
 				EventHandler ann = method.getAnnotation(EventHandler.class);
@@ -58,6 +58,7 @@ public class EventBus {
 	}
 	
 	public void unregisterListener(Listener listener) {
+		if(listener == null) return;
 		for(Method method : listener.getClass().getMethods()) {
 			if(method.getParameterCount() == 1) {
 				Parameter p = method.getParameters()[0];

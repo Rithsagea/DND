@@ -13,8 +13,10 @@ import api.rithsagea.dnd.character.UpdateAbilityEvent.UpdateSkillModifierEvent;
 import api.rithsagea.dnd.character.UpdateFieldEvent.UpdateInitiativeEvent;
 import api.rithsagea.dnd.character.UpdateFieldEvent.UpdatePassiveWisdomEvent;
 import api.rithsagea.dnd.character.UpdateFieldEvent.UpdateSpeedEvent;
+import api.rithsagea.dnd.character.UpdateSheetEvent.LoadTraitsEvent;
 import api.rithsagea.dnd.event.EventBus;
 import api.rithsagea.dnd.event.EventHandler;
+import api.rithsagea.dnd.event.EventPriority;
 import api.rithsagea.dnd.event.Listener;
 import api.rithsagea.dnd.types.DndRace;
 import api.rithsagea.dnd.types.enums.Ability;
@@ -25,7 +27,6 @@ import api.rithsagea.dnd.util.DataUtil;
 
 public class CharacterSheet implements Listener {
 	
-	private static final int SHEET_LISTENER_PRIORITY = -10;
 	private EventBus eventBus;
 	
 	public CharacterSheet() {
@@ -44,8 +45,9 @@ public class CharacterSheet implements Listener {
 	}
 	
 	public void refreshSheet() {
-		calculateRace();
 		calculateLevel();
+		
+		calculateTraits();
 		
 		calculateAbilities();
 	}
@@ -125,8 +127,8 @@ public class CharacterSheet implements Listener {
 	private int initiative;
 	private int speed;
 	
-	@EventHandler(priority=SHEET_LISTENER_PRIORITY )
-	private void onUpdateAbility(UpdateAbilityEvent e) {
+	@EventHandler(priority = EventPriority.ROOT)
+	public void onUpdateAbility(UpdateAbilityEvent e) {
 		if(e instanceof UpdateAbilityScoreEvent) {
 			abilityScores.put(e.getAbility(), e.getValue());
 		}
@@ -144,8 +146,8 @@ public class CharacterSheet implements Listener {
 		}
 	}
 	
-	@EventHandler(priority=SHEET_LISTENER_PRIORITY )
-	private void onUpdateField(UpdateFieldEvent e) {
+	@EventHandler(priority = EventPriority.ROOT)
+	public void onUpdateField(UpdateFieldEvent e) {
 		if(e instanceof UpdatePassiveWisdomEvent) {
 			passiveWisdom = e.getValue();
 		}
@@ -242,12 +244,10 @@ public class CharacterSheet implements Listener {
 	
 	private DndRace race;
 	
-	private void calculateRace() {
-		race.getTraits().forEach(this::addTrait);
-	}
-	
 	public void setRace(DndRace race) {
+		eventBus.unregisterListener(this.race);
 		this.race = race;
+		eventBus.registerListener(race);
 	}
 	
 	public DndRace getRace() {
@@ -257,6 +257,15 @@ public class CharacterSheet implements Listener {
 	// -=-=- Traits -=-=-
 	
 	private Set<Trait> traits = new TreeSet<Trait>();
+	
+	@EventHandler(priority = EventPriority.ROOT)
+	public void onLoadTraits(LoadTraitsEvent e) {
+		e.getTraits().forEach(this::addTrait);
+	}
+	
+	private void calculateTraits() {
+		eventBus.submitEvent(new LoadTraitsEvent(this));
+	}
 	
 	private void addTrait(Trait trait) {
 		traits.add(trait);

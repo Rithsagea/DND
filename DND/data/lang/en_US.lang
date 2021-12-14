@@ -60,6 +60,38 @@ Condition.Restrained.Name=Restrained
 Condition.Stunned.Name=Stunned
 Condition.Unconscious.Name=Unconscious
 
+###############
+# Damage Type #
+###############
+
+DamageType.Acid.Name=Acid
+DamageType.Bludgeoning.Name=Bludgeoning
+DamageType.Cold.Name=Cold
+DamageType.Fire.Name=Fire
+DamageType.Force.Name=Force
+DamageType.Lightning.Name=Lightning
+DamageType.Necrotic.Name=Necrotic
+DamageType.Piercing.Name=Piercing
+DamageType.Poison.Name=Poison
+DamageType.Psychic.Name=Psychic
+DamageType.Radiant.Name=Radiant
+DamageType.Slashing.Name=Slashing
+DamageType.Thunder.Name=Thunder
+
+DamageType.Acid.Description=The corrosive spray of a black dragon’s breath and the dissolving enzymes secreted by a black pudding deal acid damage.
+DamageType.Bludgeoning.Description=Blunt force attacks—hammers, falling, constriction, and the like—deal bludgeoning damage.
+DamageType.Cold.Description=The infernal chill radiating from an ice devil’s spear and the frigid blast of a white dragon’s breath deal cold damage.
+DamageType.Fire.Description=Red dragons breathe fire, and many spells conjure flames to deal fire damage.
+DamageType.Force.Description= Force is pure magical energy focused into a damaging form. Most effects that deal force damage are spells, including magic missile and spiritual weapon.
+DamageType.Lightning.Description=A lightning bolt spell and a blue dragon’s breath deal lightning damage.
+DamageType.Necrotic.Description=Necrotic damage, dealt by certain undead and a spell such as chill touch, withers matter and even the soul.
+DamageType.Piercing.Description= Puncturing and impaling attacks, including spears and monsters’ bites, deal piercing damage.
+DamageType.Poison.Description=Venomous stings and the toxic gas of a green dragon’s breath deal poison damage.
+DamageType.Psychic.Description=Mental abilities such as a mind flayer’s psionic blast deal psychic damage.
+DamageType.Radiant.Description=Radiant damage, dealt by a cleric’s flame strike spell or an angel’s smiting weapon, sears the flesh like fire and overloads the spirit with power.
+DamageType.Slashing.Description=Swords, axes, and monsters’ claws deal slashing damage.
+DamageType.Thunder.Description=A concussive burst of sound, such as the effect of the thunderwave spell, deals thunder damage.
+
 ############
 # Language #
 ############
@@ -134,7 +166,6 @@ Trait.SupremeJudge.Name=Supreme Judge
 Trait.SupremeJudge.Description=You are proficient in the Insight and Intimidation skills.
 Trait.DivineBeing.Name=Divine Being
 Trait.DivineBeing.Description=Your creature type is both humanoid and celestial. Additionally, you do not require food, drink, or sleep, you do not incur exhaustion if you do not rest, you are immune to diseases, have resistance to poison damage and have advantage on saving throws against being poisoned, though you must still rest for 8 hours to receive the benefits of a long rest, and you may still receive levels of exhaustion from effects that directly inflict it. You may also still ingest food or drink if you wish.
-
 
 ##########
 # Traits #

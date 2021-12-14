@@ -80,7 +80,7 @@ public class CharacterSheet implements Listener {
 		this.inspiration = inspiration;
 	}
 	
-	// -=-=- Misc -=-=-
+	// -=-=- Levelling -=-=-
 	
 	private static final int[] EXPERIENCE_TABLE = new int[] {
 			-1, 0, 300, 900, 2700, 6500,
@@ -234,6 +234,9 @@ public class CharacterSheet implements Listener {
 	public int getSpeed() {
 		return speed;
 	}
+	
+	// -=-=- Misc -=-=-
+	
 	
 	// -=-=- Races -=-=-
 	

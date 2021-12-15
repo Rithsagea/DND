@@ -1,6 +1,6 @@
 package test.rithsagea.dnd;
 
-import com.rithsagea.dnd.race.enma.EnmaRace;
+import com.rithsagea.dnd.race.human.HumanRace;
 
 import api.rithsagea.dnd.character.CharacterSheet;
 import api.rithsagea.dnd.types.DndRace;
@@ -11,7 +11,7 @@ public class CharacterCreationTest {
 	public static void main(String[] args) {
 		LanguageManager lang = LanguageManager.getInstance();
 		
-		DndRace race = new EnmaRace();
+		DndRace race = new HumanRace();
 		
 		CharacterSheet sheet = new CharacterSheet();
 		

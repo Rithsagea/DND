@@ -13,7 +13,6 @@ import api.rithsagea.dnd.character.UpdateAbilityEvent.UpdateSkillModifierEvent;
 import api.rithsagea.dnd.character.UpdateFieldEvent.UpdateInitiativeEvent;
 import api.rithsagea.dnd.character.UpdateFieldEvent.UpdatePassiveWisdomEvent;
 import api.rithsagea.dnd.character.UpdateFieldEvent.UpdateSpeedEvent;
-import api.rithsagea.dnd.character.UpdateSheetEvent.LoadTraitsEvent;
 import api.rithsagea.dnd.event.EventBus;
 import api.rithsagea.dnd.event.EventHandler;
 import api.rithsagea.dnd.event.EventPriority;
@@ -21,6 +20,7 @@ import api.rithsagea.dnd.event.Listener;
 import api.rithsagea.dnd.types.DndRace;
 import api.rithsagea.dnd.types.enums.Ability;
 import api.rithsagea.dnd.types.enums.Alignment;
+import api.rithsagea.dnd.types.enums.EquipmentProficiency;
 import api.rithsagea.dnd.types.enums.Skill;
 import api.rithsagea.dnd.types.traits.Trait;
 import api.rithsagea.dnd.util.DataUtil;
@@ -39,6 +39,7 @@ public class CharacterSheet implements Listener {
 		
 		skillProficiencies = new TreeSet<>();
 		savingProficiencies = new TreeSet<>();
+		equipmentProficiencies = new TreeSet<>();
 		
 		eventBus = new EventBus();
 		eventBus.registerListener(this);
@@ -46,9 +47,6 @@ public class CharacterSheet implements Listener {
 	
 	public void refreshSheet() {
 		calculateLevel();
-		
-		calculateTraits();
-		
 		calculateAbilities();
 	}
 	
@@ -82,7 +80,7 @@ public class CharacterSheet implements Listener {
 		this.inspiration = inspiration;
 	}
 	
-	// -=-=- Levelling -=-=-
+	// -=-=- Leveling -=-=-
 	
 	private static final int[] EXPERIENCE_TABLE = new int[] {
 			-1, 0, 300, 900, 2700, 6500,
@@ -93,9 +91,12 @@ public class CharacterSheet implements Listener {
 	
 	private int experience;
 	private int level;
+	private int proficiencyBonus;
 	
 	private void calculateLevel() {
 		for(level = 1; level < 20 && experience > EXPERIENCE_TABLE[level]; level++);
+		
+		proficiencyBonus = (int) (Math.ceil(level / 4d + 1));
 	}
 	
 	public void setExperience(int experience) {
@@ -110,6 +111,36 @@ public class CharacterSheet implements Listener {
 		return level;
 	}
 	
+	// -=-=- Proficiencies -=-=-
+	
+	private Set<Skill> skillProficiencies;
+	private Set<Ability> savingProficiencies;
+	private Set<EquipmentProficiency> equipmentProficiencies;
+	
+	public boolean hasProficiency(Skill skill) {
+		return skillProficiencies.contains(skill);
+	}
+	
+	public boolean hasProficiency(Ability ability) {
+		return savingProficiencies.contains(ability);
+	}
+	
+	public boolean hasProficiency(EquipmentProficiency equipment) {
+		return equipmentProficiencies.contains(equipment);
+	}
+	
+	public void addProficiency(Skill skill) {
+		skillProficiencies.add(skill);
+	}
+	
+	public void addProficiency(Ability ability) {
+		savingProficiencies.add(ability);
+	}
+	
+	public void addProficiency(EquipmentProficiency equipment) {
+		equipmentProficiencies.add(equipment);
+	}
+	
 	// -=-=- Ability Scores -=-=-
 	
 	private Map<Ability, Integer> baseAbilityScores;
@@ -119,10 +150,6 @@ public class CharacterSheet implements Listener {
 	private Map<Ability, Integer> savingThrows;
 	private Map<Skill, Integer> skillModifiers;
 	
-	private Set<Skill> skillProficiencies;
-	private Set<Ability> savingProficiencies;
-	
-	private int proficiencyBonus;
 	private int passiveWisdom;
 	private int initiative;
 	private int speed;
@@ -138,11 +165,14 @@ public class CharacterSheet implements Listener {
 		}
 		
 		if(e instanceof UpdateSavingThrowEvent) {
-			savingThrows.put(e.getAbility(), e.getValue());
+			savingThrows.put(e.getAbility(), e.getValue()
+					+ (hasProficiency(e.getAbility()) ? proficiencyBonus : 0));
 		}
 		
 		if(e instanceof UpdateSkillModifierEvent) {
-			skillModifiers.put(((UpdateSkillModifierEvent) e).getSkill(), e.getValue());
+			Skill s = ((UpdateSkillModifierEvent) e).getSkill();
+			skillModifiers.put(s, e.getValue()
+					+ (hasProficiency(s) ? proficiencyBonus : 0));
 		}
 	}
 	
@@ -164,8 +194,6 @@ public class CharacterSheet implements Listener {
 	private void calculateAbilities() {		
 		skillProficiencies.clear();
 		savingProficiencies.clear();
-		
-		proficiencyBonus = (int) (Math.ceil(level / 4d + 1));
 		
 		for(Entry<Ability, Integer> entry : baseAbilityScores.entrySet()) {
 			eventBus.submitEvent(new UpdateAbilityScoreEvent(this, entry.getKey(), entry.getValue()));
@@ -205,22 +233,6 @@ public class CharacterSheet implements Listener {
 		baseAbilityScores.put(Ability.CHARISMA, chaVal);
 	}
 	
-	public boolean hasProficiency(Skill skill) {
-		return skillProficiencies.contains(skill);
-	}
-	
-	public boolean hasProficiency(Ability ability) {
-		return savingProficiencies.contains(ability);
-	}
-	
-	public void addProficiency(Skill skill) {
-		skillProficiencies.add(skill);
-	}
-	
-	public void addProficiency(Ability ability) {
-		savingProficiencies.add(ability);
-	}
-	
 	public int getProficiencyBonus() {
 		return proficiencyBonus;
 	}
@@ -245,9 +257,14 @@ public class CharacterSheet implements Listener {
 	private DndRace race;
 	
 	public void setRace(DndRace race) {
-		eventBus.unregisterListener(this.race);
+		if(this.race != null) {
+			this.race.getTraits().forEach(traits::remove);
+			eventBus.unregisterListener(this.race);
+		}
+			
 		this.race = race;
 		eventBus.registerListener(race);
+		race.onLoad(this);
 	}
 	
 	public DndRace getRace() {
@@ -258,16 +275,7 @@ public class CharacterSheet implements Listener {
 	
 	private Set<Trait> traits = new TreeSet<Trait>();
 	
-	@EventHandler(priority = EventPriority.ROOT)
-	public void onLoadTraits(LoadTraitsEvent e) {
-		e.getTraits().forEach(this::addTrait);
-	}
-	
-	private void calculateTraits() {
-		eventBus.submitEvent(new LoadTraitsEvent(this));
-	}
-	
-	private void addTrait(Trait trait) {
+	public void addTrait(Trait trait) {
 		traits.add(trait);
 		eventBus.registerListener(trait);
 	}

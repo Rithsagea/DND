@@ -7,7 +7,8 @@ public class DescriptionTrait extends Trait {
 	public static enum DescriptionType {
 		AGE("Age"),
 		ALIGNMENT("Alignment"),
-		SIZE("Size");
+		SIZE("Size"),
+		LANGUAGE("Language");
 		
 		private final String key;
 		

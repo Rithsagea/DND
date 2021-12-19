@@ -13,7 +13,7 @@ import api.rithsagea.dnd.character.UpdateAbilityEvent.UpdateSkillModifierEvent;
 import api.rithsagea.dnd.character.UpdateFieldEvent.UpdateInitiativeEvent;
 import api.rithsagea.dnd.character.UpdateFieldEvent.UpdatePassiveWisdomEvent;
 import api.rithsagea.dnd.character.UpdateFieldEvent.UpdateSpeedEvent;
-import api.rithsagea.dnd.character.UpdateProficiencyEvent.UpdateAbilityProficiencyEvent;
+import api.rithsagea.dnd.character.UpdateProficiencyEvent.UpdateSavingProficiencyEvent;
 import api.rithsagea.dnd.character.UpdateProficiencyEvent.UpdateEquipmentProficiencyEvent;
 import api.rithsagea.dnd.character.UpdateProficiencyEvent.UpdateSkillProficiencyEvent;
 import api.rithsagea.dnd.event.EventBus;
@@ -146,7 +146,7 @@ public class CharacterSheet implements Listener {
 		equipmentProficiencies.clear();
 		
 		eventBus.submitEvent(new UpdateSkillProficiencyEvent(this));
-		eventBus.submitEvent(new UpdateAbilityProficiencyEvent(this));
+		eventBus.submitEvent(new UpdateSavingProficiencyEvent(this));
 		eventBus.submitEvent(new UpdateEquipmentProficiencyEvent(this));
 	}
 	

@@ -50,8 +50,8 @@ public class UpdateProficiencyEvent<T extends Enum<?>> extends UpdateSheetEvent 
 		}
 	}
 	
-	public static class UpdateAbilityProficiencyEvent extends UpdateProficiencyEvent<Ability> {
-		public UpdateAbilityProficiencyEvent(CharacterSheet sheet) {
+	public static class UpdateSavingProficiencyEvent extends UpdateProficiencyEvent<Ability> {
+		public UpdateSavingProficiencyEvent(CharacterSheet sheet) {
 			super(sheet);
 		}
 	}

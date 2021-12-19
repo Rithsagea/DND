@@ -3,13 +3,16 @@ package api.rithsagea.dnd.types;
 import java.util.Set;
 import java.util.TreeSet;
 
-import api.rithsagea.dnd.character.CharacterSheet;
+import api.rithsagea.dnd.character.UpdateProficiencyEvent.UpdateEquipmentProficiencyEvent;
+import api.rithsagea.dnd.character.UpdateProficiencyEvent.UpdateSavingProficiencyEvent;
+import api.rithsagea.dnd.character.UpdateProficiencyEvent.UpdateSkillProficiencyEvent;
+import api.rithsagea.dnd.event.EventHandler;
 import api.rithsagea.dnd.event.Listener;
 import api.rithsagea.dnd.types.enums.Ability;
 import api.rithsagea.dnd.types.enums.EquipmentProficiency;
 import api.rithsagea.dnd.types.enums.Skill;
 
-public class DndClass implements IndexedItem, Listener, Loadable {
+public class DndClass implements IndexedItem, Listener {
 	
 	private String id;
 	
@@ -37,23 +40,19 @@ public class DndClass implements IndexedItem, Listener, Loadable {
 		equipmentProficiencies.add(equipment);
 	}
 	
-	public boolean hasProficiency(Skill skill) {
-		return skillProficiencies.contains(skill);
+	@EventHandler
+	public void onUpdateSkillProficiency(UpdateSkillProficiencyEvent e) {
+		skillProficiencies.forEach(e::add);
 	}
 	
-	public boolean hasProficiency(Ability ability) {
-		return savingProficiencies.contains(ability);
+	@EventHandler
+	public void onUpdateAbilityProficiency(UpdateSavingProficiencyEvent e) {
+		savingProficiencies.forEach(e::add);
 	}
 	
-	public boolean hasProficiency(EquipmentProficiency equipment) {
-		return equipmentProficiencies.contains(equipment);
-	}
-	
-	@Override
-	public void onLoad(CharacterSheet sheet) {
-		skillProficiencies.forEach(sheet::addProficiency);
-		savingProficiencies.forEach(sheet::addProficiency);
-		equipmentProficiencies.forEach(sheet::addProficiency);
+	@EventHandler
+	public void onUpdateEquipmentProficiency(UpdateEquipmentProficiencyEvent e) {
+		equipmentProficiencies.forEach(e::add);
 	}
 	
 	@Override

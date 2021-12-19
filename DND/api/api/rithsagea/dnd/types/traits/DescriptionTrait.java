@@ -8,7 +8,7 @@ public class DescriptionTrait extends Trait {
 		AGE("Age"),
 		ALIGNMENT("Alignment"),
 		SIZE("Size"),
-		LANGUAGE("Language");
+		LANGUAGE("Languages");
 		
 		private final String key;
 		

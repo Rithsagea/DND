@@ -154,28 +154,31 @@ Skill.Survival.Name=Survival
 # Race #
 ########
 
+### Enma ###
+
+Race.Enma.Name=Enma
+Trait.Enma.Age.Description=Yama are near immortal; they do not age, though they can still die in combat.
+Trait.Enma.Alignment.Description=Yama are always either lawful neutral or true neutral; they are almost never good, evil, or chaotic alignments. Lawful alignments are much more common among them.
+Trait.Enma.Languages.Description=You can speak, read, and write Common and Celestial.
+Trait.Enma.Size.Description=Yama vary drastically in stature, with the shortest standing only just over 5 feet tall and the tallest brushing just short of 8 feet in height. Regardless of where you stand in this range, your size is Medium.
+Trait.Enma.Speed.Description=Your base walking speed is 30 feet.
+
+Trait.CompletelyLevelHeaded.Name=Completely Level-Headed
+Trait.CompletelyLevelHeaded.Description=You have advantage on saving throws against being charmed or frightened, and magic can't put you to sleep.
+Trait.SupremeJudge.Name=Supreme Judge
+Trait.SupremeJudge.Description=You are proficient in the Insight and Intimidation skills.
+Trait.DivineBeing.Name=Divine Being
+Trait.DivineBeing.Description=Your creature type is both humanoid and celestial. Additionally, you do not require food, drink, or sleep, you do not incur exhaustion if you do not rest, you are immune to diseases, have resistance to poison damage and have advantage on saving throws against being poisoned, though you must still rest for 8 hours to receive the benefits of a long rest, and you may still receive levels of exhaustion from effects that directly inflict it. You may also still ingest food or drink if you wish.
+
 ### Human ###
 
 Race.Human.Name=Human
 Trait.Human.AbilityScoreIncrease.Description=Your ability scores each increase by 1.
 Trait.Human.Age.Description=Humans reach adulthood in their late teens and live less than a century.
 Trait.Human.Alignment.Description=Humans tend toward no particular alignment. The best and the worst are found among them.
-Trait.Human.Language.Description=You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.
+Trait.Human.Languages.Description=You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.
 Trait.Human.Size.Description=Humans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, your size is Medium.
 Trait.Human.Speed.Description=Your base walking speed is 30 feet.
-
-### Yama ###
-
-Race.Enma.Name=Enma
-Trait.Enma.Age.Description=Yama are near immortal; they do not age, though they can still die in combat.
-Trait.Enma.Alignment.Description=Yama are always either lawful neutral or true neutral; they are almost never good, evil, or chaotic alignments. Lawful alignments are much more common among them.
-Trait.Enma.Size.Description=Yama vary drastically in stature, with the shortest standing only just over 5 feet tall and the tallest brushing just short of 8 feet in height. Regardless of where you stand in this range, your size is Medium.
-Trait.Enma.Speed.Description=Your base walking speed is 30 feet.
-
-Trait.SupremeJudge.Name=Supreme Judge
-Trait.SupremeJudge.Description=You are proficient in the Insight and Intimidation skills.
-Trait.DivineBeing.Name=Divine Being
-Trait.DivineBeing.Description=Your creature type is both humanoid and celestial. Additionally, you do not require food, drink, or sleep, you do not incur exhaustion if you do not rest, you are immune to diseases, have resistance to poison damage and have advantage on saving throws against being poisoned, though you must still rest for 8 hours to receive the benefits of a long rest, and you may still receive levels of exhaustion from effects that directly inflict it. You may also still ingest food or drink if you wish.
 
 ##########
 # Traits #

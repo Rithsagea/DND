@@ -1,6 +1,6 @@
 package com.rithsagea.dnd.race.enma;
 
-import api.rithsagea.dnd.character.UpdateAbilityEvent.UpdateSkillModifierEvent;
+import api.rithsagea.dnd.character.UpdateProficiencyEvent.UpdateSkillProficiencyEvent;
 import api.rithsagea.dnd.event.EventHandler;
 import api.rithsagea.dnd.types.enums.Skill;
 import api.rithsagea.dnd.types.traits.Trait;
@@ -13,8 +13,8 @@ public class SupremeJudgeTrait extends Trait {
 	}
 	
 	@EventHandler
-	public void onSkillUpdate(UpdateSkillModifierEvent e) {
-		e.getSheet().addProficiency(Skill.INSIGHT);
-		e.getSheet().addProficiency(Skill.INTIMIDATION);
+	public void onUpdateProficiency(UpdateSkillProficiencyEvent e) {
+		e.addAll(Skill.INSIGHT,
+				Skill.INTIMIDATION);
 	}
 }

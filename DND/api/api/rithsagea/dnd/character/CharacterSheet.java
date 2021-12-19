@@ -13,6 +13,9 @@ import api.rithsagea.dnd.character.UpdateAbilityEvent.UpdateSkillModifierEvent;
 import api.rithsagea.dnd.character.UpdateFieldEvent.UpdateInitiativeEvent;
 import api.rithsagea.dnd.character.UpdateFieldEvent.UpdatePassiveWisdomEvent;
 import api.rithsagea.dnd.character.UpdateFieldEvent.UpdateSpeedEvent;
+import api.rithsagea.dnd.character.UpdateProficiencyEvent.UpdateAbilityProficiencyEvent;
+import api.rithsagea.dnd.character.UpdateProficiencyEvent.UpdateEquipmentProficiencyEvent;
+import api.rithsagea.dnd.character.UpdateProficiencyEvent.UpdateSkillProficiencyEvent;
 import api.rithsagea.dnd.event.EventBus;
 import api.rithsagea.dnd.event.EventHandler;
 import api.rithsagea.dnd.event.EventPriority;
@@ -47,6 +50,7 @@ public class CharacterSheet implements Listener {
 	
 	public void refreshSheet() {
 		calculateLevel();
+		calculateProficiencies();
 		calculateAbilities();
 	}
 	
@@ -115,7 +119,36 @@ public class CharacterSheet implements Listener {
 	
 	private Set<Skill> skillProficiencies;
 	private Set<Ability> savingProficiencies;
-	private Set<EquipmentProficiency> equipmentProficiencies;
+	private Set<EquipmentProficiency> equipmentProficiencies;	
+
+	@SuppressWarnings("unchecked")
+	@EventHandler(priority = EventPriority.ROOT)
+	public void onUpdateProficiency(UpdateProficiencyEvent<?> e) {
+		if(e.getProficiencies().isEmpty()) return;
+		Enum<?> first = e.getProficiencies().iterator().next();
+		
+		if(first instanceof Ability) {
+			((Set<Ability>) e.getProficiencies()).forEach(this::addProficiency);
+		}
+		
+		if(first instanceof Skill) {
+			((Set<Skill>) e.getProficiencies()).forEach(this::addProficiency);
+		}
+		
+		if(first instanceof EquipmentProficiency) {
+			((Set<EquipmentProficiency>) e.getProficiencies()).forEach(this::addProficiency);
+		}
+	}
+	
+	private void calculateProficiencies() {
+		skillProficiencies.clear();
+		savingProficiencies.clear();
+		equipmentProficiencies.clear();
+		
+		eventBus.submitEvent(new UpdateSkillProficiencyEvent(this));
+		eventBus.submitEvent(new UpdateAbilityProficiencyEvent(this));
+		eventBus.submitEvent(new UpdateEquipmentProficiencyEvent(this));
+	}
 	
 	public boolean hasProficiency(Skill skill) {
 		return skillProficiencies.contains(skill);
@@ -192,9 +225,6 @@ public class CharacterSheet implements Listener {
 	}
 	
 	private void calculateAbilities() {		
-		skillProficiencies.clear();
-		savingProficiencies.clear();
-		
 		for(Entry<Ability, Integer> entry : baseAbilityScores.entrySet()) {
 			eventBus.submitEvent(new UpdateAbilityScoreEvent(this, entry.getKey(), entry.getValue()));
 		}
@@ -258,13 +288,13 @@ public class CharacterSheet implements Listener {
 	
 	public void setRace(DndRace race) {
 		if(this.race != null) {
-			this.race.getTraits().forEach(traits::remove);
+			this.race.getTraits().forEach(this::removeTrait);
 			eventBus.unregisterListener(this.race);
 		}
 			
 		this.race = race;
 		eventBus.registerListener(race);
-		race.onLoad(this);
+		race.getTraits().forEach(this::addTrait);
 	}
 	
 	public DndRace getRace() {
@@ -275,9 +305,14 @@ public class CharacterSheet implements Listener {
 	
 	private Set<Trait> traits = new TreeSet<Trait>();
 	
-	public void addTrait(Trait trait) {
+	private void addTrait(Trait trait) {
 		traits.add(trait);
 		eventBus.registerListener(trait);
+	}
+	
+	private void removeTrait(Trait trait) {
+		traits.remove(trait);
+		eventBus.unregisterListener(trait);
 	}
 	
 	public Set<Trait> getTraits() {

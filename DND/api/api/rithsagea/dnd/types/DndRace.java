@@ -11,7 +11,7 @@ import api.rithsagea.dnd.types.traits.DescriptionTrait.DescriptionType;
 import api.rithsagea.dnd.types.traits.SpeedTrait;
 import api.rithsagea.dnd.types.traits.Trait;
 
-public class DndRace implements IndexedItem, Listener, Loadable {
+public class DndRace implements IndexedItem, Listener {
 	
 	private String id;
 	private Set<Trait> traits;
@@ -33,11 +33,6 @@ public class DndRace implements IndexedItem, Listener, Loadable {
 	
 	public Set<Trait> getTraits() {
 		return Collections.unmodifiableSet(traits);
-	}
-	
-	@Override
-	public void onLoad(CharacterSheet sheet) {
-		traits.forEach(sheet::addTrait);
 	}
 	
 	@Override

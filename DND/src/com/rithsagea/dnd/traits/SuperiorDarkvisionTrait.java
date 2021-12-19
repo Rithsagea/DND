@@ -1,4 +1,4 @@
-package com.rithsagea.dnd.race.enma;
+package com.rithsagea.dnd.traits;
 
 import api.rithsagea.dnd.types.traits.Trait;
 

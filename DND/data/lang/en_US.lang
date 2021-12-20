@@ -40,6 +40,26 @@ Alignment.LawfulEvil.Name=Lawful Evil
 Alignment.NeutralEvil.Name=Neutral Evil
 Alignment.ChaoticEvil.Name=Chaotic Evil
 
+##############
+# Background #
+##############
+
+Background.Acolyte.Name=Acolyte
+Background.Charlatan.Name=Charlatan
+Background.Criminal.Name=Criminal
+Background.Entertainer.Name=Entertainer
+Background.FolkHero.Name=Folk Hero
+Background.Gladiator.Name=Gladiator
+Background.GuildArtisan.Name=Guild Artisan
+Background.Hermit.Name=Hermit
+Background.Noble.Name=Noble
+Background.Outlander.Name=Outlander
+Background.Sage.Name=Sage
+Background.Sailor.Name=Sailor
+Background.Soldier.Name=Soldier
+Background.Urchin.Name=Urchin
+
+
 #############
 # Condition #
 #############
@@ -154,21 +174,24 @@ Skill.Survival.Name=Survival
 # Race #
 ########
 
-### Enma ###
+### Elf ###
 
-Race.Enma.Name=Enma
-Trait.Enma.Age.Description=Yama are near immortal; they do not age, though they can still die in combat.
-Trait.Enma.Alignment.Description=Yama are always either lawful neutral or true neutral; they are almost never good, evil, or chaotic alignments. Lawful alignments are much more common among them.
-Trait.Enma.Languages.Description=You can speak, read, and write Common and Celestial.
-Trait.Enma.Size.Description=Yama vary drastically in stature, with the shortest standing only just over 5 feet tall and the tallest brushing just short of 8 feet in height. Regardless of where you stand in this range, your size is Medium.
-Trait.Enma.Speed.Description=Your base walking speed is 30 feet.
+Race.Elf.Name=Elf
+Trait.Elf.AbilityScoreIncrease.Description=Your Dexterity score increases by 2.
+Trait.Elf.Age.Description=Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.
+Trait.Elf.Alignment.Description=Elves love freedom, variety, and self-expression, so they lean strongly towards the gentler aspects of chaos. They value and protect others' freedom as well as their own, and are good more often than not. Drow are an exception; their exile into the Underdark has made them vicious and dangerous. Drow are more often evil than not.
+Trait.Elf.Language.Description=You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.
+Trait.Elf.Size.Description=Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.
+Trait.Elf.Speed.Description=Your base walking speed is 30 feet.
 
-Trait.CompletelyLevelHeaded.Name=Completely Level-Headed
-Trait.CompletelyLevelHeaded.Description=You have advantage on saving throws against being charmed or frightened, and magic can't put you to sleep.
-Trait.SupremeJudge.Name=Supreme Judge
-Trait.SupremeJudge.Description=You are proficient in the Insight and Intimidation skills.
-Trait.DivineBeing.Name=Divine Being
-Trait.DivineBeing.Description=Your creature type is both humanoid and celestial. Additionally, you do not require food, drink, or sleep, you do not incur exhaustion if you do not rest, you are immune to diseases, have resistance to poison damage and have advantage on saving throws against being poisoned, though you must still rest for 8 hours to receive the benefits of a long rest, and you may still receive levels of exhaustion from effects that directly inflict it. You may also still ingest food or drink if you wish.
+Trait.FeyAncestry.Name=Fey Ancestry
+Trait.FeyAncestry.Description=You have advantage on saving throws against being charmed, and magic can't put you to sleep.
+
+Trait.KeenSenses.Name=Keen Senses
+Trait.KeenSenses.Description=You have proficiency in the Perception skill.
+
+Trait.Trance.Name=Trance
+Trait.Trance.Description=Elves do not sleep. Instead they meditate deeply, remaining semi-conscious, for 4 hours a day. The Common word for this meditation is "trance." While meditating, you dream after a fashion; such dreams are actually mental exercises that have become reflexive after years of practice. After resting in this way, you gain the same benefit a human would from 8 hours of sleep.
 
 ### Human ###
 
@@ -176,13 +199,24 @@ Race.Human.Name=Human
 Trait.Human.AbilityScoreIncrease.Description=Your ability scores each increase by 1.
 Trait.Human.Age.Description=Humans reach adulthood in their late teens and live less than a century.
 Trait.Human.Alignment.Description=Humans tend toward no particular alignment. The best and the worst are found among them.
-Trait.Human.Languages.Description=You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.
+Trait.Human.Language.Description=You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.
 Trait.Human.Size.Description=Humans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, your size is Medium.
 Trait.Human.Speed.Description=Your base walking speed is 30 feet.
 
 ##########
 # Traits #
 ##########
+
+#Generic Traits
+Trait.Age.Name=Age
+Trait.Alignment.Name=Alignment
+Trait.Size.Name=Size
+Trait.Language.Name=Languages
+Trait.Speed.Name=Speed
+Trait.AbilityScoreIncrease.Name=Ability Score Increase
+
+Trait.Darkvision.Name=Darkvision
+Trait.Darkvision.Description=Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.
 
 Trait.SuperiorDarkvision.Name=Superior Darkvision
 Trait.SuperiorDarkvision.Description=You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.

@@ -1,6 +1,9 @@
 package api.rithsagea.dnd.types.enums;
 
-public enum EquipmentProficiency {
+import api.rithsagea.dnd.types.IndexedItem;
+import api.rithsagea.dnd.util.WordUtil;
+
+public enum EquipmentProficiency implements IndexedItem {
 	//Armor
 	ARMOR,
 	SHIELDS,
@@ -11,4 +14,9 @@ public enum EquipmentProficiency {
 	
 	//Tools
 	;
+
+	@Override
+	public String getId() {
+		return WordUtil.formatId(name());
+	}
 }

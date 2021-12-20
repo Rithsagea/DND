@@ -3,9 +3,9 @@ package api.rithsagea.dnd.types;
 import java.util.Set;
 import java.util.TreeSet;
 
-import api.rithsagea.dnd.character.UpdateProficiencyEvent.UpdateEquipmentProficiencyEvent;
-import api.rithsagea.dnd.character.UpdateProficiencyEvent.UpdateSavingProficiencyEvent;
-import api.rithsagea.dnd.character.UpdateProficiencyEvent.UpdateSkillProficiencyEvent;
+import api.rithsagea.dnd.character.events.UpdateProficiencyEvent.UpdateEquipmentProficiencyEvent;
+import api.rithsagea.dnd.character.events.UpdateProficiencyEvent.UpdateSavingProficiencyEvent;
+import api.rithsagea.dnd.character.events.UpdateProficiencyEvent.UpdateSkillProficiencyEvent;
 import api.rithsagea.dnd.event.EventHandler;
 import api.rithsagea.dnd.event.Listener;
 import api.rithsagea.dnd.types.enums.Ability;

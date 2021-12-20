@@ -6,16 +6,19 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeSet;
 
-import api.rithsagea.dnd.character.UpdateAbilityEvent.UpdateAbilityModifierEvent;
-import api.rithsagea.dnd.character.UpdateAbilityEvent.UpdateAbilityScoreEvent;
-import api.rithsagea.dnd.character.UpdateAbilityEvent.UpdateSavingThrowEvent;
-import api.rithsagea.dnd.character.UpdateAbilityEvent.UpdateSkillModifierEvent;
-import api.rithsagea.dnd.character.UpdateFieldEvent.UpdateInitiativeEvent;
-import api.rithsagea.dnd.character.UpdateFieldEvent.UpdatePassiveWisdomEvent;
-import api.rithsagea.dnd.character.UpdateFieldEvent.UpdateSpeedEvent;
-import api.rithsagea.dnd.character.UpdateProficiencyEvent.UpdateSavingProficiencyEvent;
-import api.rithsagea.dnd.character.UpdateProficiencyEvent.UpdateEquipmentProficiencyEvent;
-import api.rithsagea.dnd.character.UpdateProficiencyEvent.UpdateSkillProficiencyEvent;
+import api.rithsagea.dnd.character.events.UpdateAbilityEvent;
+import api.rithsagea.dnd.character.events.UpdateFieldEvent;
+import api.rithsagea.dnd.character.events.UpdateProficiencyEvent;
+import api.rithsagea.dnd.character.events.UpdateAbilityEvent.UpdateAbilityModifierEvent;
+import api.rithsagea.dnd.character.events.UpdateAbilityEvent.UpdateAbilityScoreEvent;
+import api.rithsagea.dnd.character.events.UpdateAbilityEvent.UpdateSavingThrowEvent;
+import api.rithsagea.dnd.character.events.UpdateAbilityEvent.UpdateSkillModifierEvent;
+import api.rithsagea.dnd.character.events.UpdateFieldEvent.UpdateInitiativeEvent;
+import api.rithsagea.dnd.character.events.UpdateFieldEvent.UpdatePassiveWisdomEvent;
+import api.rithsagea.dnd.character.events.UpdateFieldEvent.UpdateSpeedEvent;
+import api.rithsagea.dnd.character.events.UpdateProficiencyEvent.UpdateEquipmentProficiencyEvent;
+import api.rithsagea.dnd.character.events.UpdateProficiencyEvent.UpdateSavingProficiencyEvent;
+import api.rithsagea.dnd.character.events.UpdateProficiencyEvent.UpdateSkillProficiencyEvent;
 import api.rithsagea.dnd.event.EventBus;
 import api.rithsagea.dnd.event.EventHandler;
 import api.rithsagea.dnd.event.EventPriority;
@@ -23,6 +26,7 @@ import api.rithsagea.dnd.event.Listener;
 import api.rithsagea.dnd.types.DndRace;
 import api.rithsagea.dnd.types.enums.Ability;
 import api.rithsagea.dnd.types.enums.Alignment;
+import api.rithsagea.dnd.types.enums.Background;
 import api.rithsagea.dnd.types.enums.EquipmentProficiency;
 import api.rithsagea.dnd.types.enums.Skill;
 import api.rithsagea.dnd.types.traits.Trait;
@@ -30,6 +34,9 @@ import api.rithsagea.dnd.util.DataUtil;
 
 public class CharacterSheet implements Listener {
 	
+	// -=-=- Technicals -=-=-
+
+	private CharacterMeta meta;
 	private EventBus eventBus;
 	
 	public CharacterSheet() {
@@ -44,8 +51,13 @@ public class CharacterSheet implements Listener {
 		savingProficiencies = new TreeSet<>();
 		equipmentProficiencies = new TreeSet<>();
 		
+		meta = new CharacterMeta();
 		eventBus = new EventBus();
 		eventBus.registerListener(this);
+	}
+	
+	public CharacterMeta getMeta() {
+		return meta;
 	}
 	
 	public void refreshSheet() {
@@ -57,6 +69,8 @@ public class CharacterSheet implements Listener {
 	// -=-=- Lore -=-=-
 	
 	private String name;
+	private String playerName;
+	private Background background;
 	private Alignment alignment;
 	private boolean inspiration;
 	
@@ -66,6 +80,22 @@ public class CharacterSheet implements Listener {
 	
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public String getPlayerName() {
+		return playerName;
+	}
+	
+	public void setPlayerName(String playerName) {
+		this.playerName = playerName;
+	}
+	
+ 	public Background getBackground() {
+		return background;
+	}
+	
+	public void setBackground(Background background) {
+		this.background = background;
 	}
 	
 	public Alignment getAlignment() {
@@ -124,19 +154,18 @@ public class CharacterSheet implements Listener {
 	@SuppressWarnings("unchecked")
 	@EventHandler(priority = EventPriority.ROOT)
 	public void onUpdateProficiency(UpdateProficiencyEvent<?> e) {
-		if(e.getProficiencies().isEmpty()) return;
-		Enum<?> first = e.getProficiencies().iterator().next();
-		
-		if(first instanceof Ability) {
-			((Set<Ability>) e.getProficiencies()).forEach(this::addProficiency);
-		}
-		
-		if(first instanceof Skill) {
-			((Set<Skill>) e.getProficiencies()).forEach(this::addProficiency);
-		}
-		
-		if(first instanceof EquipmentProficiency) {
-			((Set<EquipmentProficiency>) e.getProficiencies()).forEach(this::addProficiency);
+		for(Enum<?> prof : e.getProficiencies()) {
+			if(prof instanceof Ability) {
+				((Set<Ability>) e.getProficiencies()).forEach(this::addProficiency);
+			}
+			
+			if(prof instanceof Skill) {
+				((Set<Skill>) e.getProficiencies()).forEach(this::addProficiency);
+			}
+			
+			if(prof instanceof EquipmentProficiency) {
+				((Set<EquipmentProficiency>) e.getProficiencies()).forEach(this::addProficiency);
+			}
 		}
 	}
 	
@@ -261,6 +290,23 @@ public class CharacterSheet implements Listener {
 		baseAbilityScores.put(Ability.INTELLIGENCE, intVal);
 		baseAbilityScores.put(Ability.WISDOM, wisVal);
 		baseAbilityScores.put(Ability.CHARISMA, chaVal);
+	}
+	
+	public int getAbilityScore(Ability ability) {
+		return abilityScores.get(ability);
+	}
+	
+	public int getAbilityModifier(Ability ability) {
+		return abilityModifiers.get(ability);
+	}
+	
+	
+	public int getSavingThrow(Ability ability) {
+		return savingThrows.get(ability);
+	}
+	
+	public int getSkillModifier(Skill skill) {
+		return skillModifiers.get(skill);
 	}
 	
 	public int getProficiencyBonus() {

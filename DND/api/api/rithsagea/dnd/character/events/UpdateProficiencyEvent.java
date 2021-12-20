@@ -1,15 +1,17 @@
-package api.rithsagea.dnd.character;
+package api.rithsagea.dnd.character.events;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
+import api.rithsagea.dnd.character.CharacterSheet;
+import api.rithsagea.dnd.types.IndexedItem;
 import api.rithsagea.dnd.types.enums.Ability;
 import api.rithsagea.dnd.types.enums.EquipmentProficiency;
 import api.rithsagea.dnd.types.enums.Skill;
 
-public class UpdateProficiencyEvent<T extends Enum<?>> extends UpdateSheetEvent {
+public class UpdateProficiencyEvent<T extends Enum<?> & IndexedItem> extends UpdateSheetEvent {
 
 	private Set<T> proficiencies;
 	

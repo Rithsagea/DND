@@ -1,4 +1,6 @@
-package api.rithsagea.dnd.character;
+package api.rithsagea.dnd.character.events;
+
+import api.rithsagea.dnd.character.CharacterSheet;
 
 public class UpdateFieldEvent extends UpdateSheetEvent {
 	
@@ -15,6 +17,22 @@ public class UpdateFieldEvent extends UpdateSheetEvent {
 	
 	public void setValue(int value) {
 		this.value = value;
+	}
+	
+	public void add(int value) {
+		this.value += value;
+	}
+	
+	public void multiply(int value) {
+		this.value *= value;
+	}
+	
+	public void min(int value) {
+		this.value = Math.max(value, this.value);
+	}
+	
+	public void max(int value) {
+		this.value = Math.min(value, this.value);
 	}
 	
 	public static class UpdatePassiveWisdomEvent extends UpdateFieldEvent {

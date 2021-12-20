@@ -8,6 +8,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import api.rithsagea.dnd.character.CharacterSheet;
+import api.rithsagea.dnd.types.enums.Ability;
+import api.rithsagea.dnd.types.enums.Skill;
+import api.rithsagea.dnd.types.traits.Trait;
+
 public class TestUtil {
 	
 	private static List<String> serializeObject(Object obj) {
@@ -87,5 +92,58 @@ public class TestUtil {
 		}
 		
 		return null;
+	}
+	
+	public static String format(int num) {
+		return (num <= 0 ? "" : "+") + num;
+	}
+	
+	public static String sheetToString(CharacterSheet sheet) {
+		StringBuilder b = new StringBuilder();
+		b.append("-=-=- Overview -=-=-\n");
+		b.append("Character Name: " + sheet.getName() + "\n");
+		b.append("Class: " + null + "\n");
+		b.append("Background: " + sheet.getBackground() + "\n");
+		b.append("Player Name: " + sheet.getPlayerName() + "\n");
+		b.append("Race: " + sheet.getRace() + "\n");
+		b.append("Alignment: " + sheet.getAlignment() + "\n");
+		b.append("Experience Points: " + sheet.getExperience() + "\n");
+		b.append("Level: " + sheet.getLevel() + "\n");
+		
+		b.append("\n-=-=- Scores -=-=-\n");
+		for(Ability a : Ability.values()) {
+			b.append(a + ": " + sheet.getAbilityScore(a) + " (" + format(sheet.getAbilityModifier(a)) +")\n");
+		}
+		
+		b.append("\n-=-=- Modifiers -=-=-\n");
+		for(Ability a : Ability.values()) {
+			b.append(a + ": " + format(sheet.getSavingThrow(a)) + "\n");
+		}
+		b.append("\n");
+		for(Skill s : Skill.values()) {
+			b.append(s + ": " + format(sheet.getSkillModifier(s)) + "\n");
+		}
+		
+		b.append("\n-=-=- Misc -=-=-\n");
+		b.append("Inspiration: " + sheet.getInspiration() + "\n");
+		b.append("Proficiency Bonus: " + format(sheet.getProficiencyBonus()) + "\n");
+		b.append("Passive Wisdom: " + sheet.getPassiveWisdom() + "\n");
+		b.append("\n");
+		b.append("Armor Class: " + null + "\n");
+		b.append("Initiative: " + format(sheet.getInitiative()) + "\n");
+		b.append("Speed: " + sheet.getSpeed() + "\n");
+		b.append("\n");
+		b.append("Hit Points: " + null + "/" + null + "\n");
+		b.append("Temporary Hit Points: " + null + "\n");
+		b.append("Hit Dice: " + null + "\n");
+		b.append("\n");
+		b.append("Death Saves: " + null + "/" + null + "\n");
+		
+		b.append("\n-=-=- Traits -=-=-\n");
+		for(Trait trait : sheet.getTraits()) {
+			b.append(trait + "\n");
+		}
+		
+		return b.toString();
 	}
 }

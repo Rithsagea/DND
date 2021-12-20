@@ -1,11 +1,13 @@
 package api.rithsagea.dnd.types;
 
 import java.util.Collections;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
-import api.rithsagea.dnd.character.CharacterSheet;
 import api.rithsagea.dnd.event.Listener;
+import api.rithsagea.dnd.types.enums.Ability;
+import api.rithsagea.dnd.types.traits.AbilityScoreIncreaseTrait;
 import api.rithsagea.dnd.types.traits.DescriptionTrait;
 import api.rithsagea.dnd.types.traits.DescriptionTrait.DescriptionType;
 import api.rithsagea.dnd.types.traits.SpeedTrait;
@@ -16,7 +18,7 @@ public class DndRace implements IndexedItem, Listener {
 	private String id;
 	private Set<Trait> traits;
 	
-	public DndRace(String id, int speed) {
+	public DndRace(String id, int speed, Map<Ability, Integer> abilityScores) {
 		this.id = id;
 		traits = new TreeSet<>();
 		
@@ -25,6 +27,7 @@ public class DndRace implements IndexedItem, Listener {
 		addTrait(new DescriptionTrait(this, DescriptionType.SIZE));
 		addTrait(new DescriptionTrait(this, DescriptionType.LANGUAGE));
 		addTrait(new SpeedTrait(this, speed));
+		addTrait(new AbilityScoreIncreaseTrait(this, abilityScores));
 	}
 	
 	protected void addTrait(Trait trait) {

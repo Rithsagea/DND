@@ -54,4 +54,15 @@ public class Tree extends Node {
 		
 		return builder.toString();
 	}
+
+	public static Tree of(Map<?, ?> map) {
+		Tree tree = new Tree();
+		
+		for(Entry<?, ?> entry : map.entrySet()) {
+			//yes, class cast exception, should only pass in string keys
+			tree.set((String) entry.getKey(), Leaf.auto(entry.getKey()));
+		}
+		
+		return tree;
+	}
 }

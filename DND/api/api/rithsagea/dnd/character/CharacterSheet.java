@@ -27,7 +27,7 @@ import api.rithsagea.dnd.types.DndRace;
 import api.rithsagea.dnd.types.enums.Ability;
 import api.rithsagea.dnd.types.enums.Alignment;
 import api.rithsagea.dnd.types.enums.Background;
-import api.rithsagea.dnd.types.enums.EquipmentProficiency;
+import api.rithsagea.dnd.types.enums.Equipment;
 import api.rithsagea.dnd.types.enums.Skill;
 import api.rithsagea.dnd.types.traits.Trait;
 import api.rithsagea.dnd.util.DataUtil;
@@ -149,7 +149,7 @@ public class CharacterSheet implements Listener {
 	
 	private Set<Skill> skillProficiencies;
 	private Set<Ability> savingProficiencies;
-	private Set<EquipmentProficiency> equipmentProficiencies;	
+	private Set<Equipment> equipmentProficiencies;	
 
 	@SuppressWarnings("unchecked")
 	@EventHandler(priority = EventPriority.ROOT)
@@ -163,8 +163,8 @@ public class CharacterSheet implements Listener {
 				((Set<Skill>) e.getProficiencies()).forEach(this::addProficiency);
 			}
 			
-			if(prof instanceof EquipmentProficiency) {
-				((Set<EquipmentProficiency>) e.getProficiencies()).forEach(this::addProficiency);
+			if(prof instanceof Equipment) {
+				((Set<Equipment>) e.getProficiencies()).forEach(this::addProficiency);
 			}
 		}
 	}
@@ -187,7 +187,7 @@ public class CharacterSheet implements Listener {
 		return savingProficiencies.contains(ability);
 	}
 	
-	public boolean hasProficiency(EquipmentProficiency equipment) {
+	public boolean hasProficiency(Equipment equipment) {
 		return equipmentProficiencies.contains(equipment);
 	}
 	
@@ -199,7 +199,7 @@ public class CharacterSheet implements Listener {
 		savingProficiencies.add(ability);
 	}
 	
-	public void addProficiency(EquipmentProficiency equipment) {
+	public void addProficiency(Equipment equipment) {
 		equipmentProficiencies.add(equipment);
 	}
 	

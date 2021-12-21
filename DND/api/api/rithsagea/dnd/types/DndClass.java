@@ -9,7 +9,7 @@ import api.rithsagea.dnd.character.events.UpdateProficiencyEvent.UpdateSkillProf
 import api.rithsagea.dnd.event.EventHandler;
 import api.rithsagea.dnd.event.Listener;
 import api.rithsagea.dnd.types.enums.Ability;
-import api.rithsagea.dnd.types.enums.EquipmentProficiency;
+import api.rithsagea.dnd.types.enums.Equipment;
 import api.rithsagea.dnd.types.enums.Skill;
 
 public class DndClass implements IndexedItem, Listener {
@@ -18,7 +18,7 @@ public class DndClass implements IndexedItem, Listener {
 	
 	private Set<Skill> skillProficiencies;
 	private Set<Ability> savingProficiencies;
-	private Set<EquipmentProficiency> equipmentProficiencies;
+	private Set<Equipment> equipmentProficiencies;
 	
 	public DndClass(String id) {
 		this.id = id;
@@ -36,8 +36,20 @@ public class DndClass implements IndexedItem, Listener {
 		savingProficiencies.add(ability);
 	}
 	
-	protected void addProficiency(EquipmentProficiency equipment) {
+	protected void addProficiency(Equipment equipment) {
 		equipmentProficiencies.add(equipment);
+	}
+	
+	protected void addProficiencies(Skill...skills) {
+		for(Skill skill : skills) addProficiency(skill);
+	}
+	
+	protected void addProficiencies(Ability...abilities) {
+		for(Ability ability : abilities) addProficiency(ability);
+	}
+	
+	protected void addProficiencies(Equipment...equipments) {
+		for(Equipment equip : equipments) addProficiency(equip);
 	}
 	
 	@EventHandler

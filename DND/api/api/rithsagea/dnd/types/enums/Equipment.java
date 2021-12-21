@@ -3,7 +3,7 @@ package api.rithsagea.dnd.types.enums;
 import api.rithsagea.dnd.types.IndexedItem;
 import api.rithsagea.dnd.util.WordUtil;
 
-public enum EquipmentProficiency implements IndexedItem {
+public enum Equipment implements IndexedItem {
 	//Armor
 	ARMOR,
 	SHIELDS,

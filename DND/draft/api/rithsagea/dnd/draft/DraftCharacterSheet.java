@@ -11,6 +11,7 @@ import api.rithsagea.dnd.types.enums.Ability;
 import api.rithsagea.dnd.types.enums.Alignment;
 import api.rithsagea.dnd.types.enums.Background;
 import api.rithsagea.dnd.types.enums.Equipment;
+import api.rithsagea.dnd.types.enums.Size;
 import api.rithsagea.dnd.types.enums.Skill;
 import api.rithsagea.dnd.types.traits.Trait;
 
@@ -24,6 +25,11 @@ public class DraftCharacterSheet {
 	private Background background;
 	private Alignment alignment;
 	private boolean inspiration;
+	
+	private int age;
+	private int height;
+	private int weight;
+	private Size size;
 	
 	private int experiencePoints;
 	private int level;
@@ -47,4 +53,8 @@ public class DraftCharacterSheet {
 	private int passiveWisdom;
 	private int initiative;
 	private int speed;
+	
+	public DraftCharacterSheet() {
+		eventBus = new EventBus();
+	}
 }

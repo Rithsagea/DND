@@ -14,6 +14,7 @@
 	<classpathentry kind="src" path="legacy"/>
 	<classpathentry kind="src" path="api"/>
 	<classpathentry kind="src" path="draft"/>
+	<classpathentry kind="src" path="lib"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>

@@ -14,4 +14,10 @@ public class UpdateSheetEvent implements Event {
 	public CharacterSheet getSheet() {
 		return sheet;
 	}
+	
+	public static class RefreshSheetEvent extends UpdateSheetEvent {
+		public RefreshSheetEvent(CharacterSheet sheet) {
+			super(sheet);
+		}
+	}
 }

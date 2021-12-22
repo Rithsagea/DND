@@ -7,18 +7,19 @@ import java.util.Set;
 import java.util.TreeSet;
 
 import api.rithsagea.dnd.character.events.UpdateAbilityEvent;
-import api.rithsagea.dnd.character.events.UpdateFieldEvent;
-import api.rithsagea.dnd.character.events.UpdateProficiencyEvent;
 import api.rithsagea.dnd.character.events.UpdateAbilityEvent.UpdateAbilityModifierEvent;
 import api.rithsagea.dnd.character.events.UpdateAbilityEvent.UpdateAbilityScoreEvent;
 import api.rithsagea.dnd.character.events.UpdateAbilityEvent.UpdateSavingThrowEvent;
 import api.rithsagea.dnd.character.events.UpdateAbilityEvent.UpdateSkillModifierEvent;
+import api.rithsagea.dnd.character.events.UpdateFieldEvent;
 import api.rithsagea.dnd.character.events.UpdateFieldEvent.UpdateInitiativeEvent;
 import api.rithsagea.dnd.character.events.UpdateFieldEvent.UpdatePassiveWisdomEvent;
 import api.rithsagea.dnd.character.events.UpdateFieldEvent.UpdateSpeedEvent;
+import api.rithsagea.dnd.character.events.UpdateProficiencyEvent;
 import api.rithsagea.dnd.character.events.UpdateProficiencyEvent.UpdateEquipmentProficiencyEvent;
 import api.rithsagea.dnd.character.events.UpdateProficiencyEvent.UpdateSavingProficiencyEvent;
 import api.rithsagea.dnd.character.events.UpdateProficiencyEvent.UpdateSkillProficiencyEvent;
+import api.rithsagea.dnd.character.events.UpdateSheetEvent.RefreshSheetEvent;
 import api.rithsagea.dnd.event.EventBus;
 import api.rithsagea.dnd.event.EventHandler;
 import api.rithsagea.dnd.event.EventPriority;
@@ -61,6 +62,7 @@ public class CharacterSheet implements Listener {
 	}
 	
 	public void refreshSheet() {
+		eventBus.submitEvent(new RefreshSheetEvent(this));
 		calculateLevel();
 		calculateProficiencies();
 		calculateAbilities();
@@ -299,7 +301,6 @@ public class CharacterSheet implements Listener {
 	public int getAbilityModifier(Ability ability) {
 		return abilityModifiers.get(ability);
 	}
-	
 	
 	public int getSavingThrow(Ability ability) {
 		return savingThrows.get(ability);

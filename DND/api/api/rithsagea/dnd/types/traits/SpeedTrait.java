@@ -1,7 +1,8 @@
 package api.rithsagea.dnd.types.traits;
 
+import com.rithsagea.util.event.EventHandler;
+
 import api.rithsagea.dnd.character.events.UpdateFieldEvent.UpdateSpeedEvent;
-import api.rithsagea.dnd.event.EventHandler;
 import api.rithsagea.dnd.types.DndRace;
 
 public class SpeedTrait extends UniqueTrait {

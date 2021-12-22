@@ -1,6 +1,7 @@
 package api.rithsagea.dnd.types.traits;
 
-import api.rithsagea.dnd.event.Listener;
+import com.rithsagea.util.event.Listener;
+
 import api.rithsagea.dnd.types.IndexedItem;
 import api.rithsagea.dnd.types.KeyConstants;
 import api.rithsagea.dnd.util.LanguageManager;

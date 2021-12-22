@@ -1,4 +1,4 @@
-package api.rithsagea.dnd.util.tree;
+package com.rithsagea.util.tree;
 
 public class Leaf<T> extends Node {
 	private T value;

@@ -1,9 +1,9 @@
 package test.rithsagea.dnd;
 
-import api.rithsagea.dnd.event.Event;
-import api.rithsagea.dnd.event.EventBus;
-import api.rithsagea.dnd.event.EventHandler;
-import api.rithsagea.dnd.event.Listener;
+import com.rithsagea.util.event.Event;
+import com.rithsagea.util.event.EventBus;
+import com.rithsagea.util.event.EventHandler;
+import com.rithsagea.util.event.Listener;
 
 public class EventTest {
 	private static class TestListener1 implements Listener {

@@ -1,4 +1,4 @@
-package api.rithsagea.dnd.util.tree;
+package com.rithsagea.util.tree;
 
 import java.util.Map;
 import java.util.Map.Entry;

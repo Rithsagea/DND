@@ -1,7 +1,8 @@
 package com.rithsagea.dnd.classes.fighter;
 
+import com.rithsagea.util.event.EventHandler;
+
 import api.rithsagea.dnd.character.events.UpdateSheetEvent.RefreshSheetEvent;
-import api.rithsagea.dnd.event.EventHandler;
 import api.rithsagea.dnd.types.DndClass;
 import api.rithsagea.dnd.types.enums.Ability;
 import api.rithsagea.dnd.types.enums.Equipment;

@@ -1,4 +1,4 @@
-package api.rithsagea.dnd.event;
+package com.rithsagea.util.event;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

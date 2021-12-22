@@ -1,7 +1,8 @@
 package com.rithsagea.dnd.race.elf;
 
+import com.rithsagea.util.event.EventHandler;
+
 import api.rithsagea.dnd.character.events.UpdateProficiencyEvent.UpdateSkillProficiencyEvent;
-import api.rithsagea.dnd.event.EventHandler;
 import api.rithsagea.dnd.types.enums.Skill;
 import api.rithsagea.dnd.types.traits.Trait;
 

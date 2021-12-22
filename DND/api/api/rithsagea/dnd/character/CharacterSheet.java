@@ -3,6 +3,12 @@ package api.rithsagea.dnd.character;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Map.Entry;
+
+import com.rithsagea.util.event.EventBus;
+import com.rithsagea.util.event.EventHandler;
+import com.rithsagea.util.event.EventPriority;
+import com.rithsagea.util.event.Listener;
+
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -20,10 +26,6 @@ import api.rithsagea.dnd.character.events.UpdateProficiencyEvent.UpdateEquipment
 import api.rithsagea.dnd.character.events.UpdateProficiencyEvent.UpdateSavingProficiencyEvent;
 import api.rithsagea.dnd.character.events.UpdateProficiencyEvent.UpdateSkillProficiencyEvent;
 import api.rithsagea.dnd.character.events.UpdateSheetEvent.RefreshSheetEvent;
-import api.rithsagea.dnd.event.EventBus;
-import api.rithsagea.dnd.event.EventHandler;
-import api.rithsagea.dnd.event.EventPriority;
-import api.rithsagea.dnd.event.Listener;
 import api.rithsagea.dnd.types.DndRace;
 import api.rithsagea.dnd.types.enums.Ability;
 import api.rithsagea.dnd.types.enums.Alignment;

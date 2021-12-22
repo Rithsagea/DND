@@ -1,4 +1,4 @@
-package api.rithsagea.dnd.event;
+package com.rithsagea.util.event;
 
 public class EventPriority {
 	public static final int DEFAULT = 10;

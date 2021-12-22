@@ -1,4 +1,4 @@
-package api.rithsagea.dnd.event;
+package com.rithsagea.util.event;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

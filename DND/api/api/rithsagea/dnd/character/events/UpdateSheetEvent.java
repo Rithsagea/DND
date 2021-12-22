@@ -1,7 +1,8 @@
 package api.rithsagea.dnd.character.events;
 
+import com.rithsagea.util.event.Event;
+
 import api.rithsagea.dnd.character.CharacterSheet;
-import api.rithsagea.dnd.event.Event;
 
 public class UpdateSheetEvent implements Event {
 	

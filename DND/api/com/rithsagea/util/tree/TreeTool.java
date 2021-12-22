@@ -1,4 +1,4 @@
-package api.rithsagea.dnd.util.tree;
+package com.rithsagea.util.tree;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
@@ -6,9 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.TreeMap;
 
-import api.rithsagea.dnd.util.tree.Leaf.ObjectLeaf;
+import com.rithsagea.util.tree.Leaf.ObjectLeaf;
+
+import java.util.TreeMap;
 
 public class TreeTool {
 	public static final String CLASS_FIELD = "$class";

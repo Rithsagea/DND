@@ -1,18 +1,18 @@
-package api.rithsagea.dnd.util.tree;
+package com.rithsagea.util.tree;
 
 import java.util.Collection;
 import java.util.Map;
 
-import api.rithsagea.dnd.util.tree.Leaf.BooleanLeaf;
-import api.rithsagea.dnd.util.tree.Leaf.ByteLeaf;
-import api.rithsagea.dnd.util.tree.Leaf.CharacterLeaf;
-import api.rithsagea.dnd.util.tree.Leaf.DoubleLeaf;
-import api.rithsagea.dnd.util.tree.Leaf.FloatLeaf;
-import api.rithsagea.dnd.util.tree.Leaf.IntegerLeaf;
-import api.rithsagea.dnd.util.tree.Leaf.LongLeaf;
-import api.rithsagea.dnd.util.tree.Leaf.ObjectLeaf;
-import api.rithsagea.dnd.util.tree.Leaf.ShortLeaf;
-import api.rithsagea.dnd.util.tree.Leaf.StringLeaf;
+import com.rithsagea.util.tree.Leaf.BooleanLeaf;
+import com.rithsagea.util.tree.Leaf.ByteLeaf;
+import com.rithsagea.util.tree.Leaf.CharacterLeaf;
+import com.rithsagea.util.tree.Leaf.DoubleLeaf;
+import com.rithsagea.util.tree.Leaf.FloatLeaf;
+import com.rithsagea.util.tree.Leaf.IntegerLeaf;
+import com.rithsagea.util.tree.Leaf.LongLeaf;
+import com.rithsagea.util.tree.Leaf.ObjectLeaf;
+import com.rithsagea.util.tree.Leaf.ShortLeaf;
+import com.rithsagea.util.tree.Leaf.StringLeaf;
 
 public class Node {
 	

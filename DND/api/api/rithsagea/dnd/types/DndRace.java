@@ -5,7 +5,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
-import api.rithsagea.dnd.event.Listener;
+import com.rithsagea.util.event.Listener;
+
 import api.rithsagea.dnd.types.enums.Ability;
 import api.rithsagea.dnd.types.traits.AbilityScoreIncreaseTrait;
 import api.rithsagea.dnd.types.traits.DescriptionTrait;

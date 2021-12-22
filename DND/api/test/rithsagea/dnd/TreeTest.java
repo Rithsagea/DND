@@ -3,8 +3,8 @@ package test.rithsagea.dnd;
 import java.util.ArrayList;
 import java.util.List;
 
-import api.rithsagea.dnd.util.tree.Node;
-import api.rithsagea.dnd.util.tree.TreeTool;
+import com.rithsagea.util.tree.Node;
+import com.rithsagea.util.tree.TreeTool;
 
 public class TreeTest {
 	public static class Foo {

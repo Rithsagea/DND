@@ -2,81 +2,85 @@ package api.rithsagea.dnd.character;
 
 import java.util.Collections;
 import java.util.Map;
-import java.util.Map.Entry;
+import java.util.Set;
 
 import com.rithsagea.util.event.EventBus;
-import com.rithsagea.util.event.EventHandler;
-import com.rithsagea.util.event.EventPriority;
-import com.rithsagea.util.event.Listener;
 
-import java.util.Set;
-import java.util.TreeSet;
-
-import api.rithsagea.dnd.character.events.UpdateAbilityEvent;
-import api.rithsagea.dnd.character.events.UpdateAbilityEvent.UpdateAbilityModifierEvent;
-import api.rithsagea.dnd.character.events.UpdateAbilityEvent.UpdateAbilityScoreEvent;
-import api.rithsagea.dnd.character.events.UpdateAbilityEvent.UpdateSavingThrowEvent;
-import api.rithsagea.dnd.character.events.UpdateAbilityEvent.UpdateSkillModifierEvent;
-import api.rithsagea.dnd.character.events.UpdateFieldEvent;
-import api.rithsagea.dnd.character.events.UpdateFieldEvent.UpdateInitiativeEvent;
-import api.rithsagea.dnd.character.events.UpdateFieldEvent.UpdatePassiveWisdomEvent;
-import api.rithsagea.dnd.character.events.UpdateFieldEvent.UpdateSpeedEvent;
-import api.rithsagea.dnd.character.events.UpdateProficiencyEvent;
-import api.rithsagea.dnd.character.events.UpdateProficiencyEvent.UpdateEquipmentProficiencyEvent;
-import api.rithsagea.dnd.character.events.UpdateProficiencyEvent.UpdateSavingProficiencyEvent;
-import api.rithsagea.dnd.character.events.UpdateProficiencyEvent.UpdateSkillProficiencyEvent;
-import api.rithsagea.dnd.character.events.UpdateSheetEvent.RefreshSheetEvent;
+import api.rithsagea.dnd.meta.Metadata;
+import api.rithsagea.dnd.types.DndClass;
 import api.rithsagea.dnd.types.DndRace;
 import api.rithsagea.dnd.types.enums.Ability;
 import api.rithsagea.dnd.types.enums.Alignment;
 import api.rithsagea.dnd.types.enums.Background;
 import api.rithsagea.dnd.types.enums.Equipment;
+import api.rithsagea.dnd.types.enums.Size;
 import api.rithsagea.dnd.types.enums.Skill;
 import api.rithsagea.dnd.types.traits.Trait;
-import api.rithsagea.dnd.util.DataUtil;
 
-public class CharacterSheet implements Listener {
-	
-	// -=-=- Technicals -=-=-
+public class CharacterSheet {
 
-	private CharacterMeta meta;
 	private EventBus eventBus;
-	
-	public CharacterSheet() {
-		baseAbilityScores = DataUtil.generateDefaultMap(Ability.class, 0);
-		
-		abilityScores = DataUtil.generateDefaultMap(Ability.class, 0);
-		abilityModifiers = DataUtil.generateDefaultMap(Ability.class, 0);
-		savingThrows = DataUtil.generateDefaultMap(Ability.class, 0);
-		skillModifiers = DataUtil.generateDefaultMap(Skill.class, 0);
-		
-		skillProficiencies = new TreeSet<>();
-		savingProficiencies = new TreeSet<>();
-		equipmentProficiencies = new TreeSet<>();
-		
-		meta = new CharacterMeta();
-		eventBus = new EventBus();
-		eventBus.registerListener(this);
-	}
-	
-	public CharacterMeta getMeta() {
-		return meta;
-	}
-	
-	public void refreshSheet() {
-		eventBus.submitEvent(new RefreshSheetEvent(this));
-		calculateLevel();
-		calculateProficiencies();
-		calculateAbilities();
-	}
-	
-	// -=-=- Lore -=-=-
+	private Metadata metadata;
 	
 	private String name;
 	private String playerName;
+	
 	private Background background;
 	private Alignment alignment;
 	private boolean inspiration;
+	
+	private int age;
+	private int height;
+	private int weight;
+	private Size size;
+	
+	private static final int[] EXPERIENCE_TABLE = new int[] {
+			-1, 0, 300, 900, 2700, 6500,
+			14000, 23000, 34000, 48000, 64000,
+			85000, 100000, 120000, 140000, 165000,
+			195000, 225000, 265000, 305000, 355000
+	};
+	
+	private int experiencePoints;
+	private int level;
+	private int proficiencyBonus;
+	
+	private DndRace characterRace;
+	private Set<DndClass> characterClasses; //multiclassing go here
+	
+	private Set<Skill> skillProficiencies;
+	private Set<Ability> savingProficiencies;
+	private Set<Equipment> equipmentProficiencies;	
+
+	private Set<Trait> traits;
+	
+	private Map<Ability, Integer> baseAbilityScores;
+	private Map<Ability, Integer> abilityScores;
+	private Map<Ability, Integer> abilityModifiers;
+	private Map<Ability, Integer> savingThrows;
+	private Map<Skill, Integer> skillModifiers;
+	
+	private int passiveWisdom;
+	private int initiative;
+	private int speed;
+	
+	public CharacterSheet() {
+		eventBus = new EventBus();
+	}
+	
+	public void refresh() {
+		calculateLevel();
+	}
+	
+	public Metadata getMetadata() {
+		return metadata;
+	}
+	
+	private void calculateLevel() {
+		for(level = 1; level < 20 && experiencePoints > EXPERIENCE_TABLE[level]; level++);
+		
+		proficiencyBonus = (int) (Math.ceil(level / 4d + 1));
+	}
 	
 	public String getName() {
 		return name;
@@ -94,7 +98,7 @@ public class CharacterSheet implements Listener {
 		this.playerName = playerName;
 	}
 	
- 	public Background getBackground() {
+	public Background getBackground() {
 		return background;
 	}
 	
@@ -109,7 +113,7 @@ public class CharacterSheet implements Listener {
 	public void setAlignment(Alignment alignment) {
 		this.alignment = alignment;
 	}
-	
+
 	public boolean getInspiration() {
 		return inspiration;
 	}
@@ -118,253 +122,75 @@ public class CharacterSheet implements Listener {
 		this.inspiration = inspiration;
 	}
 	
-	// -=-=- Leveling -=-=-
+	public int getAge() {
+		return age;
+	}
 	
-	private static final int[] EXPERIENCE_TABLE = new int[] {
-			-1, 0, 300, 900, 2700, 6500,
-			14000, 23000, 34000, 48000, 64000,
-			85000, 100000, 120000, 140000, 165000,
-			195000, 225000, 265000, 305000, 355000
-	};
+	public void setAge(int age) {
+		this.age = age;
+	}
 	
-	private int experience;
-	private int level;
-	private int proficiencyBonus;
+	public int getHeight() {
+		return height;
+	}
 	
-	private void calculateLevel() {
-		for(level = 1; level < 20 && experience > EXPERIENCE_TABLE[level]; level++);
-		
-		proficiencyBonus = (int) (Math.ceil(level / 4d + 1));
+	public void setHeight(int height) {
+		this.height = height;
+	}
+	
+	public int getWeight() {
+		return weight;
+	}
+	
+	public void setWeight(int weight) {
+		this.weight = weight;
+	}
+	
+	public Size getSize() {
+		return size;
+	}
+	
+	public void setSize(Size size) {
+		this.size = size;
 	}
 	
 	public void setExperience(int experience) {
-		this.experience = experience;
+		this.experiencePoints = experience;
 	}
 	
 	public int getExperience() {
-		return experience;
+		return experiencePoints;
 	}
 	
 	public int getLevel() {
 		return level;
 	}
 	
-	// -=-=- Proficiencies -=-=-
-	
-	private Set<Skill> skillProficiencies;
-	private Set<Ability> savingProficiencies;
-	private Set<Equipment> equipmentProficiencies;	
-
-	@SuppressWarnings("unchecked")
-	@EventHandler(priority = EventPriority.ROOT)
-	public void onUpdateProficiency(UpdateProficiencyEvent<?> e) {
-		for(Enum<?> prof : e.getProficiencies()) {
-			if(prof instanceof Ability) {
-				((Set<Ability>) e.getProficiencies()).forEach(this::addProficiency);
-			}
-			
-			if(prof instanceof Skill) {
-				((Set<Skill>) e.getProficiencies()).forEach(this::addProficiency);
-			}
-			
-			if(prof instanceof Equipment) {
-				((Set<Equipment>) e.getProficiencies()).forEach(this::addProficiency);
-			}
-		}
-	}
-	
-	private void calculateProficiencies() {
-		skillProficiencies.clear();
-		savingProficiencies.clear();
-		equipmentProficiencies.clear();
-		
-		eventBus.submitEvent(new UpdateSkillProficiencyEvent(this));
-		eventBus.submitEvent(new UpdateSavingProficiencyEvent(this));
-		eventBus.submitEvent(new UpdateEquipmentProficiencyEvent(this));
-	}
-	
-	public boolean hasProficiency(Skill skill) {
-		return skillProficiencies.contains(skill);
-	}
-	
-	public boolean hasProficiency(Ability ability) {
-		return savingProficiencies.contains(ability);
-	}
-	
-	public boolean hasProficiency(Equipment equipment) {
-		return equipmentProficiencies.contains(equipment);
-	}
-	
-	public void addProficiency(Skill skill) {
-		skillProficiencies.add(skill);
-	}
-	
-	public void addProficiency(Ability ability) {
-		savingProficiencies.add(ability);
-	}
-	
-	public void addProficiency(Equipment equipment) {
-		equipmentProficiencies.add(equipment);
-	}
-	
-	// -=-=- Ability Scores -=-=-
-	
-	private Map<Ability, Integer> baseAbilityScores;
-	
-	private Map<Ability, Integer> abilityScores;
-	private Map<Ability, Integer> abilityModifiers;
-	private Map<Ability, Integer> savingThrows;
-	private Map<Skill, Integer> skillModifiers;
-	
-	private int passiveWisdom;
-	private int initiative;
-	private int speed;
-	
-	@EventHandler(priority = EventPriority.ROOT)
-	public void onUpdateAbility(UpdateAbilityEvent e) {
-		if(e instanceof UpdateAbilityScoreEvent) {
-			abilityScores.put(e.getAbility(), e.getValue());
-		}
-		
-		if(e instanceof UpdateAbilityModifierEvent) {
-			abilityModifiers.put(e.getAbility(), e.getValue());
-		}
-		
-		if(e instanceof UpdateSavingThrowEvent) {
-			savingThrows.put(e.getAbility(), e.getValue()
-					+ (hasProficiency(e.getAbility()) ? proficiencyBonus : 0));
-		}
-		
-		if(e instanceof UpdateSkillModifierEvent) {
-			Skill s = ((UpdateSkillModifierEvent) e).getSkill();
-			skillModifiers.put(s, e.getValue()
-					+ (hasProficiency(s) ? proficiencyBonus : 0));
-		}
-	}
-	
-	@EventHandler(priority = EventPriority.ROOT)
-	public void onUpdateField(UpdateFieldEvent e) {
-		if(e instanceof UpdatePassiveWisdomEvent) {
-			passiveWisdom = e.getValue();
-		}
-		
-		if(e instanceof UpdateInitiativeEvent) {
-			initiative = e.getValue();
-		}
-		
-		if(e instanceof UpdateSpeedEvent) {
-			speed = e.getValue();
-		}
-	}
-	
-	private void calculateAbilities() {		
-		for(Entry<Ability, Integer> entry : baseAbilityScores.entrySet()) {
-			eventBus.submitEvent(new UpdateAbilityScoreEvent(this, entry.getKey(), entry.getValue()));
-		}
-		
-		for(Ability ability : Ability.values()) {
-			eventBus.submitEvent(new UpdateAbilityModifierEvent(this, ability, (abilityScores.get(ability) - 10) / 2));
-		}
-		
-		for(Ability ability : Ability.values()) {
-			eventBus.submitEvent(new UpdateSavingThrowEvent(this, ability, abilityModifiers.get(ability)));
-		}
-		
-		for(Skill skill : Skill.values()) {
-			eventBus.submitEvent(new UpdateSkillModifierEvent(this, skill, abilityModifiers.get(skill.getAbility())));
-		}
-		
-		eventBus.submitEvent(new UpdatePassiveWisdomEvent(this, 10 + skillModifiers.get(Skill.PERCEPTION)));
-		eventBus.submitEvent(new UpdateInitiativeEvent(this, abilityModifiers.get(Ability.DEXTERITY)));
-		eventBus.submitEvent(new UpdateSpeedEvent(this, 30));
-	}
-	
-	public int getBaseAbilityScore(Ability ability) {
-		return baseAbilityScores.get(ability);
-	}
-	
-	public void setBaseAbilityScore(Ability ability, int value) {
-		baseAbilityScores.put(ability, value);
-	}
-	
-	public void setBaseAbilityScores(int strVal, int dexVal, int conVal, int intVal, int wisVal, int chaVal) {
-		baseAbilityScores.put(Ability.STRENGTH, strVal);
-		baseAbilityScores.put(Ability.DEXTERITY, dexVal);
-		baseAbilityScores.put(Ability.CONSTITUTION, conVal);
-		baseAbilityScores.put(Ability.INTELLIGENCE, intVal);
-		baseAbilityScores.put(Ability.WISDOM, wisVal);
-		baseAbilityScores.put(Ability.CHARISMA, chaVal);
-	}
-	
-	public int getAbilityScore(Ability ability) {
-		return abilityScores.get(ability);
-	}
-	
-	public int getAbilityModifier(Ability ability) {
-		return abilityModifiers.get(ability);
-	}
-	
-	public int getSavingThrow(Ability ability) {
-		return savingThrows.get(ability);
-	}
-	
-	public int getSkillModifier(Skill skill) {
-		return skillModifiers.get(skill);
-	}
-	
 	public int getProficiencyBonus() {
 		return proficiencyBonus;
 	}
-	
-	public int getPassiveWisdom() {
-		return passiveWisdom;
-	}
-	
-	public int getInitiative() {
-		return initiative;
-	}
 
-	public int getSpeed() {
-		return speed;
+	public DndRace getRace() {
+		return characterRace;
 	}
-	
-	// -=-=- Misc -=-=-
-	
-	
-	// -=-=- Races -=-=-
-	
-	private DndRace race;
 	
 	public void setRace(DndRace race) {
-		if(this.race != null) {
-			this.race.getTraits().forEach(this::removeTrait);
-			eventBus.unregisterListener(this.race);
-		}
-			
-		this.race = race;
-		eventBus.registerListener(race);
-		race.getTraits().forEach(this::addTrait);
+		
 	}
 	
-	public DndRace getRace() {
-		return race;
+	public Set<DndClass> getClasses() {
+		return Collections.unmodifiableSet(characterClasses);
 	}
 	
-	// -=-=- Traits -=-=-
-	
-	private Set<Trait> traits = new TreeSet<Trait>();
-	
-	private void addTrait(Trait trait) {
-		traits.add(trait);
-		eventBus.registerListener(trait);
+	public void addClass(DndClass c) {
+		characterClasses.add(c);
 	}
 	
-	private void removeTrait(Trait trait) {
-		traits.remove(trait);
-		eventBus.unregisterListener(trait);
-	}
-	
-	public Set<Trait> getTraits() {
-		return Collections.unmodifiableSet(traits);
+	/**
+	 * For convenience only
+	 * @param c the class to remove
+	 */
+	public void removeClass(DndClass c) {
+		characterClasses.remove(c);
 	}
 }

@@ -34,22 +34,4 @@ public class UpdateFieldEvent extends UpdateSheetEvent {
 	public void max(int value) {
 		this.value = Math.min(value, this.value);
 	}
-	
-	public static class UpdatePassiveWisdomEvent extends UpdateFieldEvent {
-		public UpdatePassiveWisdomEvent(CharacterSheet sheet, int value) {
-			super(sheet, value);
-		}
-	}
-	
-	public static class UpdateInitiativeEvent extends UpdateFieldEvent {
-		public UpdateInitiativeEvent(CharacterSheet sheet, int value) {
-			super(sheet, value);
-		}
-	}
-	
-	public static class UpdateSpeedEvent extends UpdateFieldEvent {
-		public UpdateSpeedEvent(CharacterSheet sheet, int value) {
-			super(sheet, value);
-		}
-	}
 }

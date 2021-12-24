@@ -5,8 +5,17 @@ import java.util.Map;
 import java.util.Set;
 
 import com.rithsagea.util.event.EventBus;
+import com.rithsagea.util.event.EventHandler;
+import com.rithsagea.util.event.EventPriority;
+import com.rithsagea.util.event.Listener;
 
-import api.rithsagea.dnd.meta.Metadata;
+import api.rithsagea.dnd.character.events.values.UpdateAbilityModifierEvent;
+import api.rithsagea.dnd.character.events.values.UpdateAbilityScoreEvent;
+import api.rithsagea.dnd.character.events.values.UpdateArmorClassEvent;
+import api.rithsagea.dnd.character.events.values.UpdateInitiativeEvent;
+import api.rithsagea.dnd.character.events.values.UpdatePassiveWisdomEvent;
+import api.rithsagea.dnd.character.events.values.UpdateSavingThrowEvent;
+import api.rithsagea.dnd.character.events.values.UpdateSkillModifierEvent;
 import api.rithsagea.dnd.types.DndClass;
 import api.rithsagea.dnd.types.DndRace;
 import api.rithsagea.dnd.types.enums.Ability;
@@ -16,13 +25,13 @@ import api.rithsagea.dnd.types.enums.Equipment;
 import api.rithsagea.dnd.types.enums.Size;
 import api.rithsagea.dnd.types.enums.Skill;
 import api.rithsagea.dnd.types.traits.Trait;
+import api.rithsagea.dnd.util.DataUtil;
 
-public class CharacterSheet {
+public class CharacterSheet implements Listener {
 
 	private EventBus eventBus;
-	private Metadata metadata;
 	
-	private String name;
+	private String characterName;
 	private String playerName;
 	
 	private Background background;
@@ -50,8 +59,7 @@ public class CharacterSheet {
 	
 	private Set<Skill> skillProficiencies;
 	private Set<Ability> savingProficiencies;
-	private Set<Equipment> equipmentProficiencies;	
-
+	
 	private Set<Trait> traits;
 	
 	private Map<Ability, Integer> baseAbilityScores;
@@ -62,18 +70,26 @@ public class CharacterSheet {
 	
 	private int passiveWisdom;
 	private int initiative;
+	private int armorClass;
 	private int speed;
 	
 	public CharacterSheet() {
+		baseAbilityScores = DataUtil.generateDefaultMap(Ability.class, 0);
+		abilityScores = DataUtil.generateDefaultMap(Ability.class, 0);
+		abilityModifiers = DataUtil.generateDefaultMap(Ability.class, 0);
+		savingThrows = DataUtil.generateDefaultMap(Ability.class, 0);
+		skillModifiers = DataUtil.generateDefaultMap(Skill.class, 0);
+		
 		eventBus = new EventBus();
+		eventBus.registerListener(this);
+		
+		speed = 30; //TODO set this when configuring race instead
 	}
 	
 	public void refresh() {
 		calculateLevel();
-	}
-	
-	public Metadata getMetadata() {
-		return metadata;
+		//proficiencies
+		calculateAbilityScores();
 	}
 	
 	private void calculateLevel() {
@@ -82,12 +98,81 @@ public class CharacterSheet {
 		proficiencyBonus = (int) (Math.ceil(level / 4d + 1));
 	}
 	
-	public String getName() {
-		return name;
+	//////////////////////////
+	/// ABILITY SCORE CALC ///
+	//////////////////////////
+	
+	@EventHandler(priority = EventPriority.ROOT)
+	public void onUpdateAbilityScore(UpdateAbilityScoreEvent e) {
+		abilityScores.put(e.getAbility(), e.getValue());
+	}
+	
+	@EventHandler(priority = EventPriority.ROOT)
+	public void onUpdateAbilityModifier(UpdateAbilityModifierEvent e) {
+		abilityModifiers.put(e.getAbility(), e.getValue());
+	}
+	
+	@EventHandler(priority = EventPriority.ROOT)
+	public void onUpdateSavingThrow(UpdateSavingThrowEvent e) {
+		savingThrows.put(e.getAbility(), e.getValue());
+	}
+	
+	@EventHandler(priority = EventPriority.ROOT)
+	public void onUpdateSkillModifier(UpdateSkillModifierEvent e) {
+		skillModifiers.put(e.getSkill(), e.getValue());
+	}
+	
+	@EventHandler(priority = EventPriority.ROOT)
+	public void onUpdatePassiveWisdom(UpdatePassiveWisdomEvent e) {
+		passiveWisdom = e.getValue();
+	}
+	
+	@EventHandler(priority = EventPriority.ROOT)
+	public void onUpdateInitiative(UpdateInitiativeEvent e) {
+		initiative = e.getValue();
+	}
+	
+	@EventHandler(priority = EventPriority.ROOT)
+	public void onUpdateArmorClass(UpdateArmorClassEvent e) {
+		armorClass = e.getValue();
+	}
+	
+	private void calculateAbilityScores() {
+		for(Ability ability : Ability.values()) {
+			eventBus.submitEvent(new UpdateAbilityScoreEvent(this, ability, 
+					baseAbilityScores.get(ability)));
+		}
+		
+		for(Ability ability : Ability.values()) {
+			eventBus.submitEvent(new UpdateAbilityModifierEvent(this, ability,
+					(abilityScores.get(ability) - 10) / 2));
+		}
+		
+		for(Ability ability : Ability.values()) {
+			eventBus.submitEvent(new UpdateSavingThrowEvent(this, ability,
+					abilityModifiers.get(ability)));
+		}
+		
+		for(Skill skill : Skill.values()) {
+			eventBus.submitEvent(new UpdateSkillModifierEvent(this, skill,
+					abilityModifiers.get(skill.getAbility())));
+		}
+		
+		eventBus.submitEvent(new UpdatePassiveWisdomEvent(this, 10 + skillModifiers.get(Skill.PERCEPTION)));
+		eventBus.submitEvent(new UpdateInitiativeEvent(this, abilityModifiers.get(Ability.DEXTERITY)));
+		eventBus.submitEvent(new UpdateArmorClassEvent(this, 10 + abilityModifiers.get(Ability.DEXTERITY)));
+	}
+	
+	//////////////////////////////
+	/// MUTATORS AND ACCESSORS ///
+	//////////////////////////////
+	
+	public String getCharacterName() {
+		return characterName;
 	}
 	
 	public void setName(String name) {
-		this.name = name;
+		this.characterName = name;
 	}
 	
 	public String getPlayerName() {
@@ -192,5 +277,55 @@ public class CharacterSheet {
 	 */
 	public void removeClass(DndClass c) {
 		characterClasses.remove(c);
+	}
+
+	public void setBaseAbilityScore(Ability ability, int val) {
+		baseAbilityScores.put(ability, val);
+	}
+	
+	public void setBaseAbilityScores(int strVal, int dexVal, int conVal,
+									int intVal, int wisVal, int chaVal) {
+		setBaseAbilityScore(Ability.STRENGTH, strVal);
+		setBaseAbilityScore(Ability.DEXTERITY, dexVal);
+		setBaseAbilityScore(Ability.CONSTITUTION, conVal);
+		setBaseAbilityScore(Ability.INTELLIGENCE, intVal);
+		setBaseAbilityScore(Ability.WISDOM, wisVal);
+		setBaseAbilityScore(Ability.CHARISMA, chaVal);
+	}
+	
+	public int getBaseAbilityScore(Ability ability) {
+		return baseAbilityScores.get(ability);
+	}
+	
+	public int getAbilityScore(Ability ability) {
+		return abilityScores.get(ability);
+	}
+	
+	public int getAbilityModifier(Ability ability) {
+		return abilityModifiers.get(ability);
+	}
+	
+	public int getSavingThrow(Ability ability) {
+		return savingThrows.get(ability);
+	}
+	
+	public int getSkillModifier(Skill skill) {
+		return skillModifiers.get(skill);
+	}
+
+	public int getPassiveWisdom() {
+		return passiveWisdom;
+	}
+	
+	public int getInitiative() {
+		return initiative;
+	}
+	
+	public int getArmorClass() {
+		return armorClass;
+	}
+	
+	public int getSpeed() {
+		return speed;
 	}
 }

@@ -6,7 +6,7 @@ import java.util.TreeMap;
 
 import com.rithsagea.util.event.EventHandler;
 
-import api.rithsagea.dnd.character.events.UpdateAbilityEvent.UpdateAbilityScoreEvent;
+import api.rithsagea.dnd.character.events.values.UpdateAbilityScoreEvent;
 import api.rithsagea.dnd.types.DndRace;
 import api.rithsagea.dnd.types.enums.Ability;
 

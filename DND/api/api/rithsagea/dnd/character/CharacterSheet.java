@@ -21,7 +21,6 @@ import api.rithsagea.dnd.types.DndRace;
 import api.rithsagea.dnd.types.enums.Ability;
 import api.rithsagea.dnd.types.enums.Alignment;
 import api.rithsagea.dnd.types.enums.Background;
-import api.rithsagea.dnd.types.enums.Equipment;
 import api.rithsagea.dnd.types.enums.Size;
 import api.rithsagea.dnd.types.enums.Skill;
 import api.rithsagea.dnd.types.traits.Trait;
@@ -55,7 +54,7 @@ public class CharacterSheet implements Listener {
 	private int proficiencyBonus;
 	
 	private DndRace characterRace;
-	private Set<DndClass> characterClasses; //multiclassing go here
+	private Set<CharacterClass> characterClasses; //multiclassing go here
 	
 	private Set<Skill> skillProficiencies;
 	private Set<Ability> savingProficiencies;
@@ -167,6 +166,8 @@ public class CharacterSheet implements Listener {
 	/// MUTATORS AND ACCESSORS ///
 	//////////////////////////////
 	
+	//OVERVIEW
+	
 	public String getCharacterName() {
 		return characterName;
 	}
@@ -239,6 +240,8 @@ public class CharacterSheet implements Listener {
 		this.size = size;
 	}
 	
+	//LEVEL
+	
 	public void setExperience(int experience) {
 		this.experiencePoints = experience;
 	}
@@ -255,6 +258,8 @@ public class CharacterSheet implements Listener {
 		return proficiencyBonus;
 	}
 
+	//PROFILE
+	
 	public DndRace getRace() {
 		return characterRace;
 	}
@@ -263,22 +268,33 @@ public class CharacterSheet implements Listener {
 		
 	}
 	
-	public Set<DndClass> getClasses() {
+	public Set<CharacterClass> getClasses() {
 		return Collections.unmodifiableSet(characterClasses);
 	}
 	
 	public void addClass(DndClass c) {
-		characterClasses.add(c);
+		characterClasses.add(new CharacterClass(c));
 	}
 	
 	/**
 	 * For convenience only
 	 * @param c the class to remove
 	 */
-	public void removeClass(DndClass c) {
+	public void removeClass(CharacterClass c) {
 		characterClasses.remove(c);
 	}
 
+	//PROFICIENCIES
+	public boolean hasSkillProficiency(Skill skill) {
+		return skillProficiencies.contains(skill);
+	}
+	
+	public boolean hasSavingProficiency(Ability ability) {
+		return savingProficiencies.contains(ability);
+	}
+	
+	//ABILITY SCORES
+	
 	public void setBaseAbilityScore(Ability ability, int val) {
 		baseAbilityScores.put(ability, val);
 	}
@@ -313,6 +329,8 @@ public class CharacterSheet implements Listener {
 		return skillModifiers.get(skill);
 	}
 
+	//MISC VALUES
+	
 	public int getPassiveWisdom() {
 		return passiveWisdom;
 	}

@@ -9,9 +9,9 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import api.rithsagea.dnd.character.CharacterSheet;
+import api.rithsagea.dnd.types.aspects.Trait;
 import api.rithsagea.dnd.types.enums.Ability;
 import api.rithsagea.dnd.types.enums.Skill;
-import api.rithsagea.dnd.types.traits.Trait;
 
 public class TestUtil {
 	

@@ -2,8 +2,8 @@ package test.rithsagea.dnd;
 
 import java.util.Arrays;
 
+import api.rithsagea.dnd.types.LanguageManager;
 import api.rithsagea.dnd.types.enums.Background;
-import api.rithsagea.dnd.util.LanguageManager;
 
 public class LanguageTest {
 	public static void main(String[] args) {

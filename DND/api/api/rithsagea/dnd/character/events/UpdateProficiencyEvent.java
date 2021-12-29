@@ -7,9 +7,6 @@ import java.util.Set;
 
 import api.rithsagea.dnd.character.CharacterSheet;
 import api.rithsagea.dnd.types.IndexedItem;
-import api.rithsagea.dnd.types.enums.Ability;
-import api.rithsagea.dnd.types.enums.Equipment;
-import api.rithsagea.dnd.types.enums.Skill;
 
 public class UpdateProficiencyEvent<T extends Enum<?> & IndexedItem> extends UpdateSheetEvent {
 
@@ -44,23 +41,5 @@ public class UpdateProficiencyEvent<T extends Enum<?> & IndexedItem> extends Upd
 	
 	public final Set<T> getProficiencies() {
 		return Collections.unmodifiableSet(proficiencies);
-	}
-	
-	public static class UpdateSkillProficiencyEvent extends UpdateProficiencyEvent<Skill> {
-		public UpdateSkillProficiencyEvent(CharacterSheet sheet) {
-			super(sheet);
-		}
-	}
-	
-	public static class UpdateSavingProficiencyEvent extends UpdateProficiencyEvent<Ability> {
-		public UpdateSavingProficiencyEvent(CharacterSheet sheet) {
-			super(sheet);
-		}
-	}
-	
-	public static class UpdateEquipmentProficiencyEvent extends UpdateProficiencyEvent<Equipment> {
-		public UpdateEquipmentProficiencyEvent(CharacterSheet sheet) {
-			super(sheet);
-		}
 	}
 }

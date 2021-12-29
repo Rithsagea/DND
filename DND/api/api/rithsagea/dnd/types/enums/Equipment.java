@@ -1,7 +1,8 @@
 package api.rithsagea.dnd.types.enums;
 
+import com.rithsagea.util.WordUtil;
+
 import api.rithsagea.dnd.types.IndexedItem;
-import api.rithsagea.dnd.util.WordUtil;
 
 public enum Equipment implements IndexedItem {
 	//Armor

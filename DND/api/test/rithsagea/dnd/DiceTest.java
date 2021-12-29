@@ -2,8 +2,8 @@ package test.rithsagea.dnd;
 
 import java.util.Random;
 
-import api.rithsagea.dnd.dice.Dice;
-import api.rithsagea.dnd.dice.Roll;
+import com.rithsagea.util.dice.Dice;
+import com.rithsagea.util.dice.Roll;
 
 public class DiceTest {
 	public static void main(String[] args) {

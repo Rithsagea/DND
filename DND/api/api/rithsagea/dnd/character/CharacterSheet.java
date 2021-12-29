@@ -1,34 +1,42 @@
 package api.rithsagea.dnd.character;
 
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
+import com.rithsagea.util.DataUtil;
 import com.rithsagea.util.event.EventBus;
 import com.rithsagea.util.event.EventHandler;
 import com.rithsagea.util.event.EventPriority;
 import com.rithsagea.util.event.Listener;
 
-import api.rithsagea.dnd.character.events.values.UpdateAbilityModifierEvent;
-import api.rithsagea.dnd.character.events.values.UpdateAbilityScoreEvent;
-import api.rithsagea.dnd.character.events.values.UpdateArmorClassEvent;
-import api.rithsagea.dnd.character.events.values.UpdateInitiativeEvent;
-import api.rithsagea.dnd.character.events.values.UpdatePassiveWisdomEvent;
-import api.rithsagea.dnd.character.events.values.UpdateSavingThrowEvent;
-import api.rithsagea.dnd.character.events.values.UpdateSkillModifierEvent;
-import api.rithsagea.dnd.types.DndClass;
+import api.rithsagea.dnd.character.events.update.UpdateAbilityModifierEvent;
+import api.rithsagea.dnd.character.events.update.UpdateAbilityScoreEvent;
+import api.rithsagea.dnd.character.events.update.UpdateArmorClassEvent;
+import api.rithsagea.dnd.character.events.update.UpdateInitiativeEvent;
+import api.rithsagea.dnd.character.events.update.UpdatePassiveWisdomEvent;
+import api.rithsagea.dnd.character.events.update.UpdateSavingProficiencyEvent;
+import api.rithsagea.dnd.character.events.update.UpdateSavingThrowEvent;
+import api.rithsagea.dnd.character.events.update.UpdateSkillModifierEvent;
+import api.rithsagea.dnd.character.events.update.UpdateSkillProficiencyEvent;
+import api.rithsagea.dnd.character.events.update.UpdateSpeedEvent;
+import api.rithsagea.dnd.types.AbstractClass;
+import api.rithsagea.dnd.types.AbstractRace;
 import api.rithsagea.dnd.types.DndRace;
 import api.rithsagea.dnd.types.enums.Ability;
 import api.rithsagea.dnd.types.enums.Alignment;
 import api.rithsagea.dnd.types.enums.Background;
 import api.rithsagea.dnd.types.enums.Size;
 import api.rithsagea.dnd.types.enums.Skill;
-import api.rithsagea.dnd.types.traits.Trait;
-import api.rithsagea.dnd.util.DataUtil;
+import api.rithsagea.dnd.util.options.CharacterChoice;
 
 public class CharacterSheet implements Listener {
 
 	private EventBus eventBus;
+	private Map<String, CharacterChoice> choices;
 	
 	private String characterName;
 	private String playerName;
@@ -59,8 +67,6 @@ public class CharacterSheet implements Listener {
 	private Set<Skill> skillProficiencies;
 	private Set<Ability> savingProficiencies;
 	
-	private Set<Trait> traits;
-	
 	private Map<Ability, Integer> baseAbilityScores;
 	private Map<Ability, Integer> abilityScores;
 	private Map<Ability, Integer> abilityModifiers;
@@ -73,11 +79,18 @@ public class CharacterSheet implements Listener {
 	private int speed;
 	
 	public CharacterSheet() {
+		characterClasses = new HashSet<>();
+		
+		skillProficiencies = new TreeSet<>();
+		savingProficiencies = new TreeSet<>();
+		
 		baseAbilityScores = DataUtil.generateDefaultMap(Ability.class, 0);
 		abilityScores = DataUtil.generateDefaultMap(Ability.class, 0);
 		abilityModifiers = DataUtil.generateDefaultMap(Ability.class, 0);
 		savingThrows = DataUtil.generateDefaultMap(Ability.class, 0);
 		skillModifiers = DataUtil.generateDefaultMap(Skill.class, 0);
+		
+		choices = new TreeMap<>();
 		
 		eventBus = new EventBus();
 		eventBus.registerListener(this);
@@ -87,7 +100,7 @@ public class CharacterSheet implements Listener {
 	
 	public void refresh() {
 		calculateLevel();
-		//proficiencies
+		calculateProficiencies();
 		calculateAbilityScores();
 	}
 	
@@ -95,6 +108,27 @@ public class CharacterSheet implements Listener {
 		for(level = 1; level < 20 && experiencePoints > EXPERIENCE_TABLE[level]; level++);
 		
 		proficiencyBonus = (int) (Math.ceil(level / 4d + 1));
+	}
+	
+	////////////////////////
+	/// PROFICIENCY CALC ///
+	////////////////////////
+	
+	@EventHandler(priority = EventPriority.ROOT)
+	public void onUpdateSavingProficiency(UpdateSavingProficiencyEvent e) {
+		savingProficiencies.clear();
+		savingProficiencies.addAll(e.getProficiencies());
+	}
+	
+	@EventHandler(priority = EventPriority.ROOT)
+	public void onUpdateSkillProficiency(UpdateSkillProficiencyEvent e) {
+		skillProficiencies.clear();
+		skillProficiencies.addAll(e.getProficiencies());
+	}
+	
+	private void calculateProficiencies() {
+		eventBus.submitEvent(new UpdateSavingProficiencyEvent(this));
+		eventBus.submitEvent(new UpdateSkillProficiencyEvent(this));
 	}
 	
 	//////////////////////////
@@ -134,6 +168,11 @@ public class CharacterSheet implements Listener {
 	@EventHandler(priority = EventPriority.ROOT)
 	public void onUpdateArmorClass(UpdateArmorClassEvent e) {
 		armorClass = e.getValue();
+	}
+	
+	@EventHandler(priority = EventPriority.ROOT)
+	public void onUpdateSpeed(UpdateSpeedEvent e) {
+		speed = e.getValue();
 	}
 	
 	private void calculateAbilityScores() {
@@ -260,11 +299,11 @@ public class CharacterSheet implements Listener {
 
 	//PROFILE
 	
-	public DndRace getRace() {
+	public AbstractRace getRace() {
 		return characterRace;
 	}
 	
-	public void setRace(DndRace race) {
+	public void setRace(AbstractRace race) {
 		
 	}
 	
@@ -272,7 +311,15 @@ public class CharacterSheet implements Listener {
 		return Collections.unmodifiableSet(characterClasses);
 	}
 	
-	public void addClass(DndClass c) {
+	public CharacterClass getClassData(AbstractClass clazz) {
+		for(CharacterClass c : characterClasses)
+			if(c.getClassType().equals(clazz))
+				return c;
+		
+		return null;
+	}
+	
+	public void addClass(AbstractClass c) {
 		characterClasses.add(new CharacterClass(c));
 	}
 	
@@ -285,6 +332,7 @@ public class CharacterSheet implements Listener {
 	}
 
 	//PROFICIENCIES
+	
 	public boolean hasSkillProficiency(Skill skill) {
 		return skillProficiencies.contains(skill);
 	}
@@ -345,5 +393,10 @@ public class CharacterSheet implements Listener {
 	
 	public int getSpeed() {
 		return speed;
+	}
+
+	//CHOICES (FOR BACKEND)
+	public CharacterChoice getChoice(String key) {
+		return choices.get(key);
 	}
 }

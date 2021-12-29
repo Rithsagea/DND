@@ -1,10 +1,10 @@
-package api.rithsagea.dnd.character;
+package api.rithsagea.dnd.types.aspects;
 
 import com.rithsagea.util.event.Listener;
 
 import api.rithsagea.dnd.types.IndexedItem;
 import api.rithsagea.dnd.types.KeyConstants;
-import api.rithsagea.dnd.util.LanguageManager;
+import api.rithsagea.dnd.types.LanguageManager;
 
 public abstract class Aspect implements IndexedItem, Listener, Comparable<Aspect> {
 	

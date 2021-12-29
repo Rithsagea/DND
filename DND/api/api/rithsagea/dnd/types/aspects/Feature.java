@@ -1,6 +1,4 @@
-package api.rithsagea.dnd.features;
-
-import api.rithsagea.dnd.character.Aspect;
+package api.rithsagea.dnd.types.aspects;
 
 public abstract class Feature extends Aspect {
 	

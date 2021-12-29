@@ -1,4 +1,4 @@
-package api.rithsagea.dnd.dice;
+package com.rithsagea.util.dice;
 
 import java.util.ArrayList;
 import java.util.List;

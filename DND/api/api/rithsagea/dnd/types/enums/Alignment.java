@@ -1,9 +1,10 @@
 package api.rithsagea.dnd.types.enums;
 
+import com.rithsagea.util.WordUtil;
+
 import api.rithsagea.dnd.types.IndexedItem;
 import api.rithsagea.dnd.types.KeyConstants;
-import api.rithsagea.dnd.util.LanguageManager;
-import api.rithsagea.dnd.util.WordUtil;
+import api.rithsagea.dnd.types.LanguageManager;
 
 public enum Alignment implements IndexedItem {
 	LAWFUL_GOOD,

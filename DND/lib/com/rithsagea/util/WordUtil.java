@@ -1,4 +1,4 @@
-package api.rithsagea.dnd.util;
+package com.rithsagea.util;
 
 public class WordUtil {
 	

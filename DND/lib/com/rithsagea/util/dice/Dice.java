@@ -1,15 +1,15 @@
-package api.rithsagea.dnd.dice;
+package com.rithsagea.util.dice;
 
 import java.util.Random;
 
-public class Dice {
+public class Dice implements Cloneable {
 	
-	private int value;
 	private int count;
+	private int value;
 	
 	public Dice(int count, int value) {
-		this.value = value;
 		this.count = count;
+		this.value = value;
 	}
 	
 	public Dice(String code) {
@@ -37,8 +37,7 @@ public class Dice {
 	public int roll(Random rand) {
 		int sum = 0;
 		for(int x = 0; x < count; x++) {
-//			sum += rand.nextInt(value) + 1;
-			sum += value;
+			sum += rand.nextInt(value) + 1;
 		}
 		
 		return sum;
@@ -47,5 +46,10 @@ public class Dice {
 	@Override
 	public String toString() {
 		return count + "d" + value;
+	}
+	
+	@Override
+	public Dice clone() {
+		return new Dice(count, value);
 	}
 }

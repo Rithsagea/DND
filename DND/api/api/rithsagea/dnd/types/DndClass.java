@@ -1,32 +1,48 @@
 package api.rithsagea.dnd.types;
 
+import java.util.Collections;
 import java.util.Set;
+import java.util.TreeSet;
 
-import com.rithsagea.util.event.Listener;
+import com.rithsagea.util.dice.Dice;
 
-import api.rithsagea.dnd.features.Feature;
-import api.rithsagea.dnd.features.HitPointFeature;
+import api.rithsagea.dnd.types.aspects.Feature;
 
-public abstract class DndClass implements IndexedItem, Listener {
-	
+public class DndClass implements AbstractClass {
+
 	private String id;
+	private Dice hitDice;
 	private Set<Feature> features;
 	
-	public DndClass(String id) {
+	public DndClass(String id, Dice hitDice) {
 		this.id = id;
+		this.hitDice = hitDice.clone();
 		
-		features.add(getHitPoints());
+		features = new TreeSet<>();
 	}
 	
-	public abstract HitPointFeature getHitPoints();
+	protected void addFeature(Feature feature) {
+		features.add(feature);
+	}
 	
 	@Override
 	public String getId() {
 		return id;
+	}
+
+	@Override
+	public Dice getHitDice() {
+		return hitDice;
+	}
+	
+	@Override
+	public Set<Feature> getFeatures() {
+		return Collections.unmodifiableSet(features);
 	}
 	
 	@Override
 	public String toString() {
 		return getName();
 	}
+
 }

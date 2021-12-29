@@ -5,13 +5,10 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
-import com.rithsagea.util.event.Listener;
-
-import api.rithsagea.dnd.character.Aspect;
+import api.rithsagea.dnd.types.aspects.Trait;
 import api.rithsagea.dnd.types.enums.Ability;
-import api.rithsagea.dnd.types.traits.Trait;
 
-public class DndRace implements IndexedItem, Listener {
+public class DndRace implements AbstractRace {
 	
 	private String id;
 	private Set<Trait> traits;
@@ -25,7 +22,7 @@ public class DndRace implements IndexedItem, Listener {
 		traits.add(trait);
 	}
 	
-	public Set<Aspect> getTraits() {
+	public Set<Trait> getTraits() {
 		return Collections.unmodifiableSet(traits);
 	}
 	

@@ -3,8 +3,10 @@ package api.rithsagea.dnd.types;
 import java.util.HashMap;
 import java.util.Map;
 
-import api.rithsagea.dnd.types.traits.Trait;
-import api.rithsagea.dnd.types.traits.UniqueTrait;
+import api.rithsagea.dnd.types.aspects.Feature;
+import api.rithsagea.dnd.types.aspects.Trait;
+import api.rithsagea.dnd.types.aspects.UniqueFeature;
+import api.rithsagea.dnd.types.aspects.UniqueTrait;
 
 public class Registry {
 	private static Registry INSTANCE = new Registry();
@@ -13,11 +15,17 @@ public class Registry {
 	}
 	
 	private Map<String, Trait> traits;
-	private Map<String, DndRace> races;
+	private Map<String, AbstractRace> races;
+	
+	private Map<String, Feature> features;
+	private Map<String, AbstractClass> classes;
 	
 	private Registry() {
 		traits = new HashMap<>();
 		races = new HashMap<>();
+		
+		features = new HashMap<>();
+		classes = new HashMap<>();
 	}
 	
 	public void registerTrait(Trait trait) {
@@ -43,7 +51,35 @@ public class Registry {
 		}
 	}
 	
-	public DndRace getRace(String id) {
+	public AbstractRace getRace(String id) {
 		return races.get(id);
 	}
+
+	public void registerFeature(Feature feature) {
+		if(!features.containsKey(feature.getId())) {
+			features.put(feature.getId(), feature);
+			
+			System.out.println("Registered Feature: " + feature.getId());
+		}
+	}
+	
+	public Feature getFeature(String id) {
+		return features.get(id);
+	}
+	
+	public void registerClass(AbstractClass clazz) {
+		if(!classes.containsKey(clazz.getId())) {
+			clazz.getFeatures().stream()
+				.filter(f -> f instanceof UniqueFeature)
+				.forEach(this::registerFeature);
+			classes.put(clazz.getId(), clazz);
+			
+			System.out.println("Registered Class: " + clazz.getId());
+		}
+	}
+	
+	public AbstractClass getClass(String id) {
+		return classes.get(id);
+	}
+
 }

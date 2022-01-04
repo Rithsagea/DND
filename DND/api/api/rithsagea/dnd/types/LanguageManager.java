@@ -9,8 +9,9 @@ import java.util.Locale;
 import java.util.Properties;
 import java.util.Set;
 
-import api.rithsagea.dnd.types.aspects.Feature;
-import api.rithsagea.dnd.types.aspects.Trait;
+import api.rithsagea.dnd.types.classes.AbstractClass;
+import api.rithsagea.dnd.types.classes.Feature;
+import legacy.rithsagea.dnd.api.types.Trait;
 
 public class LanguageManager {
 	private static LanguageManager INSTANCE = new LanguageManager();
@@ -47,7 +48,7 @@ public class LanguageManager {
 	public String get(IndexedItem item, String key) {
 		String className = item.getClass().getSimpleName();
 		if(item instanceof Trait) className = "Trait";
-		if(item instanceof AbstractRace) className = "Race";
+//		if(item instanceof AbstractRace) className = "Race";
 		if(item instanceof Feature) className = "Feature";
 		if(item instanceof AbstractClass) className = "Class";
 		

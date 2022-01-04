@@ -118,6 +118,12 @@ DamageType.Radiant.Description=Radiant damage, dealt by a cleric’s flame strike 
 DamageType.Slashing.Description=Swords, axes, and monsters’ claws deal slashing damage.
 DamageType.Thunder.Description=A concussive burst of sound, such as the effect of the thunderwave spell, deals thunder damage.
 
+###########
+# Feature #
+###########
+
+Feature.HitPoint.Name=Hit Points
+
 ############
 # Language #
 ############

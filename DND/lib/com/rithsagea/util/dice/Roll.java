@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Roll {
+public class Roll implements Cloneable {
 	
 	private int constant;
 	private List<Dice> dice;
@@ -64,5 +64,10 @@ public class Roll {
 		if(constant > 0) builder.append(prefix + constant);
 		
 		return builder.toString();
+	}
+	
+	@Override
+	public Roll clone() {
+		return new Roll(toString()); //TODO make more rigorous
 	}
 }

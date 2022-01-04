@@ -4,10 +4,10 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import java.util.TreeMap;
 import java.util.TreeSet;
 
 import com.rithsagea.util.DataUtil;
+import com.rithsagea.util.dice.Roll;
 import com.rithsagea.util.event.EventBus;
 import com.rithsagea.util.event.EventHandler;
 import com.rithsagea.util.event.EventPriority;
@@ -16,6 +16,7 @@ import com.rithsagea.util.event.Listener;
 import api.rithsagea.dnd.character.events.update.UpdateAbilityModifierEvent;
 import api.rithsagea.dnd.character.events.update.UpdateAbilityScoreEvent;
 import api.rithsagea.dnd.character.events.update.UpdateArmorClassEvent;
+import api.rithsagea.dnd.character.events.update.UpdateMaxHitPointEvent;
 import api.rithsagea.dnd.character.events.update.UpdateInitiativeEvent;
 import api.rithsagea.dnd.character.events.update.UpdatePassiveWisdomEvent;
 import api.rithsagea.dnd.character.events.update.UpdateSavingProficiencyEvent;
@@ -23,20 +24,17 @@ import api.rithsagea.dnd.character.events.update.UpdateSavingThrowEvent;
 import api.rithsagea.dnd.character.events.update.UpdateSkillModifierEvent;
 import api.rithsagea.dnd.character.events.update.UpdateSkillProficiencyEvent;
 import api.rithsagea.dnd.character.events.update.UpdateSpeedEvent;
-import api.rithsagea.dnd.types.AbstractClass;
-import api.rithsagea.dnd.types.AbstractRace;
-import api.rithsagea.dnd.types.DndRace;
+import api.rithsagea.dnd.types.classes.AbstractClass;
+import api.rithsagea.dnd.types.classes.Feature;
 import api.rithsagea.dnd.types.enums.Ability;
 import api.rithsagea.dnd.types.enums.Alignment;
 import api.rithsagea.dnd.types.enums.Background;
 import api.rithsagea.dnd.types.enums.Size;
 import api.rithsagea.dnd.types.enums.Skill;
-import api.rithsagea.dnd.util.options.CharacterChoice;
 
 public class CharacterSheet implements Listener {
 
 	private EventBus eventBus;
-	private Map<String, CharacterChoice> choices;
 	
 	private String characterName;
 	private String playerName;
@@ -61,8 +59,8 @@ public class CharacterSheet implements Listener {
 	private int level;
 	private int proficiencyBonus;
 	
-	private DndRace characterRace;
-	private Set<CharacterClass> characterClasses; //multiclassing go here
+	private AbstractClass characterClass;
+	private Set<Feature> features;
 	
 	private Set<Skill> skillProficiencies;
 	private Set<Ability> savingProficiencies;
@@ -73,13 +71,17 @@ public class CharacterSheet implements Listener {
 	private Map<Ability, Integer> savingThrows;
 	private Map<Skill, Integer> skillModifiers;
 	
+	private int hitPoints;
+	private int maxHitPoints;
+	private Roll hitDice;
+	
 	private int passiveWisdom;
 	private int initiative;
 	private int armorClass;
 	private int speed;
 	
 	public CharacterSheet() {
-		characterClasses = new HashSet<>();
+		features = new HashSet<>();
 		
 		skillProficiencies = new TreeSet<>();
 		savingProficiencies = new TreeSet<>();
@@ -90,24 +92,31 @@ public class CharacterSheet implements Listener {
 		savingThrows = DataUtil.generateDefaultMap(Ability.class, 0);
 		skillModifiers = DataUtil.generateDefaultMap(Skill.class, 0);
 		
-		choices = new TreeMap<>();
-		
 		eventBus = new EventBus();
 		eventBus.registerListener(this);
-		
-		speed = 30; //TODO set this when configuring race instead
 	}
 	
 	public void refresh() {
 		calculateLevel();
+		calculateProfile();
 		calculateProficiencies();
 		calculateAbilityScores();
+		calculateHitPoints();
 	}
 	
 	private void calculateLevel() {
 		for(level = 1; level < 20 && experiencePoints > EXPERIENCE_TABLE[level]; level++);
 		
 		proficiencyBonus = (int) (Math.ceil(level / 4d + 1));
+	}
+	
+	/////////////////////////
+	/// CLASS & RACE CALC ///
+	/////////////////////////
+	
+	private void calculateProfile() {
+		characterClass.getFeatures().forEach(this::addFeature);
+		//TODO MULTICLASSING
 	}
 	
 	////////////////////////
@@ -199,6 +208,21 @@ public class CharacterSheet implements Listener {
 		eventBus.submitEvent(new UpdatePassiveWisdomEvent(this, 10 + skillModifiers.get(Skill.PERCEPTION)));
 		eventBus.submitEvent(new UpdateInitiativeEvent(this, abilityModifiers.get(Ability.DEXTERITY)));
 		eventBus.submitEvent(new UpdateArmorClassEvent(this, 10 + abilityModifiers.get(Ability.DEXTERITY)));
+	}
+	
+	///////////////////////
+	/// HIT POINTS CALC ///
+	///////////////////////
+	
+	@EventHandler(priority = EventPriority.ROOT)
+	public void onUpdateMaxHitPoint(UpdateMaxHitPointEvent e) {
+		hitDice = e.getHitDice();
+		maxHitPoints = e.getValue();
+		setHitPoints(hitPoints); // refresh hp cap
+	}
+	
+	private void calculateHitPoints() {
+		eventBus.submitEvent(new UpdateMaxHitPointEvent(this, 0));
 	}
 	
 	//////////////////////////////
@@ -297,40 +321,46 @@ public class CharacterSheet implements Listener {
 		return proficiencyBonus;
 	}
 
-	//PROFILE
+	//PROFILE (CLASSES & RACES)
 	
-	public AbstractRace getRace() {
-		return characterRace;
-	}
-	
-	public void setRace(AbstractRace race) {
+	public void setCharacterClass(AbstractClass c) {
+		removeClass(characterClass);
+		characterClass = c;
 		
+		addClass(characterClass);
 	}
 	
-	public Set<CharacterClass> getClasses() {
-		return Collections.unmodifiableSet(characterClasses);
+	private void addClass(AbstractClass c) {
+		eventBus.registerListener(c);
+		c.getFeatures().forEach(this::addFeature);
 	}
 	
-	public CharacterClass getClassData(AbstractClass clazz) {
-		for(CharacterClass c : characterClasses)
-			if(c.getClassType().equals(clazz))
-				return c;
-		
-		return null;
+	private void removeClass(AbstractClass c) {
+		if(c != null) {
+			eventBus.unregisterListener(c);
+			c.getFeatures().forEach(this::removeFeature);
+		}
 	}
 	
-	public void addClass(AbstractClass c) {
-		characterClasses.add(new CharacterClass(c));
+	private void addFeature(Feature f) {
+		eventBus.registerListener(f);
+		features.add(f);
 	}
 	
-	/**
-	 * For convenience only
-	 * @param c the class to remove
-	 */
-	public void removeClass(CharacterClass c) {
-		characterClasses.remove(c);
+	private void removeFeature(Feature f) {
+		if(f != null) {
+			eventBus.unregisterListener(f);
+		}
 	}
-
+	
+	public AbstractClass getCharacterClass() {
+		return characterClass;
+	}
+	
+	public Set<Feature> getFeatures() {
+		return Collections.unmodifiableSet(features);
+	}
+	
 	//PROFICIENCIES
 	
 	public boolean hasSkillProficiency(Skill skill) {
@@ -377,6 +407,24 @@ public class CharacterSheet implements Listener {
 		return skillModifiers.get(skill);
 	}
 
+	//HIT POINTS
+	
+	public int getHitPoints() {
+		return hitPoints;
+	}
+	
+	public void setHitPoints(int hitPoints) {
+		this.hitPoints = Math.min(maxHitPoints, hitPoints);
+	}
+	
+	public Roll getHitDice() {
+		return hitDice.clone();
+	}
+	
+	public int getMaxHitPoints() {
+		return maxHitPoints;
+	}
+	
 	//MISC VALUES
 	
 	public int getPassiveWisdom() {
@@ -395,8 +443,9 @@ public class CharacterSheet implements Listener {
 		return speed;
 	}
 
-	//CHOICES (FOR BACKEND)
-	public CharacterChoice getChoice(String key) {
-		return choices.get(key);
+	//BACKEND
+	
+	public EventBus getEventBus() {
+		return eventBus;
 	}
 }

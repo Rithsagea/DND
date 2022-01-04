@@ -8,11 +8,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import api.rithsagea.dnd.character.CharacterSheet;
-import api.rithsagea.dnd.types.aspects.Trait;
-import api.rithsagea.dnd.types.enums.Ability;
-import api.rithsagea.dnd.types.enums.Skill;
-
 public class TestUtil {
 	
 	private static List<String> serializeObject(Object obj) {

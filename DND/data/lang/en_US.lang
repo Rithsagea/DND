@@ -118,11 +118,44 @@ DamageType.Radiant.Description=Radiant damage, dealt by a cleric’s flame strike 
 DamageType.Slashing.Description=Swords, axes, and monsters’ claws deal slashing damage.
 DamageType.Thunder.Description=A concussive burst of sound, such as the effect of the thunderwave spell, deals thunder damage.
 
+###########################
+# Equipment Proficiencies #
+###########################
+
+Equipment.Armor.Name=Armor
+Equipment.LightArmor.Name=Light Armor
+Equipment.MediumArmor.Name=Medium Armor
+Equipment.Shields.Name=Shields
+
+Equipment.SimpleWeapons.Name=Simple Weapons
+Equipment.MartialWeapons.Name=Martial Weapons
+Equipment.Firearms.Name=Firearms
+
+Equipment.ThievesTools.Name=Thieves' Tools
+
+Equipment.AlchemistsSupplies.Name=Alchemist's Supplies
+Equipment.BrewersSupplies.Name=Brewer's Supplies
+Equipment.CalligraphersSupplies.Name=Calligrapher's Supplies
+Equipment.CarpentersTools.Name=Carpenter's Tools
+Equipment.CobblersTools.Name=Cobbler's Tools
+Equipment.CooksUtensils.Name=Cook's Utensils
+Equipment.GlassblowersTools.Name=Glassblower's Tools
+Equipment.JewelersTools.Name=Jeweler's Tools
+Equipment.LeatherworkersTools.Name=Leatherworker's Tools
+Equipment.MasonsTools.Name=Mason's Tools
+Equipment.PaintersSupplies.Name=Painter's Supplies
+Equipment.PottersTools.Name=Potter's Tools
+Equipment.SmithsTools.Name=Smith's Tools
+Equipment.TinkersTools.Name=Tinker's Tools
+Equipment.WeaversTools.Name=Weaver's Tools
+Equipment.WoodcarversTools.Name=Woodcarver's Tools
+
 ###########
 # Feature #
 ###########
 
 Feature.HitPoint.Name=Hit Points
+Feature.Proficiency.Name=Proficiencies
 
 ############
 # Language #

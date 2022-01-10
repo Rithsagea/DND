@@ -1,5 +1,6 @@
 package com.rithsagea.util;
 
+import java.util.Collection;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.function.Function;
@@ -35,5 +36,17 @@ public class DataUtil {
 		for(K k : clazz.getEnumConstants())
 			map.put(k, func.apply(k));
 		return map;
+	}
+	
+	/**
+	 * Creates a new array from a collection of type T.
+	 * WILL THROW EXCEPTION IF T IS A PRIMITIVE
+	 * @param <T> the type of array to make
+	 * @param col the collection to convert
+	 * @return the array
+	 */
+	@SuppressWarnings("unchecked")
+	public static <T> T[] toArray(Collection<T> col) {
+		return col.toArray((T[]) new Object[col.size()]);
 	}
 }

@@ -1,12 +1,19 @@
 package test.rithsagea.dnd;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.rithsagea.dnd.classes.artificer.ArtificerClass;
+import com.rithsagea.util.choice.Choice;
+import com.rithsagea.util.choice.Option;
 
 import api.rithsagea.dnd.character.CharacterSheet;
 import api.rithsagea.dnd.types.LanguageManager;
 import api.rithsagea.dnd.types.classes.Feature;
 import api.rithsagea.dnd.types.enums.Ability;
+import api.rithsagea.dnd.types.enums.Equipment;
 import api.rithsagea.dnd.types.enums.Skill;
+import api.rithsagea.dnd.util.choice.OptionedItem;
 
 public class CharacterCreationTest {
 	
@@ -24,6 +31,33 @@ public class CharacterCreationTest {
 		sheet.setPlayerName("Alfiend");
 		sheet.setCharacterClass(new ArtificerClass());
 		sheet.refresh();
+		
+		//choices
+		System.out.println("-=-=- Options -=-=-");
+		List<Feature> features = new ArrayList<>(sheet.getFeatures());
+		List<List<Integer>> choiceValues = List.of(
+				List.of(0),
+				List.of(0, 6));
+		int optionIndex = 0;
+		
+		for(Feature feature : features) {
+			if(feature instanceof OptionedItem) {
+				OptionedItem optionedItem = (OptionedItem) feature;
+				for(Option op : optionedItem.getOptions()) {
+					System.out.printf("-- %d -- Option[%d]\n", optionIndex, op.getCount());
+					List<Choice> choices = new ArrayList<>(op.getChoices());
+					for(int j = 0; j < choices.size(); j++) {
+						System.out.println(j + ": " + choices.get(j));
+					}
+					
+					for(int j = 0; j < op.getCount(); j++) {
+						op.choose(choices.get(choiceValues.get(optionIndex).get(j)));
+					}
+					
+					optionIndex++;
+				}
+			}
+		}
 		
 		sheet.setHitPoints(Integer.MAX_VALUE); // Full Health
 		sheet.refresh();
@@ -55,19 +89,26 @@ public class CharacterCreationTest {
 		
 		System.out.println("-=-=- Saving Throws -=-=-");
 		for(Ability ability : Ability.values()) {
-			System.out.printf("%s: %s\n",
-					ability, format(sheet.getSavingThrow(ability)));
+			System.out.printf("%s: %s%s\n",
+					ability, format(sheet.getSavingThrow(ability)),
+					sheet.hasSavingProficiency(ability) ? "*" : "");
 		}
 		
 		System.out.println("-=-=- Skills -=-=-");
 		for(Skill skill : Skill.values()) {
-			System.out.printf("%15.15s: %s\n",
-					skill, format(sheet.getSkillModifier(skill)));
+			System.out.printf("%15.15s: %s%s\n",
+					skill, format(sheet.getSkillModifier(skill)),
+					sheet.hasSkillProficiency(skill) ? "*" : "");
+		}
+		
+		System.out.println("-=-=- Proficiencies -=-=-");
+		for(Equipment equipment : sheet.getEquipmentProficiencies()) {
+			System.out.printf("%s\n", equipment);
 		}
 		
 		System.out.println("-=-=- Traits & Features -=-=-");
 		for(Feature feature : sheet.getFeatures()) {
-			System.out.printf("%s\n", feature);
+			System.out.printf("%s\n", feature.getName());
 		}
 		//TODO
 		

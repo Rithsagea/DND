@@ -16,8 +16,9 @@ import com.rithsagea.util.event.Listener;
 import api.rithsagea.dnd.character.events.update.UpdateAbilityModifierEvent;
 import api.rithsagea.dnd.character.events.update.UpdateAbilityScoreEvent;
 import api.rithsagea.dnd.character.events.update.UpdateArmorClassEvent;
-import api.rithsagea.dnd.character.events.update.UpdateMaxHitPointEvent;
+import api.rithsagea.dnd.character.events.update.UpdateEquipmentProficiencyEvent;
 import api.rithsagea.dnd.character.events.update.UpdateInitiativeEvent;
+import api.rithsagea.dnd.character.events.update.UpdateMaxHitPointEvent;
 import api.rithsagea.dnd.character.events.update.UpdatePassiveWisdomEvent;
 import api.rithsagea.dnd.character.events.update.UpdateSavingProficiencyEvent;
 import api.rithsagea.dnd.character.events.update.UpdateSavingThrowEvent;
@@ -29,6 +30,7 @@ import api.rithsagea.dnd.types.classes.Feature;
 import api.rithsagea.dnd.types.enums.Ability;
 import api.rithsagea.dnd.types.enums.Alignment;
 import api.rithsagea.dnd.types.enums.Background;
+import api.rithsagea.dnd.types.enums.Equipment;
 import api.rithsagea.dnd.types.enums.Size;
 import api.rithsagea.dnd.types.enums.Skill;
 
@@ -64,6 +66,7 @@ public class CharacterSheet implements Listener {
 	
 	private Set<Skill> skillProficiencies;
 	private Set<Ability> savingProficiencies;
+	private Set<Equipment> equipmentProficiencies;
 	
 	private Map<Ability, Integer> baseAbilityScores;
 	private Map<Ability, Integer> abilityScores;
@@ -83,6 +86,7 @@ public class CharacterSheet implements Listener {
 	public CharacterSheet() {
 		features = new HashSet<>();
 		
+		equipmentProficiencies = new TreeSet<>();
 		skillProficiencies = new TreeSet<>();
 		savingProficiencies = new TreeSet<>();
 		
@@ -124,6 +128,12 @@ public class CharacterSheet implements Listener {
 	////////////////////////
 	
 	@EventHandler(priority = EventPriority.ROOT)
+	public void onUpdateEquipmentProficiency(UpdateEquipmentProficiencyEvent e) {
+		equipmentProficiencies.clear();
+		equipmentProficiencies.addAll(e.getProficiencies());
+	}
+	
+	@EventHandler(priority = EventPriority.ROOT)
 	public void onUpdateSavingProficiency(UpdateSavingProficiencyEvent e) {
 		savingProficiencies.clear();
 		savingProficiencies.addAll(e.getProficiencies());
@@ -136,6 +146,7 @@ public class CharacterSheet implements Listener {
 	}
 	
 	private void calculateProficiencies() {
+		eventBus.submitEvent(new UpdateEquipmentProficiencyEvent(this));
 		eventBus.submitEvent(new UpdateSavingProficiencyEvent(this));
 		eventBus.submitEvent(new UpdateSkillProficiencyEvent(this));
 	}
@@ -197,12 +208,12 @@ public class CharacterSheet implements Listener {
 		
 		for(Ability ability : Ability.values()) {
 			eventBus.submitEvent(new UpdateSavingThrowEvent(this, ability,
-					abilityModifiers.get(ability)));
+					abilityModifiers.get(ability) + (hasSavingProficiency(ability) ? proficiencyBonus : 0)));
 		}
 		
 		for(Skill skill : Skill.values()) {
 			eventBus.submitEvent(new UpdateSkillModifierEvent(this, skill,
-					abilityModifiers.get(skill.getAbility())));
+					abilityModifiers.get(skill.getAbility()) + (hasSkillProficiency(skill) ? proficiencyBonus : 0)));
 		}
 		
 		eventBus.submitEvent(new UpdatePassiveWisdomEvent(this, 10 + skillModifiers.get(Skill.PERCEPTION)));
@@ -362,6 +373,14 @@ public class CharacterSheet implements Listener {
 	}
 	
 	//PROFICIENCIES
+	
+	public boolean hasEquipmentProficiency(Equipment equipment) {
+		return equipmentProficiencies.contains(equipment);
+	}
+	
+	public Set<Equipment> getEquipmentProficiencies() {
+		return Collections.unmodifiableSet(equipmentProficiencies);
+	}
 	
 	public boolean hasSkillProficiency(Skill skill) {
 		return skillProficiencies.contains(skill);

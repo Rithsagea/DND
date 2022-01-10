@@ -1,9 +1,11 @@
-package api.rithsagea.dnd.types.classes;
+package api.rithsagea.dnd.types.classes.features;
 
 import com.rithsagea.util.dice.Dice;
 import com.rithsagea.util.event.EventHandler;
 
 import api.rithsagea.dnd.character.events.update.UpdateMaxHitPointEvent;
+import api.rithsagea.dnd.types.classes.AbstractClass;
+import api.rithsagea.dnd.types.classes.UniqueFeature;
 import api.rithsagea.dnd.types.enums.Ability;
 
 public class HitPointFeature extends UniqueFeature {

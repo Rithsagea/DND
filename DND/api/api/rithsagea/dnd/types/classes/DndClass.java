@@ -1,11 +1,13 @@
 package api.rithsagea.dnd.types.classes;
 
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
 public abstract class DndClass implements AbstractClass {
-
+	
 	private int level;
 	private boolean multiclass;
 	private Set<Feature> features;
@@ -18,8 +20,16 @@ public abstract class DndClass implements AbstractClass {
 		onLevelUp(level);
 	}
 
-	protected void addFeature(Feature f) {
-		features.add(f);
+	protected void addFeature(Feature feature) {
+		features.add(feature);
+	}
+	
+	protected void addFeatures(Collection<Feature> features) {
+		features.forEach(this::addFeature);
+	}
+	
+	protected void addFeatures(Feature... features) {
+		addFeatures(Arrays.asList(features));
 	}
 	
 	@Override

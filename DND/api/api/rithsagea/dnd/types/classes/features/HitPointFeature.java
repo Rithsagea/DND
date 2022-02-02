@@ -1,5 +1,8 @@
 package api.rithsagea.dnd.types.classes.features;
 
+import java.util.Set;
+
+import com.rithsagea.util.choice.Option;
 import com.rithsagea.util.dice.Dice;
 import com.rithsagea.util.event.EventHandler;
 
@@ -34,5 +37,10 @@ public class HitPointFeature extends UniqueFeature {
 	@Override
 	public String getSubId() {
 		return "HitPoint";
+	}
+
+	@Override
+	public Set<Option> getOptions() {
+		return null;
 	}
 }

@@ -9,5 +9,5 @@ public interface Option {
 	public boolean choose(Choice choice);
 	public boolean remove(Choice choice);
 
-	public Set<Choice> getChosenChoices();
+	public Set<Choice> getChosen();
 }

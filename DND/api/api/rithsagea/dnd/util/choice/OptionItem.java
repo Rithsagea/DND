@@ -62,7 +62,7 @@ public class OptionItem implements Option {
 	}
 
 	@Override
-	public Set<Choice> getChosenChoices() {
+	public Set<Choice> getChosen() {
 		return chosen;
 	}
 }

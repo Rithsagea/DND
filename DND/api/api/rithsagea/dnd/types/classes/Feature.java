@@ -1,9 +1,7 @@
 package api.rithsagea.dnd.types.classes;
 
-import com.rithsagea.util.event.Listener;
+import api.rithsagea.dnd.types.Aspect;
 
-import api.rithsagea.dnd.types.IndexedItem;
-
-public interface Feature extends IndexedItem, Listener {
+public interface Feature extends Aspect {
 
 }

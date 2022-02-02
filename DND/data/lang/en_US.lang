@@ -66,6 +66,8 @@ Background.Urchin.Name=Urchin
 ### Artificer ###
 Class.Artificer.Name=Artificer
 
+Feature.MagicalTinkering.Name=Magical Tinkering
+
 #############
 # Condition #
 #############
@@ -85,6 +87,21 @@ Condition.Prone.Name=Prone
 Condition.Restrained.Name=Restrained
 Condition.Stunned.Name=Stunned
 Condition.Unconscious.Name=Unconscious
+
+############
+# Currency #
+############
+
+Currency.Copper.Name=Copper
+Currency.Copper.UnitLabel=cp
+Currency.Silver.Name=Silver
+Currency.Silver.UnitLabel=sp
+Currency.Electrum.Name=Electrum
+Currency.Electrum.UnitLabel=ep
+Currency.Gold.Name=Gold
+Currency.Gold.UnitLabel=gp
+Currency.Platinum.Name=Platinum
+Currency.Platinum.UnitLabel=pp
 
 ###############
 # Damage Type #

@@ -36,8 +36,10 @@ public class CharacterCreationTest {
 		System.out.println("-=-=- Options -=-=-");
 		List<Feature> features = new ArrayList<>(sheet.getFeatures());
 		List<List<Integer>> choiceValues = List.of(
-				List.of(0),
+				List.of(12),
 				List.of(0, 6));
+		
+		
 		int optionIndex = 0;
 		
 		for(Feature feature : features) {

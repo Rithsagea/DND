@@ -11,7 +11,7 @@ import java.util.Set;
 
 import api.rithsagea.dnd.types.classes.AbstractClass;
 import api.rithsagea.dnd.types.classes.Feature;
-import legacy.rithsagea.dnd.api.types.Trait;
+import api.rithsagea.dnd.types.races.Trait;
 
 public class LanguageManager {
 	private static LanguageManager INSTANCE = new LanguageManager();

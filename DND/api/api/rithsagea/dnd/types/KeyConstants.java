@@ -5,4 +5,6 @@ public class KeyConstants {
 	public static final String NAME = "Name";
 	public static final String SHORT_NAME = "ShortName";
 	public static final String DESCRIPTION = "Description";
+	
+	public static final String UNIT_LABEL = "UnitLabel";
 }

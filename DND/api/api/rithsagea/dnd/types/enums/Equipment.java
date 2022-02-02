@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.Set;
 import java.util.TreeSet;
 
+import com.rithsagea.util.DataUtil;
 import com.rithsagea.util.WordUtil;
 
 import api.rithsagea.dnd.types.IndexedItem;
@@ -43,7 +44,7 @@ public enum Equipment implements IndexedItem {
 	WOODCARVERS_TOOLS
 	;
 	
-	public static final Set<Equipment> ARTISANS_TOOLS = Collections.unmodifiableSet(new TreeSet<>(Set.of(
+	public static final Set<Equipment> ARTISANS_TOOLS = Collections.unmodifiableSet(new TreeSet<>(DataUtil.set(
 			ALCHEMISTS_SUPPLIES,
 			BREWERS_SUPPLIES,
 			CALLIGRAPHERS_SUPPLIES,

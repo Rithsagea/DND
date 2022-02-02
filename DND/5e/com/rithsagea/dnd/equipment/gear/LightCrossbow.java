@@ -3,6 +3,8 @@ package com.rithsagea.dnd.equipment.gear;
 import java.util.Collections;
 import java.util.Set;
 
+import com.rithsagea.util.DataUtil;
+
 import api.rithsagea.dnd.equipment.Weapon;
 import api.rithsagea.dnd.equipment.properties.Ammunition;
 import api.rithsagea.dnd.equipment.properties.Loading;
@@ -11,7 +13,7 @@ import api.rithsagea.dnd.types.enums.Equipment;
 
 public class LightCrossbow extends Weapon implements Ammunition, Loading, TwoHanded {
 
-	private static final Set<Equipment> PROFICIENCIES = Collections.unmodifiableSet(Set.of(
+	private static final Set<Equipment> PROFICIENCIES = Collections.unmodifiableSet(DataUtil.set(
 			Equipment.SIMPLE_WEAPONS));
 	
 	public LightCrossbow(int quantity) {

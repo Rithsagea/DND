@@ -1,7 +1,12 @@
 package com.rithsagea.util;
 
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 import java.util.function.Function;
 
@@ -48,5 +53,27 @@ public class DataUtil {
 	@SuppressWarnings("unchecked")
 	public static <T> T[] toArray(Collection<T> col) {
 		return col.toArray((T[]) new Object[col.size()]);
+	}
+	
+	/**
+	 * Creates a new unmodifiable set from the provided elements
+	 * @param <T> the type of set to make
+	 * @param elements the elements to include
+	 * @return the set
+	 */
+	@SafeVarargs
+	public static <T> Set<T> set(T... elements) {
+		return Collections.unmodifiableSet(new LinkedHashSet<T>(Arrays.asList(elements)));
+	}
+	
+	/**
+	 * Creates a new unmodifiable list from the provided elements
+	 * @param <T> the type of list to make
+	 * @param elements the elements to include
+	 * @return the list
+	 */
+	@SafeVarargs
+	public static <T> List<T> list(T... elements) {
+		return Collections.unmodifiableList(Arrays.asList(elements));
 	}
 }

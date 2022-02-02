@@ -2,9 +2,9 @@ package api.rithsagea.dnd.types.classes.features;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;
-import java.util.List;
 import java.util.Set;
 
+import com.rithsagea.util.DataUtil;
 import com.rithsagea.util.choice.Option;
 import com.rithsagea.util.event.EventHandler;
 
@@ -51,7 +51,7 @@ public class ProficiencyFeature extends UniqueFeature implements OptionedItem {
 	}
 	
 	public Set<Option> getOptions() {
-		Set<Option> set = new LinkedHashSet<>(List.of(equipmentOption, skillOption));
+		Set<Option> set = new LinkedHashSet<>(DataUtil.list(equipmentOption, skillOption));
 		set.remove(null);
 		return set;
 	}

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.rithsagea.dnd.classes.artificer.ArtificerClass;
+import com.rithsagea.util.DataUtil;
 import com.rithsagea.util.choice.Choice;
 import com.rithsagea.util.choice.Option;
 
@@ -35,9 +36,9 @@ public class CharacterCreationTest {
 		//choices
 		System.out.println("-=-=- Options -=-=-");
 		List<Feature> features = new ArrayList<>(sheet.getFeatures());
-		List<List<Integer>> choiceValues = List.of(
-				List.of(12),
-				List.of(0, 6));
+		List<List<Integer>> choiceValues = DataUtil.list(
+				DataUtil.list(12),
+				DataUtil.list(0, 6));
 		
 		
 		int optionIndex = 0;

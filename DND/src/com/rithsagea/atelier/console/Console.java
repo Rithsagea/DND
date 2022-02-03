@@ -21,8 +21,14 @@ public abstract class Console {
 			commands.put(label, command);
 	}
 	
-	
 	public void receiveMessage(Message message) {
+		String text = message.getText();
+		String[] args = text.split(" ");
+		String label = args[0];
 		
+		Command cmd = commands.get(label);
+		if(cmd != null) cmd.execute(message, args);
 	}
+	
+	public abstract void sendMessage(Message message);
 }

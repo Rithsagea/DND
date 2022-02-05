@@ -5,12 +5,10 @@ import com.rithsagea.atelier.console.Command;
 import com.rithsagea.atelier.console.Message;
 import com.rithsagea.atelier.console.TextMessage;
 
-public class StopCommand implements Command {
+public class StopCommand extends Command {
 
-	private AtelierBot bot;
-	
 	public StopCommand(AtelierBot bot) {
-		this.bot = bot;
+		super(bot);
 	}
 	
 	@Override
@@ -25,6 +23,8 @@ public class StopCommand implements Command {
 
 	@Override
 	public void execute(Message message, String[] args) {
+		AtelierBot bot = getBot();
+		
 		bot.getConsole().sendMessage(new TextMessage("Stopping Atelier!"));
 		bot.stop();
 	}

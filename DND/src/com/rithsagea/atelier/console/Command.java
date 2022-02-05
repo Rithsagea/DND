@@ -1,8 +1,21 @@
 package com.rithsagea.atelier.console;
 
-public interface Command {
-	public String getLabel();
-	public String[] getAliases();
+import com.rithsagea.atelier.AtelierBot;
+
+public abstract class Command {
 	
-	public void execute(Message message, String[] args);
+	private AtelierBot bot;
+	
+	public Command(AtelierBot bot) {
+		this.bot = bot;
+	}
+	
+	public AtelierBot getBot() {
+		return bot;
+	}
+	
+	public abstract String getLabel();
+	public abstract String[] getAliases();
+	
+	public abstract void execute(Message message, String[] args);
 }

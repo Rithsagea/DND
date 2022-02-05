@@ -5,6 +5,7 @@ import java.util.Scanner;
 import com.rithsagea.atelier.console.Console;
 import com.rithsagea.atelier.console.TextConsole;
 import com.rithsagea.atelier.console.TextMessage;
+import com.rithsagea.atelier.console.command.CharacterCommand;
 import com.rithsagea.atelier.console.command.StopCommand;
 
 import api.rithsagea.atelier.CharacterDatabase;
@@ -26,6 +27,7 @@ public class AtelierBot {
 	
 	private void registerCommands() {
 		console.registerCommand(new StopCommand(this));
+		console.registerCommand(new CharacterCommand(this));
 	}
 	
 	public Console getConsole() {

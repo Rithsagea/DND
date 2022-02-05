@@ -3,7 +3,13 @@ package com.rithsagea.atelier.console;
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class ModularCommand implements Command {
+import com.rithsagea.atelier.AtelierBot;
+
+public abstract class ModularCommand extends Command {
+
+	public ModularCommand(AtelierBot bot) {
+		super(bot);
+	}
 
 	private Map<String, Command> subCommands = new HashMap<>();
 	
@@ -25,7 +31,7 @@ public abstract class ModularCommand implements Command {
 	
 	@Override
 	public void execute(Message message, String[] args) {
-		if(args.length == 0) {
+		if(args.length <= 1) {
 			executeEmpty(message);
 		} else {
 			String[] subArgs = new String[args.length - 1];

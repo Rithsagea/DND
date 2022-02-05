@@ -11,12 +11,12 @@ public abstract class Console {
 	}
 	
 	public void registerCommand(Command command) {
-		registerCommand(command, command.getLabel());
+		registerCommand(command.getLabel(), command);
 		for(String alias : command.getAliases())
-			registerCommand(command, alias);
+			registerCommand(alias, command);
 	}
 	
-	private void registerCommand(Command command, String label) {
+	private void registerCommand(String label, Command command) {
 		if(!commands.containsKey(label))
 			commands.put(label, command);
 	}

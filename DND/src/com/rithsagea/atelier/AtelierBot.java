@@ -3,7 +3,6 @@ package com.rithsagea.atelier;
 import java.io.File;
 
 import com.rithsagea.atelier.console.Console;
-import com.rithsagea.atelier.console.command.CharacterCommand;
 import com.rithsagea.atelier.console.command.StopCommand;
 
 import api.rithsagea.atelier.AtelierDatabase;
@@ -21,14 +20,13 @@ public class AtelierBot {
 	public AtelierBot(Console console) {
 		this.console = console;
 		config = new Config(new File("config.properties"));
-		database = new AtelierDatabase(config.getDatabaseUrl());
+//		database = new AtelierDatabase(config.getDatabaseUrl());
 		
 		registerCommands();
 	}
 	
 	private void registerCommands() {
 		console.registerCommand(new StopCommand(this));
-		console.registerCommand(new CharacterCommand(this));
 	}
 	
 	public Console getConsole() {

@@ -26,10 +26,11 @@ public class AtelierRunner {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		debug("char new");
+//		debug("char new");
 		debug("char list");
-		debug("char select bb325126-063b-6e58-bb5e-029b33fbd643");
+		debug("char select 61fed562108eec72453e414e");
 		debug("char");
+		debug("exit");
 		
 		while(bot.isRunning()) {
 			System.out.print("> ");

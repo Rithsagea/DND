@@ -1,24 +1,28 @@
 package api.rithsagea.atelier;
 
-import java.util.UUID;
+import org.bson.codecs.pojo.annotations.BsonId;
+import org.bson.types.ObjectId;
 
 public class CharacterSheet {
-	private String name;
-	private UUID id;
 	
-	public CharacterSheet(UUID id) {
+	@BsonId
+	private ObjectId id;
+	
+	private String name;
+	
+	public CharacterSheet(ObjectId id) {
 		this.id = id;
 	}
 	
 	public CharacterSheet() {
-		id = UUID.randomUUID();
+	
 	}
 	
 	/////////////////
 	/// ACCESSORS ///
 	/////////////////
 	
-	public UUID getId() {
+	public ObjectId getId() {
 		return id;
 	}
 	

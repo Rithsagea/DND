@@ -1,11 +1,15 @@
 package api.rithsagea.atelier;
 
-import java.util.UUID;
+import org.bson.codecs.pojo.annotations.BsonId;
+import org.bson.types.ObjectId;
 
 public class User {
+	
+	@BsonId
 	private long id;
+	
 	private String name;
-	private UUID characterId;
+	private ObjectId characterId;
 	
 	public User() {
 		
@@ -27,11 +31,11 @@ public class User {
 		this.name = name;
 	}
 	
-	public UUID getCharacterId() {
+	public ObjectId getCharacterId() {
 		return characterId;
 	}
 	
-	public void setCharacterId(UUID id) {
+	public void setCharacterId(ObjectId id) {
 		this.characterId = id;
 	}
 }

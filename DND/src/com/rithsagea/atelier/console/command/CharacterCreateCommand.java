@@ -4,6 +4,7 @@ import com.rithsagea.atelier.AtelierBot;
 import com.rithsagea.atelier.console.Command;
 import com.rithsagea.atelier.console.Message;
 
+import api.rithsagea.atelier.AtelierDatabase;
 import api.rithsagea.atelier.CharacterSheet;
 
 public class CharacterCreateCommand extends Command {
@@ -24,8 +25,11 @@ public class CharacterCreateCommand extends Command {
 
 	@Override
 	public void execute(Message message, String[] args) {
-		CharacterSheet sheet = getBot().getCharacterDatabase().newSheet();
+		AtelierDatabase db = getBot().getDatabase();
+		CharacterSheet sheet = new CharacterSheet();
+		
 		getBot().getConsole().sendMessage("Creating New Character: " + sheet.getId());
+		db.updateSheet(sheet);
 	}
 	
 }

@@ -1,10 +1,10 @@
 package com.rithsagea.atelier.console.command;
 
-import java.util.UUID;
-
 import com.rithsagea.atelier.AtelierBot;
 import com.rithsagea.atelier.console.Message;
 import com.rithsagea.atelier.console.ModularCommand;
+
+import api.rithsagea.atelier.CharacterSheet;
 
 public class CharacterListCommand extends ModularCommand {
 
@@ -24,10 +24,9 @@ public class CharacterListCommand extends ModularCommand {
 
 	@Override
 	public void executeDefault(Message message, String[] args) {
-		for(UUID id : getBot().getCharacterDatabase().getIds()) {
-			getBot().getConsole().sendMessage(id.toString());
+		for(CharacterSheet sheet : getBot().getDatabase().getSheets()) {
+			getBot().getConsole().sendMessage(sheet.getId().toString());
 		}
-		
 	}
 
 }

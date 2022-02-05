@@ -1,11 +1,12 @@
 package com.rithsagea.atelier.console.command;
 
-import java.util.UUID;
+import org.bson.types.ObjectId;
 
 import com.rithsagea.atelier.AtelierBot;
 import com.rithsagea.atelier.console.Command;
 import com.rithsagea.atelier.console.Message;
 
+import api.rithsagea.atelier.AtelierDatabase;
 import api.rithsagea.atelier.CharacterSheet;
 import api.rithsagea.atelier.User;
 
@@ -27,14 +28,18 @@ public class CharacterSelectCommand extends Command {
 
 	@Override
 	public void execute(Message message, String[] args) {
-		UUID id = UUID.fromString(args[1]);
+		ObjectId id = new ObjectId(args[1]);
 		
-		CharacterSheet sheet = getBot().getCharacterDatabase().getSheet(id);
-		User user = getBot().getUserDatabase().findUser(message.getSender());
+		AtelierBot bot = getBot();
+		AtelierDatabase db = bot.getDatabase();
+		
+		CharacterSheet sheet = db.findSheet(id);
+		User user = db.findUser(message.getSender());
 		
 		user.setCharacterId(sheet.getId());
+		db.updateUser(user);
 		
-		getBot().getConsole().sendMessage("Selected Character: " + sheet.getId());
+		bot.getConsole().sendMessage("Selected Character: " + sheet.getId());
 	}
 	
 }

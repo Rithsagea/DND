@@ -20,6 +20,7 @@ public abstract class ModularCommand extends Command {
 	
 	protected void registerSubCommand(Command command) {
 		registerSubCommand(command.getLabel(), command);
+		if(command.getAliases() != null)
 		for(String alias : command.getAliases())
 			registerSubCommand(alias, command);
 	}
@@ -35,7 +36,7 @@ public abstract class ModularCommand extends Command {
 			executeEmpty(message);
 		} else {
 			String[] subArgs = new String[args.length - 1];
-			String label = args[0];
+			String label = args[1];
 			System.arraycopy(args, 1, subArgs, 0, subArgs.length);
 			
 			Command cmd = subCommands.get(label);

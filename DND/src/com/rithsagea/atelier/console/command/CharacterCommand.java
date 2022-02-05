@@ -1,14 +1,23 @@
 package com.rithsagea.atelier.console.command;
 
+import java.util.UUID;
+
 import com.rithsagea.atelier.AtelierBot;
+import com.rithsagea.atelier.User;
 import com.rithsagea.atelier.console.Message;
 import com.rithsagea.atelier.console.ModularCommand;
 import com.rithsagea.atelier.console.TextMessage;
+
+import api.rithsagea.atelier.CharacterSheet;
 
 public class CharacterCommand extends ModularCommand {
 	
 	public CharacterCommand(AtelierBot bot) {
 		super(bot);
+		
+		registerSubCommand(new CharacterCreateCommand(bot));
+		registerSubCommand(new CharacterListCommand(bot));
+		registerSubCommand(new CharacterSelectCommand(bot));
 	}
 
 	@Override
@@ -24,6 +33,13 @@ public class CharacterCommand extends ModularCommand {
 	@Override
 	public void executeEmpty(Message message) {
 		AtelierBot bot = getBot();
-		bot.getConsole().sendMessage(new TextMessage("Dummy Character " + message.getSender()));
+		User user = bot.getUserDatabase().getUser(message.getSender());
+		UUID id = user.getCharacterId();
+		if(id == null) {
+			bot.getConsole().sendMessage(new TextMessage("No Character Found!"));
+		} else {
+			CharacterSheet sheet = bot.getCharacterDatabase().getSheet(id);
+			bot.getConsole().sendMessage(new TextMessage("" + sheet));
+		}
 	}
 }

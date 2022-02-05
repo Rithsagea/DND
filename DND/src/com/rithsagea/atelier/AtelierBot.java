@@ -1,10 +1,6 @@
 package com.rithsagea.atelier;
 
-import java.util.Scanner;
-
 import com.rithsagea.atelier.console.Console;
-import com.rithsagea.atelier.console.TextConsole;
-import com.rithsagea.atelier.console.TextMessage;
 import com.rithsagea.atelier.console.command.CharacterCommand;
 import com.rithsagea.atelier.console.command.StopCommand;
 
@@ -14,6 +10,7 @@ public class AtelierBot {
 	
 	private Console console;
 	private CharacterDatabase characterDatabase;
+	private UserDatabase userDatabase;
 	
 	private boolean running = true;
 	
@@ -21,6 +18,7 @@ public class AtelierBot {
 		this.console = console;
 		
 		characterDatabase = new CharacterDatabase();
+		userDatabase = new UserDatabase();
 		
 		registerCommands();
 	}
@@ -38,26 +36,15 @@ public class AtelierBot {
 		return characterDatabase;
 	}
 	
+	public UserDatabase getUserDatabase() {
+		return userDatabase;
+	}
+	
 	public void stop() {
 		running = false;
 	}
 	
 	public boolean isRunning() {
 		return running;
-	}
-	
-	
-	public static void main(String[] args) {
-		TextConsole console = new TextConsole();
-		AtelierBot bot = new AtelierBot(console);
-		
-		Scanner scanner = new Scanner(System.in);
-		
-		while(bot.isRunning()) {
-			System.out.print("> ");
-			console.receiveMessage(new TextMessage(scanner.nextLine()));
-		}
-		
-		scanner.close();
 	}
 }

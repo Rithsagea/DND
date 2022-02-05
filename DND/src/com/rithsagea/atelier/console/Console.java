@@ -12,6 +12,7 @@ public abstract class Console {
 	
 	public void registerCommand(Command command) {
 		registerCommand(command.getLabel(), command);
+		if(command.getAliases() != null)
 		for(String alias : command.getAliases())
 			registerCommand(alias, command);
 	}
@@ -31,4 +32,8 @@ public abstract class Console {
 	}
 	
 	public abstract void sendMessage(Message message);
+	
+	public void sendMessage(String message) {
+		sendMessage(new TextMessage(message));
+	}
 }

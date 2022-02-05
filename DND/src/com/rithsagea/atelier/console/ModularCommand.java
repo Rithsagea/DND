@@ -28,12 +28,12 @@ public abstract class ModularCommand extends Command {
 	public abstract String getLabel();
 	public abstract String[] getAliases();
 
-	public abstract void executeEmpty(Message message);
+	public abstract void executeDefault(Message message, String[] args);
 	
 	@Override
 	public void execute(Message message, String[] args) {
 		if(args.length <= 1) {
-			executeEmpty(message);
+			executeDefault(message, new String[0]);
 		} else {
 			String[] subArgs = new String[args.length - 1];
 			String label = args[1];
@@ -43,6 +43,8 @@ public abstract class ModularCommand extends Command {
 			
 			if(cmd != null) {
 				cmd.execute(message, subArgs);
+			} else {
+				executeDefault(message, subArgs);
 			}
 		}
 	}

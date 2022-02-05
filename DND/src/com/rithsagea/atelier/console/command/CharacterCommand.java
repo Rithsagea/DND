@@ -31,7 +31,7 @@ public class CharacterCommand extends ModularCommand {
 	}
 
 	@Override
-	public void executeEmpty(Message message) {
+	public void executeDefault(Message message, String[] args) {
 		AtelierBot bot = getBot();
 		User user = bot.getUserDatabase().getUser(message.getSender());
 		UUID id = user.getCharacterId();

@@ -23,7 +23,7 @@ public class CharacterListCommand extends ModularCommand {
 	}
 
 	@Override
-	public void executeEmpty(Message message) {
+	public void executeDefault(Message message, String[] args) {
 		for(UUID id : getBot().getCharacterDatabase().getIds()) {
 			getBot().getConsole().sendMessage(id.toString());
 		}
